@@ -20,6 +20,68 @@ module SwaggerClient
       @api_client = api_client
     end
 
+    # Inserts a single timesheet record
+    # 
+    # @param request The timesheet request object
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [CsApiApiResponseInt32]
+    def timesheets_create_single_timesheet(request, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = timesheets_create_single_timesheet_with_http_info(request, x_chronosheets_auth, opts)
+      return data
+    end
+
+    # Inserts a single timesheet record
+    # 
+    # @param request The timesheet request object
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    def timesheets_create_single_timesheet_with_http_info(request, x_chronosheets_auth, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TimesheetsApi.timesheets_create_single_timesheet ..."
+      end
+      # verify the required parameter 'request' is set
+      if @api_client.config.client_side_validation && request.nil?
+        fail ArgumentError, "Missing the required parameter 'request' when calling TimesheetsApi.timesheets_create_single_timesheet"
+      end
+      # verify the required parameter 'x_chronosheets_auth' is set
+      if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
+        fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling TimesheetsApi.timesheets_create_single_timesheet"
+      end
+      # resource path
+      local_var_path = "/api/Timesheets/CreateSingleTimesheet"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json', 'text/json', 'application/xml', 'text/xml', 'multipart/form-data'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded', 'multipart/form-data'])
+      header_params[:'x-chronosheets-auth'] = x_chronosheets_auth
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(request)
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CsApiApiResponseInt32')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TimesheetsApi#timesheets_create_single_timesheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete a timesheet
     # 
     # @param timesheet_id The ID of the timesheet to delete
@@ -145,68 +207,6 @@ module SwaggerClient
         :return_type => 'CsApiApiResponseListTimesheet')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TimesheetsApi#timesheets_get_timesheets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Inserts a single timesheet record
-    # 
-    # @param request The timesheet request object
-    # @param x_chronosheets_auth The ChronoSheets Auth Token
-    # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
-    def timesheets_insert_single_timesheet(request, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = timesheets_insert_single_timesheet_with_http_info(request, x_chronosheets_auth, opts)
-      return data
-    end
-
-    # Inserts a single timesheet record
-    # 
-    # @param request The timesheet request object
-    # @param x_chronosheets_auth The ChronoSheets Auth Token
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
-    def timesheets_insert_single_timesheet_with_http_info(request, x_chronosheets_auth, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TimesheetsApi.timesheets_insert_single_timesheet ..."
-      end
-      # verify the required parameter 'request' is set
-      if @api_client.config.client_side_validation && request.nil?
-        fail ArgumentError, "Missing the required parameter 'request' when calling TimesheetsApi.timesheets_insert_single_timesheet"
-      end
-      # verify the required parameter 'x_chronosheets_auth' is set
-      if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
-        fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling TimesheetsApi.timesheets_insert_single_timesheet"
-      end
-      # resource path
-      local_var_path = "/api/Timesheets/InsertSingleTimesheet"
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json', 'text/json', 'application/xml', 'text/xml', 'multipart/form-data'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded', 'multipart/form-data'])
-      header_params[:'x-chronosheets-auth'] = x_chronosheets_auth
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(request)
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TimesheetsApi#timesheets_insert_single_timesheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

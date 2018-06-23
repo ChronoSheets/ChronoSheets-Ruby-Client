@@ -32,6 +32,19 @@ describe 'TimesheetsApi' do
     end
   end
 
+  # unit tests for timesheets_create_single_timesheet
+  # Inserts a single timesheet record
+  # 
+  # @param request The timesheet request object
+  # @param x_chronosheets_auth The ChronoSheets Auth Token
+  # @param [Hash] opts the optional parameters
+  # @return [CsApiApiResponseInt32]
+  describe 'timesheets_create_single_timesheet test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for timesheets_delete_timesheet
   # Delete a timesheet
   # 
@@ -54,19 +67,6 @@ describe 'TimesheetsApi' do
   # @param [Hash] opts the optional parameters
   # @return [CsApiApiResponseListTimesheet]
   describe 'timesheets_get_timesheets test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for timesheets_insert_single_timesheet
-  # Inserts a single timesheet record
-  # 
-  # @param request The timesheet request object
-  # @param x_chronosheets_auth The ChronoSheets Auth Token
-  # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseInt32]
-  describe 'timesheets_insert_single_timesheet test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

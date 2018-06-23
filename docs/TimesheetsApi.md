@@ -4,10 +4,58 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**timesheets_create_single_timesheet**](TimesheetsApi.md#timesheets_create_single_timesheet) | **PUT** /api/Timesheets/CreateSingleTimesheet | Inserts a single timesheet record
 [**timesheets_delete_timesheet**](TimesheetsApi.md#timesheets_delete_timesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet
 [**timesheets_get_timesheets**](TimesheetsApi.md#timesheets_get_timesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates
-[**timesheets_insert_single_timesheet**](TimesheetsApi.md#timesheets_insert_single_timesheet) | **PUT** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
 [**timesheets_update_timesheets**](TimesheetsApi.md#timesheets_update_timesheets) | **POST** /api/Timesheets/UpdateTimesheets | Batch update timesheets
+
+
+# **timesheets_create_single_timesheet**
+> CsApiApiResponseInt32 timesheets_create_single_timesheet(request, x_chronosheets_auth)
+
+Inserts a single timesheet record
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+
+api_instance = SwaggerClient::TimesheetsApi.new
+
+request = SwaggerClient::CsApiTimesheet.new # CsApiTimesheet | The timesheet request object
+
+x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+
+
+begin
+  #Inserts a single timesheet record
+  result = api_instance.timesheets_create_single_timesheet(request, x_chronosheets_auth)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling TimesheetsApi->timesheets_create_single_timesheet: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CsApiTimesheet**](CsApiTimesheet.md)| The timesheet request object | 
+ **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
 
 
 # **timesheets_delete_timesheet**
@@ -105,54 +153,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
-
-
-
-# **timesheets_insert_single_timesheet**
-> CsApiApiResponseInt32 timesheets_insert_single_timesheet(request, x_chronosheets_auth)
-
-Inserts a single timesheet record
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::TimesheetsApi.new
-
-request = SwaggerClient::CsApiTimesheet.new # CsApiTimesheet | The timesheet request object
-
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
-
-
-begin
-  #Inserts a single timesheet record
-  result = api_instance.timesheets_insert_single_timesheet(request, x_chronosheets_auth)
-  p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling TimesheetsApi->timesheets_insert_single_timesheet: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CsApiTimesheet**](CsApiTimesheet.md)| The timesheet request object | 
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
-
-### Return type
-
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
