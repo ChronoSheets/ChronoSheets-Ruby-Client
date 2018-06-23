@@ -3,7 +3,7 @@
 =begin
 #ChronoSheets API
 
-#An API for integrating into ChronoSheets timesheets
+#ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.
 
 OpenAPI spec version: v1
 Contact: lachlan@chronosheets.com
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.email       = ["lachlan@chronosheets.com"]
   s.homepage    = "https://github.com/swagger-api/swagger-codegen"
   s.summary     = "ChronoSheets API Ruby Gem"
-  s.description = "An API for integrating into ChronoSheets timesheets"
+  s.description = "ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations."
   # TODO uncommnet and update below with a proper license 
   #s.license     = "Apache 2.0"
   s.required_ruby_version = ">= 1.9"
