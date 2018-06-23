@@ -114,8 +114,8 @@ describe 'ReportsApi' do
   # @param start_date 
   # @param end_date 
   # @param user_ids 
-  # @param sort 
-  # @param order 
+  # @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters
+  # @param order 0 &#x3D; Ascending, 1 &#x3D; Descending
   # @param skip 
   # @param take 
   # @param x_chronosheets_auth The ChronoSheets Auth Token

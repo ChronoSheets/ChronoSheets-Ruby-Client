@@ -43,8 +43,10 @@ module SwaggerClient
 
     attr_accessor :org_id
 
+    # 0 = Unknown, 1 = iOS, 2 = Android
     attr_accessor :mobile_platform
 
+    # 1 = Image, 30 = WordDoc, 31 = Pdf, 32 = MSSpreadSheet, 33 = MSPowerPoint, 34 = RichTextFormat, 35 = ZipFile, 100 = Other
     attr_accessor :attachment_type
 
     attr_accessor :notes
@@ -141,8 +143,8 @@ module SwaggerClient
         :'file_attachment_id' => :'Integer',
         :'user_id' => :'Integer',
         :'org_id' => :'Integer',
-        :'mobile_platform' => :'String',
-        :'attachment_type' => :'String',
+        :'mobile_platform' => :'Integer',
+        :'attachment_type' => :'Integer',
         :'notes' => :'String',
         :'non_image_file_path' => :'String',
         :'image_large_file_path' => :'String',
@@ -285,9 +287,9 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      mobile_platform_validator = EnumAttributeValidator.new('String', ["Unknown", "iOS", "Android"])
+      mobile_platform_validator = EnumAttributeValidator.new('Integer', ["0", "1", "2"])
       return false unless mobile_platform_validator.valid?(@mobile_platform)
-      attachment_type_validator = EnumAttributeValidator.new('String', ["Image", "WordDoc", "Pdf", "MSSpreadSheet", "MSPowerPoint", "RichTextFormat", "ZipFile", "Other"])
+      attachment_type_validator = EnumAttributeValidator.new('Integer', ["1", "30", "31", "32", "33", "34", "35", "100"])
       return false unless attachment_type_validator.valid?(@attachment_type)
       return true
     end
@@ -295,7 +297,7 @@ module SwaggerClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] mobile_platform Object to be assigned
     def mobile_platform=(mobile_platform)
-      validator = EnumAttributeValidator.new('String', ["Unknown", "iOS", "Android"])
+      validator = EnumAttributeValidator.new('Integer', ["0", "1", "2"])
       unless validator.valid?(mobile_platform)
         fail ArgumentError, "invalid value for 'mobile_platform', must be one of #{validator.allowable_values}."
       end
@@ -305,7 +307,7 @@ module SwaggerClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] attachment_type Object to be assigned
     def attachment_type=(attachment_type)
-      validator = EnumAttributeValidator.new('String', ["Image", "WordDoc", "Pdf", "MSSpreadSheet", "MSPowerPoint", "RichTextFormat", "ZipFile", "Other"])
+      validator = EnumAttributeValidator.new('Integer', ["1", "30", "31", "32", "33", "34", "35", "100"])
       unless validator.valid?(attachment_type)
         fail ArgumentError, "invalid value for 'attachment_type', must be one of #{validator.allowable_values}."
       end

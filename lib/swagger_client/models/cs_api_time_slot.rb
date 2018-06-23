@@ -15,6 +15,7 @@ require 'date'
 module SwaggerClient
 
   class CsApiTimeSlot
+    # 0 = Monday, 1 = Tuesday, 2 = Wednesday, 3 = Thursday, 4 = Friday, 5 = Saturday, 6 = Sunday
     attr_accessor :day_type
 
     attr_accessor :usual_hour_id
@@ -67,7 +68,7 @@ module SwaggerClient
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'day_type' => :'String',
+        :'day_type' => :'Integer',
         :'usual_hour_id' => :'Integer',
         :'start_hour' => :'Integer',
         :'start_minute' => :'Integer',
@@ -125,7 +126,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      day_type_validator = EnumAttributeValidator.new('String', ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
+      day_type_validator = EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5", "6"])
       return false unless day_type_validator.valid?(@day_type)
       return true
     end
@@ -133,7 +134,7 @@ module SwaggerClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] day_type Object to be assigned
     def day_type=(day_type)
-      validator = EnumAttributeValidator.new('String', ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
+      validator = EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5", "6"])
       unless validator.valid?(day_type)
         fail ArgumentError, "invalid value for 'day_type', must be one of #{validator.allowable_values}."
       end

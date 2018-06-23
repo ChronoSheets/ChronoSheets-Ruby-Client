@@ -305,9 +305,9 @@ end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime |
 
 user_ids = "user_ids_example" # String | 
 
-sort = "sort_example" # String | 
+sort = 56 # Integer | 0 = Username, 1 = EmailAddress, 2 = JobCode, 3 = TaskName, 4 = ClientName, 5 = ProjectName, 6 = StartDate, 7 = EndDate, 8 = SpanSeconds, 9 = Description, 10 = PayAmount, 11 = PayOvertimeAmount, 12 = TripCost, 13 = TripDistanceMeters
 
-order = "order_example" # String | 
+order = 56 # Integer | 0 = Ascending, 1 = Descending
 
 skip = 56 # Integer | 
 
@@ -332,8 +332,8 @@ Name | Type | Description  | Notes
  **start_date** | **DateTime**|  | 
  **end_date** | **DateTime**|  | 
  **user_ids** | **String**|  | 
- **sort** | **String**|  | 
- **order** | **String**|  | 
+ **sort** | **Integer**| 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters | 
+ **order** | **Integer**| 0 &#x3D; Ascending, 1 &#x3D; Descending | 
  **skip** | **Integer**|  | 
  **take** | **Integer**|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 

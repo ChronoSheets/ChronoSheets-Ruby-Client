@@ -33,6 +33,7 @@ module SwaggerClient
 
     attr_accessor :org_id
 
+    # 0 = Unknown, 1 = iOS, 2 = Android
     attr_accessor :mobile_platform
 
     attr_accessor :start_date
@@ -124,7 +125,7 @@ module SwaggerClient
         :'vehicle_id' => :'Integer',
         :'user_id' => :'Integer',
         :'org_id' => :'Integer',
-        :'mobile_platform' => :'String',
+        :'mobile_platform' => :'Integer',
         :'start_date' => :'DateTime',
         :'end_date' => :'DateTime',
         :'vehicle_name' => :'String',
@@ -255,7 +256,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      mobile_platform_validator = EnumAttributeValidator.new('String', ["Unknown", "iOS", "Android"])
+      mobile_platform_validator = EnumAttributeValidator.new('Integer', ["0", "1", "2"])
       return false unless mobile_platform_validator.valid?(@mobile_platform)
       return true
     end
@@ -263,7 +264,7 @@ module SwaggerClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] mobile_platform Object to be assigned
     def mobile_platform=(mobile_platform)
-      validator = EnumAttributeValidator.new('String', ["Unknown", "iOS", "Android"])
+      validator = EnumAttributeValidator.new('Integer', ["0", "1", "2"])
       unless validator.valid?(mobile_platform)
         fail ArgumentError, "invalid value for 'mobile_platform', must be one of #{validator.allowable_values}."
       end
