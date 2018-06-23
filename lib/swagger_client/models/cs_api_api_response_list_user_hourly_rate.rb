@@ -17,7 +17,7 @@ module SwaggerClient
   class CsApiApiResponseListUserHourlyRate
     attr_accessor :data
 
-    # 0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired
+    # 0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired, 128 = TestingABC
     attr_accessor :status
 
     attr_accessor :message
@@ -96,7 +96,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      status_validator = EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5"])
+      status_validator = EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5", "128"])
       return false unless status_validator.valid?(@status)
       return true
     end
@@ -104,7 +104,7 @@ module SwaggerClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
-      validator = EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5"])
+      validator = EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5", "128"])
       unless validator.valid?(status)
         fail ArgumentError, "invalid value for 'status', must be one of #{validator.allowable_values}."
       end

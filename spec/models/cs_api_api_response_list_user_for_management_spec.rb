@@ -41,7 +41,7 @@ describe 'CsApiApiResponseListUserForManagement' do
   describe 'test attribute "status"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-       #validator = Petstore::EnumTest::EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5"])
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5", "128"])
        #validator.allowable_values.each do |value|
        #  expect { @instance.status = value }.not_to raise_error
        #end
