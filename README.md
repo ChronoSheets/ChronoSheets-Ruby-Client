@@ -119,7 +119,7 @@ Class | Method | HTTP request | Description
 *SwaggerClient::TasksApi* | [**tasks_update_task**](docs/TasksApi.md#tasks_update_task) | **POST** /api/Tasks/UpdateTask | Update a task
 *SwaggerClient::TimesheetsApi* | [**timesheets_delete_timesheet**](docs/TimesheetsApi.md#timesheets_delete_timesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet
 *SwaggerClient::TimesheetsApi* | [**timesheets_get_timesheets**](docs/TimesheetsApi.md#timesheets_get_timesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates
-*SwaggerClient::TimesheetsApi* | [**timesheets_insert_single_timesheet**](docs/TimesheetsApi.md#timesheets_insert_single_timesheet) | **POST** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
+*SwaggerClient::TimesheetsApi* | [**timesheets_insert_single_timesheet**](docs/TimesheetsApi.md#timesheets_insert_single_timesheet) | **PUT** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
 *SwaggerClient::TimesheetsApi* | [**timesheets_update_timesheets**](docs/TimesheetsApi.md#timesheets_update_timesheets) | **POST** /api/Timesheets/UpdateTimesheets | Batch update timesheets
 *SwaggerClient::TripsApi* | [**trips_create_trip**](docs/TripsApi.md#trips_create_trip) | **POST** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
 *SwaggerClient::TripsApi* | [**trips_get_my_trip_by_id**](docs/TripsApi.md#trips_get_my_trip_by_id) | **GET** /api/Trips/GetMyTripById | Get trip by Id
