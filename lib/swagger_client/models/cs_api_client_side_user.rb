@@ -25,6 +25,8 @@ module SwaggerClient
 
     attr_accessor :last_name
 
+    attr_accessor :email_address
+
     attr_accessor :roles
 
     attr_accessor :alert_settings
@@ -42,6 +44,7 @@ module SwaggerClient
         :'user_name' => :'UserName',
         :'first_name' => :'FirstName',
         :'last_name' => :'LastName',
+        :'email_address' => :'EmailAddress',
         :'roles' => :'Roles',
         :'alert_settings' => :'AlertSettings',
         :'setup_wizard_required' => :'SetupWizardRequired',
@@ -57,6 +60,7 @@ module SwaggerClient
         :'user_name' => :'String',
         :'first_name' => :'String',
         :'last_name' => :'String',
+        :'email_address' => :'String',
         :'roles' => :'Integer',
         :'alert_settings' => :'Integer',
         :'setup_wizard_required' => :'BOOLEAN',
@@ -90,6 +94,10 @@ module SwaggerClient
 
       if attributes.has_key?(:'LastName')
         self.last_name = attributes[:'LastName']
+      end
+
+      if attributes.has_key?(:'EmailAddress')
+        self.email_address = attributes[:'EmailAddress']
       end
 
       if attributes.has_key?(:'Roles')
@@ -133,6 +141,7 @@ module SwaggerClient
           user_name == o.user_name &&
           first_name == o.first_name &&
           last_name == o.last_name &&
+          email_address == o.email_address &&
           roles == o.roles &&
           alert_settings == o.alert_settings &&
           setup_wizard_required == o.setup_wizard_required &&
@@ -148,7 +157,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, organisation_id, user_name, first_name, last_name, roles, alert_settings, setup_wizard_required, organisation].hash
+      [id, organisation_id, user_name, first_name, last_name, email_address, roles, alert_settings, setup_wizard_required, organisation].hash
     end
 
     # Builds the object from hash
