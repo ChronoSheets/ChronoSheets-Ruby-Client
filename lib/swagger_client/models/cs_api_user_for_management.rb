@@ -15,8 +15,6 @@ require 'date'
 module SwaggerClient
 
   class CsApiUserForManagement
-    attr_accessor :is_subscribed_to_newsletter
-
     attr_accessor :is_account_active
 
     attr_accessor :id
@@ -37,13 +35,14 @@ module SwaggerClient
 
     attr_accessor :setup_wizard_required
 
+    attr_accessor :is_subscribed_to_newsletter
+
     attr_accessor :organisation
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'is_subscribed_to_newsletter' => :'IsSubscribedToNewsletter',
         :'is_account_active' => :'IsAccountActive',
         :'id' => :'Id',
         :'organisation_id' => :'OrganisationId',
@@ -54,6 +53,7 @@ module SwaggerClient
         :'roles' => :'Roles',
         :'alert_settings' => :'AlertSettings',
         :'setup_wizard_required' => :'SetupWizardRequired',
+        :'is_subscribed_to_newsletter' => :'IsSubscribedToNewsletter',
         :'organisation' => :'Organisation'
       }
     end
@@ -61,7 +61,6 @@ module SwaggerClient
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'is_subscribed_to_newsletter' => :'BOOLEAN',
         :'is_account_active' => :'BOOLEAN',
         :'id' => :'Integer',
         :'organisation_id' => :'Integer',
@@ -72,6 +71,7 @@ module SwaggerClient
         :'roles' => :'Integer',
         :'alert_settings' => :'Integer',
         :'setup_wizard_required' => :'BOOLEAN',
+        :'is_subscribed_to_newsletter' => :'BOOLEAN',
         :'organisation' => :'CsApiOrganisation'
       }
     end
@@ -83,10 +83,6 @@ module SwaggerClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      if attributes.has_key?(:'IsSubscribedToNewsletter')
-        self.is_subscribed_to_newsletter = attributes[:'IsSubscribedToNewsletter']
-      end
 
       if attributes.has_key?(:'IsAccountActive')
         self.is_account_active = attributes[:'IsAccountActive']
@@ -128,6 +124,10 @@ module SwaggerClient
         self.setup_wizard_required = attributes[:'SetupWizardRequired']
       end
 
+      if attributes.has_key?(:'IsSubscribedToNewsletter')
+        self.is_subscribed_to_newsletter = attributes[:'IsSubscribedToNewsletter']
+      end
+
       if attributes.has_key?(:'Organisation')
         self.organisation = attributes[:'Organisation']
       end
@@ -152,7 +152,6 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          is_subscribed_to_newsletter == o.is_subscribed_to_newsletter &&
           is_account_active == o.is_account_active &&
           id == o.id &&
           organisation_id == o.organisation_id &&
@@ -163,6 +162,7 @@ module SwaggerClient
           roles == o.roles &&
           alert_settings == o.alert_settings &&
           setup_wizard_required == o.setup_wizard_required &&
+          is_subscribed_to_newsletter == o.is_subscribed_to_newsletter &&
           organisation == o.organisation
     end
 
@@ -175,7 +175,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_subscribed_to_newsletter, is_account_active, id, organisation_id, user_name, first_name, last_name, email_address, roles, alert_settings, setup_wizard_required, organisation].hash
+      [is_account_active, id, organisation_id, user_name, first_name, last_name, email_address, roles, alert_settings, setup_wizard_required, is_subscribed_to_newsletter, organisation].hash
     end
 
     # Builds the object from hash
