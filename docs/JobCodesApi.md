@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **job_codes_create_job_code**
-> CsApiApiResponseInt32 job_codes_create_job_code(request, x_chronosheets_auth)
+> CSApiResponseInt32 job_codes_create_job_code(request, x_chronosheets_auth)
 
 Create a job code
 
@@ -23,7 +23,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::JobCodesApi.new
 
-request = SwaggerClient::CsApiInsertJobCodeRequest.new # CsApiInsertJobCodeRequest | 
+request = SwaggerClient::CSInsertJobCodeRequest.new # CSInsertJobCodeRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -41,12 +41,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertJobCodeRequest**](CsApiInsertJobCodeRequest.md)|  | 
+ **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 
 
 # **job_codes_delete_job_code**
-> CsApiApiResponseBoolean job_codes_delete_job_code(job_code_id, x_chronosheets_auth)
+> CSApiResponseBoolean job_codes_delete_job_code(job_code_id, x_chronosheets_auth)
 
 Delete a job code
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ No authorization required
 
 
 # **job_codes_get_job_code_by_id**
-> CsApiApiResponseJobCode job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth)
+> CSApiResponseJobCode job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth)
 
 Get a particular job code by job code id
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseJobCode**](CsApiApiResponseJobCode.md)
+[**CSApiResponseJobCode**](CSApiResponseJobCode.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ No authorization required
 
 
 # **job_codes_get_job_codes**
-> CsApiApiResponseListJobCode job_codes_get_job_codes(x_chronosheets_auth)
+> CSApiResponseListJobCode job_codes_get_job_codes(x_chronosheets_auth)
 
 Get job codes for your organisation
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListJobCode**](CsApiApiResponseListJobCode.md)
+[**CSApiResponseListJobCode**](CSApiResponseListJobCode.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ No authorization required
 
 
 # **job_codes_update_job_code**
-> CsApiApiResponseBoolean job_codes_update_job_code(request, x_chronosheets_auth)
+> CSApiResponseBoolean job_codes_update_job_code(request, x_chronosheets_auth)
 
 Update a job code
 
@@ -212,7 +212,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::JobCodesApi.new
 
-request = SwaggerClient::CsApiUpdateJobCodeRequest.new # CsApiUpdateJobCodeRequest | 
+request = SwaggerClient::CSUpdateJobCodeRequest.new # CSUpdateJobCodeRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -230,12 +230,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateJobCodeRequest**](CsApiUpdateJobCodeRequest.md)|  | 
+ **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **trips_create_trip**
-> CsApiApiResponseInt32 trips_create_trip(request, x_chronosheets_auth)
+> CSApiResponseInt32 trips_create_trip(request, x_chronosheets_auth)
 
 Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
 
@@ -21,7 +21,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TripsApi.new
 
-request = SwaggerClient::CsApiCreateTripRequest.new # CsApiCreateTripRequest | The create trip request
+request = SwaggerClient::CSCreateTripRequest.new # CSCreateTripRequest | The create trip request
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -39,12 +39,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiCreateTripRequest**](CsApiCreateTripRequest.md)| The create trip request | 
+ **request** | [**CSCreateTripRequest**](CSCreateTripRequest.md)| The create trip request | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 
 # **trips_get_my_trip_by_id**
-> CsApiApiResponseTrip trips_get_my_trip_by_id(trip_id, x_chronosheets_auth)
+> CSApiResponseTrip trips_get_my_trip_by_id(trip_id, x_chronosheets_auth)
 
 Get trip by Id
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTrip**](CsApiApiResponseTrip.md)
+[**CSApiResponseTrip**](CSApiResponseTrip.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ No authorization required
 
 
 # **trips_get_my_trips**
-> CsApiApiResponseForPaginatedListTrip trips_get_my_trips(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth)
+> CSApiResponseForPaginatedListTrip trips_get_my_trips(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth)
 
 Get my trips
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListTrip**](CsApiApiResponseForPaginatedListTrip.md)
+[**CSApiResponseForPaginatedListTrip**](CSApiResponseForPaginatedListTrip.md)
 
 ### Authorization
 

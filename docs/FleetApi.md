@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **fleet_create_vehicle**
-> CsApiApiResponseInt32 fleet_create_vehicle(request, x_chronosheets_auth)
+> CSApiResponseInt32 fleet_create_vehicle(request, x_chronosheets_auth)
 
 Create a vehicle
 
@@ -22,7 +22,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::FleetApi.new
 
-request = SwaggerClient::CsApiInsertVehicleRequest.new # CsApiInsertVehicleRequest | 
+request = SwaggerClient::CSInsertVehicleRequest.new # CSInsertVehicleRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -40,12 +40,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertVehicleRequest**](CsApiInsertVehicleRequest.md)|  | 
+ **request** | [**CSInsertVehicleRequest**](CSInsertVehicleRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 
 # **fleet_get_vehicle_by_id**
-> CsApiApiResponseFleetVehicle fleet_get_vehicle_by_id(vehicle_id, x_chronosheets_auth)
+> CSApiResponseFleetVehicle fleet_get_vehicle_by_id(vehicle_id, x_chronosheets_auth)
 
 Get a particular vehicle
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseFleetVehicle**](CsApiApiResponseFleetVehicle.md)
+[**CSApiResponseFleetVehicle**](CSApiResponseFleetVehicle.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 
 # **fleet_get_vehicles**
-> CsApiApiResponseListFleetVehicle fleet_get_vehicles(include_deleted, x_chronosheets_auth)
+> CSApiResponseListFleetVehicle fleet_get_vehicles(include_deleted, x_chronosheets_auth)
 
 Get a collection of vehicles that are under your organisation
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListFleetVehicle**](CsApiApiResponseListFleetVehicle.md)
+[**CSApiResponseListFleetVehicle**](CSApiResponseListFleetVehicle.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ No authorization required
 
 
 # **fleet_update_vehicle**
-> CsApiApiResponseBoolean fleet_update_vehicle(request, x_chronosheets_auth)
+> CSApiResponseBoolean fleet_update_vehicle(request, x_chronosheets_auth)
 
 Update a vehicle
 
@@ -166,7 +166,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::FleetApi.new
 
-request = SwaggerClient::CsApiSaveVehicleRequest.new # CsApiSaveVehicleRequest | 
+request = SwaggerClient::CSSaveVehicleRequest.new # CSSaveVehicleRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -184,12 +184,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveVehicleRequest**](CsApiSaveVehicleRequest.md)|  | 
+ **request** | [**CSSaveVehicleRequest**](CSSaveVehicleRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

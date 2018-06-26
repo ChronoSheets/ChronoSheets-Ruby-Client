@@ -38,7 +38,7 @@ describe 'UsersApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseInsertUserResponse]
+  # @return [CSApiResponseInsertUserResponse]
   describe 'users_create_timesheet_user test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -51,7 +51,7 @@ describe 'UsersApi' do
   # @param user_id 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseUserForManagement]
+  # @return [CSApiResponseUserForManagement]
   describe 'users_get_timesheet_user test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -63,7 +63,7 @@ describe 'UsersApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListUserForManagement]
+  # @return [CSApiResponseListUserForManagement]
   describe 'users_get_timesheet_users test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -76,7 +76,7 @@ describe 'UsersApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseUpdateUserResponse]
+  # @return [CSApiResponseUpdateUserResponse]
   describe 'users_update_timesheet_user test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

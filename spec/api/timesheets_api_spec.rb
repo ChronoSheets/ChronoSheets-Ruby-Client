@@ -38,7 +38,7 @@ describe 'TimesheetsApi' do
   # @param request The timesheet request object
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseInt32]
+  # @return [CSApiResponseInt32]
   describe 'timesheets_create_single_timesheet test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -51,7 +51,7 @@ describe 'TimesheetsApi' do
   # @param timesheet_id The ID of the timesheet to delete
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'timesheets_delete_timesheet test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -65,7 +65,7 @@ describe 'TimesheetsApi' do
   # @param end_date The end date of the date range
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListTimesheet]
+  # @return [CSApiResponseListTimesheet]
   describe 'timesheets_get_timesheets test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -78,7 +78,7 @@ describe 'TimesheetsApi' do
   # @param request The batch update timesheets request
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListInt32]
+  # @return [CSApiResponseListInt32]
   describe 'timesheets_update_timesheets test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

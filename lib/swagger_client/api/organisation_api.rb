@@ -24,7 +24,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseOrganisation]
+    # @return [CSApiResponseOrganisation]
     def organisation_get_organisation(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = organisation_get_organisation_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -34,7 +34,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseOrganisation, Fixnum, Hash)>] CsApiApiResponseOrganisation data, response status code and response headers
+    # @return [Array<(CSApiResponseOrganisation, Fixnum, Hash)>] CSApiResponseOrganisation data, response status code and response headers
     def organisation_get_organisation_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganisationApi.organisation_get_organisation ..."
@@ -67,7 +67,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseOrganisation')
+        :return_type => 'CSApiResponseOrganisation')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OrganisationApi#organisation_get_organisation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -79,7 +79,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseUpdateOrganisationResponse]
+    # @return [CSApiResponseUpdateOrganisationResponse]
     def organisation_update_organisation(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = organisation_update_organisation_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -90,7 +90,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseUpdateOrganisationResponse, Fixnum, Hash)>] CsApiApiResponseUpdateOrganisationResponse data, response status code and response headers
+    # @return [Array<(CSApiResponseUpdateOrganisationResponse, Fixnum, Hash)>] CSApiResponseUpdateOrganisationResponse data, response status code and response headers
     def organisation_update_organisation_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganisationApi.organisation_update_organisation ..."
@@ -129,7 +129,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseUpdateOrganisationResponse')
+        :return_type => 'CSApiResponseUpdateOrganisationResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OrganisationApi#organisation_update_organisation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -38,7 +38,7 @@ describe 'ClientsApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseInt32]
+  # @return [CSApiResponseInt32]
   describe 'clients_create_client test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -51,7 +51,7 @@ describe 'ClientsApi' do
   # @param client_id The ID of the client you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseClient]
+  # @return [CSApiResponseClient]
   describe 'clients_get_client test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -63,7 +63,7 @@ describe 'ClientsApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListClient]
+  # @return [CSApiResponseListClient]
   describe 'clients_get_clients test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -76,7 +76,7 @@ describe 'ClientsApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'clients_update_client test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

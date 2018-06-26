@@ -38,7 +38,7 @@ describe 'ProjectsApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseInt32]
+  # @return [CSApiResponseInt32]
   describe 'projects_create_project test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -51,7 +51,7 @@ describe 'ProjectsApi' do
   # @param project_id The ID of the project
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseProject]
+  # @return [CSApiResponseProject]
   describe 'projects_get_project_by_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -64,7 +64,7 @@ describe 'ProjectsApi' do
   # @param client_id The ID of the client
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListProject]
+  # @return [CSApiResponseListProject]
   describe 'projects_get_projects_for_client test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -77,7 +77,7 @@ describe 'ProjectsApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'projects_update_project test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

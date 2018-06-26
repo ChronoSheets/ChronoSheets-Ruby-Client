@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def user_job_favourites_create_job_favourite(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_job_favourites_create_job_favourite_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def user_job_favourites_create_job_favourite_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserJobFavouritesApi.user_job_favourites_create_job_favourite ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserJobFavouritesApi#user_job_favourites_create_job_favourite\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param job_id The ID of the Job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_job_favourites_delete_job_favourite_with_http_info(job_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param job_id The ID of the Job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def user_job_favourites_delete_job_favourite_with_http_info(job_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserJobFavouritesApi.user_job_favourites_delete_job_favourite ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserJobFavouritesApi#user_job_favourites_delete_job_favourite\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -147,7 +147,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListUserJobFavourite]
+    # @return [CSApiResponseListUserJobFavourite]
     def user_job_favourites_get_job_favourites(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_job_favourites_get_job_favourites_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -157,7 +157,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListUserJobFavourite, Fixnum, Hash)>] CsApiApiResponseListUserJobFavourite data, response status code and response headers
+    # @return [Array<(CSApiResponseListUserJobFavourite, Fixnum, Hash)>] CSApiResponseListUserJobFavourite data, response status code and response headers
     def user_job_favourites_get_job_favourites_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserJobFavouritesApi.user_job_favourites_get_job_favourites ..."
@@ -190,7 +190,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListUserJobFavourite')
+        :return_type => 'CSApiResponseListUserJobFavourite')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserJobFavouritesApi#user_job_favourites_get_job_favourites\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

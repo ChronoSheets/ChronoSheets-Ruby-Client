@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **user_profile_do_login**
-> CsApiApiResponseDoLoginResponse user_profile_do_login(request)
+> CSApiResponseDoLoginResponse user_profile_do_login(request)
 
 
 
@@ -23,7 +23,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UserProfileApi.new
 
-request = SwaggerClient::CsApiDoLoginRequest.new # CsApiDoLoginRequest | 
+request = SwaggerClient::CSDoLoginRequest.new # CSDoLoginRequest | 
 
 
 begin
@@ -38,11 +38,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiDoLoginRequest**](CsApiDoLoginRequest.md)|  | 
+ **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)|  | 
 
 ### Return type
 
-[**CsApiApiResponseDoLoginResponse**](CsApiApiResponseDoLoginResponse.md)
+[**CSApiResponseDoLoginResponse**](CSApiResponseDoLoginResponse.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 
 
 # **user_profile_do_logout**
-> CsApiApiResponseBoolean user_profile_do_logout(x_chronosheets_auth)
+> CSApiResponseBoolean user_profile_do_logout(x_chronosheets_auth)
 
 
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ No authorization required
 
 
 # **user_profile_get_my_profile**
-> CsApiApiResponseUserProfile user_profile_get_my_profile(x_chronosheets_auth)
+> CSApiResponseUserProfile user_profile_get_my_profile(x_chronosheets_auth)
 
 
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseUserProfile**](CsApiApiResponseUserProfile.md)
+[**CSApiResponseUserProfile**](CSApiResponseUserProfile.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ No authorization required
 
 
 # **user_profile_keep_session_alive**
-> CsApiApiResponseBoolean user_profile_keep_session_alive(x_chronosheets_auth)
+> CSApiResponseBoolean user_profile_keep_session_alive(x_chronosheets_auth)
 
 
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 
 
 # **user_profile_update_my_profile**
-> CsApiApiResponseSignupResponse user_profile_update_my_profile(request, x_chronosheets_auth)
+> CSApiResponseSignupResponse user_profile_update_my_profile(request, x_chronosheets_auth)
 
 
 
@@ -199,7 +199,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UserProfileApi.new
 
-request = SwaggerClient::CsApiUpdateMyProfileRequest.new # CsApiUpdateMyProfileRequest | 
+request = SwaggerClient::CSUpdateMyProfileRequest.new # CSUpdateMyProfileRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -216,12 +216,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateMyProfileRequest**](CsApiUpdateMyProfileRequest.md)|  | 
+ **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseSignupResponse**](CsApiApiResponseSignupResponse.md)
+[**CSApiResponseSignupResponse**](CSApiResponseSignupResponse.md)
 
 ### Authorization
 

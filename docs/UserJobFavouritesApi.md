@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **user_job_favourites_create_job_favourite**
-> CsApiApiResponseInt32 user_job_favourites_create_job_favourite(request, x_chronosheets_auth)
+> CSApiResponseInt32 user_job_favourites_create_job_favourite(request, x_chronosheets_auth)
 
 Create a job favourite
 
@@ -21,7 +21,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UserJobFavouritesApi.new
 
-request = SwaggerClient::CsApiInsertUserJobFavouriteRequest.new # CsApiInsertUserJobFavouriteRequest | 
+request = SwaggerClient::CSInsertUserJobFavouriteRequest.new # CSInsertUserJobFavouriteRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -39,12 +39,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserJobFavouriteRequest**](CsApiInsertUserJobFavouriteRequest.md)|  | 
+ **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 
 # **user_job_favourites_delete_job_favourite**
-> CsApiApiResponseBoolean user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth)
+> CSApiResponseBoolean user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth)
 
 Delete a job favourite
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ No authorization required
 
 
 # **user_job_favourites_get_job_favourites**
-> CsApiApiResponseListUserJobFavourite user_job_favourites_get_job_favourites(x_chronosheets_auth)
+> CSApiResponseListUserJobFavourite user_job_favourites_get_job_favourites(x_chronosheets_auth)
 
 Get your job favourites
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserJobFavourite**](CsApiApiResponseListUserJobFavourite.md)
+[**CSApiResponseListUserJobFavourite**](CSApiResponseListUserJobFavourite.md)
 
 ### Authorization
 

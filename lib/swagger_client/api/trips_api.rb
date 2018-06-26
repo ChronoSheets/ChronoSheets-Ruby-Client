@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request The create trip request
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def trips_create_trip(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = trips_create_trip_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request The create trip request
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def trips_create_trip_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TripsApi.trips_create_trip ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TripsApi#trips_create_trip\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param trip_id The ID of the trip
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseTrip]
+    # @return [CSApiResponseTrip]
     def trips_get_my_trip_by_id(trip_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = trips_get_my_trip_by_id_with_http_info(trip_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param trip_id The ID of the trip
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseTrip, Fixnum, Hash)>] CsApiApiResponseTrip data, response status code and response headers
+    # @return [Array<(CSApiResponseTrip, Fixnum, Hash)>] CSApiResponseTrip data, response status code and response headers
     def trips_get_my_trip_by_id_with_http_info(trip_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TripsApi.trips_get_my_trip_by_id ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseTrip')
+        :return_type => 'CSApiResponseTrip')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TripsApi#trips_get_my_trip_by_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -152,7 +152,7 @@ module SwaggerClient
     # @param vehicle_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseForPaginatedListTrip]
+    # @return [CSApiResponseForPaginatedListTrip]
     def trips_get_my_trips(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = trips_get_my_trips_with_http_info(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth, opts)
       return data
@@ -167,7 +167,7 @@ module SwaggerClient
     # @param vehicle_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseForPaginatedListTrip, Fixnum, Hash)>] CsApiApiResponseForPaginatedListTrip data, response status code and response headers
+    # @return [Array<(CSApiResponseForPaginatedListTrip, Fixnum, Hash)>] CSApiResponseForPaginatedListTrip data, response status code and response headers
     def trips_get_my_trips_with_http_info(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TripsApi.trips_get_my_trips ..."
@@ -225,7 +225,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseForPaginatedListTrip')
+        :return_type => 'CSApiResponseForPaginatedListTrip')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TripsApi#trips_get_my_trips\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

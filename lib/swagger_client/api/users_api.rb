@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInsertUserResponse]
+    # @return [CSApiResponseInsertUserResponse]
     def users_create_timesheet_user(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = users_create_timesheet_user_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInsertUserResponse, Fixnum, Hash)>] CsApiApiResponseInsertUserResponse data, response status code and response headers
+    # @return [Array<(CSApiResponseInsertUserResponse, Fixnum, Hash)>] CSApiResponseInsertUserResponse data, response status code and response headers
     def users_create_timesheet_user_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.users_create_timesheet_user ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInsertUserResponse')
+        :return_type => 'CSApiResponseInsertUserResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#users_create_timesheet_user\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param user_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseUserForManagement]
+    # @return [CSApiResponseUserForManagement]
     def users_get_timesheet_user(user_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = users_get_timesheet_user_with_http_info(user_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param user_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseUserForManagement, Fixnum, Hash)>] CsApiApiResponseUserForManagement data, response status code and response headers
+    # @return [Array<(CSApiResponseUserForManagement, Fixnum, Hash)>] CSApiResponseUserForManagement data, response status code and response headers
     def users_get_timesheet_user_with_http_info(user_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.users_get_timesheet_user ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseUserForManagement')
+        :return_type => 'CSApiResponseUserForManagement')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#users_get_timesheet_user\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -147,7 +147,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListUserForManagement]
+    # @return [CSApiResponseListUserForManagement]
     def users_get_timesheet_users(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = users_get_timesheet_users_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -157,7 +157,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListUserForManagement, Fixnum, Hash)>] CsApiApiResponseListUserForManagement data, response status code and response headers
+    # @return [Array<(CSApiResponseListUserForManagement, Fixnum, Hash)>] CSApiResponseListUserForManagement data, response status code and response headers
     def users_get_timesheet_users_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.users_get_timesheet_users ..."
@@ -190,7 +190,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListUserForManagement')
+        :return_type => 'CSApiResponseListUserForManagement')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#users_get_timesheet_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -202,7 +202,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseUpdateUserResponse]
+    # @return [CSApiResponseUpdateUserResponse]
     def users_update_timesheet_user(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = users_update_timesheet_user_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -213,7 +213,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseUpdateUserResponse, Fixnum, Hash)>] CsApiApiResponseUpdateUserResponse data, response status code and response headers
+    # @return [Array<(CSApiResponseUpdateUserResponse, Fixnum, Hash)>] CSApiResponseUpdateUserResponse data, response status code and response headers
     def users_update_timesheet_user_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.users_update_timesheet_user ..."
@@ -252,7 +252,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseUpdateUserResponse')
+        :return_type => 'CSApiResponseUpdateUserResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#users_update_timesheet_user\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

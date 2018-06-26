@@ -38,7 +38,7 @@ describe 'JobCodesApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseInt32]
+  # @return [CSApiResponseInt32]
   describe 'job_codes_create_job_code test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -51,7 +51,7 @@ describe 'JobCodesApi' do
   # @param job_code_id The ID of the job code your want to delete
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'job_codes_delete_job_code test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -64,7 +64,7 @@ describe 'JobCodesApi' do
   # @param job_code_id 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseJobCode]
+  # @return [CSApiResponseJobCode]
   describe 'job_codes_get_job_code_by_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -76,7 +76,7 @@ describe 'JobCodesApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListJobCode]
+  # @return [CSApiResponseListJobCode]
   describe 'job_codes_get_job_codes test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -89,7 +89,7 @@ describe 'JobCodesApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'job_codes_update_job_code test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

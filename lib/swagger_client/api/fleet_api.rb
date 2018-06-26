@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def fleet_create_vehicle(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = fleet_create_vehicle_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def fleet_create_vehicle_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FleetApi.fleet_create_vehicle ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FleetApi#fleet_create_vehicle\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param vehicle_id The ID of the vehicle you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseFleetVehicle]
+    # @return [CSApiResponseFleetVehicle]
     def fleet_get_vehicle_by_id(vehicle_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = fleet_get_vehicle_by_id_with_http_info(vehicle_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param vehicle_id The ID of the vehicle you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseFleetVehicle, Fixnum, Hash)>] CsApiApiResponseFleetVehicle data, response status code and response headers
+    # @return [Array<(CSApiResponseFleetVehicle, Fixnum, Hash)>] CSApiResponseFleetVehicle data, response status code and response headers
     def fleet_get_vehicle_by_id_with_http_info(vehicle_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FleetApi.fleet_get_vehicle_by_id ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseFleetVehicle')
+        :return_type => 'CSApiResponseFleetVehicle')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FleetApi#fleet_get_vehicle_by_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -148,7 +148,7 @@ module SwaggerClient
     # @param include_deleted 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListFleetVehicle]
+    # @return [CSApiResponseListFleetVehicle]
     def fleet_get_vehicles(include_deleted, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = fleet_get_vehicles_with_http_info(include_deleted, x_chronosheets_auth, opts)
       return data
@@ -159,7 +159,7 @@ module SwaggerClient
     # @param include_deleted 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListFleetVehicle, Fixnum, Hash)>] CsApiApiResponseListFleetVehicle data, response status code and response headers
+    # @return [Array<(CSApiResponseListFleetVehicle, Fixnum, Hash)>] CSApiResponseListFleetVehicle data, response status code and response headers
     def fleet_get_vehicles_with_http_info(include_deleted, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FleetApi.fleet_get_vehicles ..."
@@ -197,7 +197,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListFleetVehicle')
+        :return_type => 'CSApiResponseListFleetVehicle')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FleetApi#fleet_get_vehicles\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -209,7 +209,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def fleet_update_vehicle(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = fleet_update_vehicle_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -220,7 +220,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def fleet_update_vehicle_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FleetApi.fleet_update_vehicle ..."
@@ -259,7 +259,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FleetApi#fleet_update_vehicle\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

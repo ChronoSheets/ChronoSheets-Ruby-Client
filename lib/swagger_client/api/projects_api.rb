@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def projects_create_project(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = projects_create_project_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def projects_create_project_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ProjectsApi.projects_create_project ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ProjectsApi#projects_create_project\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param project_id The ID of the project
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseProject]
+    # @return [CSApiResponseProject]
     def projects_get_project_by_id(project_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = projects_get_project_by_id_with_http_info(project_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param project_id The ID of the project
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseProject, Fixnum, Hash)>] CsApiApiResponseProject data, response status code and response headers
+    # @return [Array<(CSApiResponseProject, Fixnum, Hash)>] CSApiResponseProject data, response status code and response headers
     def projects_get_project_by_id_with_http_info(project_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ProjectsApi.projects_get_project_by_id ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseProject')
+        :return_type => 'CSApiResponseProject')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ProjectsApi#projects_get_project_by_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -148,7 +148,7 @@ module SwaggerClient
     # @param client_id The ID of the client
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListProject]
+    # @return [CSApiResponseListProject]
     def projects_get_projects_for_client(client_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = projects_get_projects_for_client_with_http_info(client_id, x_chronosheets_auth, opts)
       return data
@@ -159,7 +159,7 @@ module SwaggerClient
     # @param client_id The ID of the client
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListProject, Fixnum, Hash)>] CsApiApiResponseListProject data, response status code and response headers
+    # @return [Array<(CSApiResponseListProject, Fixnum, Hash)>] CSApiResponseListProject data, response status code and response headers
     def projects_get_projects_for_client_with_http_info(client_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ProjectsApi.projects_get_projects_for_client ..."
@@ -197,7 +197,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListProject')
+        :return_type => 'CSApiResponseListProject')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ProjectsApi#projects_get_projects_for_client\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -209,7 +209,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def projects_update_project(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = projects_update_project_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -220,7 +220,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def projects_update_project_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ProjectsApi.projects_update_project ..."
@@ -259,7 +259,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ProjectsApi#projects_update_project\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

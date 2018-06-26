@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **organisation_get_organisation**
-> CsApiApiResponseOrganisation organisation_get_organisation(x_chronosheets_auth)
+> CSApiResponseOrganisation organisation_get_organisation(x_chronosheets_auth)
 
 Get your organisation.  Requires 'OrganisationAdmin' permission.
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseOrganisation**](CsApiApiResponseOrganisation.md)
+[**CSApiResponseOrganisation**](CSApiResponseOrganisation.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 
 
 # **organisation_update_organisation**
-> CsApiApiResponseUpdateOrganisationResponse organisation_update_organisation(request, x_chronosheets_auth)
+> CSApiResponseUpdateOrganisationResponse organisation_update_organisation(request, x_chronosheets_auth)
 
 Update an organisation.  Requires 'OrganisationAdmin' permission.
 
@@ -65,7 +65,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::OrganisationApi.new
 
-request = SwaggerClient::CsApiUpdateOrganisationRequest.new # CsApiUpdateOrganisationRequest | 
+request = SwaggerClient::CSUpdateOrganisationRequest.new # CSUpdateOrganisationRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -83,12 +83,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateOrganisationRequest**](CsApiUpdateOrganisationRequest.md)|  | 
+ **request** | [**CSUpdateOrganisationRequest**](CSUpdateOrganisationRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseUpdateOrganisationResponse**](CsApiApiResponseUpdateOrganisationResponse.md)
+[**CSApiResponseUpdateOrganisationResponse**](CSApiResponseUpdateOrganisationResponse.md)
 
 ### Authorization
 

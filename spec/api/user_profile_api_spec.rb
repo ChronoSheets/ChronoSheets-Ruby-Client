@@ -37,7 +37,7 @@ describe 'UserProfileApi' do
   # 
   # @param request 
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseDoLoginResponse]
+  # @return [CSApiResponseDoLoginResponse]
   describe 'user_profile_do_login test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -49,7 +49,7 @@ describe 'UserProfileApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'user_profile_do_logout test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -61,7 +61,7 @@ describe 'UserProfileApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseUserProfile]
+  # @return [CSApiResponseUserProfile]
   describe 'user_profile_get_my_profile test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -73,7 +73,7 @@ describe 'UserProfileApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'user_profile_keep_session_alive test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -86,7 +86,7 @@ describe 'UserProfileApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseSignupResponse]
+  # @return [CSApiResponseSignupResponse]
   describe 'user_profile_update_my_profile test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

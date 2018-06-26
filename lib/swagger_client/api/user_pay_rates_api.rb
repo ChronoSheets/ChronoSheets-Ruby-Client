@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def user_pay_rates_create_pay_rate(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_pay_rates_create_pay_rate_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def user_pay_rates_create_pay_rate_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserPayRatesApi.user_pay_rates_create_pay_rate ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserPayRatesApi#user_pay_rates_create_pay_rate\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param user_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListUserHourlyRate]
+    # @return [CSApiResponseListUserHourlyRate]
     def user_pay_rates_get_pay_rates(user_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_pay_rates_get_pay_rates_with_http_info(user_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param user_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListUserHourlyRate, Fixnum, Hash)>] CsApiApiResponseListUserHourlyRate data, response status code and response headers
+    # @return [Array<(CSApiResponseListUserHourlyRate, Fixnum, Hash)>] CSApiResponseListUserHourlyRate data, response status code and response headers
     def user_pay_rates_get_pay_rates_with_http_info(user_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserPayRatesApi.user_pay_rates_get_pay_rates ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListUserHourlyRate')
+        :return_type => 'CSApiResponseListUserHourlyRate')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserPayRatesApi#user_pay_rates_get_pay_rates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

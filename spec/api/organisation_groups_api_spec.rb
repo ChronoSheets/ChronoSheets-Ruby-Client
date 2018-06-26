@@ -38,7 +38,7 @@ describe 'OrganisationGroupsApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseInt32]
+  # @return [CSApiResponseInt32]
   describe 'organisation_groups_create_organisation_group test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -51,7 +51,7 @@ describe 'OrganisationGroupsApi' do
   # @param organisation_group_id The ID of the organisation group you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseOrganisationGroup]
+  # @return [CSApiResponseOrganisationGroup]
   describe 'organisation_groups_get_organisation_group test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -63,7 +63,7 @@ describe 'OrganisationGroupsApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListOrganisationGroup]
+  # @return [CSApiResponseListOrganisationGroup]
   describe 'organisation_groups_get_organisation_groups test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -76,7 +76,7 @@ describe 'OrganisationGroupsApi' do
   # @param job_id The ID of the job
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListOrganisationGroup]
+  # @return [CSApiResponseListOrganisationGroup]
   describe 'organisation_groups_get_organisation_groups_for_job test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -89,7 +89,7 @@ describe 'OrganisationGroupsApi' do
   # @param vehicle_id The ID of the vehicle
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListOrganisationGroup]
+  # @return [CSApiResponseListOrganisationGroup]
   describe 'organisation_groups_get_organisation_groups_for_vehicle test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -102,7 +102,7 @@ describe 'OrganisationGroupsApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseBoolean]
+  # @return [CSApiResponseBoolean]
   describe 'organisation_groups_update_organisation_group test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

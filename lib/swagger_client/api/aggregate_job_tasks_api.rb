@@ -24,7 +24,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListAggregateJobCode]
+    # @return [CSApiResponseListAggregateJobCode]
     def aggregate_job_tasks_get_aggregate_job_tasks(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = aggregate_job_tasks_get_aggregate_job_tasks_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -34,7 +34,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListAggregateJobCode, Fixnum, Hash)>] CsApiApiResponseListAggregateJobCode data, response status code and response headers
+    # @return [Array<(CSApiResponseListAggregateJobCode, Fixnum, Hash)>] CSApiResponseListAggregateJobCode data, response status code and response headers
     def aggregate_job_tasks_get_aggregate_job_tasks_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AggregateJobTasksApi.aggregate_job_tasks_get_aggregate_job_tasks ..."
@@ -67,7 +67,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListAggregateJobCode')
+        :return_type => 'CSApiResponseListAggregateJobCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AggregateJobTasksApi#aggregate_job_tasks_get_aggregate_job_tasks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

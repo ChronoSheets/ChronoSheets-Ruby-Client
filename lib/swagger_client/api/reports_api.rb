@@ -27,7 +27,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseCombinedReportsData]
+    # @return [CSApiResponseCombinedReportsData]
     def reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_get_all_charts_data_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts)
       return data
@@ -40,7 +40,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseCombinedReportsData, Fixnum, Hash)>] CsApiApiResponseCombinedReportsData data, response status code and response headers
+    # @return [Array<(CSApiResponseCombinedReportsData, Fixnum, Hash)>] CSApiResponseCombinedReportsData data, response status code and response headers
     def reports_get_all_charts_data_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_all_charts_data_admin ..."
@@ -88,7 +88,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseCombinedReportsData')
+        :return_type => 'CSApiResponseCombinedReportsData')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_get_all_charts_data_admin\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -101,7 +101,7 @@ module SwaggerClient
     # @param end_date 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseCombinedReportsData]
+    # @return [CSApiResponseCombinedReportsData]
     def reports_get_all_charts_data_user(start_date, end_date, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_get_all_charts_data_user_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
@@ -113,7 +113,7 @@ module SwaggerClient
     # @param end_date 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseCombinedReportsData, Fixnum, Hash)>] CsApiApiResponseCombinedReportsData data, response status code and response headers
+    # @return [Array<(CSApiResponseCombinedReportsData, Fixnum, Hash)>] CSApiResponseCombinedReportsData data, response status code and response headers
     def reports_get_all_charts_data_user_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_all_charts_data_user ..."
@@ -156,7 +156,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseCombinedReportsData')
+        :return_type => 'CSApiResponseCombinedReportsData')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_get_all_charts_data_user\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -168,7 +168,7 @@ module SwaggerClient
     # @param trip_id The ID of the trip
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseTrip]
+    # @return [CSApiResponseTrip]
     def reports_get_org_trip_by_id(trip_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_get_org_trip_by_id_with_http_info(trip_id, x_chronosheets_auth, opts)
       return data
@@ -179,7 +179,7 @@ module SwaggerClient
     # @param trip_id The ID of the trip
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseTrip, Fixnum, Hash)>] CsApiApiResponseTrip data, response status code and response headers
+    # @return [Array<(CSApiResponseTrip, Fixnum, Hash)>] CSApiResponseTrip data, response status code and response headers
     def reports_get_org_trip_by_id_with_http_info(trip_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_org_trip_by_id ..."
@@ -217,7 +217,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseTrip')
+        :return_type => 'CSApiResponseTrip')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_get_org_trip_by_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -233,7 +233,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
+    # @return [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
     def reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_get_organisation_timesheet_file_attachments_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts)
       return data
@@ -248,7 +248,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment, Fixnum, Hash)>] CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment data, response status code and response headers
+    # @return [Array<(CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment data, response status code and response headers
     def reports_get_organisation_timesheet_file_attachments_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_organisation_timesheet_file_attachments ..."
@@ -306,7 +306,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment')
+        :return_type => 'CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_get_organisation_timesheet_file_attachments\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -322,7 +322,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseForPaginatedListOrgReportTrip]
+    # @return [CSApiResponseForPaginatedListOrgReportTrip]
     def reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_get_organisation_trips_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts)
       return data
@@ -337,7 +337,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseForPaginatedListOrgReportTrip, Fixnum, Hash)>] CsApiApiResponseForPaginatedListOrgReportTrip data, response status code and response headers
+    # @return [Array<(CSApiResponseForPaginatedListOrgReportTrip, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTrip data, response status code and response headers
     def reports_get_organisation_trips_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_organisation_trips ..."
@@ -395,7 +395,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseForPaginatedListOrgReportTrip')
+        :return_type => 'CSApiResponseForPaginatedListOrgReportTrip')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_get_organisation_trips\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -413,7 +413,7 @@ module SwaggerClient
     # @param take 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseForPaginatedListRawReportItem]
+    # @return [CSApiResponseForPaginatedListRawReportItem]
     def reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_get_raw_data_admin_with_http_info(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth, opts)
       return data
@@ -430,7 +430,7 @@ module SwaggerClient
     # @param take 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseForPaginatedListRawReportItem, Fixnum, Hash)>] CsApiApiResponseForPaginatedListRawReportItem data, response status code and response headers
+    # @return [Array<(CSApiResponseForPaginatedListRawReportItem, Fixnum, Hash)>] CSApiResponseForPaginatedListRawReportItem data, response status code and response headers
     def reports_get_raw_data_admin_with_http_info(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_raw_data_admin ..."
@@ -506,7 +506,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseForPaginatedListRawReportItem')
+        :return_type => 'CSApiResponseForPaginatedListRawReportItem')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_get_raw_data_admin\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -520,7 +520,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListProjectCostingReportItem]
+    # @return [CSApiResponseListProjectCostingReportItem]
     def reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_project_costings_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts)
       return data
@@ -533,7 +533,7 @@ module SwaggerClient
     # @param user_ids 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListProjectCostingReportItem, Fixnum, Hash)>] CsApiApiResponseListProjectCostingReportItem data, response status code and response headers
+    # @return [Array<(CSApiResponseListProjectCostingReportItem, Fixnum, Hash)>] CSApiResponseListProjectCostingReportItem data, response status code and response headers
     def reports_project_costings_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_project_costings_admin ..."
@@ -581,7 +581,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListProjectCostingReportItem')
+        :return_type => 'CSApiResponseListProjectCostingReportItem')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_project_costings_admin\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -594,7 +594,7 @@ module SwaggerClient
     # @param end_date 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListJobSeriesReportItem]
+    # @return [CSApiResponseListJobSeriesReportItem]
     def reports_user_jobs_over_time(start_date, end_date, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_user_jobs_over_time_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
@@ -606,7 +606,7 @@ module SwaggerClient
     # @param end_date 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListJobSeriesReportItem, Fixnum, Hash)>] CsApiApiResponseListJobSeriesReportItem data, response status code and response headers
+    # @return [Array<(CSApiResponseListJobSeriesReportItem, Fixnum, Hash)>] CSApiResponseListJobSeriesReportItem data, response status code and response headers
     def reports_user_jobs_over_time_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_user_jobs_over_time ..."
@@ -649,7 +649,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListJobSeriesReportItem')
+        :return_type => 'CSApiResponseListJobSeriesReportItem')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_user_jobs_over_time\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

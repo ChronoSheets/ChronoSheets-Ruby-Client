@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **timesheets_create_single_timesheet**
-> CsApiApiResponseInt32 timesheets_create_single_timesheet(request, x_chronosheets_auth)
+> CSApiResponseInt32 timesheets_create_single_timesheet(request, x_chronosheets_auth)
 
 Inserts a single timesheet record
 
@@ -22,7 +22,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TimesheetsApi.new
 
-request = SwaggerClient::CsApiTimesheet.new # CsApiTimesheet | The timesheet request object
+request = SwaggerClient::CSTimesheet.new # CSTimesheet | The timesheet request object
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -40,12 +40,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiTimesheet**](CsApiTimesheet.md)| The timesheet request object | 
+ **request** | [**CSTimesheet**](CSTimesheet.md)| The timesheet request object | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 
 # **timesheets_delete_timesheet**
-> CsApiApiResponseBoolean timesheets_delete_timesheet(timesheet_id, x_chronosheets_auth)
+> CSApiResponseBoolean timesheets_delete_timesheet(timesheet_id, x_chronosheets_auth)
 
 Delete a timesheet
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 
 # **timesheets_get_timesheets**
-> CsApiApiResponseListTimesheet timesheets_get_timesheets(start_date, end_date, x_chronosheets_auth)
+> CSApiResponseListTimesheet timesheets_get_timesheets(start_date, end_date, x_chronosheets_auth)
 
 Get timesheets between start and end dates
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheet**](CsApiApiResponseListTimesheet.md)
+[**CSApiResponseListTimesheet**](CSApiResponseListTimesheet.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ No authorization required
 
 
 # **timesheets_update_timesheets**
-> CsApiApiResponseListInt32 timesheets_update_timesheets(request, x_chronosheets_auth)
+> CSApiResponseListInt32 timesheets_update_timesheets(request, x_chronosheets_auth)
 
 Batch update timesheets
 
@@ -169,7 +169,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TimesheetsApi.new
 
-request = SwaggerClient::CsApiBatchUpdateTimesheetRequest.new # CsApiBatchUpdateTimesheetRequest | The batch update timesheets request
+request = SwaggerClient::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | The batch update timesheets request
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -187,12 +187,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiBatchUpdateTimesheetRequest**](CsApiBatchUpdateTimesheetRequest.md)| The batch update timesheets request | 
+ **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| The batch update timesheets request | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseListInt32**](CsApiApiResponseListInt32.md)
+[**CSApiResponseListInt32**](CSApiResponseListInt32.md)
 
 ### Authorization
 

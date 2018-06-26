@@ -24,7 +24,7 @@ module SwaggerClient
     # 
     # @param request 
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseDoLoginResponse]
+    # @return [CSApiResponseDoLoginResponse]
     def user_profile_do_login(request, opts = {})
       data, _status_code, _headers = user_profile_do_login_with_http_info(request, opts)
       return data
@@ -34,7 +34,7 @@ module SwaggerClient
     # 
     # @param request 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseDoLoginResponse, Fixnum, Hash)>] CsApiApiResponseDoLoginResponse data, response status code and response headers
+    # @return [Array<(CSApiResponseDoLoginResponse, Fixnum, Hash)>] CSApiResponseDoLoginResponse data, response status code and response headers
     def user_profile_do_login_with_http_info(request, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserProfileApi.user_profile_do_login ..."
@@ -68,7 +68,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseDoLoginResponse')
+        :return_type => 'CSApiResponseDoLoginResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserProfileApi#user_profile_do_login\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -79,7 +79,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def user_profile_do_logout(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_profile_do_logout_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -89,7 +89,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def user_profile_do_logout_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserProfileApi.user_profile_do_logout ..."
@@ -122,7 +122,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserProfileApi#user_profile_do_logout\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -133,7 +133,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseUserProfile]
+    # @return [CSApiResponseUserProfile]
     def user_profile_get_my_profile(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_profile_get_my_profile_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -143,7 +143,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseUserProfile, Fixnum, Hash)>] CsApiApiResponseUserProfile data, response status code and response headers
+    # @return [Array<(CSApiResponseUserProfile, Fixnum, Hash)>] CSApiResponseUserProfile data, response status code and response headers
     def user_profile_get_my_profile_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserProfileApi.user_profile_get_my_profile ..."
@@ -176,7 +176,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseUserProfile')
+        :return_type => 'CSApiResponseUserProfile')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserProfileApi#user_profile_get_my_profile\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -187,7 +187,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def user_profile_keep_session_alive(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_profile_keep_session_alive_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -197,7 +197,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def user_profile_keep_session_alive_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserProfileApi.user_profile_keep_session_alive ..."
@@ -230,7 +230,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserProfileApi#user_profile_keep_session_alive\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -242,7 +242,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseSignupResponse]
+    # @return [CSApiResponseSignupResponse]
     def user_profile_update_my_profile(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = user_profile_update_my_profile_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -253,7 +253,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseSignupResponse, Fixnum, Hash)>] CsApiApiResponseSignupResponse data, response status code and response headers
+    # @return [Array<(CSApiResponseSignupResponse, Fixnum, Hash)>] CSApiResponseSignupResponse data, response status code and response headers
     def user_profile_update_my_profile_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UserProfileApi.user_profile_update_my_profile ..."
@@ -292,7 +292,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseSignupResponse')
+        :return_type => 'CSApiResponseSignupResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UserProfileApi#user_profile_update_my_profile\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **aggregate_job_tasks_get_aggregate_job_tasks**
-> CsApiApiResponseListAggregateJobCode aggregate_job_tasks_get_aggregate_job_tasks(x_chronosheets_auth)
+> CSApiResponseListAggregateJobCode aggregate_job_tasks_get_aggregate_job_tasks(x_chronosheets_auth)
 
 Get jobs and tasks information, aggregated
 
@@ -39,7 +39,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListAggregateJobCode**](CsApiApiResponseListAggregateJobCode.md)
+[**CSApiResponseListAggregateJobCode**](CSApiResponseListAggregateJobCode.md)
 
 ### Authorization
 

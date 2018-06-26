@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **projects_create_project**
-> CsApiApiResponseInt32 projects_create_project(request, x_chronosheets_auth)
+> CSApiResponseInt32 projects_create_project(request, x_chronosheets_auth)
 
 Create a project
 
@@ -22,7 +22,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ProjectsApi.new
 
-request = SwaggerClient::CsApiInsertProjectRequest.new # CsApiInsertProjectRequest | 
+request = SwaggerClient::CSInsertProjectRequest.new # CSInsertProjectRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -40,12 +40,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertProjectRequest**](CsApiInsertProjectRequest.md)|  | 
+ **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 
 # **projects_get_project_by_id**
-> CsApiApiResponseProject projects_get_project_by_id(project_id, x_chronosheets_auth)
+> CSApiResponseProject projects_get_project_by_id(project_id, x_chronosheets_auth)
 
 Get project by Id
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseProject**](CsApiApiResponseProject.md)
+[**CSApiResponseProject**](CSApiResponseProject.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 
 # **projects_get_projects_for_client**
-> CsApiApiResponseListProject projects_get_projects_for_client(client_id, x_chronosheets_auth)
+> CSApiResponseListProject projects_get_projects_for_client(client_id, x_chronosheets_auth)
 
 Get projects for a particular client
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListProject**](CsApiApiResponseListProject.md)
+[**CSApiResponseListProject**](CSApiResponseListProject.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ No authorization required
 
 
 # **projects_update_project**
-> CsApiApiResponseBoolean projects_update_project(request, x_chronosheets_auth)
+> CSApiResponseBoolean projects_update_project(request, x_chronosheets_auth)
 
 Update a project
 
@@ -166,7 +166,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ProjectsApi.new
 
-request = SwaggerClient::CsApiUpdateProjectRequest.new # CsApiUpdateProjectRequest | 
+request = SwaggerClient::CSUpdateProjectRequest.new # CSUpdateProjectRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -184,12 +184,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateProjectRequest**](CsApiUpdateProjectRequest.md)|  | 
+ **request** | [**CSUpdateProjectRequest**](CSUpdateProjectRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

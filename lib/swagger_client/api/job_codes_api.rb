@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def job_codes_create_job_code(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = job_codes_create_job_code_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def job_codes_create_job_code_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobCodesApi.job_codes_create_job_code ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobCodesApi#job_codes_create_job_code\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param job_code_id The ID of the job code your want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def job_codes_delete_job_code(job_code_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = job_codes_delete_job_code_with_http_info(job_code_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param job_code_id The ID of the job code your want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def job_codes_delete_job_code_with_http_info(job_code_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobCodesApi.job_codes_delete_job_code ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobCodesApi#job_codes_delete_job_code\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -148,7 +148,7 @@ module SwaggerClient
     # @param job_code_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseJobCode]
+    # @return [CSApiResponseJobCode]
     def job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = job_codes_get_job_code_by_id_with_http_info(job_code_id, x_chronosheets_auth, opts)
       return data
@@ -159,7 +159,7 @@ module SwaggerClient
     # @param job_code_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseJobCode, Fixnum, Hash)>] CsApiApiResponseJobCode data, response status code and response headers
+    # @return [Array<(CSApiResponseJobCode, Fixnum, Hash)>] CSApiResponseJobCode data, response status code and response headers
     def job_codes_get_job_code_by_id_with_http_info(job_code_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobCodesApi.job_codes_get_job_code_by_id ..."
@@ -197,7 +197,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseJobCode')
+        :return_type => 'CSApiResponseJobCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobCodesApi#job_codes_get_job_code_by_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -208,7 +208,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListJobCode]
+    # @return [CSApiResponseListJobCode]
     def job_codes_get_job_codes(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = job_codes_get_job_codes_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -218,7 +218,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListJobCode, Fixnum, Hash)>] CsApiApiResponseListJobCode data, response status code and response headers
+    # @return [Array<(CSApiResponseListJobCode, Fixnum, Hash)>] CSApiResponseListJobCode data, response status code and response headers
     def job_codes_get_job_codes_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobCodesApi.job_codes_get_job_codes ..."
@@ -251,7 +251,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListJobCode')
+        :return_type => 'CSApiResponseListJobCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobCodesApi#job_codes_get_job_codes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -263,7 +263,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def job_codes_update_job_code(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = job_codes_update_job_code_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -274,7 +274,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def job_codes_update_job_code_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: JobCodesApi.job_codes_update_job_code ..."
@@ -313,7 +313,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: JobCodesApi#job_codes_update_job_code\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

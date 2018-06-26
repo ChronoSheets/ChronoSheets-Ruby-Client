@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **organisation_group_users_get_organisation_group_users**
-> CsApiApiResponseListUserForManagement organisation_group_users_get_organisation_group_users(org_group_id, x_chronosheets_auth)
+> CSApiResponseListUserForManagement organisation_group_users_get_organisation_group_users(org_group_id, x_chronosheets_auth)
 
 Get a collection of organisation group users that belong to an organisation group
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserForManagement**](CsApiApiResponseListUserForManagement.md)
+[**CSApiResponseListUserForManagement**](CSApiResponseListUserForManagement.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 
 
 # **organisation_group_users_update_organisation_group_users**
-> CsApiApiResponseBoolean organisation_group_users_update_organisation_group_users(request, x_chronosheets_auth)
+> CSApiResponseBoolean organisation_group_users_update_organisation_group_users(request, x_chronosheets_auth)
 
 Set the users who belong to an organisation group
 
@@ -68,7 +68,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::OrganisationGroupUsersApi.new
 
-request = SwaggerClient::CsApiSetOrganisationGroupUsersRequest.new # CsApiSetOrganisationGroupUsersRequest | 
+request = SwaggerClient::CSSetOrganisationGroupUsersRequest.new # CSSetOrganisationGroupUsersRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -86,12 +86,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSetOrganisationGroupUsersRequest**](CsApiSetOrganisationGroupUsersRequest.md)|  | 
+ **request** | [**CSSetOrganisationGroupUsersRequest**](CSSetOrganisationGroupUsersRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

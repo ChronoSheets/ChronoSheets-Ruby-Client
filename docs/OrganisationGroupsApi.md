@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **organisation_groups_create_organisation_group**
-> CsApiApiResponseInt32 organisation_groups_create_organisation_group(request, x_chronosheets_auth)
+> CSApiResponseInt32 organisation_groups_create_organisation_group(request, x_chronosheets_auth)
 
 Create an organisation group
 
@@ -24,7 +24,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::OrganisationGroupsApi.new
 
-request = SwaggerClient::CsApiInsertOrganisationGroupRequest.new # CsApiInsertOrganisationGroupRequest | 
+request = SwaggerClient::CSInsertOrganisationGroupRequest.new # CSInsertOrganisationGroupRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -42,12 +42,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertOrganisationGroupRequest**](CsApiInsertOrganisationGroupRequest.md)|  | 
+ **request** | [**CSInsertOrganisationGroupRequest**](CSInsertOrganisationGroupRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 
 
 # **organisation_groups_get_organisation_group**
-> CsApiApiResponseOrganisationGroup organisation_groups_get_organisation_group(organisation_group_id, x_chronosheets_auth)
+> CSApiResponseOrganisationGroup organisation_groups_get_organisation_group(organisation_group_id, x_chronosheets_auth)
 
 Get a particular organisation group
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseOrganisationGroup**](CsApiApiResponseOrganisationGroup.md)
+[**CSApiResponseOrganisationGroup**](CSApiResponseOrganisationGroup.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ No authorization required
 
 
 # **organisation_groups_get_organisation_groups**
-> CsApiApiResponseListOrganisationGroup organisation_groups_get_organisation_groups(x_chronosheets_auth)
+> CSApiResponseListOrganisationGroup organisation_groups_get_organisation_groups(x_chronosheets_auth)
 
 Get a collection of organisation groups that are under your organisation
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ No authorization required
 
 
 # **organisation_groups_get_organisation_groups_for_job**
-> CsApiApiResponseListOrganisationGroup organisation_groups_get_organisation_groups_for_job(job_id, x_chronosheets_auth)
+> CSApiResponseListOrganisationGroup organisation_groups_get_organisation_groups_for_job(job_id, x_chronosheets_auth)
 
 Get org groups for a particular job
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ No authorization required
 
 
 # **organisation_groups_get_organisation_groups_for_vehicle**
-> CsApiApiResponseListOrganisationGroup organisation_groups_get_organisation_groups_for_vehicle(vehicle_id, x_chronosheets_auth)
+> CSApiResponseListOrganisationGroup organisation_groups_get_organisation_groups_for_vehicle(vehicle_id, x_chronosheets_auth)
 
 Get org groups for a particular vehicle
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ No authorization required
 
 
 # **organisation_groups_update_organisation_group**
-> CsApiApiResponseBoolean organisation_groups_update_organisation_group(request, x_chronosheets_auth)
+> CSApiResponseBoolean organisation_groups_update_organisation_group(request, x_chronosheets_auth)
 
 Update an organisation group
 
@@ -261,7 +261,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::OrganisationGroupsApi.new
 
-request = SwaggerClient::CsApiSaveOrganisationGroupRequest.new # CsApiSaveOrganisationGroupRequest | 
+request = SwaggerClient::CSSaveOrganisationGroupRequest.new # CSSaveOrganisationGroupRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -279,12 +279,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveOrganisationGroupRequest**](CsApiSaveOrganisationGroupRequest.md)|  | 
+ **request** | [**CSSaveOrganisationGroupRequest**](CSSaveOrganisationGroupRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

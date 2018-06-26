@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **users_create_timesheet_user**
-> CsApiApiResponseInsertUserResponse users_create_timesheet_user(request, x_chronosheets_auth)
+> CSApiResponseInsertUserResponse users_create_timesheet_user(request, x_chronosheets_auth)
 
 Create a user in your organisation
 
@@ -22,7 +22,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UsersApi.new
 
-request = SwaggerClient::CsApiInsertUserRequest.new # CsApiInsertUserRequest | 
+request = SwaggerClient::CSInsertUserRequest.new # CSInsertUserRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -40,12 +40,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserRequest**](CsApiInsertUserRequest.md)|  | 
+ **request** | [**CSInsertUserRequest**](CSInsertUserRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInsertUserResponse**](CsApiApiResponseInsertUserResponse.md)
+[**CSApiResponseInsertUserResponse**](CSApiResponseInsertUserResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 
 # **users_get_timesheet_user**
-> CsApiApiResponseUserForManagement users_get_timesheet_user(user_id, x_chronosheets_auth)
+> CSApiResponseUserForManagement users_get_timesheet_user(user_id, x_chronosheets_auth)
 
 Get a particular user in your organisation
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseUserForManagement**](CsApiApiResponseUserForManagement.md)
+[**CSApiResponseUserForManagement**](CSApiResponseUserForManagement.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 
 # **users_get_timesheet_users**
-> CsApiApiResponseListUserForManagement users_get_timesheet_users(x_chronosheets_auth)
+> CSApiResponseListUserForManagement users_get_timesheet_users(x_chronosheets_auth)
 
 Get users for your organisation
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserForManagement**](CsApiApiResponseListUserForManagement.md)
+[**CSApiResponseListUserForManagement**](CSApiResponseListUserForManagement.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 
 
 # **users_update_timesheet_user**
-> CsApiApiResponseUpdateUserResponse users_update_timesheet_user(request, x_chronosheets_auth)
+> CSApiResponseUpdateUserResponse users_update_timesheet_user(request, x_chronosheets_auth)
 
 Update a user
 
@@ -163,7 +163,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UsersApi.new
 
-request = SwaggerClient::CsApiUpdateUserRequest.new # CsApiUpdateUserRequest | 
+request = SwaggerClient::CSUpdateUserRequest.new # CSUpdateUserRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -181,12 +181,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateUserRequest**](CsApiUpdateUserRequest.md)|  | 
+ **request** | [**CSUpdateUserRequest**](CSUpdateUserRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseUpdateUserResponse**](CsApiApiResponseUpdateUserResponse.md)
+[**CSApiResponseUpdateUserResponse**](CSApiResponseUpdateUserResponse.md)
 
 ### Authorization
 

@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def clients_create_client(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = clients_create_client_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def clients_create_client_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ClientsApi.clients_create_client ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ClientsApi#clients_create_client\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param client_id The ID of the client you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseClient]
+    # @return [CSApiResponseClient]
     def clients_get_client(client_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = clients_get_client_with_http_info(client_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param client_id The ID of the client you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseClient, Fixnum, Hash)>] CsApiApiResponseClient data, response status code and response headers
+    # @return [Array<(CSApiResponseClient, Fixnum, Hash)>] CSApiResponseClient data, response status code and response headers
     def clients_get_client_with_http_info(client_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ClientsApi.clients_get_client ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseClient')
+        :return_type => 'CSApiResponseClient')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ClientsApi#clients_get_client\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -147,7 +147,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListClient]
+    # @return [CSApiResponseListClient]
     def clients_get_clients(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = clients_get_clients_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -157,7 +157,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListClient, Fixnum, Hash)>] CsApiApiResponseListClient data, response status code and response headers
+    # @return [Array<(CSApiResponseListClient, Fixnum, Hash)>] CSApiResponseListClient data, response status code and response headers
     def clients_get_clients_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ClientsApi.clients_get_clients ..."
@@ -190,7 +190,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListClient')
+        :return_type => 'CSApiResponseListClient')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ClientsApi#clients_get_clients\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -202,7 +202,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def clients_update_client(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = clients_update_client_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -213,7 +213,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def clients_update_client_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ClientsApi.clients_update_client ..."
@@ -252,7 +252,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ClientsApi#clients_update_client\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

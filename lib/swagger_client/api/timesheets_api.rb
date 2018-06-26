@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request The timesheet request object
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def timesheets_create_single_timesheet(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = timesheets_create_single_timesheet_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request The timesheet request object
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def timesheets_create_single_timesheet_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TimesheetsApi.timesheets_create_single_timesheet ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TimesheetsApi#timesheets_create_single_timesheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param timesheet_id The ID of the timesheet to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def timesheets_delete_timesheet(timesheet_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = timesheets_delete_timesheet_with_http_info(timesheet_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param timesheet_id The ID of the timesheet to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def timesheets_delete_timesheet_with_http_info(timesheet_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TimesheetsApi.timesheets_delete_timesheet ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TimesheetsApi#timesheets_delete_timesheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -149,7 +149,7 @@ module SwaggerClient
     # @param end_date The end date of the date range
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListTimesheet]
+    # @return [CSApiResponseListTimesheet]
     def timesheets_get_timesheets(start_date, end_date, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = timesheets_get_timesheets_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
@@ -161,7 +161,7 @@ module SwaggerClient
     # @param end_date The end date of the date range
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListTimesheet, Fixnum, Hash)>] CsApiApiResponseListTimesheet data, response status code and response headers
+    # @return [Array<(CSApiResponseListTimesheet, Fixnum, Hash)>] CSApiResponseListTimesheet data, response status code and response headers
     def timesheets_get_timesheets_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TimesheetsApi.timesheets_get_timesheets ..."
@@ -204,7 +204,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListTimesheet')
+        :return_type => 'CSApiResponseListTimesheet')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TimesheetsApi#timesheets_get_timesheets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -216,7 +216,7 @@ module SwaggerClient
     # @param request The batch update timesheets request
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListInt32]
+    # @return [CSApiResponseListInt32]
     def timesheets_update_timesheets(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = timesheets_update_timesheets_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -227,7 +227,7 @@ module SwaggerClient
     # @param request The batch update timesheets request
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListInt32, Fixnum, Hash)>] CsApiApiResponseListInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseListInt32, Fixnum, Hash)>] CSApiResponseListInt32 data, response status code and response headers
     def timesheets_update_timesheets_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TimesheetsApi.timesheets_update_timesheets ..."
@@ -266,7 +266,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListInt32')
+        :return_type => 'CSApiResponseListInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TimesheetsApi#timesheets_update_timesheets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

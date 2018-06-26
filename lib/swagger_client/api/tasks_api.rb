@@ -25,7 +25,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseInt32]
+    # @return [CSApiResponseInt32]
     def tasks_create_task(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = tasks_create_task_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseInt32, Fixnum, Hash)>] CsApiApiResponseInt32 data, response status code and response headers
+    # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
     def tasks_create_task_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TasksApi.tasks_create_task ..."
@@ -75,7 +75,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseInt32')
+        :return_type => 'CSApiResponseInt32')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TasksApi#tasks_create_task\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -87,7 +87,7 @@ module SwaggerClient
     # @param task_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def tasks_delete_task(task_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = tasks_delete_task_with_http_info(task_id, x_chronosheets_auth, opts)
       return data
@@ -98,7 +98,7 @@ module SwaggerClient
     # @param task_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def tasks_delete_task_with_http_info(task_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TasksApi.tasks_delete_task ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TasksApi#tasks_delete_task\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -148,7 +148,7 @@ module SwaggerClient
     # @param task_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseTimesheetTask]
+    # @return [CSApiResponseTimesheetTask]
     def tasks_get_task_by_id(task_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = tasks_get_task_by_id_with_http_info(task_id, x_chronosheets_auth, opts)
       return data
@@ -159,7 +159,7 @@ module SwaggerClient
     # @param task_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseTimesheetTask, Fixnum, Hash)>] CsApiApiResponseTimesheetTask data, response status code and response headers
+    # @return [Array<(CSApiResponseTimesheetTask, Fixnum, Hash)>] CSApiResponseTimesheetTask data, response status code and response headers
     def tasks_get_task_by_id_with_http_info(task_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TasksApi.tasks_get_task_by_id ..."
@@ -197,7 +197,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseTimesheetTask')
+        :return_type => 'CSApiResponseTimesheetTask')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TasksApi#tasks_get_task_by_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -208,7 +208,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListTimesheetTask]
+    # @return [CSApiResponseListTimesheetTask]
     def tasks_get_tasks(x_chronosheets_auth, opts = {})
       data, _status_code, _headers = tasks_get_tasks_with_http_info(x_chronosheets_auth, opts)
       return data
@@ -218,7 +218,7 @@ module SwaggerClient
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListTimesheetTask, Fixnum, Hash)>] CsApiApiResponseListTimesheetTask data, response status code and response headers
+    # @return [Array<(CSApiResponseListTimesheetTask, Fixnum, Hash)>] CSApiResponseListTimesheetTask data, response status code and response headers
     def tasks_get_tasks_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TasksApi.tasks_get_tasks ..."
@@ -251,7 +251,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListTimesheetTask')
+        :return_type => 'CSApiResponseListTimesheetTask')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TasksApi#tasks_get_tasks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -263,7 +263,7 @@ module SwaggerClient
     # @param job_id The ID of the job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListTimesheetTask]
+    # @return [CSApiResponseListTimesheetTask]
     def tasks_get_tasks_for_job(job_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = tasks_get_tasks_for_job_with_http_info(job_id, x_chronosheets_auth, opts)
       return data
@@ -274,7 +274,7 @@ module SwaggerClient
     # @param job_id The ID of the job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListTimesheetTask, Fixnum, Hash)>] CsApiApiResponseListTimesheetTask data, response status code and response headers
+    # @return [Array<(CSApiResponseListTimesheetTask, Fixnum, Hash)>] CSApiResponseListTimesheetTask data, response status code and response headers
     def tasks_get_tasks_for_job_with_http_info(job_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TasksApi.tasks_get_tasks_for_job ..."
@@ -312,7 +312,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListTimesheetTask')
+        :return_type => 'CSApiResponseListTimesheetTask')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TasksApi#tasks_get_tasks_for_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -324,7 +324,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def tasks_update_task(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = tasks_update_task_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -335,7 +335,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def tasks_update_task_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TasksApi.tasks_update_task ..."
@@ -374,7 +374,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TasksApi#tasks_update_task\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

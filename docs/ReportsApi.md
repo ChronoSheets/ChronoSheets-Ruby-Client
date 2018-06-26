@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **reports_get_all_charts_data_admin**
-> CsApiApiResponseCombinedReportsData reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+> CSApiResponseCombinedReportsData reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth)
 
 Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseCombinedReportsData**](CsApiApiResponseCombinedReportsData.md)
+[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 
 # **reports_get_all_charts_data_user**
-> CsApiApiResponseCombinedReportsData reports_get_all_charts_data_user(start_date, end_date, x_chronosheets_auth)
+> CSApiResponseCombinedReportsData reports_get_all_charts_data_user(start_date, end_date, x_chronosheets_auth)
 
 Get Consolidated User Reports Data (Jobs and Tasks)
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseCombinedReportsData**](CsApiApiResponseCombinedReportsData.md)
+[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ No authorization required
 
 
 # **reports_get_org_trip_by_id**
-> CsApiApiResponseTrip reports_get_org_trip_by_id(trip_id, x_chronosheets_auth)
+> CSApiResponseTrip reports_get_org_trip_by_id(trip_id, x_chronosheets_auth)
 
 Get trip by Id, for reporting purposes
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTrip**](CsApiApiResponseTrip.md)
+[**CSApiResponseTrip**](CSApiResponseTrip.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ No authorization required
 
 
 # **reports_get_organisation_timesheet_file_attachments**
-> CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
+> CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
 
 Reports on Organisation timesheet file attachments
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
+[**CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ No authorization required
 
 
 # **reports_get_organisation_trips**
-> CsApiApiResponseForPaginatedListOrgReportTrip reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
+> CSApiResponseForPaginatedListOrgReportTrip reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
 
 Reports on Organisation trips (GPS tracking from whole organisation)
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListOrgReportTrip**](CsApiApiResponseForPaginatedListOrgReportTrip.md)
+[**CSApiResponseForPaginatedListOrgReportTrip**](CSApiResponseForPaginatedListOrgReportTrip.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ No authorization required
 
 
 # **reports_get_raw_data_admin**
-> CsApiApiResponseForPaginatedListRawReportItem reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth)
+> CSApiResponseForPaginatedListRawReportItem reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth)
 
 Get Timesheets Raw Data
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListRawReportItem**](CsApiApiResponseForPaginatedListRawReportItem.md)
+[**CSApiResponseForPaginatedListRawReportItem**](CSApiResponseForPaginatedListRawReportItem.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ No authorization required
 
 
 # **reports_project_costings_admin**
-> CsApiApiResponseListProjectCostingReportItem reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+> CSApiResponseListProjectCostingReportItem reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth)
 
 Gets project cost estimations VS actual cost for date range and users
 
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListProjectCostingReportItem**](CsApiApiResponseListProjectCostingReportItem.md)
+[**CSApiResponseListProjectCostingReportItem**](CSApiResponseListProjectCostingReportItem.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ No authorization required
 
 
 # **reports_user_jobs_over_time**
-> CsApiApiResponseListJobSeriesReportItem reports_user_jobs_over_time(start_date, end_date, x_chronosheets_auth)
+> CSApiResponseListJobSeriesReportItem reports_user_jobs_over_time(start_date, end_date, x_chronosheets_auth)
 
 Timeseries jobs data for the logged in user
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListJobSeriesReportItem**](CsApiApiResponseListJobSeriesReportItem.md)
+[**CSApiResponseListJobSeriesReportItem**](CSApiResponseListJobSeriesReportItem.md)
 
 ### Authorization
 

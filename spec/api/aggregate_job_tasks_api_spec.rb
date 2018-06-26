@@ -37,7 +37,7 @@ describe 'AggregateJobTasksApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListAggregateJobCode]
+  # @return [CSApiResponseListAggregateJobCode]
   describe 'aggregate_job_tasks_get_aggregate_job_tasks test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

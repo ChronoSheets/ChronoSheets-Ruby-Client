@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **user_pay_rates_create_pay_rate**
-> CsApiApiResponseInt32 user_pay_rates_create_pay_rate(request, x_chronosheets_auth)
+> CSApiResponseInt32 user_pay_rates_create_pay_rate(request, x_chronosheets_auth)
 
 Create a new pay rate for a particular user, archiving the previous pay rate
 
@@ -20,7 +20,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UserPayRatesApi.new
 
-request = SwaggerClient::CsApiInsertUserHourlyRateRequest.new # CsApiInsertUserHourlyRateRequest | 
+request = SwaggerClient::CSInsertUserHourlyRateRequest.new # CSInsertUserHourlyRateRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -38,12 +38,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserHourlyRateRequest**](CsApiInsertUserHourlyRateRequest.md)|  | 
+ **request** | [**CSInsertUserHourlyRateRequest**](CSInsertUserHourlyRateRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 
 
 # **user_pay_rates_get_pay_rates**
-> CsApiApiResponseListUserHourlyRate user_pay_rates_get_pay_rates(user_id, x_chronosheets_auth)
+> CSApiResponseListUserHourlyRate user_pay_rates_get_pay_rates(user_id, x_chronosheets_auth)
 
 Get a collection of pay rates for a particular user, specified by user id
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserHourlyRate**](CsApiApiResponseListUserHourlyRate.md)
+[**CSApiResponseListUserHourlyRate**](CSApiResponseListUserHourlyRate.md)
 
 ### Authorization
 

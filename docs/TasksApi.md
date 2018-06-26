@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **tasks_create_task**
-> CsApiApiResponseInt32 tasks_create_task(request, x_chronosheets_auth)
+> CSApiResponseInt32 tasks_create_task(request, x_chronosheets_auth)
 
 Create a task
 
@@ -24,7 +24,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TasksApi.new
 
-request = SwaggerClient::CsApiInsertTaskRequest.new # CsApiInsertTaskRequest | 
+request = SwaggerClient::CSInsertTaskRequest.new # CSInsertTaskRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -42,12 +42,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertTaskRequest**](CsApiInsertTaskRequest.md)|  | 
+ **request** | [**CSInsertTaskRequest**](CSInsertTaskRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 
 
 # **tasks_delete_task**
-> CsApiApiResponseBoolean tasks_delete_task(task_id, x_chronosheets_auth)
+> CSApiResponseBoolean tasks_delete_task(task_id, x_chronosheets_auth)
 
 Delete a task
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ No authorization required
 
 
 # **tasks_get_task_by_id**
-> CsApiApiResponseTimesheetTask tasks_get_task_by_id(task_id, x_chronosheets_auth)
+> CSApiResponseTimesheetTask tasks_get_task_by_id(task_id, x_chronosheets_auth)
 
 Get a particular task by id
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTimesheetTask**](CsApiApiResponseTimesheetTask.md)
+[**CSApiResponseTimesheetTask**](CSApiResponseTimesheetTask.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ No authorization required
 
 
 # **tasks_get_tasks**
-> CsApiApiResponseListTimesheetTask tasks_get_tasks(x_chronosheets_auth)
+> CSApiResponseListTimesheetTask tasks_get_tasks(x_chronosheets_auth)
 
 Get tasks in your organisation
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheetTask**](CsApiApiResponseListTimesheetTask.md)
+[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ No authorization required
 
 
 # **tasks_get_tasks_for_job**
-> CsApiApiResponseListTimesheetTask tasks_get_tasks_for_job(job_id, x_chronosheets_auth)
+> CSApiResponseListTimesheetTask tasks_get_tasks_for_job(job_id, x_chronosheets_auth)
 
 Get tasks for a particular job
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheetTask**](CsApiApiResponseListTimesheetTask.md)
+[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ No authorization required
 
 
 # **tasks_update_task**
-> CsApiApiResponseBoolean tasks_update_task(request, x_chronosheets_auth)
+> CSApiResponseBoolean tasks_update_task(request, x_chronosheets_auth)
 
 Update a task
 
@@ -261,7 +261,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TasksApi.new
 
-request = SwaggerClient::CsApiUpdateTaskRequest.new # CsApiUpdateTaskRequest | 
+request = SwaggerClient::CSUpdateTaskRequest.new # CSUpdateTaskRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -279,12 +279,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateTaskRequest**](CsApiUpdateTaskRequest.md)|  | 
+ **request** | [**CSUpdateTaskRequest**](CSUpdateTaskRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

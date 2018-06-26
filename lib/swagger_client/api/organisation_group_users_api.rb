@@ -25,7 +25,7 @@ module SwaggerClient
     # @param org_group_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListUserForManagement]
+    # @return [CSApiResponseListUserForManagement]
     def organisation_group_users_get_organisation_group_users(org_group_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = organisation_group_users_get_organisation_group_users_with_http_info(org_group_id, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param org_group_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListUserForManagement, Fixnum, Hash)>] CsApiApiResponseListUserForManagement data, response status code and response headers
+    # @return [Array<(CSApiResponseListUserForManagement, Fixnum, Hash)>] CSApiResponseListUserForManagement data, response status code and response headers
     def organisation_group_users_get_organisation_group_users_with_http_info(org_group_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganisationGroupUsersApi.organisation_group_users_get_organisation_group_users ..."
@@ -74,7 +74,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListUserForManagement')
+        :return_type => 'CSApiResponseListUserForManagement')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OrganisationGroupUsersApi#organisation_group_users_get_organisation_group_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -86,7 +86,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def organisation_group_users_update_organisation_group_users(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = organisation_group_users_update_organisation_group_users_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -97,7 +97,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def organisation_group_users_update_organisation_group_users_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganisationGroupUsersApi.organisation_group_users_update_organisation_group_users ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OrganisationGroupUsersApi#organisation_group_users_update_organisation_group_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

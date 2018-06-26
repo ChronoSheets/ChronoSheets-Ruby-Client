@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **clients_create_client**
-> CsApiApiResponseInt32 clients_create_client(request, x_chronosheets_auth)
+> CSApiResponseInt32 clients_create_client(request, x_chronosheets_auth)
 
 Create a client
 
@@ -22,7 +22,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ClientsApi.new
 
-request = SwaggerClient::CsApiInsertClientRequest.new # CsApiInsertClientRequest | 
+request = SwaggerClient::CSInsertClientRequest.new # CSInsertClientRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -40,12 +40,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertClientRequest**](CsApiInsertClientRequest.md)|  | 
+ **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 
 # **clients_get_client**
-> CsApiApiResponseClient clients_get_client(client_id, x_chronosheets_auth)
+> CSApiResponseClient clients_get_client(client_id, x_chronosheets_auth)
 
 Get a particular client
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseClient**](CsApiApiResponseClient.md)
+[**CSApiResponseClient**](CSApiResponseClient.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 
 # **clients_get_clients**
-> CsApiApiResponseListClient clients_get_clients(x_chronosheets_auth)
+> CSApiResponseListClient clients_get_clients(x_chronosheets_auth)
 
 Get a collection of clients that are under your organisation
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListClient**](CsApiApiResponseListClient.md)
+[**CSApiResponseListClient**](CSApiResponseListClient.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 
 
 # **clients_update_client**
-> CsApiApiResponseBoolean clients_update_client(request, x_chronosheets_auth)
+> CSApiResponseBoolean clients_update_client(request, x_chronosheets_auth)
 
 Update a client
 
@@ -163,7 +163,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ClientsApi.new
 
-request = SwaggerClient::CsApiSaveClientRequest.new # CsApiSaveClientRequest | 
+request = SwaggerClient::CSSaveClientRequest.new # CSSaveClientRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -181,12 +181,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveClientRequest**](CsApiSaveClientRequest.md)|  | 
+ **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

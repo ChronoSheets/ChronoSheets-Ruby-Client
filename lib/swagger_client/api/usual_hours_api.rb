@@ -25,7 +25,7 @@ module SwaggerClient
     # @param user_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseListUsualHoursDay]
+    # @return [CSApiResponseListUsualHoursDay]
     def usual_hours_get_usual_hours(user_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = usual_hours_get_usual_hours_with_http_info(user_id, x_chronosheets_auth, opts)
       return data
@@ -36,7 +36,7 @@ module SwaggerClient
     # @param user_id 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseListUsualHoursDay, Fixnum, Hash)>] CsApiApiResponseListUsualHoursDay data, response status code and response headers
+    # @return [Array<(CSApiResponseListUsualHoursDay, Fixnum, Hash)>] CSApiResponseListUsualHoursDay data, response status code and response headers
     def usual_hours_get_usual_hours_with_http_info(user_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsualHoursApi.usual_hours_get_usual_hours ..."
@@ -74,7 +74,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseListUsualHoursDay')
+        :return_type => 'CSApiResponseListUsualHoursDay')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsualHoursApi#usual_hours_get_usual_hours\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -86,7 +86,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CsApiApiResponseBoolean]
+    # @return [CSApiResponseBoolean]
     def usual_hours_set_usual_hours(request, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = usual_hours_set_usual_hours_with_http_info(request, x_chronosheets_auth, opts)
       return data
@@ -97,7 +97,7 @@ module SwaggerClient
     # @param request 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CsApiApiResponseBoolean, Fixnum, Hash)>] CsApiApiResponseBoolean data, response status code and response headers
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
     def usual_hours_set_usual_hours_with_http_info(request, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsualHoursApi.usual_hours_set_usual_hours ..."
@@ -136,7 +136,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CsApiApiResponseBoolean')
+        :return_type => 'CSApiResponseBoolean')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsualHoursApi#usual_hours_set_usual_hours\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

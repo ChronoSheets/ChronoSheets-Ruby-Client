@@ -40,7 +40,7 @@ describe 'ReportsApi' do
   # @param user_ids 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseCombinedReportsData]
+  # @return [CSApiResponseCombinedReportsData]
   describe 'reports_get_all_charts_data_admin test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'ReportsApi' do
   # @param end_date 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseCombinedReportsData]
+  # @return [CSApiResponseCombinedReportsData]
   describe 'reports_get_all_charts_data_user test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -67,7 +67,7 @@ describe 'ReportsApi' do
   # @param trip_id The ID of the trip
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseTrip]
+  # @return [CSApiResponseTrip]
   describe 'reports_get_org_trip_by_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -84,7 +84,7 @@ describe 'ReportsApi' do
   # @param user_ids 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
+  # @return [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
   describe 'reports_get_organisation_timesheet_file_attachments test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -101,7 +101,7 @@ describe 'ReportsApi' do
   # @param user_ids 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseForPaginatedListOrgReportTrip]
+  # @return [CSApiResponseForPaginatedListOrgReportTrip]
   describe 'reports_get_organisation_trips test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -120,7 +120,7 @@ describe 'ReportsApi' do
   # @param take 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseForPaginatedListRawReportItem]
+  # @return [CSApiResponseForPaginatedListRawReportItem]
   describe 'reports_get_raw_data_admin test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -135,7 +135,7 @@ describe 'ReportsApi' do
   # @param user_ids 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListProjectCostingReportItem]
+  # @return [CSApiResponseListProjectCostingReportItem]
   describe 'reports_project_costings_admin test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -149,7 +149,7 @@ describe 'ReportsApi' do
   # @param end_date 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseListJobSeriesReportItem]
+  # @return [CSApiResponseListJobSeriesReportItem]
   describe 'reports_user_jobs_over_time test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

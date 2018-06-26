@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **usual_hours_get_usual_hours**
-> CsApiApiResponseListUsualHoursDay usual_hours_get_usual_hours(user_id, x_chronosheets_auth)
+> CSApiResponseListUsualHoursDay usual_hours_get_usual_hours(user_id, x_chronosheets_auth)
 
 Get usual hours (rostered hours) for an employee
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUsualHoursDay**](CsApiApiResponseListUsualHoursDay.md)
+[**CSApiResponseListUsualHoursDay**](CSApiResponseListUsualHoursDay.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 
 
 # **usual_hours_set_usual_hours**
-> CsApiApiResponseBoolean usual_hours_set_usual_hours(request, x_chronosheets_auth)
+> CSApiResponseBoolean usual_hours_set_usual_hours(request, x_chronosheets_auth)
 
 Set usual hours (rostered hours) for an employee
 
@@ -68,7 +68,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UsualHoursApi.new
 
-request = SwaggerClient::CsApiSetUsualHoursRequest.new # CsApiSetUsualHoursRequest | 
+request = SwaggerClient::CSSetUsualHoursRequest.new # CSSetUsualHoursRequest | 
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -86,12 +86,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSetUsualHoursRequest**](CsApiSetUsualHoursRequest.md)|  | 
+ **request** | [**CSSetUsualHoursRequest**](CSSetUsualHoursRequest.md)|  | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

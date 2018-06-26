@@ -37,7 +37,7 @@ describe 'OrganisationApi' do
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseOrganisation]
+  # @return [CSApiResponseOrganisation]
   describe 'organisation_get_organisation test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -50,7 +50,7 @@ describe 'OrganisationApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CsApiApiResponseUpdateOrganisationResponse]
+  # @return [CSApiResponseUpdateOrganisationResponse]
   describe 'organisation_update_organisation test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
