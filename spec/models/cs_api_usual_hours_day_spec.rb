@@ -35,7 +35,7 @@ describe 'CsApiUsualHoursDay' do
   describe 'test attribute "day_type"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-       #validator = Petstore::EnumTest::EnumAttributeValidator.new('Integer', ["0", "1", "2", "3", "4", "5", "6"])
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
        #validator.allowable_values.each do |value|
        #  expect { @instance.day_type = value }.not_to raise_error
        #end

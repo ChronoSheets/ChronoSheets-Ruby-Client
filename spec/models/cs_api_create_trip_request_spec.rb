@@ -59,7 +59,7 @@ describe 'CsApiCreateTripRequest' do
   describe 'test attribute "mobile_platform"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-       #validator = Petstore::EnumTest::EnumAttributeValidator.new('Integer', ["0", "1", "2"])
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Unknown", "iOS", "Android"])
        #validator.allowable_values.each do |value|
        #  expect { @instance.mobile_platform = value }.not_to raise_error
        #end

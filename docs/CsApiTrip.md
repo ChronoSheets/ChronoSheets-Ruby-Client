@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **vehicle_id** | **Integer** |  | [optional] 
 **user_id** | **Integer** |  | [optional] 
 **org_id** | **Integer** |  | [optional] 
-**mobile_platform** | **Integer** | 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android | [optional] 
+**mobile_platform** | **String** |  | [optional] 
 **start_date** | **DateTime** |  | [optional] 
 **end_date** | **DateTime** |  | [optional] 
 **vehicle_name** | **String** |  | [optional] 

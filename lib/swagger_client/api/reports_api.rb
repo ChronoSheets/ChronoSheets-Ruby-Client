@@ -407,8 +407,8 @@ module SwaggerClient
     # @param start_date 
     # @param end_date 
     # @param user_ids 
-    # @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters
-    # @param order 0 &#x3D; Ascending, 1 &#x3D; Descending
+    # @param sort 
+    # @param order 
     # @param skip 
     # @param take 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -424,8 +424,8 @@ module SwaggerClient
     # @param start_date 
     # @param end_date 
     # @param user_ids 
-    # @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters
-    # @param order 0 &#x3D; Ascending, 1 &#x3D; Descending
+    # @param sort 
+    # @param order 
     # @param skip 
     # @param take 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -452,16 +452,16 @@ module SwaggerClient
         fail ArgumentError, "Missing the required parameter 'sort' when calling ReportsApi.reports_get_raw_data_admin"
       end
       # verify enum value
-      if @api_client.config.client_side_validation && !['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'].include?(sort)
-        fail ArgumentError, "invalid value for 'sort', must be one of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13"
+      if @api_client.config.client_side_validation && !['EmailAddress', 'JobCode', 'TaskName', 'ClientName', 'ProjectName', 'StartDate', 'EndDate', 'SpanSeconds', 'Description', 'PayAmount', 'PayOvertimeAmount', 'TripCost', 'TripDistanceMeters', 'Username'].include?(sort)
+        fail ArgumentError, "invalid value for 'sort', must be one of EmailAddress, JobCode, TaskName, ClientName, ProjectName, StartDate, EndDate, SpanSeconds, Description, PayAmount, PayOvertimeAmount, TripCost, TripDistanceMeters, Username"
       end
       # verify the required parameter 'order' is set
       if @api_client.config.client_side_validation && order.nil?
         fail ArgumentError, "Missing the required parameter 'order' when calling ReportsApi.reports_get_raw_data_admin"
       end
       # verify enum value
-      if @api_client.config.client_side_validation && !['0', '1'].include?(order)
-        fail ArgumentError, "invalid value for 'order', must be one of 0, 1"
+      if @api_client.config.client_side_validation && !['Ascending', 'Descending'].include?(order)
+        fail ArgumentError, "invalid value for 'order', must be one of Ascending, Descending"
       end
       # verify the required parameter 'skip' is set
       if @api_client.config.client_side_validation && skip.nil?
