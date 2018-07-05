@@ -30,7 +30,7 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
+user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -187,7 +187,7 @@ skip = 56 # Integer | Skip this many items
 
 take = 56 # Integer | Take this many items
 
-user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
+user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
  **skip** | **Integer**| Skip this many items | 
  **take** | **Integer**| Take this many items | 
- **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -247,7 +247,7 @@ skip = 56 # Integer | Skip this many items
 
 take = 56 # Integer | Take this many items
 
-user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
+user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
  **skip** | **Integer**| Skip this many items | 
  **take** | **Integer**| Take this many items | 
- **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -303,7 +303,7 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
+user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 
 sort = "sort_example" # String | Decide which column to sort on
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **sort** | **String**| Decide which column to sort on | 
  **order** | **String**| Decide which direction to sort the column | 
  **skip** | **Integer**| Skip this many rows | 
@@ -369,7 +369,7 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
+user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

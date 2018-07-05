@@ -24,7 +24,7 @@ module SwaggerClient
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseCombinedReportsData]
@@ -37,7 +37,7 @@ module SwaggerClient
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseCombinedReportsData, Fixnum, Hash)>] CSApiResponseCombinedReportsData data, response status code and response headers
@@ -230,7 +230,7 @@ module SwaggerClient
     # @param end_date The end date for the date range.  Report data in the response is before this date
     # @param skip Skip this many items
     # @param take Take this many items
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
@@ -245,7 +245,7 @@ module SwaggerClient
     # @param end_date The end date for the date range.  Report data in the response is before this date
     # @param skip Skip this many items
     # @param take Take this many items
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment data, response status code and response headers
@@ -319,7 +319,7 @@ module SwaggerClient
     # @param end_date The end date for the date range.  Report data in the response is before this date
     # @param skip Skip this many items
     # @param take Take this many items
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseForPaginatedListOrgReportTrip]
@@ -334,7 +334,7 @@ module SwaggerClient
     # @param end_date The end date for the date range.  Report data in the response is before this date
     # @param skip Skip this many items
     # @param take Take this many items
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseForPaginatedListOrgReportTrip, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTrip data, response status code and response headers
@@ -406,7 +406,7 @@ module SwaggerClient
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param sort Decide which column to sort on
     # @param order Decide which direction to sort the column
     # @param skip Skip this many rows
@@ -423,7 +423,7 @@ module SwaggerClient
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param sort Decide which column to sort on
     # @param order Decide which direction to sort the column
     # @param skip Skip this many rows
@@ -517,7 +517,7 @@ module SwaggerClient
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseListProjectCostingReportItem]
@@ -530,7 +530,7 @@ module SwaggerClient
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseListProjectCostingReportItem, Fixnum, Hash)>] CSApiResponseListProjectCostingReportItem data, response status code and response headers
