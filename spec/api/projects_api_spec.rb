@@ -33,9 +33,9 @@ describe 'ProjectsApi' do
   end
 
   # unit tests for projects_create_project
-  # Create a project
+  # Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
   # 
-  # @param request 
+  # @param request An Insert Project Request object containing values for the new Project to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInt32]
@@ -46,9 +46,9 @@ describe 'ProjectsApi' do
   end
 
   # unit tests for projects_get_project_by_id
-  # Get project by Id
+  # Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
   # 
-  # @param project_id The ID of the project
+  # @param project_id The ID of the Project you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseProject]
@@ -59,7 +59,7 @@ describe 'ProjectsApi' do
   end
 
   # unit tests for projects_get_projects_for_client
-  # Get projects for a particular client
+  # Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
   # 
   # @param client_id The ID of the client
   # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -72,9 +72,9 @@ describe 'ProjectsApi' do
   end
 
   # unit tests for projects_update_project
-  # Update a project
+  # Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
   # 
-  # @param request 
+  # @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseBoolean]

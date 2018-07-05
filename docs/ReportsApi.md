@@ -4,20 +4,20 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**reports_get_all_charts_data_admin**](ReportsApi.md#reports_get_all_charts_data_admin) | **GET** /api/Reports/GetAllChartsDataAdmin | Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
-[**reports_get_all_charts_data_user**](ReportsApi.md#reports_get_all_charts_data_user) | **GET** /api/Reports/GetAllChartsDataUser | Get Consolidated User Reports Data (Jobs and Tasks)
-[**reports_get_org_trip_by_id**](ReportsApi.md#reports_get_org_trip_by_id) | **GET** /api/Reports/GetOrgTripById | Get trip by Id, for reporting purposes
-[**reports_get_organisation_timesheet_file_attachments**](ReportsApi.md#reports_get_organisation_timesheet_file_attachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments
-[**reports_get_organisation_trips**](ReportsApi.md#reports_get_organisation_trips) | **GET** /api/Reports/GetOrganisationTrips | Reports on Organisation trips (GPS tracking from whole organisation)
-[**reports_get_raw_data_admin**](ReportsApi.md#reports_get_raw_data_admin) | **GET** /api/Reports/GetRawDataAdmin | Get Timesheets Raw Data
-[**reports_project_costings_admin**](ReportsApi.md#reports_project_costings_admin) | **GET** /api/Reports/ProjectCostingsAdmin | Gets project cost estimations VS actual cost for date range and users
-[**reports_user_jobs_over_time**](ReportsApi.md#reports_user_jobs_over_time) | **GET** /api/Reports/UserJobsOverTime | Timeseries jobs data for the logged in user
+[**reports_get_all_charts_data_admin**](ReportsApi.md#reports_get_all_charts_data_admin) | **GET** /api/Reports/GetAllChartsDataAdmin | Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+[**reports_get_all_charts_data_user**](ReportsApi.md#reports_get_all_charts_data_user) | **GET** /api/Reports/GetAllChartsDataUser | Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
+[**reports_get_org_trip_by_id**](ReportsApi.md#reports_get_org_trip_by_id) | **GET** /api/Reports/GetOrgTripById | Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
+[**reports_get_organisation_timesheet_file_attachments**](ReportsApi.md#reports_get_organisation_timesheet_file_attachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
+[**reports_get_organisation_trips**](ReportsApi.md#reports_get_organisation_trips) | **GET** /api/Reports/GetOrganisationTrips | Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
+[**reports_get_raw_data_admin**](ReportsApi.md#reports_get_raw_data_admin) | **GET** /api/Reports/GetRawDataAdmin | Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+[**reports_project_costings_admin**](ReportsApi.md#reports_project_costings_admin) | **GET** /api/Reports/ProjectCostingsAdmin | Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
+[**reports_user_jobs_over_time**](ReportsApi.md#reports_user_jobs_over_time) | **GET** /api/Reports/UserJobsOverTime | Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
 
 
 # **reports_get_all_charts_data_admin**
 > CSApiResponseCombinedReportsData reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth)
 
-Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
 
 ### Example
 ```ruby
@@ -26,17 +26,17 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | 
+user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+  #Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -48,9 +48,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **DateTime**|  | 
- **end_date** | **DateTime**|  | 
- **user_ids** | **String**|  | 
+ **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
+ **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
+ **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -71,7 +71,7 @@ No authorization required
 # **reports_get_all_charts_data_user**
 > CSApiResponseCombinedReportsData reports_get_all_charts_data_user(start_date, end_date, x_chronosheets_auth)
 
-Get Consolidated User Reports Data (Jobs and Tasks)
+Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.  Requires the 'ViewOwnReports' permission.
 
 ### Example
 ```ruby
@@ -80,15 +80,15 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Get Consolidated User Reports Data (Jobs and Tasks)
+  #Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.  Requires the 'ViewOwnReports' permission.
   result = api_instance.reports_get_all_charts_data_user(start_date, end_date, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -100,8 +100,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **DateTime**|  | 
- **end_date** | **DateTime**|  | 
+ **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
+ **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -122,7 +122,7 @@ No authorization required
 # **reports_get_org_trip_by_id**
 > CSApiResponseTrip reports_get_org_trip_by_id(trip_id, x_chronosheets_auth)
 
-Get trip by Id, for reporting purposes
+Get trip by Id, for reporting purposes.  Requires the 'ReportAdmin' permission.
 
 ### Example
 ```ruby
@@ -131,13 +131,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-trip_id = 56 # Integer | The ID of the trip
+trip_id = 56 # Integer | The ID of the Trip you want to get
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Get trip by Id, for reporting purposes
+  #Get trip by Id, for reporting purposes.  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_org_trip_by_id(trip_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -149,7 +149,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trip_id** | **Integer**| The ID of the trip | 
+ **trip_id** | **Integer**| The ID of the Trip you want to get | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -170,7 +170,7 @@ No authorization required
 # **reports_get_organisation_timesheet_file_attachments**
 > CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
 
-Reports on Organisation timesheet file attachments
+Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the 'ReportAdmin' permission.
 
 ### Example
 ```ruby
@@ -179,21 +179,21 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-skip = 56 # Integer | 
+skip = 56 # Integer | Skip this many items
 
-take = 56 # Integer | 
+take = 56 # Integer | Take this many items
 
-user_ids = "user_ids_example" # String | 
+user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Reports on Organisation timesheet file attachments
+  #Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -205,11 +205,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **DateTime**|  | 
- **end_date** | **DateTime**|  | 
- **skip** | **Integer**|  | 
- **take** | **Integer**|  | 
- **user_ids** | **String**|  | 
+ **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
+ **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
+ **skip** | **Integer**| Skip this many items | 
+ **take** | **Integer**| Take this many items | 
+ **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -230,7 +230,7 @@ No authorization required
 # **reports_get_organisation_trips**
 > CSApiResponseForPaginatedListOrgReportTrip reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
 
-Reports on Organisation trips (GPS tracking from whole organisation)
+Reports on Organisation trips (GPS tracking from whole organisation).  Requires the 'ReportAdmin' permission.
 
 ### Example
 ```ruby
@@ -239,21 +239,21 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-skip = 56 # Integer | 
+skip = 56 # Integer | Skip this many items
 
-take = 56 # Integer | 
+take = 56 # Integer | Take this many items
 
-user_ids = "user_ids_example" # String | 
+user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Reports on Organisation trips (GPS tracking from whole organisation)
+  #Reports on Organisation trips (GPS tracking from whole organisation).  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -265,11 +265,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **DateTime**|  | 
- **end_date** | **DateTime**|  | 
- **skip** | **Integer**|  | 
- **take** | **Integer**|  | 
- **user_ids** | **String**|  | 
+ **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
+ **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
+ **skip** | **Integer**| Skip this many items | 
+ **take** | **Integer**| Take this many items | 
+ **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -290,7 +290,7 @@ No authorization required
 # **reports_get_raw_data_admin**
 > CSApiResponseForPaginatedListRawReportItem reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth)
 
-Get Timesheets Raw Data
+Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
 
 ### Example
 ```ruby
@@ -299,25 +299,25 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | 
+user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
 
-sort = "sort_example" # String | 
+sort = "sort_example" # String | Decide which column to sort on
 
-order = "order_example" # String | 
+order = "order_example" # String | Decide which direction to sort the column
 
-skip = 56 # Integer | 
+skip = 56 # Integer | Skip this many rows
 
-take = 56 # Integer | 
+take = 56 # Integer | Take this many rows
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Get Timesheets Raw Data
+  #Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -329,13 +329,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **DateTime**|  | 
- **end_date** | **DateTime**|  | 
- **user_ids** | **String**|  | 
- **sort** | **String**|  | 
- **order** | **String**|  | 
- **skip** | **Integer**|  | 
- **take** | **Integer**|  | 
+ **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
+ **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
+ **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
+ **sort** | **String**| Decide which column to sort on | 
+ **order** | **String**| Decide which direction to sort the column | 
+ **skip** | **Integer**| Skip this many rows | 
+ **take** | **Integer**| Take this many rows | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -356,7 +356,7 @@ No authorization required
 # **reports_project_costings_admin**
 > CSApiResponseListProjectCostingReportItem reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth)
 
-Gets project cost estimations VS actual cost for date range and users
+Gets project cost estimations VS actual cost for date range and users.  Requires the 'ReportAdmin' permission.
 
 ### Example
 ```ruby
@@ -365,17 +365,17 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | 
+user_ids = "user_ids_example" # String | The Ids of the users, if you want to filter the report data to particular users
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Gets project cost estimations VS actual cost for date range and users
+  #Gets project cost estimations VS actual cost for date range and users.  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -387,9 +387,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **DateTime**|  | 
- **end_date** | **DateTime**|  | 
- **user_ids** | **String**|  | 
+ **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
+ **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
+ **user_ids** | **String**| The Ids of the users, if you want to filter the report data to particular users | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -410,7 +410,7 @@ No authorization required
 # **reports_user_jobs_over_time**
 > CSApiResponseListJobSeriesReportItem reports_user_jobs_over_time(start_date, end_date, x_chronosheets_auth)
 
-Timeseries jobs data for the logged in user
+Timeseries jobs data for the logged in user.  Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
 
 ### Example
 ```ruby
@@ -419,15 +419,15 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
+end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Timeseries jobs data for the logged in user
+  #Timeseries jobs data for the logged in user.  Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
   result = api_instance.reports_user_jobs_over_time(start_date, end_date, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -439,8 +439,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **DateTime**|  | 
- **end_date** | **DateTime**|  | 
+ **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
+ **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

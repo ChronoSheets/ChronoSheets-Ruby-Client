@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a project
+    # Create a project.  Requires the 'ManageClientsAndProjects' permission.
     # 
-    # @param request 
+    # @param request An Insert Project Request object containing values for the new Project to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a project
+    # Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
-    # @param request 
+    # @param request An Insert Project Request object containing values for the new Project to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get project by Id
+    # Get a project by its Id.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
-    # @param project_id The ID of the project
+    # @param project_id The ID of the Project you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseProject]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Get project by Id
+    # Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
-    # @param project_id The ID of the project
+    # @param project_id The ID of the Project you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseProject, Fixnum, Hash)>] CSApiResponseProject data, response status code and response headers
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get projects for a particular client
+    # Get projects for a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
     # @param client_id The ID of the client
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -154,7 +154,7 @@ module SwaggerClient
       return data
     end
 
-    # Get projects for a particular client
+    # Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param client_id The ID of the client
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -204,9 +204,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a project
+    # Update a project.  Requires the 'ManageClientsAndProjects' permission.
     # 
-    # @param request 
+    # @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -215,9 +215,9 @@ module SwaggerClient
       return data
     end
 
-    # Update a project
+    # Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
-    # @param request 
+    # @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers

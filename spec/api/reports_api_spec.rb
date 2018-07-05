@@ -33,11 +33,11 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_get_all_charts_data_admin
-  # Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+  # Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
   # 
-  # @param start_date 
-  # @param end_date 
-  # @param user_ids 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
+  # @param user_ids The Ids of the users, if you want to filter the report data to particular users
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseCombinedReportsData]
@@ -48,10 +48,10 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_get_all_charts_data_user
-  # Get Consolidated User Reports Data (Jobs and Tasks)
+  # Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
   # 
-  # @param start_date 
-  # @param end_date 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseCombinedReportsData]
@@ -62,9 +62,9 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_get_org_trip_by_id
-  # Get trip by Id, for reporting purposes
+  # Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
   # 
-  # @param trip_id The ID of the trip
+  # @param trip_id The ID of the Trip you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseTrip]
@@ -75,13 +75,13 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_get_organisation_timesheet_file_attachments
-  # Reports on Organisation timesheet file attachments
+  # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
   # 
-  # @param start_date 
-  # @param end_date 
-  # @param skip 
-  # @param take 
-  # @param user_ids 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
+  # @param skip Skip this many items
+  # @param take Take this many items
+  # @param user_ids The Ids of the users, if you want to filter the report data to particular users
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
@@ -92,13 +92,13 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_get_organisation_trips
-  # Reports on Organisation trips (GPS tracking from whole organisation)
+  # Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
   # 
-  # @param start_date 
-  # @param end_date 
-  # @param skip 
-  # @param take 
-  # @param user_ids 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
+  # @param skip Skip this many items
+  # @param take Take this many items
+  # @param user_ids The Ids of the users, if you want to filter the report data to particular users
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseForPaginatedListOrgReportTrip]
@@ -109,15 +109,15 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_get_raw_data_admin
-  # Get Timesheets Raw Data
+  # Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
   # 
-  # @param start_date 
-  # @param end_date 
-  # @param user_ids 
-  # @param sort 
-  # @param order 
-  # @param skip 
-  # @param take 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
+  # @param user_ids The Ids of the users, if you want to filter the report data to particular users
+  # @param sort Decide which column to sort on
+  # @param order Decide which direction to sort the column
+  # @param skip Skip this many rows
+  # @param take Take this many rows
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseForPaginatedListRawReportItem]
@@ -128,11 +128,11 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_project_costings_admin
-  # Gets project cost estimations VS actual cost for date range and users
+  # Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
   # 
-  # @param start_date 
-  # @param end_date 
-  # @param user_ids 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
+  # @param user_ids The Ids of the users, if you want to filter the report data to particular users
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseListProjectCostingReportItem]
@@ -143,10 +143,10 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_user_jobs_over_time
-  # Timeseries jobs data for the logged in user
+  # Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
   # 
-  # @param start_date 
-  # @param end_date 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseListJobSeriesReportItem]
