@@ -4,16 +4,16 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fleet_create_vehicle**](FleetApi.md#fleet_create_vehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle
+[**fleet_create_vehicle**](FleetApi.md#fleet_create_vehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
 [**fleet_get_vehicle_by_id**](FleetApi.md#fleet_get_vehicle_by_id) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle
 [**fleet_get_vehicles**](FleetApi.md#fleet_get_vehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation
-[**fleet_update_vehicle**](FleetApi.md#fleet_update_vehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle
+[**fleet_update_vehicle**](FleetApi.md#fleet_update_vehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
 
 
 # **fleet_create_vehicle**
 > CSApiResponseInt32 fleet_create_vehicle(request, x_chronosheets_auth)
 
-Create a vehicle
+Create a vehicle.  Requires the 'ManageFleet' permission.
 
 ### Example
 ```ruby
@@ -22,13 +22,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::FleetApi.new
 
-request = SwaggerClient::CSInsertVehicleRequest.new # CSInsertVehicleRequest | 
+request = SwaggerClient::CSInsertVehicleRequest.new # CSInsertVehicleRequest | An Insert Vehicle Request object containing values for the new Vehicle to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Create a vehicle
+  #Create a vehicle.  Requires the 'ManageFleet' permission.
   result = api_instance.fleet_create_vehicle(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -40,7 +40,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertVehicleRequest**](CSInsertVehicleRequest.md)|  | 
+ **request** | [**CSInsertVehicleRequest**](CSInsertVehicleRequest.md)| An Insert Vehicle Request object containing values for the new Vehicle to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -70,7 +70,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::FleetApi.new
 
-vehicle_id = 56 # Integer | The ID of the vehicle you want to get
+vehicle_id = 56 # Integer | The ID of the Vehicle you want to get
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -88,7 +88,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vehicle_id** | **Integer**| The ID of the vehicle you want to get | 
+ **vehicle_id** | **Integer**| The ID of the Vehicle you want to get | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -118,7 +118,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::FleetApi.new
 
-include_deleted = true # BOOLEAN | 
+include_deleted = true # BOOLEAN | Whether or not to include deleted vehicles
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -136,7 +136,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_deleted** | **BOOLEAN**|  | 
+ **include_deleted** | **BOOLEAN**| Whether or not to include deleted vehicles | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -157,7 +157,7 @@ No authorization required
 # **fleet_update_vehicle**
 > CSApiResponseBoolean fleet_update_vehicle(request, x_chronosheets_auth)
 
-Update a vehicle
+Update a vehicle.  Requires the 'ManageFleet' permission.
 
 ### Example
 ```ruby
@@ -166,13 +166,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::FleetApi.new
 
-request = SwaggerClient::CSSaveVehicleRequest.new # CSSaveVehicleRequest | 
+request = SwaggerClient::CSSaveVehicleRequest.new # CSSaveVehicleRequest | A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Update a vehicle
+  #Update a vehicle.  Requires the 'ManageFleet' permission.
   result = api_instance.fleet_update_vehicle(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -184,7 +184,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSaveVehicleRequest**](CSSaveVehicleRequest.md)|  | 
+ **request** | [**CSSaveVehicleRequest**](CSSaveVehicleRequest.md)| A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

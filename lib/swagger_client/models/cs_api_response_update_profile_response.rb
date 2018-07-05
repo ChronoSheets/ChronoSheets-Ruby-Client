@@ -14,7 +14,7 @@ require 'date'
 
 module SwaggerClient
 
-  class CSApiResponseSignupResponse
+  class CSApiResponseUpdateProfileResponse
     attr_accessor :data
 
     attr_accessor :status
@@ -55,7 +55,7 @@ module SwaggerClient
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data' => :'CSSignupResponse',
+        :'data' => :'CSUpdateProfileResponse',
         :'status' => :'String',
         :'message' => :'String'
       }

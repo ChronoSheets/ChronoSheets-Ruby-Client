@@ -14,7 +14,7 @@ require 'date'
 
 module SwaggerClient
 
-  class CSSignupResponse
+  class CSUpdateProfileResponse
     attr_accessor :organisation_id
 
     attr_accessor :user_id

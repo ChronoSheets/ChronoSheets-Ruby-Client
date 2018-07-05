@@ -1,9 +1,9 @@
-# SwaggerClient::CSApiResponseSignupResponse
+# SwaggerClient::CSApiResponseUpdateProfileResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**CSSignupResponse**](CSSignupResponse.md) |  | [optional] 
+**data** | [**CSUpdateProfileResponse**](CSUpdateProfileResponse.md) |  | [optional] 
 **status** | **String** |  | [optional] 
 **message** | **String** |  | [optional] 
 

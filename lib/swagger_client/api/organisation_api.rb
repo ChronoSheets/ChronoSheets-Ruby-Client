@@ -76,7 +76,7 @@ module SwaggerClient
 
     # Update an organisation.  Requires 'OrganisationAdmin' permission.
     # 
-    # @param request 
+    # @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseUpdateOrganisationResponse]
@@ -87,7 +87,7 @@ module SwaggerClient
 
     # Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
     # 
-    # @param request 
+    # @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseUpdateOrganisationResponse, Fixnum, Hash)>] CSApiResponseUpdateOrganisationResponse data, response status code and response headers

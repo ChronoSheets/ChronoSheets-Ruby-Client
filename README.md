@@ -61,7 +61,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get jobs and tasks information, aggregated
+  #Get jobs and tasks information, aggregated.  Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
   result = api_instance.aggregate_job_tasks_get_aggregate_job_tasks(x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -76,30 +76,30 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SwaggerClient::AggregateJobTasksApi* | [**aggregate_job_tasks_get_aggregate_job_tasks**](docs/AggregateJobTasksApi.md#aggregate_job_tasks_get_aggregate_job_tasks) | **GET** /api/AggregateJobTasks/GetAggregateJobTasks | Get jobs and tasks information, aggregated
-*SwaggerClient::ClientsApi* | [**clients_create_client**](docs/ClientsApi.md#clients_create_client) | **PUT** /api/Clients/CreateClient | Create a client
-*SwaggerClient::ClientsApi* | [**clients_get_client**](docs/ClientsApi.md#clients_get_client) | **GET** /api/Clients/GetClient | Get a particular client
-*SwaggerClient::ClientsApi* | [**clients_get_clients**](docs/ClientsApi.md#clients_get_clients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation
-*SwaggerClient::ClientsApi* | [**clients_update_client**](docs/ClientsApi.md#clients_update_client) | **POST** /api/Clients/UpdateClient | Update a client
-*SwaggerClient::FleetApi* | [**fleet_create_vehicle**](docs/FleetApi.md#fleet_create_vehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle
+*SwaggerClient::AggregateJobTasksApi* | [**aggregate_job_tasks_get_aggregate_job_tasks**](docs/AggregateJobTasksApi.md#aggregate_job_tasks_get_aggregate_job_tasks) | **GET** /api/AggregateJobTasks/GetAggregateJobTasks | Get jobs and tasks information, aggregated.  Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
+*SwaggerClient::ClientsApi* | [**clients_create_client**](docs/ClientsApi.md#clients_create_client) | **PUT** /api/Clients/CreateClient | Create a client.  Requires the 'ManageClientsAndProjects' permission.
+*SwaggerClient::ClientsApi* | [**clients_get_client**](docs/ClientsApi.md#clients_get_client) | **GET** /api/Clients/GetClient | Get a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+*SwaggerClient::ClientsApi* | [**clients_get_clients**](docs/ClientsApi.md#clients_get_clients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+*SwaggerClient::ClientsApi* | [**clients_update_client**](docs/ClientsApi.md#clients_update_client) | **POST** /api/Clients/UpdateClient | Update a client.  Requires the 'ManageClientsAndProjects' permission.
+*SwaggerClient::FleetApi* | [**fleet_create_vehicle**](docs/FleetApi.md#fleet_create_vehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.  Requires the 'ManageFleet' permission.
 *SwaggerClient::FleetApi* | [**fleet_get_vehicle_by_id**](docs/FleetApi.md#fleet_get_vehicle_by_id) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle
 *SwaggerClient::FleetApi* | [**fleet_get_vehicles**](docs/FleetApi.md#fleet_get_vehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation
-*SwaggerClient::FleetApi* | [**fleet_update_vehicle**](docs/FleetApi.md#fleet_update_vehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle
-*SwaggerClient::JobCodesApi* | [**job_codes_create_job_code**](docs/JobCodesApi.md#job_codes_create_job_code) | **PUT** /api/JobCodes/CreateJobCode | Create a job code
-*SwaggerClient::JobCodesApi* | [**job_codes_delete_job_code**](docs/JobCodesApi.md#job_codes_delete_job_code) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code
-*SwaggerClient::JobCodesApi* | [**job_codes_get_job_code_by_id**](docs/JobCodesApi.md#job_codes_get_job_code_by_id) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id
-*SwaggerClient::JobCodesApi* | [**job_codes_get_job_codes**](docs/JobCodesApi.md#job_codes_get_job_codes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation
-*SwaggerClient::JobCodesApi* | [**job_codes_update_job_code**](docs/JobCodesApi.md#job_codes_update_job_code) | **POST** /api/JobCodes/UpdateJobCode | Update a job code
+*SwaggerClient::FleetApi* | [**fleet_update_vehicle**](docs/FleetApi.md#fleet_update_vehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.  Requires the 'ManageFleet' permission.
+*SwaggerClient::JobCodesApi* | [**job_codes_create_job_code**](docs/JobCodesApi.md#job_codes_create_job_code) | **PUT** /api/JobCodes/CreateJobCode | Create a job code.  Requires the 'ManageJobsAndTask' permission.
+*SwaggerClient::JobCodesApi* | [**job_codes_delete_job_code**](docs/JobCodesApi.md#job_codes_delete_job_code) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.  Requires the 'ManageJobsAndTask' permission.
+*SwaggerClient::JobCodesApi* | [**job_codes_get_job_code_by_id**](docs/JobCodesApi.md#job_codes_get_job_code_by_id) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+*SwaggerClient::JobCodesApi* | [**job_codes_get_job_codes**](docs/JobCodesApi.md#job_codes_get_job_codes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+*SwaggerClient::JobCodesApi* | [**job_codes_update_job_code**](docs/JobCodesApi.md#job_codes_update_job_code) | **POST** /api/JobCodes/UpdateJobCode | Update a job code.  Requires the 'ManageJobsAndTask' permission.
 *SwaggerClient::OrganisationApi* | [**organisation_get_organisation**](docs/OrganisationApi.md#organisation_get_organisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.  Requires 'OrganisationAdmin' permission.
 *SwaggerClient::OrganisationApi* | [**organisation_update_organisation**](docs/OrganisationApi.md#organisation_update_organisation) | **POST** /api/Organisation/UpdateOrganisation | Update an organisation.  Requires 'OrganisationAdmin' permission.
-*SwaggerClient::OrganisationGroupUsersApi* | [**organisation_group_users_get_organisation_group_users**](docs/OrganisationGroupUsersApi.md#organisation_group_users_get_organisation_group_users) | **GET** /api/OrganisationGroupUsers/GetOrganisationGroupUsers | Get a collection of organisation group users that belong to an organisation group
+*SwaggerClient::OrganisationGroupUsersApi* | [**organisation_group_users_get_organisation_group_users**](docs/OrganisationGroupUsersApi.md#organisation_group_users_get_organisation_group_users) | **GET** /api/OrganisationGroupUsers/GetOrganisationGroupUsers | Get a collection of organisation group users that belong to an organisation group.  Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
 *SwaggerClient::OrganisationGroupUsersApi* | [**organisation_group_users_update_organisation_group_users**](docs/OrganisationGroupUsersApi.md#organisation_group_users_update_organisation_group_users) | **POST** /api/OrganisationGroupUsers/UpdateOrganisationGroupUsers | Set the users who belong to an organisation group
-*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_create_organisation_group**](docs/OrganisationGroupsApi.md#organisation_groups_create_organisation_group) | **PUT** /api/OrganisationGroups/CreateOrganisationGroup | Create an organisation group
-*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_group**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_group) | **GET** /api/OrganisationGroups/GetOrganisationGroup | Get a particular organisation group
-*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_groups**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_groups) | **GET** /api/OrganisationGroups/GetOrganisationGroups | Get a collection of organisation groups that are under your organisation
-*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_groups_for_job**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_groups_for_job) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForJob | Get org groups for a particular job
-*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_groups_for_vehicle**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_groups_for_vehicle) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForVehicle | Get org groups for a particular vehicle
-*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_update_organisation_group**](docs/OrganisationGroupsApi.md#organisation_groups_update_organisation_group) | **POST** /api/OrganisationGroups/UpdateOrganisationGroup | Update an organisation group
+*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_create_organisation_group**](docs/OrganisationGroupsApi.md#organisation_groups_create_organisation_group) | **PUT** /api/OrganisationGroups/CreateOrganisationGroup | Create an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
+*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_group**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_group) | **GET** /api/OrganisationGroups/GetOrganisationGroup | Get a particular organisation group.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_groups**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_groups) | **GET** /api/OrganisationGroups/GetOrganisationGroups | Get a collection of organisation groups that are under your organisation.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_groups_for_job**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_groups_for_job) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForJob | Get org groups for a particular job.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_get_organisation_groups_for_vehicle**](docs/OrganisationGroupsApi.md#organisation_groups_get_organisation_groups_for_vehicle) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForVehicle | Get org groups for a particular vehicle.  Requires the 'ManageOrganisationGroups', 'ManageFleet' or 'ManageOrganisationUsers' permissions.
+*SwaggerClient::OrganisationGroupsApi* | [**organisation_groups_update_organisation_group**](docs/OrganisationGroupsApi.md#organisation_groups_update_organisation_group) | **POST** /api/OrganisationGroups/UpdateOrganisationGroup | Update an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
 *SwaggerClient::ProjectsApi* | [**projects_create_project**](docs/ProjectsApi.md#projects_create_project) | **PUT** /api/Projects/CreateProject | Create a project
 *SwaggerClient::ProjectsApi* | [**projects_get_project_by_id**](docs/ProjectsApi.md#projects_get_project_by_id) | **GET** /api/Projects/GetProjectById | Get project by Id
 *SwaggerClient::ProjectsApi* | [**projects_get_projects_for_client**](docs/ProjectsApi.md#projects_get_projects_for_client) | **GET** /api/Projects/GetProjectsForClient | Get projects for a particular client
@@ -177,10 +177,10 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::CSApiResponseOrganisation](docs/CSApiResponseOrganisation.md)
  - [SwaggerClient::CSApiResponseOrganisationGroup](docs/CSApiResponseOrganisationGroup.md)
  - [SwaggerClient::CSApiResponseProject](docs/CSApiResponseProject.md)
- - [SwaggerClient::CSApiResponseSignupResponse](docs/CSApiResponseSignupResponse.md)
  - [SwaggerClient::CSApiResponseTimesheetTask](docs/CSApiResponseTimesheetTask.md)
  - [SwaggerClient::CSApiResponseTrip](docs/CSApiResponseTrip.md)
  - [SwaggerClient::CSApiResponseUpdateOrganisationResponse](docs/CSApiResponseUpdateOrganisationResponse.md)
+ - [SwaggerClient::CSApiResponseUpdateProfileResponse](docs/CSApiResponseUpdateProfileResponse.md)
  - [SwaggerClient::CSApiResponseUpdateUserResponse](docs/CSApiResponseUpdateUserResponse.md)
  - [SwaggerClient::CSApiResponseUserForManagement](docs/CSApiResponseUserForManagement.md)
  - [SwaggerClient::CSApiResponseUserProfile](docs/CSApiResponseUserProfile.md)
@@ -221,7 +221,6 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::CSSaveVehicleRequest](docs/CSSaveVehicleRequest.md)
  - [SwaggerClient::CSSetOrganisationGroupUsersRequest](docs/CSSetOrganisationGroupUsersRequest.md)
  - [SwaggerClient::CSSetUsualHoursRequest](docs/CSSetUsualHoursRequest.md)
- - [SwaggerClient::CSSignupResponse](docs/CSSignupResponse.md)
  - [SwaggerClient::CSTaskSeriesReportItem](docs/CSTaskSeriesReportItem.md)
  - [SwaggerClient::CSTaskTotalsReportItem](docs/CSTaskTotalsReportItem.md)
  - [SwaggerClient::CSTimeSlot](docs/CSTimeSlot.md)
@@ -233,6 +232,7 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::CSUpdateMyProfileRequest](docs/CSUpdateMyProfileRequest.md)
  - [SwaggerClient::CSUpdateOrganisationRequest](docs/CSUpdateOrganisationRequest.md)
  - [SwaggerClient::CSUpdateOrganisationResponse](docs/CSUpdateOrganisationResponse.md)
+ - [SwaggerClient::CSUpdateProfileResponse](docs/CSUpdateProfileResponse.md)
  - [SwaggerClient::CSUpdateProjectRequest](docs/CSUpdateProjectRequest.md)
  - [SwaggerClient::CSUpdateTaskRequest](docs/CSUpdateTaskRequest.md)
  - [SwaggerClient::CSUpdateUserRequest](docs/CSUpdateUserRequest.md)

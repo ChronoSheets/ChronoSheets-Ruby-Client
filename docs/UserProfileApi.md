@@ -188,7 +188,7 @@ No authorization required
 
 
 # **user_profile_update_my_profile**
-> CSApiResponseSignupResponse user_profile_update_my_profile(request, x_chronosheets_auth)
+> CSApiResponseUpdateProfileResponse user_profile_update_my_profile(request, x_chronosheets_auth)
 
 
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseSignupResponse**](CSApiResponseSignupResponse.md)
+[**CSApiResponseUpdateProfileResponse**](CSApiResponseUpdateProfileResponse.md)
 
 ### Authorization
 

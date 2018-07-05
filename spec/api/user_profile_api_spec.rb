@@ -86,7 +86,7 @@ describe 'UserProfileApi' do
   # @param request 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CSApiResponseSignupResponse]
+  # @return [CSApiResponseUpdateProfileResponse]
   describe 'user_profile_update_my_profile test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

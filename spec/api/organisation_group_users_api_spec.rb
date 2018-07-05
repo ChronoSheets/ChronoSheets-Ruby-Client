@@ -33,9 +33,9 @@ describe 'OrganisationGroupUsersApi' do
   end
 
   # unit tests for organisation_group_users_get_organisation_group_users
-  # Get a collection of organisation group users that belong to an organisation group
+  # Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
   # 
-  # @param org_group_id 
+  # @param org_group_id An OrganisatioGroup Id
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseListUserForManagement]
@@ -48,7 +48,7 @@ describe 'OrganisationGroupUsersApi' do
   # unit tests for organisation_group_users_update_organisation_group_users
   # Set the users who belong to an organisation group
   # 
-  # @param request 
+  # @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseBoolean]

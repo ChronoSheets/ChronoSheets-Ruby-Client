@@ -1,4 +1,4 @@
-# SwaggerClient::CSSignupResponse
+# SwaggerClient::CSUpdateProfileResponse
 
 ## Properties
 Name | Type | Description | Notes

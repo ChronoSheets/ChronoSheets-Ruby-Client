@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create an organisation group
+    # Create an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
     # 
-    # @param request 
+    # @param request An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create an organisation group
+    # Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
     # 
-    # @param request 
+    # @param request An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a particular organisation group
+    # Get a particular organisation group.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
     # 
-    # @param organisation_group_id The ID of the organisation group you want to get
+    # @param organisation_group_id The ID of the OrganisationGroup you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseOrganisationGroup]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Get a particular organisation group
+    # Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
     # 
-    # @param organisation_group_id The ID of the organisation group you want to get
+    # @param organisation_group_id The ID of the OrganisationGroup you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseOrganisationGroup, Fixnum, Hash)>] CSApiResponseOrganisationGroup data, response status code and response headers
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a collection of organisation groups that are under your organisation
+    # Get a collection of organisation groups that are under your organisation.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -153,7 +153,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a collection of organisation groups that are under your organisation
+    # Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -197,7 +197,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get org groups for a particular job
+    # Get org groups for a particular job.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
     # 
     # @param job_id The ID of the job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -208,7 +208,7 @@ module SwaggerClient
       return data
     end
 
-    # Get org groups for a particular job
+    # Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
     # 
     # @param job_id The ID of the job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -258,7 +258,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get org groups for a particular vehicle
+    # Get org groups for a particular vehicle.  Requires the 'ManageOrganisationGroups', 'ManageFleet' or 'ManageOrganisationUsers' permissions.
     # 
     # @param vehicle_id The ID of the vehicle
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -269,7 +269,7 @@ module SwaggerClient
       return data
     end
 
-    # Get org groups for a particular vehicle
+    # Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
     # 
     # @param vehicle_id The ID of the vehicle
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -319,9 +319,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update an organisation group
+    # Update an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
     # 
-    # @param request 
+    # @param request A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -330,9 +330,9 @@ module SwaggerClient
       return data
     end
 
-    # Update an organisation group
+    # Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
     # 
-    # @param request 
+    # @param request A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers

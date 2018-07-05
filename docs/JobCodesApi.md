@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**job_codes_create_job_code**](JobCodesApi.md#job_codes_create_job_code) | **PUT** /api/JobCodes/CreateJobCode | Create a job code
-[**job_codes_delete_job_code**](JobCodesApi.md#job_codes_delete_job_code) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code
-[**job_codes_get_job_code_by_id**](JobCodesApi.md#job_codes_get_job_code_by_id) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id
-[**job_codes_get_job_codes**](JobCodesApi.md#job_codes_get_job_codes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation
-[**job_codes_update_job_code**](JobCodesApi.md#job_codes_update_job_code) | **POST** /api/JobCodes/UpdateJobCode | Update a job code
+[**job_codes_create_job_code**](JobCodesApi.md#job_codes_create_job_code) | **PUT** /api/JobCodes/CreateJobCode | Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+[**job_codes_delete_job_code**](JobCodesApi.md#job_codes_delete_job_code) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+[**job_codes_get_job_code_by_id**](JobCodesApi.md#job_codes_get_job_code_by_id) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**job_codes_get_job_codes**](JobCodesApi.md#job_codes_get_job_codes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**job_codes_update_job_code**](JobCodesApi.md#job_codes_update_job_code) | **POST** /api/JobCodes/UpdateJobCode | Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
 # **job_codes_create_job_code**
 > CSApiResponseInt32 job_codes_create_job_code(request, x_chronosheets_auth)
 
-Create a job code
+Create a job code.  Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```ruby
@@ -23,13 +23,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::JobCodesApi.new
 
-request = SwaggerClient::CSInsertJobCodeRequest.new # CSInsertJobCodeRequest | 
+request = SwaggerClient::CSInsertJobCodeRequest.new # CSInsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Create a job code
+  #Create a job code.  Requires the 'ManageJobsAndTask' permission.
   result = api_instance.job_codes_create_job_code(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -41,7 +41,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)|  | 
+ **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)| An Insert JobCode Request object containing values for the new JobCode to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -62,7 +62,7 @@ No authorization required
 # **job_codes_delete_job_code**
 > CSApiResponseBoolean job_codes_delete_job_code(job_code_id, x_chronosheets_auth)
 
-Delete a job code
+Delete a job code.  Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```ruby
@@ -71,13 +71,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::JobCodesApi.new
 
-job_code_id = 56 # Integer | The ID of the job code your want to delete
+job_code_id = 56 # Integer | The ID of the job code you want to delete
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Delete a job code
+  #Delete a job code.  Requires the 'ManageJobsAndTask' permission.
   result = api_instance.job_codes_delete_job_code(job_code_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -89,7 +89,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **job_code_id** | **Integer**| The ID of the job code your want to delete | 
+ **job_code_id** | **Integer**| The ID of the job code you want to delete | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -110,7 +110,7 @@ No authorization required
 # **job_codes_get_job_code_by_id**
 > CSApiResponseJobCode job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth)
 
-Get a particular job code by job code id
+Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
 ```ruby
@@ -119,13 +119,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::JobCodesApi.new
 
-job_code_id = 56 # Integer | 
+job_code_id = 56 # Integer | The ID of the JobCode you want to get
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Get a particular job code by job code id
+  #Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
   result = api_instance.job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -137,7 +137,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **job_code_id** | **Integer**|  | 
+ **job_code_id** | **Integer**| The ID of the JobCode you want to get | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -158,7 +158,7 @@ No authorization required
 # **job_codes_get_job_codes**
 > CSApiResponseListJobCode job_codes_get_job_codes(x_chronosheets_auth)
 
-Get job codes for your organisation
+Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
 ```ruby
@@ -171,7 +171,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get job codes for your organisation
+  #Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
   result = api_instance.job_codes_get_job_codes(x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -203,7 +203,7 @@ No authorization required
 # **job_codes_update_job_code**
 > CSApiResponseBoolean job_codes_update_job_code(request, x_chronosheets_auth)
 
-Update a job code
+Update a job code.  Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```ruby
@@ -212,13 +212,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::JobCodesApi.new
 
-request = SwaggerClient::CSUpdateJobCodeRequest.new # CSUpdateJobCodeRequest | 
+request = SwaggerClient::CSUpdateJobCodeRequest.new # CSUpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Update a job code
+  #Update a job code.  Requires the 'ManageJobsAndTask' permission.
   result = api_instance.job_codes_update_job_code(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -230,7 +230,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)|  | 
+ **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)| A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

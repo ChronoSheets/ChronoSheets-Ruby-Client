@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a client
+    # Create a client.  Requires the 'ManageClientsAndProjects' permission.
     # 
-    # @param request 
+    # @param request An Insert Client Request object containing values for the new Client to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a client
+    # Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
-    # @param request 
+    # @param request An Insert Client Request object containing values for the new Client to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a particular client
+    # Get a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
-    # @param client_id The ID of the client you want to get
+    # @param client_id The ID of the Client you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseClient]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Get a particular client
+    # Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
-    # @param client_id The ID of the client you want to get
+    # @param client_id The ID of the Client you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseClient, Fixnum, Hash)>] CSApiResponseClient data, response status code and response headers
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a collection of clients that are under your organisation
+    # Get a collection of clients that are under your organisation.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -153,7 +153,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a collection of clients that are under your organisation
+    # Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -197,9 +197,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a client
+    # Update a client.  Requires the 'ManageClientsAndProjects' permission.
     # 
-    # @param request 
+    # @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -208,9 +208,9 @@ module SwaggerClient
       return data
     end
 
-    # Update a client
+    # Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
-    # @param request 
+    # @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers

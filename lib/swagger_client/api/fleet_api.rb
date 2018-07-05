@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a vehicle
+    # Create a vehicle.  Requires the 'ManageFleet' permission.
     # 
-    # @param request 
+    # @param request An Insert Vehicle Request object containing values for the new Vehicle to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a vehicle
+    # Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
     # 
-    # @param request 
+    # @param request An Insert Vehicle Request object containing values for the new Vehicle to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -84,7 +84,7 @@ module SwaggerClient
 
     # Get a particular vehicle
     # 
-    # @param vehicle_id The ID of the vehicle you want to get
+    # @param vehicle_id The ID of the Vehicle you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseFleetVehicle]
@@ -95,7 +95,7 @@ module SwaggerClient
 
     # Get a particular vehicle
     # 
-    # @param vehicle_id The ID of the vehicle you want to get
+    # @param vehicle_id The ID of the Vehicle you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseFleetVehicle, Fixnum, Hash)>] CSApiResponseFleetVehicle data, response status code and response headers
@@ -145,7 +145,7 @@ module SwaggerClient
 
     # Get a collection of vehicles that are under your organisation
     # 
-    # @param include_deleted 
+    # @param include_deleted Whether or not to include deleted vehicles
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseListFleetVehicle]
@@ -156,7 +156,7 @@ module SwaggerClient
 
     # Get a collection of vehicles that are under your organisation
     # 
-    # @param include_deleted 
+    # @param include_deleted Whether or not to include deleted vehicles
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseListFleetVehicle, Fixnum, Hash)>] CSApiResponseListFleetVehicle data, response status code and response headers
@@ -204,9 +204,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a vehicle
+    # Update a vehicle.  Requires the 'ManageFleet' permission.
     # 
-    # @param request 
+    # @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -215,9 +215,9 @@ module SwaggerClient
       return data
     end
 
-    # Update a vehicle
+    # Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
     # 
-    # @param request 
+    # @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
