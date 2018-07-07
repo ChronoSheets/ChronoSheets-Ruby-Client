@@ -20,7 +20,7 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a client.  Requires the 'ManageClientsAndProjects' permission.
+    # Create a client.    Requires the 'ManageClientsAndProjects' permission.
     # 
     # @param request An Insert Client Request object containing values for the new Client to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -31,7 +31,7 @@ module SwaggerClient
       return data
     end
 
-    # Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+    # Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
     # @param request An Insert Client Request object containing values for the new Client to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -82,7 +82,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+    # Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
     # @param client_id The ID of the Client you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -93,7 +93,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+    # Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param client_id The ID of the Client you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a collection of clients that are under your organisation.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+    # Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -153,7 +153,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+    # Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -197,7 +197,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a client.  Requires the 'ManageClientsAndProjects' permission.
+    # Update a client.    Requires the 'ManageClientsAndProjects' permission.
     # 
     # @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -208,7 +208,7 @@ module SwaggerClient
       return data
     end
 
-    # Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+    # Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
     # @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token

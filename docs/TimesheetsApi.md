@@ -4,16 +4,16 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**timesheets_create_single_timesheet**](TimesheetsApi.md#timesheets_create_single_timesheet) | **PUT** /api/Timesheets/CreateSingleTimesheet | Inserts a single timesheet record
-[**timesheets_delete_timesheet**](TimesheetsApi.md#timesheets_delete_timesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet
-[**timesheets_get_timesheets**](TimesheetsApi.md#timesheets_get_timesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates
-[**timesheets_update_timesheets**](TimesheetsApi.md#timesheets_update_timesheets) | **POST** /api/Timesheets/UpdateTimesheets | Batch update timesheets
+[**timesheets_create_single_timesheet**](TimesheetsApi.md#timesheets_create_single_timesheet) | **PUT** /api/Timesheets/CreateSingleTimesheet | Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**timesheets_delete_timesheet**](TimesheetsApi.md#timesheets_delete_timesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**timesheets_get_timesheets**](TimesheetsApi.md#timesheets_get_timesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**timesheets_update_timesheets**](TimesheetsApi.md#timesheets_update_timesheets) | **POST** /api/Timesheets/UpdateTimesheets | Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 
 # **timesheets_create_single_timesheet**
 > CSApiResponseInt32 timesheets_create_single_timesheet(request, x_chronosheets_auth)
 
-Inserts a single timesheet record
+Inserts a single timesheet record.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```ruby
@@ -22,13 +22,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TimesheetsApi.new
 
-request = SwaggerClient::CSTimesheet.new # CSTimesheet | The timesheet request object
+request = SwaggerClient::CSTimesheet.new # CSTimesheet | A Timesheet Request object containing values for the new Timesheet to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Inserts a single timesheet record
+  #Inserts a single timesheet record.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_create_single_timesheet(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -40,7 +40,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSTimesheet**](CSTimesheet.md)| The timesheet request object | 
+ **request** | [**CSTimesheet**](CSTimesheet.md)| A Timesheet Request object containing values for the new Timesheet to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -61,7 +61,7 @@ No authorization required
 # **timesheets_delete_timesheet**
 > CSApiResponseBoolean timesheets_delete_timesheet(timesheet_id, x_chronosheets_auth)
 
-Delete a timesheet
+Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```ruby
@@ -70,13 +70,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TimesheetsApi.new
 
-timesheet_id = 56 # Integer | The ID of the timesheet to delete
+timesheet_id = 56 # Integer | The ID of the Timesheet you want to delete
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Delete a timesheet
+  #Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_delete_timesheet(timesheet_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -88,7 +88,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **timesheet_id** | **Integer**| The ID of the timesheet to delete | 
+ **timesheet_id** | **Integer**| The ID of the Timesheet you want to delete | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -109,7 +109,7 @@ No authorization required
 # **timesheets_get_timesheets**
 > CSApiResponseListTimesheet timesheets_get_timesheets(start_date, end_date, x_chronosheets_auth)
 
-Get timesheets between start and end dates
+Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```ruby
@@ -126,7 +126,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get timesheets between start and end dates
+  #Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_get_timesheets(start_date, end_date, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -160,7 +160,7 @@ No authorization required
 # **timesheets_update_timesheets**
 > CSApiResponseListInt32 timesheets_update_timesheets(request, x_chronosheets_auth)
 
-Batch update timesheets
+Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```ruby
@@ -169,13 +169,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::TimesheetsApi.new
 
-request = SwaggerClient::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | The batch update timesheets request
+request = SwaggerClient::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Batch update timesheets
+  #Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_update_timesheets(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -187,7 +187,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| The batch update timesheets request | 
+ **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| A BatchUpdateTimesheet Request object containing values for the new Timesheets to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

@@ -20,7 +20,7 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a vehicle.  Requires the 'ManageFleet' permission.
+    # Create a vehicle.    Requires the 'ManageFleet' permission.
     # 
     # @param request An Insert Vehicle Request object containing values for the new Vehicle to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -31,7 +31,7 @@ module SwaggerClient
       return data
     end
 
-    # Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+    # Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
     # 
     # @param request An Insert Vehicle Request object containing values for the new Vehicle to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -82,7 +82,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a particular vehicle
+    # Get a particular vehicle.  Does not require any special permission.
     # 
     # @param vehicle_id The ID of the Vehicle you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -93,7 +93,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a particular vehicle
+    # Get a particular vehicle.  Does not require any special permission.
     # 
     # @param vehicle_id The ID of the Vehicle you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a collection of vehicles that are under your organisation
+    # Get a collection of vehicles that are under your organisation.    Does not require any special permission.
     # 
     # @param include_deleted Whether or not to include deleted vehicles
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -154,7 +154,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a collection of vehicles that are under your organisation
+    # Get a collection of vehicles that are under your organisation.    Does not require any special permission.
     # 
     # @param include_deleted Whether or not to include deleted vehicles
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -204,7 +204,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a vehicle.  Requires the 'ManageFleet' permission.
+    # Update a vehicle.    Requires the 'ManageFleet' permission.
     # 
     # @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -215,7 +215,7 @@ module SwaggerClient
       return data
     end
 
-    # Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+    # Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
     # 
     # @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token

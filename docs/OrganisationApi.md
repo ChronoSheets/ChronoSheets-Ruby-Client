@@ -4,14 +4,14 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**organisation_get_organisation**](OrganisationApi.md#organisation_get_organisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
-[**organisation_update_organisation**](OrganisationApi.md#organisation_update_organisation) | **POST** /api/Organisation/UpdateOrganisation | Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+[**organisation_get_organisation**](OrganisationApi.md#organisation_get_organisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
+[**organisation_update_organisation**](OrganisationApi.md#organisation_update_organisation) | **POST** /api/Organisation/UpdateOrganisation | Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 
 # **organisation_get_organisation**
 > CSApiResponseOrganisation organisation_get_organisation(x_chronosheets_auth)
 
-Get your organisation.  Requires 'OrganisationAdmin' permission.
+Get your organisation.    Requires 'OrganisationAdmin' permission.
 
 ### Example
 ```ruby
@@ -24,7 +24,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get your organisation.  Requires 'OrganisationAdmin' permission.
+  #Get your organisation.    Requires 'OrganisationAdmin' permission.
   result = api_instance.organisation_get_organisation(x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -56,7 +56,7 @@ No authorization required
 # **organisation_update_organisation**
 > CSApiResponseUpdateOrganisationResponse organisation_update_organisation(request, x_chronosheets_auth)
 
-Update an organisation.  Requires 'OrganisationAdmin' permission.
+Update an organisation.    Requires 'OrganisationAdmin' permission.
 
 ### Example
 ```ruby
@@ -71,7 +71,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Update an organisation.  Requires 'OrganisationAdmin' permission.
+  #Update an organisation.    Requires 'OrganisationAdmin' permission.
   result = api_instance.organisation_update_organisation(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e

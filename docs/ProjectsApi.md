@@ -4,16 +4,16 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**projects_create_project**](ProjectsApi.md#projects_create_project) | **PUT** /api/Projects/CreateProject | Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
-[**projects_get_project_by_id**](ProjectsApi.md#projects_get_project_by_id) | **GET** /api/Projects/GetProjectById | Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**projects_get_projects_for_client**](ProjectsApi.md#projects_get_projects_for_client) | **GET** /api/Projects/GetProjectsForClient | Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**projects_update_project**](ProjectsApi.md#projects_update_project) | **POST** /api/Projects/UpdateProject | Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**projects_create_project**](ProjectsApi.md#projects_create_project) | **PUT** /api/Projects/CreateProject | Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**projects_get_project_by_id**](ProjectsApi.md#projects_get_project_by_id) | **GET** /api/Projects/GetProjectById | Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**projects_get_projects_for_client**](ProjectsApi.md#projects_get_projects_for_client) | **GET** /api/Projects/GetProjectsForClient | Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**projects_update_project**](ProjectsApi.md#projects_update_project) | **POST** /api/Projects/UpdateProject | Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
 # **projects_create_project**
 > CSApiResponseInt32 projects_create_project(request, x_chronosheets_auth)
 
-Create a project.  Requires the 'ManageClientsAndProjects' permission.
+Create a project.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
 ```ruby
@@ -28,7 +28,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Create a project.  Requires the 'ManageClientsAndProjects' permission.
+  #Create a project.    Requires the 'ManageClientsAndProjects' permission.
   result = api_instance.projects_create_project(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -61,7 +61,7 @@ No authorization required
 # **projects_get_project_by_id**
 > CSApiResponseProject projects_get_project_by_id(project_id, x_chronosheets_auth)
 
-Get a project by its Id.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+Get a project by its Id.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
 ```ruby
@@ -76,7 +76,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get a project by its Id.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+  #Get a project by its Id.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
   result = api_instance.projects_get_project_by_id(project_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -109,7 +109,7 @@ No authorization required
 # **projects_get_projects_for_client**
 > CSApiResponseListProject projects_get_projects_for_client(client_id, x_chronosheets_auth)
 
-Get projects for a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+Get projects for a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
 ```ruby
@@ -124,7 +124,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get projects for a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+  #Get projects for a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
   result = api_instance.projects_get_projects_for_client(client_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -157,7 +157,7 @@ No authorization required
 # **projects_update_project**
 > CSApiResponseBoolean projects_update_project(request, x_chronosheets_auth)
 
-Update a project.  Requires the 'ManageClientsAndProjects' permission.
+Update a project.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
 ```ruby
@@ -172,7 +172,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Update a project.  Requires the 'ManageClientsAndProjects' permission.
+  #Update a project.    Requires the 'ManageClientsAndProjects' permission.
   result = api_instance.projects_update_project(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e

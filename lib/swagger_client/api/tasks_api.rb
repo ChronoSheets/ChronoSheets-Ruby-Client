@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a task
+    # Create a task.    Requires the 'ManageJobsAndTask' permission.
     # 
-    # @param request 
+    # @param request An Insert Task Request object containing values for the new Task to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a task
+    # Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
     # 
-    # @param request 
+    # @param request An Insert Task Request object containing values for the new Task to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Delete a task
+    # Delete a task.    Requires the 'ManageJobsAndTask' permission.
     # 
-    # @param task_id 
+    # @param task_id The ID of the Task you want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Delete a task
+    # Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
     # 
-    # @param task_id 
+    # @param task_id The ID of the Task you want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
@@ -143,9 +143,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a particular task by id
+    # Get a particular task by Id.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
     # 
-    # @param task_id 
+    # @param task_id The ID of the TimesheetTask you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseTimesheetTask]
@@ -154,9 +154,9 @@ module SwaggerClient
       return data
     end
 
-    # Get a particular task by id
+    # Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
-    # @param task_id 
+    # @param task_id The ID of the TimesheetTask you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseTimesheetTask, Fixnum, Hash)>] CSApiResponseTimesheetTask data, response status code and response headers
@@ -204,7 +204,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get tasks in your organisation
+    # Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -214,7 +214,7 @@ module SwaggerClient
       return data
     end
 
-    # Get tasks in your organisation
+    # Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -258,7 +258,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get tasks for a particular job
+    # Get a collection of tasks for a particular Job, specified by JobId.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
     # 
     # @param job_id The ID of the job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -269,7 +269,7 @@ module SwaggerClient
       return data
     end
 
-    # Get tasks for a particular job
+    # Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param job_id The ID of the job
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -319,9 +319,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a task
+    # Update a task.    Requires the 'ManageJobsAndTask' permission.
     # 
-    # @param request 
+    # @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -330,9 +330,9 @@ module SwaggerClient
       return data
     end
 
-    # Update a task
+    # Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
     # 
-    # @param request 
+    # @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers

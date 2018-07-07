@@ -4,16 +4,16 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fleet_create_vehicle**](FleetApi.md#fleet_create_vehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
-[**fleet_get_vehicle_by_id**](FleetApi.md#fleet_get_vehicle_by_id) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle
-[**fleet_get_vehicles**](FleetApi.md#fleet_get_vehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation
-[**fleet_update_vehicle**](FleetApi.md#fleet_update_vehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+[**fleet_create_vehicle**](FleetApi.md#fleet_create_vehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+[**fleet_get_vehicle_by_id**](FleetApi.md#fleet_get_vehicle_by_id) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
+[**fleet_get_vehicles**](FleetApi.md#fleet_get_vehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
+[**fleet_update_vehicle**](FleetApi.md#fleet_update_vehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 
 # **fleet_create_vehicle**
 > CSApiResponseInt32 fleet_create_vehicle(request, x_chronosheets_auth)
 
-Create a vehicle.  Requires the 'ManageFleet' permission.
+Create a vehicle.    Requires the 'ManageFleet' permission.
 
 ### Example
 ```ruby
@@ -28,7 +28,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Create a vehicle.  Requires the 'ManageFleet' permission.
+  #Create a vehicle.    Requires the 'ManageFleet' permission.
   result = api_instance.fleet_create_vehicle(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -61,7 +61,7 @@ No authorization required
 # **fleet_get_vehicle_by_id**
 > CSApiResponseFleetVehicle fleet_get_vehicle_by_id(vehicle_id, x_chronosheets_auth)
 
-Get a particular vehicle
+Get a particular vehicle.  Does not require any special permission.
 
 ### Example
 ```ruby
@@ -76,7 +76,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get a particular vehicle
+  #Get a particular vehicle.  Does not require any special permission.
   result = api_instance.fleet_get_vehicle_by_id(vehicle_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -109,7 +109,7 @@ No authorization required
 # **fleet_get_vehicles**
 > CSApiResponseListFleetVehicle fleet_get_vehicles(include_deleted, x_chronosheets_auth)
 
-Get a collection of vehicles that are under your organisation
+Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
 ### Example
 ```ruby
@@ -124,7 +124,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get a collection of vehicles that are under your organisation
+  #Get a collection of vehicles that are under your organisation.    Does not require any special permission.
   result = api_instance.fleet_get_vehicles(include_deleted, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -157,7 +157,7 @@ No authorization required
 # **fleet_update_vehicle**
 > CSApiResponseBoolean fleet_update_vehicle(request, x_chronosheets_auth)
 
-Update a vehicle.  Requires the 'ManageFleet' permission.
+Update a vehicle.    Requires the 'ManageFleet' permission.
 
 ### Example
 ```ruby
@@ -172,7 +172,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Update a vehicle.  Requires the 'ManageFleet' permission.
+  #Update a vehicle.    Requires the 'ManageFleet' permission.
   result = api_instance.fleet_update_vehicle(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e

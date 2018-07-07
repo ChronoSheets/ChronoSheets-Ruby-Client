@@ -33,9 +33,9 @@ describe 'UsualHoursApi' do
   end
 
   # unit tests for usual_hours_get_usual_hours
-  # Get usual hours (rostered hours) for an employee
+  # Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
   # 
-  # @param user_id 
+  # @param user_id The ID of the User for which you want to get UsualHours for
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseListUsualHoursDay]
@@ -46,9 +46,9 @@ describe 'UsualHoursApi' do
   end
 
   # unit tests for usual_hours_set_usual_hours
-  # Set usual hours (rostered hours) for an employee
+  # Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
   # 
-  # @param request 
+  # @param request A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseBoolean]

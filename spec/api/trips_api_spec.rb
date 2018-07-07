@@ -33,9 +33,9 @@ describe 'TripsApi' do
   end
 
   # unit tests for trips_create_trip
-  # Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+  # Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
-  # @param request The create trip request
+  # @param request A Create Trip Request object containing values for the new Trip to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInt32]
@@ -46,9 +46,9 @@ describe 'TripsApi' do
   end
 
   # unit tests for trips_get_my_trip_by_id
-  # Get trip by Id
+  # Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
   # 
-  # @param trip_id The ID of the trip
+  # @param trip_id The ID of the Trip you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseTrip]
@@ -59,13 +59,13 @@ describe 'TripsApi' do
   end
 
   # unit tests for trips_get_my_trips
-  # Get my trips
+  # Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
   # 
-  # @param start_date 
-  # @param end_date 
-  # @param skip 
-  # @param take 
-  # @param vehicle_id 
+  # @param start_date The Start date of the date range.  Trips after this date will be obtained.
+  # @param end_date The End date of the date range.  Trips before this date will be obtained.
+  # @param skip Skip this many Trips
+  # @param take Take this many Trips
+  # @param vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseForPaginatedListTrip]

@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a user in your organisation
+    # Create a user account in your organisation.  Requires the 'ManageOrganisationUsers' permission.
     # 
-    # @param request 
+    # @param request An Insert User Request object containing values for the new User to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInsertUserResponse]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a user in your organisation
+    # Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
     # 
-    # @param request 
+    # @param request An Insert User Request object containing values for the new User to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInsertUserResponse, Fixnum, Hash)>] CSApiResponseInsertUserResponse data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a particular user in your organisation
+    # Get a particular user in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
     # 
-    # @param user_id 
+    # @param user_id The User ID of the UserForManagement you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseUserForManagement]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Get a particular user in your organisation
+    # Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
     # 
-    # @param user_id 
+    # @param user_id The User ID of the UserForManagement you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseUserForManagement, Fixnum, Hash)>] CSApiResponseUserForManagement data, response status code and response headers
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get users for your organisation
+    # Get users accounts in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -153,7 +153,7 @@ module SwaggerClient
       return data
     end
 
-    # Get users for your organisation
+    # Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -197,9 +197,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a user
+    # Update a user account.  Requires the 'ManageOrganisationUsers' permission.
     # 
-    # @param request 
+    # @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseUpdateUserResponse]
@@ -208,9 +208,9 @@ module SwaggerClient
       return data
     end
 
-    # Update a user
+    # Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
     # 
-    # @param request 
+    # @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseUpdateUserResponse, Fixnum, Hash)>] CSApiResponseUpdateUserResponse data, response status code and response headers

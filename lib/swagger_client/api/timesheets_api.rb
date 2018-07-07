@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Inserts a single timesheet record
+    # Inserts a single timesheet record.    Requires the 'SubmitTimesheets' permission.
     # 
-    # @param request The timesheet request object
+    # @param request A Timesheet Request object containing values for the new Timesheet to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Inserts a single timesheet record
+    # Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
-    # @param request The timesheet request object
+    # @param request A Timesheet Request object containing values for the new Timesheet to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Delete a timesheet
+    # Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
     # 
-    # @param timesheet_id The ID of the timesheet to delete
+    # @param timesheet_id The ID of the Timesheet you want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Delete a timesheet
+    # Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
-    # @param timesheet_id The ID of the timesheet to delete
+    # @param timesheet_id The ID of the Timesheet you want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get timesheets between start and end dates
+    # Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the 'SubmitTimesheets' permission.
     # 
     # @param start_date The start date of the date range
     # @param end_date The end date of the date range
@@ -155,7 +155,7 @@ module SwaggerClient
       return data
     end
 
-    # Get timesheets between start and end dates
+    # Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
     # @param start_date The start date of the date range
     # @param end_date The end date of the date range
@@ -211,9 +211,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Batch update timesheets
+    # Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
     # 
-    # @param request The batch update timesheets request
+    # @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseListInt32]
@@ -222,9 +222,9 @@ module SwaggerClient
       return data
     end
 
-    # Batch update timesheets
+    # Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
-    # @param request The batch update timesheets request
+    # @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseListInt32, Fixnum, Hash)>] CSApiResponseListInt32 data, response status code and response headers

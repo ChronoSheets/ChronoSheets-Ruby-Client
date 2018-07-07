@@ -33,9 +33,9 @@ describe 'UserJobFavouritesApi' do
   end
 
   # unit tests for user_job_favourites_create_job_favourite
-  # Create a job favourite
+  # Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
-  # @param request 
+  # @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInt32]
@@ -46,9 +46,9 @@ describe 'UserJobFavouritesApi' do
   end
 
   # unit tests for user_job_favourites_delete_job_favourite
-  # Delete a job favourite
+  # Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
-  # @param job_id The ID of the Job
+  # @param job_id The ID of the Job for the Job Favourite you want to delete.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseBoolean]
@@ -59,7 +59,7 @@ describe 'UserJobFavouritesApi' do
   end
 
   # unit tests for user_job_favourites_get_job_favourites
-  # Get your job favourites
+  # Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters

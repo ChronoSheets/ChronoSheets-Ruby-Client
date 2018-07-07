@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+    # Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
     # 
-    # @param request The create trip request
+    # @param request A Create Trip Request object containing values for the new Trip to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+    # Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
-    # @param request The create trip request
+    # @param request A Create Trip Request object containing values for the new Trip to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get trip by Id
+    # Get trip by Id.    Requires the 'ViewMyTrips' permission.
     # 
-    # @param trip_id The ID of the trip
+    # @param trip_id The ID of the Trip you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseTrip]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Get trip by Id
+    # Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
     # 
-    # @param trip_id The ID of the trip
+    # @param trip_id The ID of the Trip you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseTrip, Fixnum, Hash)>] CSApiResponseTrip data, response status code and response headers
@@ -143,13 +143,13 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get my trips
+    # Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
     # 
-    # @param start_date 
-    # @param end_date 
-    # @param skip 
-    # @param take 
-    # @param vehicle_id 
+    # @param start_date The Start date of the date range.  Trips after this date will be obtained.
+    # @param end_date The End date of the date range.  Trips before this date will be obtained.
+    # @param skip Skip this many Trips
+    # @param take Take this many Trips
+    # @param vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseForPaginatedListTrip]
@@ -158,13 +158,13 @@ module SwaggerClient
       return data
     end
 
-    # Get my trips
+    # Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
     # 
-    # @param start_date 
-    # @param end_date 
-    # @param skip 
-    # @param take 
-    # @param vehicle_id 
+    # @param start_date The Start date of the date range.  Trips after this date will be obtained.
+    # @param end_date The End date of the date range.  Trips before this date will be obtained.
+    # @param skip Skip this many Trips
+    # @param take Take this many Trips
+    # @param vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseForPaginatedListTrip, Fixnum, Hash)>] CSApiResponseForPaginatedListTrip data, response status code and response headers

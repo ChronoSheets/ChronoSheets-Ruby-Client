@@ -33,7 +33,7 @@ describe 'FleetApi' do
   end
 
   # unit tests for fleet_create_vehicle
-  # Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+  # Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
   # 
   # @param request An Insert Vehicle Request object containing values for the new Vehicle to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -46,7 +46,7 @@ describe 'FleetApi' do
   end
 
   # unit tests for fleet_get_vehicle_by_id
-  # Get a particular vehicle
+  # Get a particular vehicle.  Does not require any special permission.
   # 
   # @param vehicle_id The ID of the Vehicle you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -59,7 +59,7 @@ describe 'FleetApi' do
   end
 
   # unit tests for fleet_get_vehicles
-  # Get a collection of vehicles that are under your organisation
+  # Get a collection of vehicles that are under your organisation.    Does not require any special permission.
   # 
   # @param include_deleted Whether or not to include deleted vehicles
   # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -72,7 +72,7 @@ describe 'FleetApi' do
   end
 
   # unit tests for fleet_update_vehicle
-  # Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+  # Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
   # 
   # @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
   # @param x_chronosheets_auth The ChronoSheets Auth Token

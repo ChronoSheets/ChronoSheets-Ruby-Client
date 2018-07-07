@@ -20,7 +20,7 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Get a collection of organisation group users that belong to an organisation group.  Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
+    # Get a collection of organisation group users that belong to an organisation group.    Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
     # 
     # @param org_group_id An OrganisatioGroup Id
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -31,7 +31,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+    # Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
     # 
     # @param org_group_id An OrganisatioGroup Id
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -81,7 +81,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Set the users who belong to an organisation group
+    # Set the users who belong to an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
     # 
     # @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -92,7 +92,7 @@ module SwaggerClient
       return data
     end
 
-    # Set the users who belong to an organisation group
+    # Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
     # 
     # @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token

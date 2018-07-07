@@ -20,7 +20,7 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a project.  Requires the 'ManageClientsAndProjects' permission.
+    # Create a project.    Requires the 'ManageClientsAndProjects' permission.
     # 
     # @param request An Insert Project Request object containing values for the new Project to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -31,7 +31,7 @@ module SwaggerClient
       return data
     end
 
-    # Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+    # Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
     # @param request An Insert Project Request object containing values for the new Project to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -82,7 +82,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a project by its Id.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+    # Get a project by its Id.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
     # @param project_id The ID of the Project you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -93,7 +93,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+    # Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param project_id The ID of the Project you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get projects for a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+    # Get projects for a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
     # 
     # @param client_id The ID of the client
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -154,7 +154,7 @@ module SwaggerClient
       return data
     end
 
-    # Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+    # Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
     # 
     # @param client_id The ID of the client
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -204,7 +204,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a project.  Requires the 'ManageClientsAndProjects' permission.
+    # Update a project.    Requires the 'ManageClientsAndProjects' permission.
     # 
     # @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -215,7 +215,7 @@ module SwaggerClient
       return data
     end
 
-    # Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+    # Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
     # @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token

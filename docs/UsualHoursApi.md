@@ -4,14 +4,14 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**usual_hours_get_usual_hours**](UsualHoursApi.md#usual_hours_get_usual_hours) | **GET** /api/UsualHours/GetUsualHours | Get usual hours (rostered hours) for an employee
-[**usual_hours_set_usual_hours**](UsualHoursApi.md#usual_hours_set_usual_hours) | **POST** /api/UsualHours/SetUsualHours | Set usual hours (rostered hours) for an employee
+[**usual_hours_get_usual_hours**](UsualHoursApi.md#usual_hours_get_usual_hours) | **GET** /api/UsualHours/GetUsualHours | Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**usual_hours_set_usual_hours**](UsualHoursApi.md#usual_hours_set_usual_hours) | **POST** /api/UsualHours/SetUsualHours | Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
 
 
 # **usual_hours_get_usual_hours**
 > CSApiResponseListUsualHoursDay usual_hours_get_usual_hours(user_id, x_chronosheets_auth)
 
-Get usual hours (rostered hours) for an employee
+Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
 
 ### Example
 ```ruby
@@ -20,13 +20,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UsualHoursApi.new
 
-user_id = 56 # Integer | 
+user_id = 56 # Integer | The ID of the User for which you want to get UsualHours for
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Get usual hours (rostered hours) for an employee
+  #Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
   result = api_instance.usual_hours_get_usual_hours(user_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -38,7 +38,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**|  | 
+ **user_id** | **Integer**| The ID of the User for which you want to get UsualHours for | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -59,7 +59,7 @@ No authorization required
 # **usual_hours_set_usual_hours**
 > CSApiResponseBoolean usual_hours_set_usual_hours(request, x_chronosheets_auth)
 
-Set usual hours (rostered hours) for an employee
+Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
 
 ### Example
 ```ruby
@@ -68,13 +68,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UsualHoursApi.new
 
-request = SwaggerClient::CSSetUsualHoursRequest.new # CSSetUsualHoursRequest | 
+request = SwaggerClient::CSSetUsualHoursRequest.new # CSSetUsualHoursRequest | A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Set usual hours (rostered hours) for an employee
+  #Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
   result = api_instance.usual_hours_set_usual_hours(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -86,7 +86,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSetUsualHoursRequest**](CSSetUsualHoursRequest.md)|  | 
+ **request** | [**CSSetUsualHoursRequest**](CSSetUsualHoursRequest.md)| A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

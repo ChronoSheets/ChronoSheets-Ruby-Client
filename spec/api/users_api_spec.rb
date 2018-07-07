@@ -33,9 +33,9 @@ describe 'UsersApi' do
   end
 
   # unit tests for users_create_timesheet_user
-  # Create a user in your organisation
+  # Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
   # 
-  # @param request 
+  # @param request An Insert User Request object containing values for the new User to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInsertUserResponse]
@@ -46,9 +46,9 @@ describe 'UsersApi' do
   end
 
   # unit tests for users_get_timesheet_user
-  # Get a particular user in your organisation
+  # Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
   # 
-  # @param user_id 
+  # @param user_id The User ID of the UserForManagement you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseUserForManagement]
@@ -59,7 +59,7 @@ describe 'UsersApi' do
   end
 
   # unit tests for users_get_timesheet_users
-  # Get users for your organisation
+  # Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
@@ -71,9 +71,9 @@ describe 'UsersApi' do
   end
 
   # unit tests for users_update_timesheet_user
-  # Update a user
+  # Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
   # 
-  # @param request 
+  # @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseUpdateUserResponse]

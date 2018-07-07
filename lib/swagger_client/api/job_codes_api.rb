@@ -20,7 +20,7 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a job code.  Requires the 'ManageJobsAndTask' permission.
+    # Create a job code.    Requires the 'ManageJobsAndTask' permission.
     # 
     # @param request An Insert JobCode Request object containing values for the new JobCode to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -31,7 +31,7 @@ module SwaggerClient
       return data
     end
 
-    # Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+    # Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
     # 
     # @param request An Insert JobCode Request object containing values for the new JobCode to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -82,7 +82,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Delete a job code.  Requires the 'ManageJobsAndTask' permission.
+    # Delete a job code.    Requires the 'ManageJobsAndTask' permission.
     # 
     # @param job_code_id The ID of the job code you want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -93,7 +93,7 @@ module SwaggerClient
       return data
     end
 
-    # Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+    # Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
     # 
     # @param job_code_id The ID of the job code you want to delete
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+    # Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
     # 
     # @param job_code_id The ID of the JobCode you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -154,7 +154,7 @@ module SwaggerClient
       return data
     end
 
-    # Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+    # Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
     # 
     # @param job_code_id The ID of the JobCode you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -204,7 +204,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+    # Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -214,7 +214,7 @@ module SwaggerClient
       return data
     end
 
-    # Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+    # Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -258,7 +258,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Update a job code.  Requires the 'ManageJobsAndTask' permission.
+    # Update a job code.    Requires the 'ManageJobsAndTask' permission.
     # 
     # @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -269,7 +269,7 @@ module SwaggerClient
       return data
     end
 
-    # Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+    # Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
     # 
     # @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
     # @param x_chronosheets_auth The ChronoSheets Auth Token

@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
+    # Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
     # 
-    # 
-    # @param request 
+    # @param request A request object containing your username/email and password.
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseDoLoginResponse]
     def user_profile_do_login(request, opts = {})
@@ -30,9 +30,9 @@ module SwaggerClient
       return data
     end
 
+    # Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
     # 
-    # 
-    # @param request 
+    # @param request A request object containing your username/email and password.
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseDoLoginResponse, Fixnum, Hash)>] CSApiResponseDoLoginResponse data, response status code and response headers
     def user_profile_do_login_with_http_info(request, opts = {})
@@ -75,7 +75,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # 
+    # Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -85,7 +85,7 @@ module SwaggerClient
       return data
     end
 
-    # 
+    # Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -129,7 +129,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # 
+    # Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -139,7 +139,7 @@ module SwaggerClient
       return data
     end
 
-    # 
+    # Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -183,7 +183,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # 
+    # Keep a session alive.  Use this method to keep a session active.  You could use this to 'ping' ChronoSheets every 'x' minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -193,7 +193,7 @@ module SwaggerClient
       return data
     end
 
-    # 
+    # Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -237,9 +237,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
+    # Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
     # 
-    # 
-    # @param request 
+    # @param request An Update MyProfile Request object containing updated fields.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseUpdateProfileResponse]
@@ -248,9 +248,9 @@ module SwaggerClient
       return data
     end
 
+    # Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
     # 
-    # 
-    # @param request 
+    # @param request An Update MyProfile Request object containing updated fields.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseUpdateProfileResponse, Fixnum, Hash)>] CSApiResponseUpdateProfileResponse data, response status code and response headers

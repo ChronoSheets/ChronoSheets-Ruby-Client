@@ -33,9 +33,9 @@ describe 'UserPayRatesApi' do
   end
 
   # unit tests for user_pay_rates_create_pay_rate
-  # Create a new pay rate for a particular user, archiving the previous pay rate
+  # Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
   # 
-  # @param request 
+  # @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInt32]
@@ -46,9 +46,9 @@ describe 'UserPayRatesApi' do
   end
 
   # unit tests for user_pay_rates_get_pay_rates
-  # Get a collection of pay rates for a particular user, specified by user id
+  # Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
   # 
-  # @param user_id 
+  # @param user_id The ID of the User for which you want to get UserHourlyRate objects
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseListUserHourlyRate]

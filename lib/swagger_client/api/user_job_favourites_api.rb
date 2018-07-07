@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a job favourite
+    # Create a job favourite.    Requires the 'SubmitTimesheets' permission.
     # 
-    # @param request 
+    # @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a job favourite
+    # Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
-    # @param request 
+    # @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Delete a job favourite
+    # Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
     # 
-    # @param job_id The ID of the Job
+    # @param job_id The ID of the Job for the Job Favourite you want to delete.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Delete a job favourite
+    # Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
-    # @param job_id The ID of the Job
+    # @param job_id The ID of the Job for the Job Favourite you want to delete.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
@@ -143,7 +143,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get your job favourites
+    # Get your job favourites.    Requires the 'SubmitTimesheets' permission.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
@@ -153,7 +153,7 @@ module SwaggerClient
       return data
     end
 
-    # Get your job favourites
+    # Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters

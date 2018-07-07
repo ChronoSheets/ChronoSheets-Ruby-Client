@@ -33,9 +33,9 @@ describe 'TasksApi' do
   end
 
   # unit tests for tasks_create_task
-  # Create a task
+  # Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
   # 
-  # @param request 
+  # @param request An Insert Task Request object containing values for the new Task to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInt32]
@@ -46,9 +46,9 @@ describe 'TasksApi' do
   end
 
   # unit tests for tasks_delete_task
-  # Delete a task
+  # Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
   # 
-  # @param task_id 
+  # @param task_id The ID of the Task you want to delete
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseBoolean]
@@ -59,9 +59,9 @@ describe 'TasksApi' do
   end
 
   # unit tests for tasks_get_task_by_id
-  # Get a particular task by id
+  # Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   # 
-  # @param task_id 
+  # @param task_id The ID of the TimesheetTask you want to get
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseTimesheetTask]
@@ -72,7 +72,7 @@ describe 'TasksApi' do
   end
 
   # unit tests for tasks_get_tasks
-  # Get tasks in your organisation
+  # Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
@@ -84,7 +84,7 @@ describe 'TasksApi' do
   end
 
   # unit tests for tasks_get_tasks_for_job
-  # Get tasks for a particular job
+  # Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   # 
   # @param job_id The ID of the job
   # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -97,9 +97,9 @@ describe 'TasksApi' do
   end
 
   # unit tests for tasks_update_task
-  # Update a task
+  # Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
   # 
-  # @param request 
+  # @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseBoolean]

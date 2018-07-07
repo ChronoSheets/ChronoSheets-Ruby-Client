@@ -20,7 +20,7 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
+    # Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -33,7 +33,7 @@ module SwaggerClient
       return data
     end
 
-    # Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+    # Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -95,7 +95,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.  Requires the 'ViewOwnReports' permission.
+    # Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.    Requires the 'ViewOwnReports' permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -107,7 +107,7 @@ module SwaggerClient
       return data
     end
 
-    # Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
+    # Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -163,7 +163,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get trip by Id, for reporting purposes.  Requires the 'ReportAdmin' permission.
+    # Get trip by Id, for reporting purposes.    Requires the 'ReportAdmin' permission.
     # 
     # @param trip_id The ID of the Trip you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -174,7 +174,7 @@ module SwaggerClient
       return data
     end
 
-    # Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
+    # Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
     # 
     # @param trip_id The ID of the Trip you want to get
     # @param x_chronosheets_auth The ChronoSheets Auth Token
@@ -224,7 +224,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the 'ReportAdmin' permission.
+    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the 'ReportAdmin' permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -239,7 +239,7 @@ module SwaggerClient
       return data
     end
 
-    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
+    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -313,7 +313,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Reports on Organisation trips (GPS tracking from whole organisation).  Requires the 'ReportAdmin' permission.
+    # Reports on Organisation trips (GPS tracking from whole organisation).    Requires the 'ReportAdmin' permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -328,7 +328,7 @@ module SwaggerClient
       return data
     end
 
-    # Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
+    # Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -402,7 +402,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
+    # Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -419,7 +419,7 @@ module SwaggerClient
       return data
     end
 
-    # Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+    # Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -513,7 +513,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Gets project cost estimations VS actual cost for date range and users.  Requires the 'ReportAdmin' permission.
+    # Gets project cost estimations VS actual cost for date range and users.    Requires the 'ReportAdmin' permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -526,7 +526,7 @@ module SwaggerClient
       return data
     end
 
-    # Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
+    # Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -588,7 +588,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Timeseries jobs data for the logged in user.  Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
+    # Timeseries jobs data for the logged in user.    Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -600,7 +600,7 @@ module SwaggerClient
       return data
     end
 
-    # Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
+    # Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date

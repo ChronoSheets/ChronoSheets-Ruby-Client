@@ -33,7 +33,7 @@ describe 'AggregateJobTasksApi' do
   end
 
   # unit tests for aggregate_job_tasks_get_aggregate_job_tasks
-  # Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+  # Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   # 
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters

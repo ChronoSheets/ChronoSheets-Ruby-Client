@@ -33,9 +33,9 @@ describe 'TimesheetsApi' do
   end
 
   # unit tests for timesheets_create_single_timesheet
-  # Inserts a single timesheet record
+  # Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
-  # @param request The timesheet request object
+  # @param request A Timesheet Request object containing values for the new Timesheet to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInt32]
@@ -46,9 +46,9 @@ describe 'TimesheetsApi' do
   end
 
   # unit tests for timesheets_delete_timesheet
-  # Delete a timesheet
+  # Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
-  # @param timesheet_id The ID of the timesheet to delete
+  # @param timesheet_id The ID of the Timesheet you want to delete
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseBoolean]
@@ -59,7 +59,7 @@ describe 'TimesheetsApi' do
   end
 
   # unit tests for timesheets_get_timesheets
-  # Get timesheets between start and end dates
+  # Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
   # @param start_date The start date of the date range
   # @param end_date The end date of the date range
@@ -73,9 +73,9 @@ describe 'TimesheetsApi' do
   end
 
   # unit tests for timesheets_update_timesheets
-  # Batch update timesheets
+  # Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
   # 
-  # @param request The batch update timesheets request
+  # @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseListInt32]

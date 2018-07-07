@@ -20,9 +20,9 @@ module SwaggerClient
       @api_client = api_client
     end
 
-    # Create a new pay rate for a particular user, archiving the previous pay rate
+    # Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the 'ManageOrganisationUsers' permission.
     # 
-    # @param request 
+    # @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -31,9 +31,9 @@ module SwaggerClient
       return data
     end
 
-    # Create a new pay rate for a particular user, archiving the previous pay rate
+    # Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
     # 
-    # @param request 
+    # @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers
@@ -82,9 +82,9 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Get a collection of pay rates for a particular user, specified by user id
+    # Get a collection of pay rates for a particular user, specified by user id.    Requires the 'ManageOrganisationUsers' permission.
     # 
-    # @param user_id 
+    # @param user_id The ID of the User for which you want to get UserHourlyRate objects
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseListUserHourlyRate]
@@ -93,9 +93,9 @@ module SwaggerClient
       return data
     end
 
-    # Get a collection of pay rates for a particular user, specified by user id
+    # Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
     # 
-    # @param user_id 
+    # @param user_id The ID of the User for which you want to get UserHourlyRate objects
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseListUserHourlyRate, Fixnum, Hash)>] CSApiResponseListUserHourlyRate data, response status code and response headers

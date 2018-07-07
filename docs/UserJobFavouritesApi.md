@@ -4,15 +4,15 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**user_job_favourites_create_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_create_job_favourite) | **PUT** /api/UserJobFavourites/CreateJobFavourite | Create a job favourite
-[**user_job_favourites_delete_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_delete_job_favourite) | **DELETE** /api/UserJobFavourites/DeleteJobFavourite | Delete a job favourite
-[**user_job_favourites_get_job_favourites**](UserJobFavouritesApi.md#user_job_favourites_get_job_favourites) | **GET** /api/UserJobFavourites/GetJobFavourites | Get your job favourites
+[**user_job_favourites_create_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_create_job_favourite) | **PUT** /api/UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**user_job_favourites_delete_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_delete_job_favourite) | **DELETE** /api/UserJobFavourites/DeleteJobFavourite | Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**user_job_favourites_get_job_favourites**](UserJobFavouritesApi.md#user_job_favourites_get_job_favourites) | **GET** /api/UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 
 # **user_job_favourites_create_job_favourite**
 > CSApiResponseInt32 user_job_favourites_create_job_favourite(request, x_chronosheets_auth)
 
-Create a job favourite
+Create a job favourite.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```ruby
@@ -21,13 +21,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UserJobFavouritesApi.new
 
-request = SwaggerClient::CSInsertUserJobFavouriteRequest.new # CSInsertUserJobFavouriteRequest | 
+request = SwaggerClient::CSInsertUserJobFavouriteRequest.new # CSInsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Create a job favourite
+  #Create a job favourite.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.user_job_favourites_create_job_favourite(request, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -39,7 +39,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)|  | 
+ **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)| An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -60,7 +60,7 @@ No authorization required
 # **user_job_favourites_delete_job_favourite**
 > CSApiResponseBoolean user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth)
 
-Delete a job favourite
+Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```ruby
@@ -69,13 +69,13 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::UserJobFavouritesApi.new
 
-job_id = 56 # Integer | The ID of the Job
+job_id = 56 # Integer | The ID of the Job for the Job Favourite you want to delete.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Delete a job favourite
+  #Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
@@ -87,7 +87,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| The ID of the Job | 
+ **job_id** | **Integer**| The ID of the Job for the Job Favourite you want to delete. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -108,7 +108,7 @@ No authorization required
 # **user_job_favourites_get_job_favourites**
 > CSApiResponseListUserJobFavourite user_job_favourites_get_job_favourites(x_chronosheets_auth)
 
-Get your job favourites
+Get your job favourites.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```ruby
@@ -121,7 +121,7 @@ x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets 
 
 
 begin
-  #Get your job favourites
+  #Get your job favourites.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.user_job_favourites_get_job_favourites(x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
