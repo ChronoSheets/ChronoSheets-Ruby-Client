@@ -14,49 +14,73 @@ require 'date'
 
 module SwaggerClient
 
-  class CSProjectCostingReportItem
-    attr_accessor :project_id
+  class CSFleetSummaryReportItem
+    attr_accessor :total_distance_meters_filtered
 
-    attr_accessor :project_name
+    attr_accessor :total_distance_meters
 
-    attr_accessor :client_id
+    attr_accessor :total_running_cost_dollars_filtered
+
+    attr_accessor :total_running_cost_dollars
+
+    attr_accessor :id
 
     attr_accessor :organisation_id
 
-    attr_accessor :client_name
+    attr_accessor :name
 
-    attr_accessor :estimated_cost
+    attr_accessor :cost_per_kilometer
 
-    attr_accessor :actual_cost_filtered
+    attr_accessor :make
 
-    attr_accessor :actual_cost
+    attr_accessor :model
+
+    attr_accessor :year
+
+    attr_accessor :licence_plate_number
+
+    attr_accessor :is_deleted
+
+    attr_accessor :permitted_employees
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'project_id' => :'ProjectId',
-        :'project_name' => :'ProjectName',
-        :'client_id' => :'ClientId',
+        :'total_distance_meters_filtered' => :'TotalDistanceMetersFiltered',
+        :'total_distance_meters' => :'TotalDistanceMeters',
+        :'total_running_cost_dollars_filtered' => :'TotalRunningCostDollarsFiltered',
+        :'total_running_cost_dollars' => :'TotalRunningCostDollars',
+        :'id' => :'Id',
         :'organisation_id' => :'OrganisationId',
-        :'client_name' => :'ClientName',
-        :'estimated_cost' => :'EstimatedCost',
-        :'actual_cost_filtered' => :'ActualCostFiltered',
-        :'actual_cost' => :'ActualCost'
+        :'name' => :'Name',
+        :'cost_per_kilometer' => :'CostPerKilometer',
+        :'make' => :'Make',
+        :'model' => :'Model',
+        :'year' => :'Year',
+        :'licence_plate_number' => :'LicencePlateNumber',
+        :'is_deleted' => :'IsDeleted',
+        :'permitted_employees' => :'PermittedEmployees'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'project_id' => :'Integer',
-        :'project_name' => :'String',
-        :'client_id' => :'Integer',
+        :'total_distance_meters_filtered' => :'Float',
+        :'total_distance_meters' => :'Float',
+        :'total_running_cost_dollars_filtered' => :'Float',
+        :'total_running_cost_dollars' => :'Float',
+        :'id' => :'Integer',
         :'organisation_id' => :'Integer',
-        :'client_name' => :'String',
-        :'estimated_cost' => :'Float',
-        :'actual_cost_filtered' => :'Float',
-        :'actual_cost' => :'Float'
+        :'name' => :'String',
+        :'cost_per_kilometer' => :'Float',
+        :'make' => :'String',
+        :'model' => :'String',
+        :'year' => :'String',
+        :'licence_plate_number' => :'String',
+        :'is_deleted' => :'BOOLEAN',
+        :'permitted_employees' => :'Array<Integer>'
       }
     end
 
@@ -68,36 +92,62 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ProjectId')
-        self.project_id = attributes[:'ProjectId']
+      if attributes.has_key?(:'TotalDistanceMetersFiltered')
+        self.total_distance_meters_filtered = attributes[:'TotalDistanceMetersFiltered']
       end
 
-      if attributes.has_key?(:'ProjectName')
-        self.project_name = attributes[:'ProjectName']
+      if attributes.has_key?(:'TotalDistanceMeters')
+        self.total_distance_meters = attributes[:'TotalDistanceMeters']
       end
 
-      if attributes.has_key?(:'ClientId')
-        self.client_id = attributes[:'ClientId']
+      if attributes.has_key?(:'TotalRunningCostDollarsFiltered')
+        self.total_running_cost_dollars_filtered = attributes[:'TotalRunningCostDollarsFiltered']
+      end
+
+      if attributes.has_key?(:'TotalRunningCostDollars')
+        self.total_running_cost_dollars = attributes[:'TotalRunningCostDollars']
+      end
+
+      if attributes.has_key?(:'Id')
+        self.id = attributes[:'Id']
       end
 
       if attributes.has_key?(:'OrganisationId')
         self.organisation_id = attributes[:'OrganisationId']
       end
 
-      if attributes.has_key?(:'ClientName')
-        self.client_name = attributes[:'ClientName']
+      if attributes.has_key?(:'Name')
+        self.name = attributes[:'Name']
       end
 
-      if attributes.has_key?(:'EstimatedCost')
-        self.estimated_cost = attributes[:'EstimatedCost']
+      if attributes.has_key?(:'CostPerKilometer')
+        self.cost_per_kilometer = attributes[:'CostPerKilometer']
       end
 
-      if attributes.has_key?(:'ActualCostFiltered')
-        self.actual_cost_filtered = attributes[:'ActualCostFiltered']
+      if attributes.has_key?(:'Make')
+        self.make = attributes[:'Make']
       end
 
-      if attributes.has_key?(:'ActualCost')
-        self.actual_cost = attributes[:'ActualCost']
+      if attributes.has_key?(:'Model')
+        self.model = attributes[:'Model']
+      end
+
+      if attributes.has_key?(:'Year')
+        self.year = attributes[:'Year']
+      end
+
+      if attributes.has_key?(:'LicencePlateNumber')
+        self.licence_plate_number = attributes[:'LicencePlateNumber']
+      end
+
+      if attributes.has_key?(:'IsDeleted')
+        self.is_deleted = attributes[:'IsDeleted']
+      end
+
+      if attributes.has_key?(:'PermittedEmployees')
+        if (value = attributes[:'PermittedEmployees']).is_a?(Array)
+          self.permitted_employees = value
+        end
       end
 
     end
@@ -120,14 +170,20 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          project_id == o.project_id &&
-          project_name == o.project_name &&
-          client_id == o.client_id &&
+          total_distance_meters_filtered == o.total_distance_meters_filtered &&
+          total_distance_meters == o.total_distance_meters &&
+          total_running_cost_dollars_filtered == o.total_running_cost_dollars_filtered &&
+          total_running_cost_dollars == o.total_running_cost_dollars &&
+          id == o.id &&
           organisation_id == o.organisation_id &&
-          client_name == o.client_name &&
-          estimated_cost == o.estimated_cost &&
-          actual_cost_filtered == o.actual_cost_filtered &&
-          actual_cost == o.actual_cost
+          name == o.name &&
+          cost_per_kilometer == o.cost_per_kilometer &&
+          make == o.make &&
+          model == o.model &&
+          year == o.year &&
+          licence_plate_number == o.licence_plate_number &&
+          is_deleted == o.is_deleted &&
+          permitted_employees == o.permitted_employees
     end
 
     # @see the `==` method
@@ -139,7 +195,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [project_id, project_name, client_id, organisation_id, client_name, estimated_cost, actual_cost_filtered, actual_cost].hash
+      [total_distance_meters_filtered, total_distance_meters, total_running_cost_dollars_filtered, total_running_cost_dollars, id, organisation_id, name, cost_per_kilometer, make, model, year, licence_plate_number, is_deleted, permitted_employees].hash
     end
 
     # Builds the object from hash

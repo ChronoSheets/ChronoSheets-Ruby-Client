@@ -14,49 +14,54 @@ require 'date'
 
 module SwaggerClient
 
-  class CSProjectCostingReportItem
-    attr_accessor :project_id
+  class CSApiResponseForPaginatedListTimesheetFileAttachment
+    attr_accessor :total_set_count
 
-    attr_accessor :project_name
+    attr_accessor :data
 
-    attr_accessor :client_id
+    attr_accessor :status
 
-    attr_accessor :organisation_id
+    attr_accessor :message
 
-    attr_accessor :client_name
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
 
-    attr_accessor :estimated_cost
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
 
-    attr_accessor :actual_cost_filtered
-
-    attr_accessor :actual_cost
-
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'project_id' => :'ProjectId',
-        :'project_name' => :'ProjectName',
-        :'client_id' => :'ClientId',
-        :'organisation_id' => :'OrganisationId',
-        :'client_name' => :'ClientName',
-        :'estimated_cost' => :'EstimatedCost',
-        :'actual_cost_filtered' => :'ActualCostFiltered',
-        :'actual_cost' => :'ActualCost'
+        :'total_set_count' => :'TotalSetCount',
+        :'data' => :'Data',
+        :'status' => :'Status',
+        :'message' => :'Message'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'project_id' => :'Integer',
-        :'project_name' => :'String',
-        :'client_id' => :'Integer',
-        :'organisation_id' => :'Integer',
-        :'client_name' => :'String',
-        :'estimated_cost' => :'Float',
-        :'actual_cost_filtered' => :'Float',
-        :'actual_cost' => :'Float'
+        :'total_set_count' => :'Integer',
+        :'data' => :'Array<CSTimesheetFileAttachment>',
+        :'status' => :'String',
+        :'message' => :'String'
       }
     end
 
@@ -68,36 +73,22 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ProjectId')
-        self.project_id = attributes[:'ProjectId']
+      if attributes.has_key?(:'TotalSetCount')
+        self.total_set_count = attributes[:'TotalSetCount']
       end
 
-      if attributes.has_key?(:'ProjectName')
-        self.project_name = attributes[:'ProjectName']
+      if attributes.has_key?(:'Data')
+        if (value = attributes[:'Data']).is_a?(Array)
+          self.data = value
+        end
       end
 
-      if attributes.has_key?(:'ClientId')
-        self.client_id = attributes[:'ClientId']
+      if attributes.has_key?(:'Status')
+        self.status = attributes[:'Status']
       end
 
-      if attributes.has_key?(:'OrganisationId')
-        self.organisation_id = attributes[:'OrganisationId']
-      end
-
-      if attributes.has_key?(:'ClientName')
-        self.client_name = attributes[:'ClientName']
-      end
-
-      if attributes.has_key?(:'EstimatedCost')
-        self.estimated_cost = attributes[:'EstimatedCost']
-      end
-
-      if attributes.has_key?(:'ActualCostFiltered')
-        self.actual_cost_filtered = attributes[:'ActualCostFiltered']
-      end
-
-      if attributes.has_key?(:'ActualCost')
-        self.actual_cost = attributes[:'ActualCost']
+      if attributes.has_key?(:'Message')
+        self.message = attributes[:'Message']
       end
 
     end
@@ -112,7 +103,19 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      status_validator = EnumAttributeValidator.new('String', ["Succeeded", "FatalException", "GeneralError", "ValidationError", "UnAuthorized", "SessionExpired"])
+      return false unless status_validator.valid?(@status)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      validator = EnumAttributeValidator.new('String', ["Succeeded", "FatalException", "GeneralError", "ValidationError", "UnAuthorized", "SessionExpired"])
+      unless validator.valid?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{validator.allowable_values}."
+      end
+      @status = status
     end
 
     # Checks equality by comparing each attribute.
@@ -120,14 +123,10 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          project_id == o.project_id &&
-          project_name == o.project_name &&
-          client_id == o.client_id &&
-          organisation_id == o.organisation_id &&
-          client_name == o.client_name &&
-          estimated_cost == o.estimated_cost &&
-          actual_cost_filtered == o.actual_cost_filtered &&
-          actual_cost == o.actual_cost
+          total_set_count == o.total_set_count &&
+          data == o.data &&
+          status == o.status &&
+          message == o.message
     end
 
     # @see the `==` method
@@ -139,7 +138,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [project_id, project_name, client_id, organisation_id, client_name, estimated_cost, actual_cost_filtered, actual_cost].hash
+      [total_set_count, data, status, message].hash
     end
 
     # Builds the object from hash

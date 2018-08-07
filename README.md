@@ -54,17 +54,17 @@ Please follow the [installation](#installation) procedure and then run the follo
 # Load the gem
 require 'swagger_client'
 
-api_instance = SwaggerClient::AggregateJobTasksApi.new
+api_instance = SwaggerClient::AggregateClientProjectsApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 
 begin
-  #Get jobs and tasks information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
-  result = api_instance.aggregate_job_tasks_get_aggregate_job_tasks(x_chronosheets_auth)
+  #Get client and project information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageClientsAndProjects' permissions.
+  result = api_instance.aggregate_client_projects_get_aggregate_client_projects(x_chronosheets_auth)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AggregateJobTasksApi->aggregate_job_tasks_get_aggregate_job_tasks: #{e}"
+  puts "Exception when calling AggregateClientProjectsApi->aggregate_client_projects_get_aggregate_client_projects: #{e}"
 end
 
 ```
@@ -75,11 +75,13 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SwaggerClient::AggregateClientProjectsApi* | [**aggregate_client_projects_get_aggregate_client_projects**](docs/AggregateClientProjectsApi.md#aggregate_client_projects_get_aggregate_client_projects) | **GET** /api/AggregateClientProjects/GetAggregateClientProjects | Get client and project information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageClientsAndProjects' permissions.
 *SwaggerClient::AggregateJobTasksApi* | [**aggregate_job_tasks_get_aggregate_job_tasks**](docs/AggregateJobTasksApi.md#aggregate_job_tasks_get_aggregate_job_tasks) | **GET** /api/AggregateJobTasks/GetAggregateJobTasks | Get jobs and tasks information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 *SwaggerClient::ClientsApi* | [**clients_create_client**](docs/ClientsApi.md#clients_create_client) | **POST** /api/Clients/CreateClient | Create a client.    Requires the 'ManageClientsAndProjects' permission.
 *SwaggerClient::ClientsApi* | [**clients_get_client**](docs/ClientsApi.md#clients_get_client) | **GET** /api/Clients/GetClient | Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 *SwaggerClient::ClientsApi* | [**clients_get_clients**](docs/ClientsApi.md#clients_get_clients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 *SwaggerClient::ClientsApi* | [**clients_update_client**](docs/ClientsApi.md#clients_update_client) | **PUT** /api/Clients/UpdateClient | Update a client.    Requires the 'ManageClientsAndProjects' permission.
+*SwaggerClient::FileAttachmentsApi* | [**file_attachments_get_my_file_attachments**](docs/FileAttachmentsApi.md#file_attachments_get_my_file_attachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you've attached to timesheets.
 *SwaggerClient::FleetApi* | [**fleet_create_vehicle**](docs/FleetApi.md#fleet_create_vehicle) | **POST** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the 'ManageFleet' permission.
 *SwaggerClient::FleetApi* | [**fleet_get_vehicle_by_id**](docs/FleetApi.md#fleet_get_vehicle_by_id) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
 *SwaggerClient::FleetApi* | [**fleet_get_vehicles**](docs/FleetApi.md#fleet_get_vehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
@@ -105,8 +107,10 @@ Class | Method | HTTP request | Description
 *SwaggerClient::ProjectsApi* | [**projects_update_project**](docs/ProjectsApi.md#projects_update_project) | **PUT** /api/Projects/UpdateProject | Update a project.    Requires the 'ManageClientsAndProjects' permission.
 *SwaggerClient::ReportsApi* | [**reports_get_all_charts_data_admin**](docs/ReportsApi.md#reports_get_all_charts_data_admin) | **GET** /api/Reports/GetAllChartsDataAdmin | Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
 *SwaggerClient::ReportsApi* | [**reports_get_all_charts_data_user**](docs/ReportsApi.md#reports_get_all_charts_data_user) | **GET** /api/Reports/GetAllChartsDataUser | Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.    Requires the 'ViewOwnReports' permission.
+*SwaggerClient::ReportsApi* | [**reports_get_fleet_summary_admin**](docs/ReportsApi.md#reports_get_fleet_summary_admin) | **GET** /api/Reports/GetFleetSummaryAdmin | Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the 'ReportAdmin' permission.
 *SwaggerClient::ReportsApi* | [**reports_get_org_trip_by_id**](docs/ReportsApi.md#reports_get_org_trip_by_id) | **GET** /api/Reports/GetOrgTripById | Get trip by Id, for reporting purposes.    Requires the 'ReportAdmin' permission.
-*SwaggerClient::ReportsApi* | [**reports_get_organisation_timesheet_file_attachments**](docs/ReportsApi.md#reports_get_organisation_timesheet_file_attachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the 'ReportAdmin' permission.
+*SwaggerClient::ReportsApi* | [**reports_get_organisation_timesheet_file_attachments**](docs/ReportsApi.md#reports_get_organisation_timesheet_file_attachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the 'ReportAdmin' permission.
+*SwaggerClient::ReportsApi* | [**reports_get_organisation_transcripts**](docs/ReportsApi.md#reports_get_organisation_transcripts) | **GET** /api/Reports/GetOrganisationTranscripts | Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the 'ReportAdmin' permission.
 *SwaggerClient::ReportsApi* | [**reports_get_organisation_trips**](docs/ReportsApi.md#reports_get_organisation_trips) | **GET** /api/Reports/GetOrganisationTrips | Reports on Organisation trips (GPS tracking from whole organisation).    Requires the 'ReportAdmin' permission.
 *SwaggerClient::ReportsApi* | [**reports_get_raw_data_admin**](docs/ReportsApi.md#reports_get_raw_data_admin) | **GET** /api/Reports/GetRawDataAdmin | Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
 *SwaggerClient::ReportsApi* | [**reports_project_costings_admin**](docs/ReportsApi.md#reports_project_costings_admin) | **GET** /api/Reports/ProjectCostingsAdmin | Gets project cost estimations VS actual cost for date range and users.    Requires the 'ReportAdmin' permission.
@@ -121,7 +125,8 @@ Class | Method | HTTP request | Description
 *SwaggerClient::TimesheetsApi* | [**timesheets_delete_timesheet**](docs/TimesheetsApi.md#timesheets_delete_timesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
 *SwaggerClient::TimesheetsApi* | [**timesheets_get_timesheets**](docs/TimesheetsApi.md#timesheets_get_timesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the 'SubmitTimesheets' permission.
 *SwaggerClient::TimesheetsApi* | [**timesheets_update_timesheets**](docs/TimesheetsApi.md#timesheets_update_timesheets) | **PUT** /api/Timesheets/UpdateTimesheets | Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
-*SwaggerClient::TripsApi* | [**trips_create_trip**](docs/TripsApi.md#trips_create_trip) | **PUT** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
+*SwaggerClient::TranscriptsApi* | [**transcripts_get_my_transcripts**](docs/TranscriptsApi.md#transcripts_get_my_transcripts) | **GET** /api/Transcripts/GetMyTranscripts | Get my file transcripts.  Get audio to text transcripts that you've created.
+*SwaggerClient::TripsApi* | [**trips_create_trip**](docs/TripsApi.md#trips_create_trip) | **POST** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
 *SwaggerClient::TripsApi* | [**trips_get_my_trip_by_id**](docs/TripsApi.md#trips_get_my_trip_by_id) | **GET** /api/Trips/GetMyTripById | Get trip by Id.    Requires the 'ViewMyTrips' permission.
 *SwaggerClient::TripsApi* | [**trips_get_my_trips**](docs/TripsApi.md#trips_get_my_trips) | **GET** /api/Trips/GetMyTrips | Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
 *SwaggerClient::UserJobFavouritesApi* | [**user_job_favourites_create_job_favourite**](docs/UserJobFavouritesApi.md#user_job_favourites_create_job_favourite) | **POST** /api/UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the 'SubmitTimesheets' permission.
@@ -144,22 +149,28 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [SwaggerClient::CSAggregateClient](docs/CSAggregateClient.md)
  - [SwaggerClient::CSAggregateJobCode](docs/CSAggregateJobCode.md)
  - [SwaggerClient::CSAggregateJobTask](docs/CSAggregateJobTask.md)
+ - [SwaggerClient::CSAggregateProject](docs/CSAggregateProject.md)
  - [SwaggerClient::CSApiResponseBoolean](docs/CSApiResponseBoolean.md)
  - [SwaggerClient::CSApiResponseClient](docs/CSApiResponseClient.md)
  - [SwaggerClient::CSApiResponseCombinedReportsData](docs/CSApiResponseCombinedReportsData.md)
  - [SwaggerClient::CSApiResponseDoLoginResponse](docs/CSApiResponseDoLoginResponse.md)
  - [SwaggerClient::CSApiResponseFleetVehicle](docs/CSApiResponseFleetVehicle.md)
  - [SwaggerClient::CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment](docs/CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
+ - [SwaggerClient::CSApiResponseForPaginatedListOrgReportTranscript](docs/CSApiResponseForPaginatedListOrgReportTranscript.md)
  - [SwaggerClient::CSApiResponseForPaginatedListOrgReportTrip](docs/CSApiResponseForPaginatedListOrgReportTrip.md)
  - [SwaggerClient::CSApiResponseForPaginatedListRawReportItem](docs/CSApiResponseForPaginatedListRawReportItem.md)
+ - [SwaggerClient::CSApiResponseForPaginatedListTimesheetFileAttachment](docs/CSApiResponseForPaginatedListTimesheetFileAttachment.md)
  - [SwaggerClient::CSApiResponseForPaginatedListTrip](docs/CSApiResponseForPaginatedListTrip.md)
  - [SwaggerClient::CSApiResponseInsertUserResponse](docs/CSApiResponseInsertUserResponse.md)
  - [SwaggerClient::CSApiResponseInt32](docs/CSApiResponseInt32.md)
  - [SwaggerClient::CSApiResponseJobCode](docs/CSApiResponseJobCode.md)
+ - [SwaggerClient::CSApiResponseListAggregateClient](docs/CSApiResponseListAggregateClient.md)
  - [SwaggerClient::CSApiResponseListAggregateJobCode](docs/CSApiResponseListAggregateJobCode.md)
  - [SwaggerClient::CSApiResponseListClient](docs/CSApiResponseListClient.md)
+ - [SwaggerClient::CSApiResponseListFleetSummaryReportItem](docs/CSApiResponseListFleetSummaryReportItem.md)
  - [SwaggerClient::CSApiResponseListFleetVehicle](docs/CSApiResponseListFleetVehicle.md)
  - [SwaggerClient::CSApiResponseListInt32](docs/CSApiResponseListInt32.md)
  - [SwaggerClient::CSApiResponseListJobCode](docs/CSApiResponseListJobCode.md)
@@ -192,6 +203,7 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::CSCreateTripRequest](docs/CSCreateTripRequest.md)
  - [SwaggerClient::CSDoLoginRequest](docs/CSDoLoginRequest.md)
  - [SwaggerClient::CSDoLoginResponse](docs/CSDoLoginResponse.md)
+ - [SwaggerClient::CSFleetSummaryReportItem](docs/CSFleetSummaryReportItem.md)
  - [SwaggerClient::CSFleetVehicle](docs/CSFleetVehicle.md)
  - [SwaggerClient::CSInsertClientRequest](docs/CSInsertClientRequest.md)
  - [SwaggerClient::CSInsertJobCodeRequest](docs/CSInsertJobCodeRequest.md)
@@ -207,6 +219,7 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::CSJobSeriesReportItem](docs/CSJobSeriesReportItem.md)
  - [SwaggerClient::CSJobTotalsReportItem](docs/CSJobTotalsReportItem.md)
  - [SwaggerClient::CSOrgReportTimesheetFileAttachment](docs/CSOrgReportTimesheetFileAttachment.md)
+ - [SwaggerClient::CSOrgReportTranscript](docs/CSOrgReportTranscript.md)
  - [SwaggerClient::CSOrgReportTrip](docs/CSOrgReportTrip.md)
  - [SwaggerClient::CSOrganisation](docs/CSOrganisation.md)
  - [SwaggerClient::CSOrganisationGroup](docs/CSOrganisationGroup.md)
@@ -224,6 +237,7 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::CSTaskTotalsReportItem](docs/CSTaskTotalsReportItem.md)
  - [SwaggerClient::CSTimeSlot](docs/CSTimeSlot.md)
  - [SwaggerClient::CSTimesheet](docs/CSTimesheet.md)
+ - [SwaggerClient::CSTimesheetFileAttachment](docs/CSTimesheetFileAttachment.md)
  - [SwaggerClient::CSTimesheetTask](docs/CSTimesheetTask.md)
  - [SwaggerClient::CSTrip](docs/CSTrip.md)
  - [SwaggerClient::CSTripCoordinate](docs/CSTripCoordinate.md)

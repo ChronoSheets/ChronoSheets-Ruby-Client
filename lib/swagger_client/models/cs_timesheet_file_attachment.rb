@@ -14,15 +14,7 @@ require 'date'
 
 module SwaggerClient
 
-  class CSOrgReportTimesheetFileAttachment
-    attr_accessor :username
-
-    attr_accessor :email_address
-
-    attr_accessor :first_name
-
-    attr_accessor :last_name
-
+  class CSTimesheetFileAttachment
     attr_accessor :timesheet_id
 
     attr_accessor :document_s3_signed_url
@@ -94,10 +86,6 @@ module SwaggerClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'username' => :'Username',
-        :'email_address' => :'EmailAddress',
-        :'first_name' => :'FirstName',
-        :'last_name' => :'LastName',
         :'timesheet_id' => :'TimesheetId',
         :'document_s3_signed_url' => :'DocumentS3SignedUrl',
         :'image_large_s3_signed_url' => :'ImageLargeS3SignedUrl',
@@ -127,10 +115,6 @@ module SwaggerClient
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'username' => :'String',
-        :'email_address' => :'String',
-        :'first_name' => :'String',
-        :'last_name' => :'String',
         :'timesheet_id' => :'Integer',
         :'document_s3_signed_url' => :'String',
         :'image_large_s3_signed_url' => :'String',
@@ -164,22 +148,6 @@ module SwaggerClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      if attributes.has_key?(:'Username')
-        self.username = attributes[:'Username']
-      end
-
-      if attributes.has_key?(:'EmailAddress')
-        self.email_address = attributes[:'EmailAddress']
-      end
-
-      if attributes.has_key?(:'FirstName')
-        self.first_name = attributes[:'FirstName']
-      end
-
-      if attributes.has_key?(:'LastName')
-        self.last_name = attributes[:'LastName']
-      end
 
       if attributes.has_key?(:'TimesheetId')
         self.timesheet_id = attributes[:'TimesheetId']
@@ -317,10 +285,6 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          username == o.username &&
-          email_address == o.email_address &&
-          first_name == o.first_name &&
-          last_name == o.last_name &&
           timesheet_id == o.timesheet_id &&
           document_s3_signed_url == o.document_s3_signed_url &&
           image_large_s3_signed_url == o.image_large_s3_signed_url &&
@@ -355,7 +319,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [username, email_address, first_name, last_name, timesheet_id, document_s3_signed_url, image_large_s3_signed_url, image_medium_s3_signed_url, image_small_s3_signed_url, timesheet_start, timesheet_end, file_attachment_id, user_id, org_id, mobile_platform, attachment_type, notes, non_image_file_path, image_large_file_path, image_medium_file_path, image_small_file_path, original_file_name, latitude, longitude, date_uploaded, date_image_captured, storage_allocation_bytes].hash
+      [timesheet_id, document_s3_signed_url, image_large_s3_signed_url, image_medium_s3_signed_url, image_small_s3_signed_url, timesheet_start, timesheet_end, file_attachment_id, user_id, org_id, mobile_platform, attachment_type, notes, non_image_file_path, image_large_file_path, image_medium_file_path, image_small_file_path, original_file_name, latitude, longitude, date_uploaded, date_image_captured, storage_allocation_bytes].hash
     end
 
     # Builds the object from hash

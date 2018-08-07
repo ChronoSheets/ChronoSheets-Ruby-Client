@@ -61,6 +61,21 @@ describe 'ReportsApi' do
     end
   end
 
+  # unit tests for reports_get_fleet_summary_admin
+  # Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+  # 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
+  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  # @param x_chronosheets_auth The ChronoSheets Auth Token
+  # @param [Hash] opts the optional parameters
+  # @return [CSApiResponseListFleetSummaryReportItem]
+  describe 'reports_get_fleet_summary_admin test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for reports_get_org_trip_by_id
   # Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
   # 
@@ -75,7 +90,7 @@ describe 'ReportsApi' do
   end
 
   # unit tests for reports_get_organisation_timesheet_file_attachments
-  # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+  # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -86,6 +101,24 @@ describe 'ReportsApi' do
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
   describe 'reports_get_organisation_timesheet_file_attachments test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for reports_get_organisation_transcripts
+  # Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+  # 
+  # @param start_date The start date for the date range.  Report data in the response is after this date
+  # @param end_date The end date for the date range.  Report data in the response is before this date
+  # @param skip Skip this many items
+  # @param take Take this many items
+  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  # @param keywords Search the transcripts by keyword(s)
+  # @param x_chronosheets_auth The ChronoSheets Auth Token
+  # @param [Hash] opts the optional parameters
+  # @return [CSApiResponseForPaginatedListOrgReportTranscript]
+  describe 'reports_get_organisation_transcripts test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

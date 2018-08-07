@@ -1,12 +1,8 @@
-# SwaggerClient::CSOrgReportTimesheetFileAttachment
+# SwaggerClient::CSTimesheetFileAttachment
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**username** | **String** |  | [optional] 
-**email_address** | **String** |  | [optional] 
-**first_name** | **String** |  | [optional] 
-**last_name** | **String** |  | [optional] 
 **timesheet_id** | **Integer** |  | [optional] 
 **document_s3_signed_url** | **String** |  | [optional] 
 **image_large_s3_signed_url** | **String** |  | [optional] 

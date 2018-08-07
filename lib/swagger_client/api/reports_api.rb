@@ -163,6 +163,81 @@ module SwaggerClient
       return data, status_code, headers
     end
 
+    # Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the 'ReportAdmin' permission.
+    # 
+    # @param start_date The start date for the date range.  Report data in the response is after this date
+    # @param end_date The end date for the date range.  Report data in the response is before this date
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [CSApiResponseListFleetSummaryReportItem]
+    def reports_get_fleet_summary_admin(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_fleet_summary_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts)
+      return data
+    end
+
+    # Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+    # 
+    # @param start_date The start date for the date range.  Report data in the response is after this date
+    # @param end_date The end date for the date range.  Report data in the response is before this date
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CSApiResponseListFleetSummaryReportItem, Fixnum, Hash)>] CSApiResponseListFleetSummaryReportItem data, response status code and response headers
+    def reports_get_fleet_summary_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_fleet_summary_admin ..."
+      end
+      # verify the required parameter 'start_date' is set
+      if @api_client.config.client_side_validation && start_date.nil?
+        fail ArgumentError, "Missing the required parameter 'start_date' when calling ReportsApi.reports_get_fleet_summary_admin"
+      end
+      # verify the required parameter 'end_date' is set
+      if @api_client.config.client_side_validation && end_date.nil?
+        fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_fleet_summary_admin"
+      end
+      # verify the required parameter 'user_ids' is set
+      if @api_client.config.client_side_validation && user_ids.nil?
+        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_fleet_summary_admin"
+      end
+      # verify the required parameter 'x_chronosheets_auth' is set
+      if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
+        fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling ReportsApi.reports_get_fleet_summary_admin"
+      end
+      # resource path
+      local_var_path = "/api/Reports/GetFleetSummaryAdmin"
+
+      # query parameters
+      query_params = {}
+      query_params[:'StartDate'] = start_date
+      query_params[:'EndDate'] = end_date
+      query_params[:'UserIds'] = user_ids
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json', 'text/json', 'application/xml', 'text/xml', 'multipart/form-data'])
+      header_params[:'x-chronosheets-auth'] = x_chronosheets_auth
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CSApiResponseListFleetSummaryReportItem')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ReportsApi#reports_get_fleet_summary_admin\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get trip by Id, for reporting purposes.    Requires the 'ReportAdmin' permission.
     # 
     # @param trip_id The ID of the Trip you want to get
@@ -224,7 +299,7 @@ module SwaggerClient
       return data, status_code, headers
     end
 
-    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the 'ReportAdmin' permission.
+    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the 'ReportAdmin' permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -239,7 +314,7 @@ module SwaggerClient
       return data
     end
 
-    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+    # Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
@@ -309,6 +384,102 @@ module SwaggerClient
         :return_type => 'CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ReportsApi#reports_get_organisation_timesheet_file_attachments\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the 'ReportAdmin' permission.
+    # 
+    # @param start_date The start date for the date range.  Report data in the response is after this date
+    # @param end_date The end date for the date range.  Report data in the response is before this date
+    # @param skip Skip this many items
+    # @param take Take this many items
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @param keywords Search the transcripts by keyword(s)
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [CSApiResponseForPaginatedListOrgReportTranscript]
+    def reports_get_organisation_transcripts(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_organisation_transcripts_with_http_info(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth, opts)
+      return data
+    end
+
+    # Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+    # 
+    # @param start_date The start date for the date range.  Report data in the response is after this date
+    # @param end_date The end date for the date range.  Report data in the response is before this date
+    # @param skip Skip this many items
+    # @param take Take this many items
+    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @param keywords Search the transcripts by keyword(s)
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CSApiResponseForPaginatedListOrgReportTranscript, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTranscript data, response status code and response headers
+    def reports_get_organisation_transcripts_with_http_info(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_organisation_transcripts ..."
+      end
+      # verify the required parameter 'start_date' is set
+      if @api_client.config.client_side_validation && start_date.nil?
+        fail ArgumentError, "Missing the required parameter 'start_date' when calling ReportsApi.reports_get_organisation_transcripts"
+      end
+      # verify the required parameter 'end_date' is set
+      if @api_client.config.client_side_validation && end_date.nil?
+        fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_organisation_transcripts"
+      end
+      # verify the required parameter 'skip' is set
+      if @api_client.config.client_side_validation && skip.nil?
+        fail ArgumentError, "Missing the required parameter 'skip' when calling ReportsApi.reports_get_organisation_transcripts"
+      end
+      # verify the required parameter 'take' is set
+      if @api_client.config.client_side_validation && take.nil?
+        fail ArgumentError, "Missing the required parameter 'take' when calling ReportsApi.reports_get_organisation_transcripts"
+      end
+      # verify the required parameter 'user_ids' is set
+      if @api_client.config.client_side_validation && user_ids.nil?
+        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_organisation_transcripts"
+      end
+      # verify the required parameter 'keywords' is set
+      if @api_client.config.client_side_validation && keywords.nil?
+        fail ArgumentError, "Missing the required parameter 'keywords' when calling ReportsApi.reports_get_organisation_transcripts"
+      end
+      # verify the required parameter 'x_chronosheets_auth' is set
+      if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
+        fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling ReportsApi.reports_get_organisation_transcripts"
+      end
+      # resource path
+      local_var_path = "/api/Reports/GetOrganisationTranscripts"
+
+      # query parameters
+      query_params = {}
+      query_params[:'StartDate'] = start_date
+      query_params[:'EndDate'] = end_date
+      query_params[:'Skip'] = skip
+      query_params[:'Take'] = take
+      query_params[:'UserIds'] = user_ids
+      query_params[:'Keywords'] = keywords
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json', 'text/json', 'application/xml', 'text/xml', 'multipart/form-data'])
+      header_params[:'x-chronosheets-auth'] = x_chronosheets_auth
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CSApiResponseForPaginatedListOrgReportTranscript')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ReportsApi#reports_get_organisation_transcripts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

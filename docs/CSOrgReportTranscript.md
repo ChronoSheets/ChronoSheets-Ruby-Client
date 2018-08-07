@@ -1,8 +1,17 @@
-# SwaggerClient::CSOrgReportTimesheetFileAttachment
+# SwaggerClient::CSOrgReportTranscript
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**finished_job** | **BOOLEAN** |  | [optional] 
+**completed_processing** | **DateTime** |  | [optional] 
+**created** | **DateTime** |  | [optional] 
+**started_processing** | **DateTime** |  | [optional] 
+**transcription_id** | **Integer** |  | [optional] 
+**job_name** | **String** |  | [optional] 
+**contents** | **String** |  | [optional] 
+**media_type** | **String** |  | [optional] 
+**transcription_status** | **String** |  | [optional] 
 **username** | **String** |  | [optional] 
 **email_address** | **String** |  | [optional] 
 **first_name** | **String** |  | [optional] 

@@ -14,49 +14,45 @@ require 'date'
 
 module SwaggerClient
 
-  class CSProjectCostingReportItem
-    attr_accessor :project_id
-
-    attr_accessor :project_name
+  class CSAggregateProject
+    attr_accessor :id
 
     attr_accessor :client_id
 
     attr_accessor :organisation_id
 
-    attr_accessor :client_name
+    attr_accessor :project_name
 
-    attr_accessor :estimated_cost
+    attr_accessor :cost_estimation
 
-    attr_accessor :actual_cost_filtered
+    attr_accessor :start_date
 
-    attr_accessor :actual_cost
+    attr_accessor :end_date
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'project_id' => :'ProjectId',
-        :'project_name' => :'ProjectName',
+        :'id' => :'Id',
         :'client_id' => :'ClientId',
         :'organisation_id' => :'OrganisationId',
-        :'client_name' => :'ClientName',
-        :'estimated_cost' => :'EstimatedCost',
-        :'actual_cost_filtered' => :'ActualCostFiltered',
-        :'actual_cost' => :'ActualCost'
+        :'project_name' => :'ProjectName',
+        :'cost_estimation' => :'CostEstimation',
+        :'start_date' => :'StartDate',
+        :'end_date' => :'EndDate'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'project_id' => :'Integer',
-        :'project_name' => :'String',
+        :'id' => :'Integer',
         :'client_id' => :'Integer',
         :'organisation_id' => :'Integer',
-        :'client_name' => :'String',
-        :'estimated_cost' => :'Float',
-        :'actual_cost_filtered' => :'Float',
-        :'actual_cost' => :'Float'
+        :'project_name' => :'String',
+        :'cost_estimation' => :'Float',
+        :'start_date' => :'DateTime',
+        :'end_date' => :'DateTime'
       }
     end
 
@@ -68,12 +64,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ProjectId')
-        self.project_id = attributes[:'ProjectId']
-      end
-
-      if attributes.has_key?(:'ProjectName')
-        self.project_name = attributes[:'ProjectName']
+      if attributes.has_key?(:'Id')
+        self.id = attributes[:'Id']
       end
 
       if attributes.has_key?(:'ClientId')
@@ -84,20 +76,20 @@ module SwaggerClient
         self.organisation_id = attributes[:'OrganisationId']
       end
 
-      if attributes.has_key?(:'ClientName')
-        self.client_name = attributes[:'ClientName']
+      if attributes.has_key?(:'ProjectName')
+        self.project_name = attributes[:'ProjectName']
       end
 
-      if attributes.has_key?(:'EstimatedCost')
-        self.estimated_cost = attributes[:'EstimatedCost']
+      if attributes.has_key?(:'CostEstimation')
+        self.cost_estimation = attributes[:'CostEstimation']
       end
 
-      if attributes.has_key?(:'ActualCostFiltered')
-        self.actual_cost_filtered = attributes[:'ActualCostFiltered']
+      if attributes.has_key?(:'StartDate')
+        self.start_date = attributes[:'StartDate']
       end
 
-      if attributes.has_key?(:'ActualCost')
-        self.actual_cost = attributes[:'ActualCost']
+      if attributes.has_key?(:'EndDate')
+        self.end_date = attributes[:'EndDate']
       end
 
     end
@@ -120,14 +112,13 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          project_id == o.project_id &&
-          project_name == o.project_name &&
+          id == o.id &&
           client_id == o.client_id &&
           organisation_id == o.organisation_id &&
-          client_name == o.client_name &&
-          estimated_cost == o.estimated_cost &&
-          actual_cost_filtered == o.actual_cost_filtered &&
-          actual_cost == o.actual_cost
+          project_name == o.project_name &&
+          cost_estimation == o.cost_estimation &&
+          start_date == o.start_date &&
+          end_date == o.end_date
     end
 
     # @see the `==` method
@@ -139,7 +130,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [project_id, project_name, client_id, organisation_id, client_name, estimated_cost, actual_cost_filtered, actual_cost].hash
+      [id, client_id, organisation_id, project_name, cost_estimation, start_date, end_date].hash
     end
 
     # Builds the object from hash

@@ -14,7 +14,25 @@ require 'date'
 
 module SwaggerClient
 
-  class CSOrgReportTimesheetFileAttachment
+  class CSOrgReportTranscript
+    attr_accessor :finished_job
+
+    attr_accessor :completed_processing
+
+    attr_accessor :created
+
+    attr_accessor :started_processing
+
+    attr_accessor :transcription_id
+
+    attr_accessor :job_name
+
+    attr_accessor :contents
+
+    attr_accessor :media_type
+
+    attr_accessor :transcription_status
+
     attr_accessor :username
 
     attr_accessor :email_address
@@ -94,6 +112,15 @@ module SwaggerClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'finished_job' => :'FinishedJob',
+        :'completed_processing' => :'CompletedProcessing',
+        :'created' => :'Created',
+        :'started_processing' => :'StartedProcessing',
+        :'transcription_id' => :'TranscriptionId',
+        :'job_name' => :'JobName',
+        :'contents' => :'Contents',
+        :'media_type' => :'MediaType',
+        :'transcription_status' => :'TranscriptionStatus',
         :'username' => :'Username',
         :'email_address' => :'EmailAddress',
         :'first_name' => :'FirstName',
@@ -127,6 +154,15 @@ module SwaggerClient
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'finished_job' => :'BOOLEAN',
+        :'completed_processing' => :'DateTime',
+        :'created' => :'DateTime',
+        :'started_processing' => :'DateTime',
+        :'transcription_id' => :'Integer',
+        :'job_name' => :'String',
+        :'contents' => :'String',
+        :'media_type' => :'String',
+        :'transcription_status' => :'String',
         :'username' => :'String',
         :'email_address' => :'String',
         :'first_name' => :'String',
@@ -164,6 +200,42 @@ module SwaggerClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'FinishedJob')
+        self.finished_job = attributes[:'FinishedJob']
+      end
+
+      if attributes.has_key?(:'CompletedProcessing')
+        self.completed_processing = attributes[:'CompletedProcessing']
+      end
+
+      if attributes.has_key?(:'Created')
+        self.created = attributes[:'Created']
+      end
+
+      if attributes.has_key?(:'StartedProcessing')
+        self.started_processing = attributes[:'StartedProcessing']
+      end
+
+      if attributes.has_key?(:'TranscriptionId')
+        self.transcription_id = attributes[:'TranscriptionId']
+      end
+
+      if attributes.has_key?(:'JobName')
+        self.job_name = attributes[:'JobName']
+      end
+
+      if attributes.has_key?(:'Contents')
+        self.contents = attributes[:'Contents']
+      end
+
+      if attributes.has_key?(:'MediaType')
+        self.media_type = attributes[:'MediaType']
+      end
+
+      if attributes.has_key?(:'TranscriptionStatus')
+        self.transcription_status = attributes[:'TranscriptionStatus']
+      end
 
       if attributes.has_key?(:'Username')
         self.username = attributes[:'Username']
@@ -285,11 +357,35 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      media_type_validator = EnumAttributeValidator.new('String', ["Other", "Mp3", "Mp4", "Wav", "Flac"])
+      return false unless media_type_validator.valid?(@media_type)
+      transcription_status_validator = EnumAttributeValidator.new('String', ["Saved", "Processing", "Completed", "FailedWithError"])
+      return false unless transcription_status_validator.valid?(@transcription_status)
       mobile_platform_validator = EnumAttributeValidator.new('String', ["Unknown", "iOS", "Android"])
       return false unless mobile_platform_validator.valid?(@mobile_platform)
       attachment_type_validator = EnumAttributeValidator.new('String', ["Image", "WordDoc", "Pdf", "MSSpreadSheet", "MSPowerPoint", "RichTextFormat", "ZipFile", "Other", "Audio"])
       return false unless attachment_type_validator.valid?(@attachment_type)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] media_type Object to be assigned
+    def media_type=(media_type)
+      validator = EnumAttributeValidator.new('String', ["Other", "Mp3", "Mp4", "Wav", "Flac"])
+      unless validator.valid?(media_type)
+        fail ArgumentError, "invalid value for 'media_type', must be one of #{validator.allowable_values}."
+      end
+      @media_type = media_type
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] transcription_status Object to be assigned
+    def transcription_status=(transcription_status)
+      validator = EnumAttributeValidator.new('String', ["Saved", "Processing", "Completed", "FailedWithError"])
+      unless validator.valid?(transcription_status)
+        fail ArgumentError, "invalid value for 'transcription_status', must be one of #{validator.allowable_values}."
+      end
+      @transcription_status = transcription_status
     end
 
     # Custom attribute writer method checking allowed values (enum).
@@ -317,6 +413,15 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          finished_job == o.finished_job &&
+          completed_processing == o.completed_processing &&
+          created == o.created &&
+          started_processing == o.started_processing &&
+          transcription_id == o.transcription_id &&
+          job_name == o.job_name &&
+          contents == o.contents &&
+          media_type == o.media_type &&
+          transcription_status == o.transcription_status &&
           username == o.username &&
           email_address == o.email_address &&
           first_name == o.first_name &&
@@ -355,7 +460,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [username, email_address, first_name, last_name, timesheet_id, document_s3_signed_url, image_large_s3_signed_url, image_medium_s3_signed_url, image_small_s3_signed_url, timesheet_start, timesheet_end, file_attachment_id, user_id, org_id, mobile_platform, attachment_type, notes, non_image_file_path, image_large_file_path, image_medium_file_path, image_small_file_path, original_file_name, latitude, longitude, date_uploaded, date_image_captured, storage_allocation_bytes].hash
+      [finished_job, completed_processing, created, started_processing, transcription_id, job_name, contents, media_type, transcription_status, username, email_address, first_name, last_name, timesheet_id, document_s3_signed_url, image_large_s3_signed_url, image_medium_s3_signed_url, image_small_s3_signed_url, timesheet_start, timesheet_end, file_attachment_id, user_id, org_id, mobile_platform, attachment_type, notes, non_image_file_path, image_large_file_path, image_medium_file_path, image_small_file_path, original_file_name, latitude, longitude, date_uploaded, date_image_captured, storage_allocation_bytes].hash
     end
 
     # Builds the object from hash

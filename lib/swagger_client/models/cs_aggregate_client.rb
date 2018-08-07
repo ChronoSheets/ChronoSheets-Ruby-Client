@@ -14,49 +14,77 @@ require 'date'
 
 module SwaggerClient
 
-  class CSProjectCostingReportItem
-    attr_accessor :project_id
+  class CSAggregateClient
+    attr_accessor :client_projects
 
-    attr_accessor :project_name
-
-    attr_accessor :client_id
+    attr_accessor :id
 
     attr_accessor :organisation_id
 
     attr_accessor :client_name
 
-    attr_accessor :estimated_cost
+    attr_accessor :client_address_line1
 
-    attr_accessor :actual_cost_filtered
+    attr_accessor :client_address_line2
 
-    attr_accessor :actual_cost
+    attr_accessor :client_suburb
+
+    attr_accessor :client_state
+
+    attr_accessor :client_post_code
+
+    attr_accessor :person_of_contact
+
+    attr_accessor :client_phone_number
+
+    attr_accessor :client_mobile_number
+
+    attr_accessor :client_email_address
+
+    attr_accessor :client_web_url
+
+    attr_accessor :project_count
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'project_id' => :'ProjectId',
-        :'project_name' => :'ProjectName',
-        :'client_id' => :'ClientId',
+        :'client_projects' => :'ClientProjects',
+        :'id' => :'Id',
         :'organisation_id' => :'OrganisationId',
         :'client_name' => :'ClientName',
-        :'estimated_cost' => :'EstimatedCost',
-        :'actual_cost_filtered' => :'ActualCostFiltered',
-        :'actual_cost' => :'ActualCost'
+        :'client_address_line1' => :'ClientAddressLine1',
+        :'client_address_line2' => :'ClientAddressLine2',
+        :'client_suburb' => :'ClientSuburb',
+        :'client_state' => :'ClientState',
+        :'client_post_code' => :'ClientPostCode',
+        :'person_of_contact' => :'PersonOfContact',
+        :'client_phone_number' => :'ClientPhoneNumber',
+        :'client_mobile_number' => :'ClientMobileNumber',
+        :'client_email_address' => :'ClientEmailAddress',
+        :'client_web_url' => :'ClientWebURL',
+        :'project_count' => :'ProjectCount'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'project_id' => :'Integer',
-        :'project_name' => :'String',
-        :'client_id' => :'Integer',
+        :'client_projects' => :'Array<CSAggregateProject>',
+        :'id' => :'Integer',
         :'organisation_id' => :'Integer',
         :'client_name' => :'String',
-        :'estimated_cost' => :'Float',
-        :'actual_cost_filtered' => :'Float',
-        :'actual_cost' => :'Float'
+        :'client_address_line1' => :'String',
+        :'client_address_line2' => :'String',
+        :'client_suburb' => :'String',
+        :'client_state' => :'String',
+        :'client_post_code' => :'String',
+        :'person_of_contact' => :'String',
+        :'client_phone_number' => :'String',
+        :'client_mobile_number' => :'String',
+        :'client_email_address' => :'String',
+        :'client_web_url' => :'String',
+        :'project_count' => :'Integer'
       }
     end
 
@@ -68,16 +96,14 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ProjectId')
-        self.project_id = attributes[:'ProjectId']
+      if attributes.has_key?(:'ClientProjects')
+        if (value = attributes[:'ClientProjects']).is_a?(Array)
+          self.client_projects = value
+        end
       end
 
-      if attributes.has_key?(:'ProjectName')
-        self.project_name = attributes[:'ProjectName']
-      end
-
-      if attributes.has_key?(:'ClientId')
-        self.client_id = attributes[:'ClientId']
+      if attributes.has_key?(:'Id')
+        self.id = attributes[:'Id']
       end
 
       if attributes.has_key?(:'OrganisationId')
@@ -88,16 +114,48 @@ module SwaggerClient
         self.client_name = attributes[:'ClientName']
       end
 
-      if attributes.has_key?(:'EstimatedCost')
-        self.estimated_cost = attributes[:'EstimatedCost']
+      if attributes.has_key?(:'ClientAddressLine1')
+        self.client_address_line1 = attributes[:'ClientAddressLine1']
       end
 
-      if attributes.has_key?(:'ActualCostFiltered')
-        self.actual_cost_filtered = attributes[:'ActualCostFiltered']
+      if attributes.has_key?(:'ClientAddressLine2')
+        self.client_address_line2 = attributes[:'ClientAddressLine2']
       end
 
-      if attributes.has_key?(:'ActualCost')
-        self.actual_cost = attributes[:'ActualCost']
+      if attributes.has_key?(:'ClientSuburb')
+        self.client_suburb = attributes[:'ClientSuburb']
+      end
+
+      if attributes.has_key?(:'ClientState')
+        self.client_state = attributes[:'ClientState']
+      end
+
+      if attributes.has_key?(:'ClientPostCode')
+        self.client_post_code = attributes[:'ClientPostCode']
+      end
+
+      if attributes.has_key?(:'PersonOfContact')
+        self.person_of_contact = attributes[:'PersonOfContact']
+      end
+
+      if attributes.has_key?(:'ClientPhoneNumber')
+        self.client_phone_number = attributes[:'ClientPhoneNumber']
+      end
+
+      if attributes.has_key?(:'ClientMobileNumber')
+        self.client_mobile_number = attributes[:'ClientMobileNumber']
+      end
+
+      if attributes.has_key?(:'ClientEmailAddress')
+        self.client_email_address = attributes[:'ClientEmailAddress']
+      end
+
+      if attributes.has_key?(:'ClientWebURL')
+        self.client_web_url = attributes[:'ClientWebURL']
+      end
+
+      if attributes.has_key?(:'ProjectCount')
+        self.project_count = attributes[:'ProjectCount']
       end
 
     end
@@ -120,14 +178,21 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          project_id == o.project_id &&
-          project_name == o.project_name &&
-          client_id == o.client_id &&
+          client_projects == o.client_projects &&
+          id == o.id &&
           organisation_id == o.organisation_id &&
           client_name == o.client_name &&
-          estimated_cost == o.estimated_cost &&
-          actual_cost_filtered == o.actual_cost_filtered &&
-          actual_cost == o.actual_cost
+          client_address_line1 == o.client_address_line1 &&
+          client_address_line2 == o.client_address_line2 &&
+          client_suburb == o.client_suburb &&
+          client_state == o.client_state &&
+          client_post_code == o.client_post_code &&
+          person_of_contact == o.person_of_contact &&
+          client_phone_number == o.client_phone_number &&
+          client_mobile_number == o.client_mobile_number &&
+          client_email_address == o.client_email_address &&
+          client_web_url == o.client_web_url &&
+          project_count == o.project_count
     end
 
     # @see the `==` method
@@ -139,7 +204,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [project_id, project_name, client_id, organisation_id, client_name, estimated_cost, actual_cost_filtered, actual_cost].hash
+      [client_projects, id, organisation_id, client_name, client_address_line1, client_address_line2, client_suburb, client_state, client_post_code, person_of_contact, client_phone_number, client_mobile_number, client_email_address, client_web_url, project_count].hash
     end
 
     # Builds the object from hash
