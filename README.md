@@ -35,9 +35,9 @@ Finally add this to the Gemfile:
 
 ### Install from Git
 
-If the Ruby gem is hosted at a git repository: https://github.com/ChronoSheets/ChronoSheets-PHP-Client, then add the following in the Gemfile:
+If the Ruby gem is hosted at a git repository: https://github.com/ChronoSheets/ChronoSheets-Ruby-Client, then add the following in the Gemfile:
 
-    gem 'ChronoSheetsAPI', :git => 'https://github.com/ChronoSheets/ChronoSheets-PHP-Client.git'
+    gem 'ChronoSheetsAPI', :git => 'https://github.com/ChronoSheets/ChronoSheets-Ruby-Client.git'
 
 ### Include the Ruby code directly
 
