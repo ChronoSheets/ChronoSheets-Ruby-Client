@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.email       = ["lachlan@chronosheets.com"]
   s.homepage    = "https://github.com/swagger-api/swagger-codegen"
   s.summary     = "Ruby API Client for ChronoSheets"
-  s.description = "Ruby API Client for ChronoSheets"
+  s.description = "ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available. Use the ChronoSheets API to create your own custom integrations. Before starting, sign up for a ChronoSheets account at http://tsheets.xyz/signup."
   s.license     = ""
   s.required_ruby_version = ">= 1.9"
 
