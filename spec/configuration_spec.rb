@@ -12,14 +12,14 @@ Swagger Codegen version: 2.3.1
 
 require 'spec_helper'
 
-describe SwaggerClient::Configuration do
-  let(:config) { SwaggerClient::Configuration.default }
+describe ChronoSheetsAPI::Configuration do
+  let(:config) { ChronoSheetsAPI::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     #require 'URI'
     #uri = URI.parse("https://www.chronosheets.com")
-    #SwaggerClient.configure do |c|
+    #ChronoSheetsAPI.configure do |c|
     #  c.host = uri.host
     #  c.base_path = uri.path
     #end

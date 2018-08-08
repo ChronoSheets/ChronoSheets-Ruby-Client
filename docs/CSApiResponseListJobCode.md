@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseListJobCode
+# ChronoSheetsAPI::CSApiResponseListJobCode
 
 ## Properties
 Name | Type | Description | Notes

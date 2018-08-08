@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseListUserHourlyRate
+# ChronoSheetsAPI::CSApiResponseListUserHourlyRate
 
 ## Properties
 Name | Type | Description | Notes

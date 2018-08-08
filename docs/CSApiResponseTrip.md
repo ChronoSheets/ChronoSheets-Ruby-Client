@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseTrip
+# ChronoSheetsAPI::CSApiResponseTrip
 
 ## Properties
 Name | Type | Description | Notes

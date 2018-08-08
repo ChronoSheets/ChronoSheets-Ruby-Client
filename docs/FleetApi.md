@@ -1,4 +1,4 @@
-# SwaggerClient::FleetApi
+# ChronoSheetsAPI::FleetApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -18,11 +18,11 @@ Create a vehicle.    Requires the 'ManageFleet' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::FleetApi.new
+api_instance = ChronoSheetsAPI::FleetApi.new
 
-request = SwaggerClient::CSInsertVehicleRequest.new # CSInsertVehicleRequest | An Insert Vehicle Request object containing values for the new Vehicle to create
+request = ChronoSheetsAPI::CSInsertVehicleRequest.new # CSInsertVehicleRequest | An Insert Vehicle Request object containing values for the new Vehicle to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -31,7 +31,7 @@ begin
   #Create a vehicle.    Requires the 'ManageFleet' permission.
   result = api_instance.fleet_create_vehicle(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling FleetApi->fleet_create_vehicle: #{e}"
 end
 ```
@@ -66,9 +66,9 @@ Get a particular vehicle.  Does not require any special permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::FleetApi.new
+api_instance = ChronoSheetsAPI::FleetApi.new
 
 vehicle_id = 56 # Integer | The ID of the Vehicle you want to get
 
@@ -79,7 +79,7 @@ begin
   #Get a particular vehicle.  Does not require any special permission.
   result = api_instance.fleet_get_vehicle_by_id(vehicle_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling FleetApi->fleet_get_vehicle_by_id: #{e}"
 end
 ```
@@ -114,9 +114,9 @@ Get a collection of vehicles that are under your organisation.    Does not requi
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::FleetApi.new
+api_instance = ChronoSheetsAPI::FleetApi.new
 
 include_deleted = true # BOOLEAN | Whether or not to include deleted vehicles
 
@@ -127,7 +127,7 @@ begin
   #Get a collection of vehicles that are under your organisation.    Does not require any special permission.
   result = api_instance.fleet_get_vehicles(include_deleted, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling FleetApi->fleet_get_vehicles: #{e}"
 end
 ```
@@ -162,11 +162,11 @@ Update a vehicle.    Requires the 'ManageFleet' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::FleetApi.new
+api_instance = ChronoSheetsAPI::FleetApi.new
 
-request = SwaggerClient::CSSaveVehicleRequest.new # CSSaveVehicleRequest | A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
+request = ChronoSheetsAPI::CSSaveVehicleRequest.new # CSSaveVehicleRequest | A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -175,7 +175,7 @@ begin
   #Update a vehicle.    Requires the 'ManageFleet' permission.
   result = api_instance.fleet_update_vehicle(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling FleetApi->fleet_update_vehicle: #{e}"
 end
 ```

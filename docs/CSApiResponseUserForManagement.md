@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseUserForManagement
+# ChronoSheetsAPI::CSApiResponseUserForManagement
 
 ## Properties
 Name | Type | Description | Notes

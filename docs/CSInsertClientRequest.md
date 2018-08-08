@@ -1,4 +1,4 @@
-# SwaggerClient::CSInsertClientRequest
+# ChronoSheetsAPI::CSInsertClientRequest
 
 ## Properties
 Name | Type | Description | Notes

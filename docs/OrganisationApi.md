@@ -1,4 +1,4 @@
-# SwaggerClient::OrganisationApi
+# ChronoSheetsAPI::OrganisationApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -16,9 +16,9 @@ Get your organisation.    Requires 'OrganisationAdmin' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationApi.new
+api_instance = ChronoSheetsAPI::OrganisationApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -27,7 +27,7 @@ begin
   #Get your organisation.    Requires 'OrganisationAdmin' permission.
   result = api_instance.organisation_get_organisation(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationApi->organisation_get_organisation: #{e}"
 end
 ```
@@ -61,11 +61,11 @@ Update an organisation.    Requires 'OrganisationAdmin' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationApi.new
+api_instance = ChronoSheetsAPI::OrganisationApi.new
 
-request = SwaggerClient::CSUpdateOrganisationRequest.new # CSUpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
+request = ChronoSheetsAPI::CSUpdateOrganisationRequest.new # CSUpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -74,7 +74,7 @@ begin
   #Update an organisation.    Requires 'OrganisationAdmin' permission.
   result = api_instance.organisation_update_organisation(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationApi->organisation_update_organisation: #{e}"
 end
 ```

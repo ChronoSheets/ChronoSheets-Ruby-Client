@@ -1,4 +1,4 @@
-# SwaggerClient::CSSetOrganisationGroupUsersRequest
+# ChronoSheetsAPI::CSSetOrganisationGroupUsersRequest
 
 ## Properties
 Name | Type | Description | Notes

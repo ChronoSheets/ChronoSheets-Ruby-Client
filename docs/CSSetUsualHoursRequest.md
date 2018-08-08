@@ -1,4 +1,4 @@
-# SwaggerClient::CSSetUsualHoursRequest
+# ChronoSheetsAPI::CSSetUsualHoursRequest
 
 ## Properties
 Name | Type | Description | Notes

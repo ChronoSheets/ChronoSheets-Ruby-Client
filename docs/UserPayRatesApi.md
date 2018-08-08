@@ -1,4 +1,4 @@
-# SwaggerClient::UserPayRatesApi
+# ChronoSheetsAPI::UserPayRatesApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -16,11 +16,11 @@ Create a new pay rate for a particular user, archiving the previous pay rate.   
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UserPayRatesApi.new
+api_instance = ChronoSheetsAPI::UserPayRatesApi.new
 
-request = SwaggerClient::CSInsertUserHourlyRateRequest.new # CSInsertUserHourlyRateRequest | An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
+request = ChronoSheetsAPI::CSInsertUserHourlyRateRequest.new # CSInsertUserHourlyRateRequest | An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -29,7 +29,7 @@ begin
   #Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the 'ManageOrganisationUsers' permission.
   result = api_instance.user_pay_rates_create_pay_rate(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UserPayRatesApi->user_pay_rates_create_pay_rate: #{e}"
 end
 ```
@@ -64,9 +64,9 @@ Get a collection of pay rates for a particular user, specified by user id.    Re
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UserPayRatesApi.new
+api_instance = ChronoSheetsAPI::UserPayRatesApi.new
 
 user_id = 56 # Integer | The ID of the User for which you want to get UserHourlyRate objects
 
@@ -77,7 +77,7 @@ begin
   #Get a collection of pay rates for a particular user, specified by user id.    Requires the 'ManageOrganisationUsers' permission.
   result = api_instance.user_pay_rates_get_pay_rates(user_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UserPayRatesApi->user_pay_rates_get_pay_rates: #{e}"
 end
 ```

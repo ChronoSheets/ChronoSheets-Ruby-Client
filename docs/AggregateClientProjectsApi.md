@@ -1,4 +1,4 @@
-# SwaggerClient::AggregateClientProjectsApi
+# ChronoSheetsAPI::AggregateClientProjectsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -15,9 +15,9 @@ Get client and project information, aggregated.    Requires the 'SubmitTimesheet
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::AggregateClientProjectsApi.new
+api_instance = ChronoSheetsAPI::AggregateClientProjectsApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -26,7 +26,7 @@ begin
   #Get client and project information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageClientsAndProjects' permissions.
   result = api_instance.aggregate_client_projects_get_aggregate_client_projects(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling AggregateClientProjectsApi->aggregate_client_projects_get_aggregate_client_projects: #{e}"
 end
 ```

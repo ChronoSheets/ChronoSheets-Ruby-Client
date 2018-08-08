@@ -1,4 +1,4 @@
-# SwaggerClient::CSProjectCostingReportItem
+# ChronoSheetsAPI::CSProjectCostingReportItem
 
 ## Properties
 Name | Type | Description | Notes

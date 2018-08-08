@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseCombinedReportsData
+# ChronoSheetsAPI::CSApiResponseCombinedReportsData
 
 ## Properties
 Name | Type | Description | Notes

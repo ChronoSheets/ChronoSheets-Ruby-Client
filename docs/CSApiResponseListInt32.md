@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseListInt32
+# ChronoSheetsAPI::CSApiResponseListInt32
 
 ## Properties
 Name | Type | Description | Notes

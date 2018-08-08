@@ -1,4 +1,4 @@
-# SwaggerClient::TripsApi
+# ChronoSheetsAPI::TripsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -17,11 +17,11 @@ Create a new trip.  Important: create a timesheet record before calling this, pa
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TripsApi.new
+api_instance = ChronoSheetsAPI::TripsApi.new
 
-request = SwaggerClient::CSCreateTripRequest.new # CSCreateTripRequest | A Create Trip Request object containing values for the new Trip to create
+request = ChronoSheetsAPI::CSCreateTripRequest.new # CSCreateTripRequest | A Create Trip Request object containing values for the new Trip to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -30,7 +30,7 @@ begin
   #Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.trips_create_trip(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TripsApi->trips_create_trip: #{e}"
 end
 ```
@@ -65,9 +65,9 @@ Get trip by Id.    Requires the 'ViewMyTrips' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TripsApi.new
+api_instance = ChronoSheetsAPI::TripsApi.new
 
 trip_id = 56 # Integer | The ID of the Trip you want to get
 
@@ -78,7 +78,7 @@ begin
   #Get trip by Id.    Requires the 'ViewMyTrips' permission.
   result = api_instance.trips_get_my_trip_by_id(trip_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TripsApi->trips_get_my_trip_by_id: #{e}"
 end
 ```
@@ -113,9 +113,9 @@ Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TripsApi.new
+api_instance = ChronoSheetsAPI::TripsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The Start date of the date range.  Trips after this date will be obtained.
 
@@ -134,7 +134,7 @@ begin
   #Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
   result = api_instance.trips_get_my_trips(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TripsApi->trips_get_my_trips: #{e}"
 end
 ```

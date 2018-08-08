@@ -1,4 +1,4 @@
-# SwaggerClient::CSFleetVehicle
+# ChronoSheetsAPI::CSFleetVehicle
 
 ## Properties
 Name | Type | Description | Notes

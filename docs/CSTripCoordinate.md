@@ -1,4 +1,4 @@
-# SwaggerClient::CSTripCoordinate
+# ChronoSheetsAPI::CSTripCoordinate
 
 ## Properties
 Name | Type | Description | Notes

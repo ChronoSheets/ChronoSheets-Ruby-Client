@@ -1,4 +1,4 @@
-# SwaggerClient::CSInsertUserHourlyRateRequest
+# ChronoSheetsAPI::CSInsertUserHourlyRateRequest
 
 ## Properties
 Name | Type | Description | Notes

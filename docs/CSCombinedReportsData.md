@@ -1,4 +1,4 @@
-# SwaggerClient::CSCombinedReportsData
+# ChronoSheetsAPI::CSCombinedReportsData
 
 ## Properties
 Name | Type | Description | Notes

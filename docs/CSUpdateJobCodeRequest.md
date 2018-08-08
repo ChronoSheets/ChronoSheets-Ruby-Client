@@ -1,4 +1,4 @@
-# SwaggerClient::CSUpdateJobCodeRequest
+# ChronoSheetsAPI::CSUpdateJobCodeRequest
 
 ## Properties
 Name | Type | Description | Notes

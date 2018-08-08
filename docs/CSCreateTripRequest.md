@@ -1,4 +1,4 @@
-# SwaggerClient::CSCreateTripRequest
+# ChronoSheetsAPI::CSCreateTripRequest
 
 ## Properties
 Name | Type | Description | Notes

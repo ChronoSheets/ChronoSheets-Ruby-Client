@@ -1,4 +1,4 @@
-# SwaggerClient::CSAggregateClient
+# ChronoSheetsAPI::CSAggregateClient
 
 ## Properties
 Name | Type | Description | Notes

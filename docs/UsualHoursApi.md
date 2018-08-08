@@ -1,4 +1,4 @@
-# SwaggerClient::UsualHoursApi
+# ChronoSheetsAPI::UsualHoursApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -16,9 +16,9 @@ Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisat
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UsualHoursApi.new
+api_instance = ChronoSheetsAPI::UsualHoursApi.new
 
 user_id = 56 # Integer | The ID of the User for which you want to get UsualHours for
 
@@ -29,7 +29,7 @@ begin
   #Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
   result = api_instance.usual_hours_get_usual_hours(user_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UsualHoursApi->usual_hours_get_usual_hours: #{e}"
 end
 ```
@@ -64,11 +64,11 @@ Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisat
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UsualHoursApi.new
+api_instance = ChronoSheetsAPI::UsualHoursApi.new
 
-request = SwaggerClient::CSSetUsualHoursRequest.new # CSSetUsualHoursRequest | A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update
+request = ChronoSheetsAPI::CSSetUsualHoursRequest.new # CSSetUsualHoursRequest | A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -77,7 +77,7 @@ begin
   #Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
   result = api_instance.usual_hours_set_usual_hours(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UsualHoursApi->usual_hours_set_usual_hours: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseForPaginatedListRawReportItem
+# ChronoSheetsAPI::CSApiResponseForPaginatedListRawReportItem
 
 ## Properties
 Name | Type | Description | Notes

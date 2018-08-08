@@ -1,4 +1,4 @@
-# SwaggerClient::OrganisationGroupUsersApi
+# ChronoSheetsAPI::OrganisationGroupUsersApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -16,9 +16,9 @@ Get a collection of organisation group users that belong to an organisation grou
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupUsersApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupUsersApi.new
 
 org_group_id = 56 # Integer | An OrganisatioGroup Id
 
@@ -29,7 +29,7 @@ begin
   #Get a collection of organisation group users that belong to an organisation group.    Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
   result = api_instance.organisation_group_users_get_organisation_group_users(org_group_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupUsersApi->organisation_group_users_get_organisation_group_users: #{e}"
 end
 ```
@@ -64,11 +64,11 @@ Set the users who belong to an organisation group.    Requires the 'ManageOrgani
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupUsersApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupUsersApi.new
 
-request = SwaggerClient::CSSetOrganisationGroupUsersRequest.new # CSSetOrganisationGroupUsersRequest | A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
+request = ChronoSheetsAPI::CSSetOrganisationGroupUsersRequest.new # CSSetOrganisationGroupUsersRequest | A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -77,7 +77,7 @@ begin
   #Set the users who belong to an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
   result = api_instance.organisation_group_users_update_organisation_group_users(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupUsersApi->organisation_group_users_update_organisation_group_users: #{e}"
 end
 ```

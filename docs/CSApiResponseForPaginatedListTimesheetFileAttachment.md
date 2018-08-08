@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseForPaginatedListTimesheetFileAttachment
+# ChronoSheetsAPI::CSApiResponseForPaginatedListTimesheetFileAttachment
 
 ## Properties
 Name | Type | Description | Notes

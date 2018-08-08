@@ -1,4 +1,4 @@
-# SwaggerClient::CSUsualHoursDay
+# ChronoSheetsAPI::CSUsualHoursDay
 
 ## Properties
 Name | Type | Description | Notes

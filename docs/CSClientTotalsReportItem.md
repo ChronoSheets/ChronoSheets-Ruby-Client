@@ -1,4 +1,4 @@
-# SwaggerClient::CSClientTotalsReportItem
+# ChronoSheetsAPI::CSClientTotalsReportItem
 
 ## Properties
 Name | Type | Description | Notes

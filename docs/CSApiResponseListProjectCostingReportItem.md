@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseListProjectCostingReportItem
+# ChronoSheetsAPI::CSApiResponseListProjectCostingReportItem
 
 ## Properties
 Name | Type | Description | Notes

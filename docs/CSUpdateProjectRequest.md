@@ -1,4 +1,4 @@
-# SwaggerClient::CSUpdateProjectRequest
+# ChronoSheetsAPI::CSUpdateProjectRequest
 
 ## Properties
 Name | Type | Description | Notes

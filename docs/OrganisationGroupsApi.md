@@ -1,4 +1,4 @@
-# SwaggerClient::OrganisationGroupsApi
+# ChronoSheetsAPI::OrganisationGroupsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -20,11 +20,11 @@ Create an organisation group.    Requires the 'ManageOrganisationGroups' permiss
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupsApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupsApi.new
 
-request = SwaggerClient::CSInsertOrganisationGroupRequest.new # CSInsertOrganisationGroupRequest | An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create
+request = ChronoSheetsAPI::CSInsertOrganisationGroupRequest.new # CSInsertOrganisationGroupRequest | An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -33,7 +33,7 @@ begin
   #Create an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
   result = api_instance.organisation_groups_create_organisation_group(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupsApi->organisation_groups_create_organisation_group: #{e}"
 end
 ```
@@ -68,9 +68,9 @@ Get a particular organisation group.    Requires the 'ManageOrganisationGroups',
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupsApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupsApi.new
 
 organisation_group_id = 56 # Integer | The ID of the OrganisationGroup you want to get
 
@@ -81,7 +81,7 @@ begin
   #Get a particular organisation group.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
   result = api_instance.organisation_groups_get_organisation_group(organisation_group_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupsApi->organisation_groups_get_organisation_group: #{e}"
 end
 ```
@@ -116,9 +116,9 @@ Get a collection of organisation groups that are under your organisation.    Req
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupsApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupsApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -127,7 +127,7 @@ begin
   #Get a collection of organisation groups that are under your organisation.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
   result = api_instance.organisation_groups_get_organisation_groups(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupsApi->organisation_groups_get_organisation_groups: #{e}"
 end
 ```
@@ -161,9 +161,9 @@ Get org groups for a particular job.    Requires the 'ManageOrganisationGroups',
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupsApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupsApi.new
 
 job_id = 56 # Integer | The ID of the job
 
@@ -174,7 +174,7 @@ begin
   #Get org groups for a particular job.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
   result = api_instance.organisation_groups_get_organisation_groups_for_job(job_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupsApi->organisation_groups_get_organisation_groups_for_job: #{e}"
 end
 ```
@@ -209,9 +209,9 @@ Get org groups for a particular vehicle.    Requires the 'ManageOrganisationGrou
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupsApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupsApi.new
 
 vehicle_id = 56 # Integer | The ID of the vehicle
 
@@ -222,7 +222,7 @@ begin
   #Get org groups for a particular vehicle.    Requires the 'ManageOrganisationGroups', 'ManageFleet' or 'ManageOrganisationUsers' permissions.
   result = api_instance.organisation_groups_get_organisation_groups_for_vehicle(vehicle_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupsApi->organisation_groups_get_organisation_groups_for_vehicle: #{e}"
 end
 ```
@@ -257,11 +257,11 @@ Update an organisation group.    Requires the 'ManageOrganisationGroups' permiss
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::OrganisationGroupsApi.new
+api_instance = ChronoSheetsAPI::OrganisationGroupsApi.new
 
-request = SwaggerClient::CSSaveOrganisationGroupRequest.new # CSSaveOrganisationGroupRequest | A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
+request = ChronoSheetsAPI::CSSaveOrganisationGroupRequest.new # CSSaveOrganisationGroupRequest | A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -270,7 +270,7 @@ begin
   #Update an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
   result = api_instance.organisation_groups_update_organisation_group(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling OrganisationGroupsApi->organisation_groups_update_organisation_group: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::CSTaskSeriesReportItem
+# ChronoSheetsAPI::CSTaskSeriesReportItem
 
 ## Properties
 Name | Type | Description | Notes

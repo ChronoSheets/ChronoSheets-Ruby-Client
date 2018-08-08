@@ -1,4 +1,4 @@
-# SwaggerClient::ClientsApi
+# ChronoSheetsAPI::ClientsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -18,11 +18,11 @@ Create a client.    Requires the 'ManageClientsAndProjects' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ClientsApi.new
+api_instance = ChronoSheetsAPI::ClientsApi.new
 
-request = SwaggerClient::CSInsertClientRequest.new # CSInsertClientRequest | An Insert Client Request object containing values for the new Client to create
+request = ChronoSheetsAPI::CSInsertClientRequest.new # CSInsertClientRequest | An Insert Client Request object containing values for the new Client to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -31,7 +31,7 @@ begin
   #Create a client.    Requires the 'ManageClientsAndProjects' permission.
   result = api_instance.clients_create_client(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ClientsApi->clients_create_client: #{e}"
 end
 ```
@@ -66,9 +66,9 @@ Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ClientsApi.new
+api_instance = ChronoSheetsAPI::ClientsApi.new
 
 client_id = 56 # Integer | The ID of the Client you want to get
 
@@ -79,7 +79,7 @@ begin
   #Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
   result = api_instance.clients_get_client(client_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ClientsApi->clients_get_client: #{e}"
 end
 ```
@@ -114,9 +114,9 @@ Get a collection of clients that are under your organisation.    Requires the 'M
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ClientsApi.new
+api_instance = ChronoSheetsAPI::ClientsApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -125,7 +125,7 @@ begin
   #Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
   result = api_instance.clients_get_clients(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ClientsApi->clients_get_clients: #{e}"
 end
 ```
@@ -159,11 +159,11 @@ Update a client.    Requires the 'ManageClientsAndProjects' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ClientsApi.new
+api_instance = ChronoSheetsAPI::ClientsApi.new
 
-request = SwaggerClient::CSSaveClientRequest.new # CSSaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
+request = ChronoSheetsAPI::CSSaveClientRequest.new # CSSaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -172,7 +172,7 @@ begin
   #Update a client.    Requires the 'ManageClientsAndProjects' permission.
   result = api_instance.clients_update_client(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ClientsApi->clients_update_client: #{e}"
 end
 ```

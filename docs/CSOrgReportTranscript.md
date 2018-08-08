@@ -1,4 +1,4 @@
-# SwaggerClient::CSOrgReportTranscript
+# ChronoSheetsAPI::CSOrgReportTranscript
 
 ## Properties
 Name | Type | Description | Notes

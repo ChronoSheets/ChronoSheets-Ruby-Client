@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseForPaginatedListOrgReportTranscript
+# ChronoSheetsAPI::CSApiResponseForPaginatedListOrgReportTranscript
 
 ## Properties
 Name | Type | Description | Notes

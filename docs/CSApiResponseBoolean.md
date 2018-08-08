@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseBoolean
+# ChronoSheetsAPI::CSApiResponseBoolean
 
 ## Properties
 Name | Type | Description | Notes

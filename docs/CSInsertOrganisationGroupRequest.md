@@ -1,4 +1,4 @@
-# SwaggerClient::CSInsertOrganisationGroupRequest
+# ChronoSheetsAPI::CSInsertOrganisationGroupRequest
 
 ## Properties
 Name | Type | Description | Notes

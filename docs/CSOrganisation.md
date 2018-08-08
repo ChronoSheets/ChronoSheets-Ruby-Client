@@ -1,4 +1,4 @@
-# SwaggerClient::CSOrganisation
+# ChronoSheetsAPI::CSOrganisation
 
 ## Properties
 Name | Type | Description | Notes

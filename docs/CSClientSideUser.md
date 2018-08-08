@@ -1,4 +1,4 @@
-# SwaggerClient::CSClientSideUser
+# ChronoSheetsAPI::CSClientSideUser
 
 ## Properties
 Name | Type | Description | Notes

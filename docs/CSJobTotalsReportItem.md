@@ -1,4 +1,4 @@
-# SwaggerClient::CSJobTotalsReportItem
+# ChronoSheetsAPI::CSJobTotalsReportItem
 
 ## Properties
 Name | Type | Description | Notes

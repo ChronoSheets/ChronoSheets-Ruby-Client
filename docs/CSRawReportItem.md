@@ -1,4 +1,4 @@
-# SwaggerClient::CSRawReportItem
+# ChronoSheetsAPI::CSRawReportItem
 
 ## Properties
 Name | Type | Description | Notes

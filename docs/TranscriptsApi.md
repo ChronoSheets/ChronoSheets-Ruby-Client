@@ -1,4 +1,4 @@
-# SwaggerClient::TranscriptsApi
+# ChronoSheetsAPI::TranscriptsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -15,9 +15,9 @@ Get my file transcripts.  Get audio to text transcripts that you've created.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TranscriptsApi.new
+api_instance = ChronoSheetsAPI::TranscriptsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The Start date of the date range.  Transcripts after this date will be obtained.
 
@@ -36,7 +36,7 @@ begin
   #Get my file transcripts.  Get audio to text transcripts that you've created.
   result = api_instance.transcripts_get_my_transcripts(start_date, end_date, skip, take, keyword, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TranscriptsApi->transcripts_get_my_transcripts: #{e}"
 end
 ```

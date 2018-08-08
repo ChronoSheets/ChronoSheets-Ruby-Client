@@ -1,4 +1,4 @@
-# SwaggerClient::CSOrgReportTimesheetFileAttachment
+# ChronoSheetsAPI::CSOrgReportTimesheetFileAttachment
 
 ## Properties
 Name | Type | Description | Notes

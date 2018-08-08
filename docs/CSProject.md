@@ -1,4 +1,4 @@
-# SwaggerClient::CSProject
+# ChronoSheetsAPI::CSProject
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ReportsApi
+# ChronoSheetsAPI::ReportsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -24,9 +24,9 @@ Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -41,7 +41,7 @@ begin
   #Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_all_charts_data_admin: #{e}"
 end
 ```
@@ -78,9 +78,9 @@ Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These a
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -93,7 +93,7 @@ begin
   #Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.    Requires the 'ViewOwnReports' permission.
   result = api_instance.reports_get_all_charts_data_user(start_date, end_date, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_all_charts_data_user: #{e}"
 end
 ```
@@ -129,9 +129,9 @@ Gets a summary report, which includes total distance travelled and total running
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -146,7 +146,7 @@ begin
   #Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_fleet_summary_admin(start_date, end_date, user_ids, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_fleet_summary_admin: #{e}"
 end
 ```
@@ -183,9 +183,9 @@ Get trip by Id, for reporting purposes.    Requires the 'ReportAdmin' permission
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 trip_id = 56 # Integer | The ID of the Trip you want to get
 
@@ -196,7 +196,7 @@ begin
   #Get trip by Id, for reporting purposes.    Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_org_trip_by_id(trip_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_org_trip_by_id: #{e}"
 end
 ```
@@ -231,9 +231,9 @@ Reports on Organisation timesheet file attachments (files uploaded and attached 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -252,7 +252,7 @@ begin
   #Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_organisation_timesheet_file_attachments: #{e}"
 end
 ```
@@ -291,9 +291,9 @@ Reports on Organisation transcripts (When an audio file is attached, it will be 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -314,7 +314,7 @@ begin
   #Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_organisation_transcripts(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_organisation_transcripts: #{e}"
 end
 ```
@@ -354,9 +354,9 @@ Reports on Organisation trips (GPS tracking from whole organisation).    Require
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -375,7 +375,7 @@ begin
   #Reports on Organisation trips (GPS tracking from whole organisation).    Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_organisation_trips: #{e}"
 end
 ```
@@ -414,9 +414,9 @@ Get Timesheets Raw Data.  This data details each timesheet record.  These are th
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -439,7 +439,7 @@ begin
   #Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
   result = api_instance.reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_raw_data_admin: #{e}"
 end
 ```
@@ -480,9 +480,9 @@ Gets project cost estimations VS actual cost for date range and users.    Requir
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -497,7 +497,7 @@ begin
   #Gets project cost estimations VS actual cost for date range and users.    Requires the 'ReportAdmin' permission.
   result = api_instance.reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_project_costings_admin: #{e}"
 end
 ```
@@ -534,9 +534,9 @@ Timeseries jobs data for the logged in user.    Requires the 'ViewOwnReports' or
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = ChronoSheetsAPI::ReportsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
 
@@ -549,7 +549,7 @@ begin
   #Timeseries jobs data for the logged in user.    Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
   result = api_instance.reports_user_jobs_over_time(start_date, end_date, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_user_jobs_over_time: #{e}"
 end
 ```

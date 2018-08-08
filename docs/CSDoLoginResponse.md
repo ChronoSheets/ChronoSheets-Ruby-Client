@@ -1,4 +1,4 @@
-# SwaggerClient::CSDoLoginResponse
+# ChronoSheetsAPI::CSDoLoginResponse
 
 ## Properties
 Name | Type | Description | Notes

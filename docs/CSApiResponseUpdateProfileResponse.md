@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseUpdateProfileResponse
+# ChronoSheetsAPI::CSApiResponseUpdateProfileResponse
 
 ## Properties
 Name | Type | Description | Notes

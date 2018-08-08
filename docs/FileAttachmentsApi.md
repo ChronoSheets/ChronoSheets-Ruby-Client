@@ -1,4 +1,4 @@
-# SwaggerClient::FileAttachmentsApi
+# ChronoSheetsAPI::FileAttachmentsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -15,9 +15,9 @@ Get my file attachments.  Get files you've attached to timesheets.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::FileAttachmentsApi.new
+api_instance = ChronoSheetsAPI::FileAttachmentsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The Start date of the date range.  File attachments after this date will be obtained.
 
@@ -34,7 +34,7 @@ begin
   #Get my file attachments.  Get files you've attached to timesheets.
   result = api_instance.file_attachments_get_my_file_attachments(start_date, end_date, skip, take, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling FileAttachmentsApi->file_attachments_get_my_file_attachments: #{e}"
 end
 ```

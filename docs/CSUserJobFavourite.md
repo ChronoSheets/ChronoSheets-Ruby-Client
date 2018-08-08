@@ -1,4 +1,4 @@
-# SwaggerClient::CSUserJobFavourite
+# ChronoSheetsAPI::CSUserJobFavourite
 
 ## Properties
 Name | Type | Description | Notes

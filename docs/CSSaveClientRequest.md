@@ -1,4 +1,4 @@
-# SwaggerClient::CSSaveClientRequest
+# ChronoSheetsAPI::CSSaveClientRequest
 
 ## Properties
 Name | Type | Description | Notes

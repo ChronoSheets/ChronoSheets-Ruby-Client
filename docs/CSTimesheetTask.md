@@ -1,4 +1,4 @@
-# SwaggerClient::CSTimesheetTask
+# ChronoSheetsAPI::CSTimesheetTask
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::TasksApi
+# ChronoSheetsAPI::TasksApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -20,11 +20,11 @@ Create a task.    Requires the 'ManageJobsAndTask' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = ChronoSheetsAPI::TasksApi.new
 
-request = SwaggerClient::CSInsertTaskRequest.new # CSInsertTaskRequest | An Insert Task Request object containing values for the new Task to create
+request = ChronoSheetsAPI::CSInsertTaskRequest.new # CSInsertTaskRequest | An Insert Task Request object containing values for the new Task to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -33,7 +33,7 @@ begin
   #Create a task.    Requires the 'ManageJobsAndTask' permission.
   result = api_instance.tasks_create_task(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_create_task: #{e}"
 end
 ```
@@ -68,9 +68,9 @@ Delete a task.    Requires the 'ManageJobsAndTask' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = ChronoSheetsAPI::TasksApi.new
 
 task_id = 56 # Integer | The ID of the Task you want to delete
 
@@ -81,7 +81,7 @@ begin
   #Delete a task.    Requires the 'ManageJobsAndTask' permission.
   result = api_instance.tasks_delete_task(task_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_delete_task: #{e}"
 end
 ```
@@ -116,9 +116,9 @@ Get a particular task by Id.   Requires the 'SubmitTimesheets' or 'ManageJobsAnd
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = ChronoSheetsAPI::TasksApi.new
 
 task_id = 56 # Integer | The ID of the TimesheetTask you want to get
 
@@ -129,7 +129,7 @@ begin
   #Get a particular task by Id.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
   result = api_instance.tasks_get_task_by_id(task_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_get_task_by_id: #{e}"
 end
 ```
@@ -164,9 +164,9 @@ Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobs
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = ChronoSheetsAPI::TasksApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -175,7 +175,7 @@ begin
   #Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
   result = api_instance.tasks_get_tasks(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_get_tasks: #{e}"
 end
 ```
@@ -209,9 +209,9 @@ Get a collection of tasks for a particular Job, specified by JobId.    Requires 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = ChronoSheetsAPI::TasksApi.new
 
 job_id = 56 # Integer | The ID of the job
 
@@ -222,7 +222,7 @@ begin
   #Get a collection of tasks for a particular Job, specified by JobId.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
   result = api_instance.tasks_get_tasks_for_job(job_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_get_tasks_for_job: #{e}"
 end
 ```
@@ -257,11 +257,11 @@ Update a task.    Requires the 'ManageJobsAndTask' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = ChronoSheetsAPI::TasksApi.new
 
-request = SwaggerClient::CSUpdateTaskRequest.new # CSUpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
+request = ChronoSheetsAPI::CSUpdateTaskRequest.new # CSUpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -270,7 +270,7 @@ begin
   #Update a task.    Requires the 'ManageJobsAndTask' permission.
   result = api_instance.tasks_update_task(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_update_task: #{e}"
 end
 ```

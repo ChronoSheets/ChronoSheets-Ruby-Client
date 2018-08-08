@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseListUsualHoursDay
+# ChronoSheetsAPI::CSApiResponseListUsualHoursDay
 
 ## Properties
 Name | Type | Description | Notes

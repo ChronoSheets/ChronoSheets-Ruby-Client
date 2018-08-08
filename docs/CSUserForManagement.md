@@ -1,4 +1,4 @@
-# SwaggerClient::CSUserForManagement
+# ChronoSheetsAPI::CSUserForManagement
 
 ## Properties
 Name | Type | Description | Notes

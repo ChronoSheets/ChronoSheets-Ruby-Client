@@ -1,4 +1,4 @@
-# SwaggerClient::AggregateJobTasksApi
+# ChronoSheetsAPI::AggregateJobTasksApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -15,9 +15,9 @@ Get jobs and tasks information, aggregated.    Requires the 'SubmitTimesheets' o
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::AggregateJobTasksApi.new
+api_instance = ChronoSheetsAPI::AggregateJobTasksApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -26,7 +26,7 @@ begin
   #Get jobs and tasks information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
   result = api_instance.aggregate_job_tasks_get_aggregate_job_tasks(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling AggregateJobTasksApi->aggregate_job_tasks_get_aggregate_job_tasks: #{e}"
 end
 ```

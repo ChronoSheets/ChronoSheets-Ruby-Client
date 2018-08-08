@@ -1,4 +1,4 @@
-# SwaggerClient::CSTrip
+# ChronoSheetsAPI::CSTrip
 
 ## Properties
 Name | Type | Description | Notes

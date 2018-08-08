@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseFleetVehicle
+# ChronoSheetsAPI::CSApiResponseFleetVehicle
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::CSUpdateOrganisationResponse
+# ChronoSheetsAPI::CSUpdateOrganisationResponse
 
 ## Properties
 Name | Type | Description | Notes

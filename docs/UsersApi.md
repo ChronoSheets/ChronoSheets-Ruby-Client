@@ -1,4 +1,4 @@
-# SwaggerClient::UsersApi
+# ChronoSheetsAPI::UsersApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -18,11 +18,11 @@ Create a user account in your organisation.  Requires the 'ManageOrganisationUse
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = ChronoSheetsAPI::UsersApi.new
 
-request = SwaggerClient::CSInsertUserRequest.new # CSInsertUserRequest | An Insert User Request object containing values for the new User to create
+request = ChronoSheetsAPI::CSInsertUserRequest.new # CSInsertUserRequest | An Insert User Request object containing values for the new User to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -31,7 +31,7 @@ begin
   #Create a user account in your organisation.  Requires the 'ManageOrganisationUsers' permission.
   result = api_instance.users_create_timesheet_user(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UsersApi->users_create_timesheet_user: #{e}"
 end
 ```
@@ -66,9 +66,9 @@ Get a particular user in your organisation.  Requires the 'ManageOrganisationUse
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = ChronoSheetsAPI::UsersApi.new
 
 user_id = 56 # Integer | The User ID of the UserForManagement you want to get
 
@@ -79,7 +79,7 @@ begin
   #Get a particular user in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
   result = api_instance.users_get_timesheet_user(user_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UsersApi->users_get_timesheet_user: #{e}"
 end
 ```
@@ -114,9 +114,9 @@ Get users accounts in your organisation.  Requires the 'ManageOrganisationUsers'
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = ChronoSheetsAPI::UsersApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -125,7 +125,7 @@ begin
   #Get users accounts in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
   result = api_instance.users_get_timesheet_users(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UsersApi->users_get_timesheet_users: #{e}"
 end
 ```
@@ -159,11 +159,11 @@ Update a user account.  Requires the 'ManageOrganisationUsers' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = ChronoSheetsAPI::UsersApi.new
 
-request = SwaggerClient::CSUpdateUserRequest.new # CSUpdateUserRequest | A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
+request = ChronoSheetsAPI::CSUpdateUserRequest.new # CSUpdateUserRequest | A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -172,7 +172,7 @@ begin
   #Update a user account.  Requires the 'ManageOrganisationUsers' permission.
   result = api_instance.users_update_timesheet_user(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UsersApi->users_update_timesheet_user: #{e}"
 end
 ```

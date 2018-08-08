@@ -1,4 +1,4 @@
-# SwaggerClient::TimesheetsApi
+# ChronoSheetsAPI::TimesheetsApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -18,11 +18,11 @@ Inserts a single timesheet record.    Requires the 'SubmitTimesheets' permission
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TimesheetsApi.new
+api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
-request = SwaggerClient::CSTimesheet.new # CSTimesheet | A Timesheet Request object containing values for the new Timesheet to create
+request = ChronoSheetsAPI::CSTimesheet.new # CSTimesheet | A Timesheet Request object containing values for the new Timesheet to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -31,7 +31,7 @@ begin
   #Inserts a single timesheet record.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_create_single_timesheet(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TimesheetsApi->timesheets_create_single_timesheet: #{e}"
 end
 ```
@@ -66,9 +66,9 @@ Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TimesheetsApi.new
+api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
 timesheet_id = 56 # Integer | The ID of the Timesheet you want to delete
 
@@ -79,7 +79,7 @@ begin
   #Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_delete_timesheet(timesheet_id, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TimesheetsApi->timesheets_delete_timesheet: #{e}"
 end
 ```
@@ -114,9 +114,9 @@ Get timesheets between start and end dates.  Note: the date range cannot exceed 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TimesheetsApi.new
+api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
 start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date of the date range
 
@@ -129,7 +129,7 @@ begin
   #Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_get_timesheets(start_date, end_date, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TimesheetsApi->timesheets_get_timesheets: #{e}"
 end
 ```
@@ -165,11 +165,11 @@ Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::TimesheetsApi.new
+api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
-request = SwaggerClient::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
+request = ChronoSheetsAPI::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -178,7 +178,7 @@ begin
   #Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.timesheets_update_timesheets(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TimesheetsApi->timesheets_update_timesheets: #{e}"
 end
 ```

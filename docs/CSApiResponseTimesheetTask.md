@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseTimesheetTask
+# ChronoSheetsAPI::CSApiResponseTimesheetTask
 
 ## Properties
 Name | Type | Description | Notes

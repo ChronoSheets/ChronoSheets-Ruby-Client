@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseListFleetSummaryReportItem
+# ChronoSheetsAPI::CSApiResponseListFleetSummaryReportItem
 
 ## Properties
 Name | Type | Description | Notes

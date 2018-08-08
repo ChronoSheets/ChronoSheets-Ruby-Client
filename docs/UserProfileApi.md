@@ -1,4 +1,4 @@
-# SwaggerClient::UserProfileApi
+# ChronoSheetsAPI::UserProfileApi
 
 All URIs are relative to *https://www.chronosheets.com*
 
@@ -19,18 +19,18 @@ Login to your ChronoSheets account and obtain an Auth Token which you can use fo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UserProfileApi.new
+api_instance = ChronoSheetsAPI::UserProfileApi.new
 
-request = SwaggerClient::CSDoLoginRequest.new # CSDoLoginRequest | A request object containing your username/email and password.
+request = ChronoSheetsAPI::CSDoLoginRequest.new # CSDoLoginRequest | A request object containing your username/email and password.
 
 
 begin
   #Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
   result = api_instance.user_profile_do_login(request)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UserProfileApi->user_profile_do_login: #{e}"
 end
 ```
@@ -64,9 +64,9 @@ Logout of your ChronoSheets account.  This method ends and deletes your active s
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UserProfileApi.new
+api_instance = ChronoSheetsAPI::UserProfileApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -75,7 +75,7 @@ begin
   #Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
   result = api_instance.user_profile_do_logout(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UserProfileApi->user_profile_do_logout: #{e}"
 end
 ```
@@ -109,9 +109,9 @@ Get your own profile.  Use this method to obtain detailed information about your
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UserProfileApi.new
+api_instance = ChronoSheetsAPI::UserProfileApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -120,7 +120,7 @@ begin
   #Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
   result = api_instance.user_profile_get_my_profile(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UserProfileApi->user_profile_get_my_profile: #{e}"
 end
 ```
@@ -154,9 +154,9 @@ Keep a session alive.  Use this method to keep a session active.  You could use 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UserProfileApi.new
+api_instance = ChronoSheetsAPI::UserProfileApi.new
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -165,7 +165,7 @@ begin
   #Keep a session alive.  Use this method to keep a session active.  You could use this to 'ping' ChronoSheets every 'x' minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
   result = api_instance.user_profile_keep_session_alive(x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UserProfileApi->user_profile_keep_session_alive: #{e}"
 end
 ```
@@ -199,11 +199,11 @@ Update your own profile.  Use this method to update your profile information or 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'ChronoSheetsAPI'
 
-api_instance = SwaggerClient::UserProfileApi.new
+api_instance = ChronoSheetsAPI::UserProfileApi.new
 
-request = SwaggerClient::CSUpdateMyProfileRequest.new # CSUpdateMyProfileRequest | An Update MyProfile Request object containing updated fields.
+request = ChronoSheetsAPI::CSUpdateMyProfileRequest.new # CSUpdateMyProfileRequest | An Update MyProfile Request object containing updated fields.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -212,7 +212,7 @@ begin
   #Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
   result = api_instance.user_profile_update_my_profile(request, x_chronosheets_auth)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling UserProfileApi->user_profile_update_my_profile: #{e}"
 end
 ```

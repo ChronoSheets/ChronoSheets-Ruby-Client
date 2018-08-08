@@ -1,4 +1,4 @@
-# SwaggerClient::CSApiResponseListUserJobFavourite
+# ChronoSheetsAPI::CSApiResponseListUserJobFavourite
 
 ## Properties
 Name | Type | Description | Notes

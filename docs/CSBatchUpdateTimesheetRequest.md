@@ -1,4 +1,4 @@
-# SwaggerClient::CSBatchUpdateTimesheetRequest
+# ChronoSheetsAPI::CSBatchUpdateTimesheetRequest
 
 ## Properties
 Name | Type | Description | Notes
