@@ -32,6 +32,19 @@ describe 'FileAttachmentsApi' do
     end
   end
 
+  # unit tests for file_attachments_delete_timesheet_file_attachment
+  # Delete a particular timesheet file attachment
+  # 
+  # @param file_attachment_id The Id of the file attachment to delete
+  # @param x_chronosheets_auth The ChronoSheets Auth Token
+  # @param [Hash] opts the optional parameters
+  # @return [CSApiResponseBoolean]
+  describe 'file_attachments_delete_timesheet_file_attachment test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for file_attachments_get_my_file_attachments
   # Get my file attachments.  Get files you&#39;ve attached to timesheets.
   # 

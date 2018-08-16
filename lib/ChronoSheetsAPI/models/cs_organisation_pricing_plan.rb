@@ -14,81 +14,25 @@ require 'date'
 
 module ChronoSheetsAPI
 
-  class CSOrganisation
-    attr_accessor :id
+  class CSOrganisationPricingPlan
+    attr_accessor :plan_id
 
-    attr_accessor :name
-
-    attr_accessor :address_line01
-
-    attr_accessor :address_line02
-
-    attr_accessor :suburb
-
-    attr_accessor :state
-
-    attr_accessor :postcode
-
-    attr_accessor :country
-
-    attr_accessor :phone
-
-    attr_accessor :email_address
-
-    attr_accessor :timezone
-
-    attr_accessor :subscription_customer_id
-
-    attr_accessor :signup_token
-
-    attr_accessor :subscription_cycle_start
-
-    attr_accessor :subscription_cycle_end
-
-    attr_accessor :pricing_plans
+    attr_accessor :quantity
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'Id',
-        :'name' => :'Name',
-        :'address_line01' => :'AddressLine01',
-        :'address_line02' => :'AddressLine02',
-        :'suburb' => :'Suburb',
-        :'state' => :'State',
-        :'postcode' => :'Postcode',
-        :'country' => :'Country',
-        :'phone' => :'Phone',
-        :'email_address' => :'EmailAddress',
-        :'timezone' => :'Timezone',
-        :'subscription_customer_id' => :'SubscriptionCustomerId',
-        :'signup_token' => :'SignupToken',
-        :'subscription_cycle_start' => :'SubscriptionCycleStart',
-        :'subscription_cycle_end' => :'SubscriptionCycleEnd',
-        :'pricing_plans' => :'PricingPlans'
+        :'plan_id' => :'PlanId',
+        :'quantity' => :'Quantity'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'Integer',
-        :'name' => :'String',
-        :'address_line01' => :'String',
-        :'address_line02' => :'String',
-        :'suburb' => :'String',
-        :'state' => :'String',
-        :'postcode' => :'String',
-        :'country' => :'String',
-        :'phone' => :'String',
-        :'email_address' => :'String',
-        :'timezone' => :'String',
-        :'subscription_customer_id' => :'String',
-        :'signup_token' => :'String',
-        :'subscription_cycle_start' => :'DateTime',
-        :'subscription_cycle_end' => :'DateTime',
-        :'pricing_plans' => :'Array<CSOrganisationPricingPlan>'
+        :'plan_id' => :'String',
+        :'quantity' => :'Integer'
       }
     end
 
@@ -100,70 +44,12 @@ module ChronoSheetsAPI
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Id')
-        self.id = attributes[:'Id']
+      if attributes.has_key?(:'PlanId')
+        self.plan_id = attributes[:'PlanId']
       end
 
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'AddressLine01')
-        self.address_line01 = attributes[:'AddressLine01']
-      end
-
-      if attributes.has_key?(:'AddressLine02')
-        self.address_line02 = attributes[:'AddressLine02']
-      end
-
-      if attributes.has_key?(:'Suburb')
-        self.suburb = attributes[:'Suburb']
-      end
-
-      if attributes.has_key?(:'State')
-        self.state = attributes[:'State']
-      end
-
-      if attributes.has_key?(:'Postcode')
-        self.postcode = attributes[:'Postcode']
-      end
-
-      if attributes.has_key?(:'Country')
-        self.country = attributes[:'Country']
-      end
-
-      if attributes.has_key?(:'Phone')
-        self.phone = attributes[:'Phone']
-      end
-
-      if attributes.has_key?(:'EmailAddress')
-        self.email_address = attributes[:'EmailAddress']
-      end
-
-      if attributes.has_key?(:'Timezone')
-        self.timezone = attributes[:'Timezone']
-      end
-
-      if attributes.has_key?(:'SubscriptionCustomerId')
-        self.subscription_customer_id = attributes[:'SubscriptionCustomerId']
-      end
-
-      if attributes.has_key?(:'SignupToken')
-        self.signup_token = attributes[:'SignupToken']
-      end
-
-      if attributes.has_key?(:'SubscriptionCycleStart')
-        self.subscription_cycle_start = attributes[:'SubscriptionCycleStart']
-      end
-
-      if attributes.has_key?(:'SubscriptionCycleEnd')
-        self.subscription_cycle_end = attributes[:'SubscriptionCycleEnd']
-      end
-
-      if attributes.has_key?(:'PricingPlans')
-        if (value = attributes[:'PricingPlans']).is_a?(Array)
-          self.pricing_plans = value
-        end
+      if attributes.has_key?(:'Quantity')
+        self.quantity = attributes[:'Quantity']
       end
 
     end
@@ -186,22 +72,8 @@ module ChronoSheetsAPI
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          address_line01 == o.address_line01 &&
-          address_line02 == o.address_line02 &&
-          suburb == o.suburb &&
-          state == o.state &&
-          postcode == o.postcode &&
-          country == o.country &&
-          phone == o.phone &&
-          email_address == o.email_address &&
-          timezone == o.timezone &&
-          subscription_customer_id == o.subscription_customer_id &&
-          signup_token == o.signup_token &&
-          subscription_cycle_start == o.subscription_cycle_start &&
-          subscription_cycle_end == o.subscription_cycle_end &&
-          pricing_plans == o.pricing_plans
+          plan_id == o.plan_id &&
+          quantity == o.quantity
     end
 
     # @see the `==` method
@@ -213,7 +85,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address_line01, address_line02, suburb, state, postcode, country, phone, email_address, timezone, subscription_customer_id, signup_token, subscription_cycle_start, subscription_cycle_end, pricing_plans].hash
+      [plan_id, quantity].hash
     end
 
     # Builds the object from hash

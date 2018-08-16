@@ -61,6 +61,8 @@ module ChronoSheetsAPI
 
     attr_accessor :storage_allocation_bytes
 
+    attr_accessor :audio_duration_seconds
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -108,7 +110,8 @@ module ChronoSheetsAPI
         :'longitude' => :'Longitude',
         :'date_uploaded' => :'DateUploaded',
         :'date_image_captured' => :'DateImageCaptured',
-        :'storage_allocation_bytes' => :'StorageAllocationBytes'
+        :'storage_allocation_bytes' => :'StorageAllocationBytes',
+        :'audio_duration_seconds' => :'AudioDurationSeconds'
       }
     end
 
@@ -137,7 +140,8 @@ module ChronoSheetsAPI
         :'longitude' => :'Float',
         :'date_uploaded' => :'DateTime',
         :'date_image_captured' => :'DateTime',
-        :'storage_allocation_bytes' => :'Integer'
+        :'storage_allocation_bytes' => :'Integer',
+        :'audio_duration_seconds' => :'Integer'
       }
     end
 
@@ -241,6 +245,10 @@ module ChronoSheetsAPI
         self.storage_allocation_bytes = attributes[:'StorageAllocationBytes']
       end
 
+      if attributes.has_key?(:'AudioDurationSeconds')
+        self.audio_duration_seconds = attributes[:'AudioDurationSeconds']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -307,7 +315,8 @@ module ChronoSheetsAPI
           longitude == o.longitude &&
           date_uploaded == o.date_uploaded &&
           date_image_captured == o.date_image_captured &&
-          storage_allocation_bytes == o.storage_allocation_bytes
+          storage_allocation_bytes == o.storage_allocation_bytes &&
+          audio_duration_seconds == o.audio_duration_seconds
     end
 
     # @see the `==` method
@@ -319,7 +328,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [timesheet_id, document_s3_signed_url, image_large_s3_signed_url, image_medium_s3_signed_url, image_small_s3_signed_url, timesheet_start, timesheet_end, file_attachment_id, user_id, org_id, mobile_platform, attachment_type, notes, non_image_file_path, image_large_file_path, image_medium_file_path, image_small_file_path, original_file_name, latitude, longitude, date_uploaded, date_image_captured, storage_allocation_bytes].hash
+      [timesheet_id, document_s3_signed_url, image_large_s3_signed_url, image_medium_s3_signed_url, image_small_s3_signed_url, timesheet_start, timesheet_end, file_attachment_id, user_id, org_id, mobile_platform, attachment_type, notes, non_image_file_path, image_large_file_path, image_medium_file_path, image_small_file_path, original_file_name, latitude, longitude, date_uploaded, date_image_captured, storage_allocation_bytes, audio_duration_seconds].hash
     end
 
     # Builds the object from hash

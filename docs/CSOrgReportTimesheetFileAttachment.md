@@ -30,5 +30,6 @@ Name | Type | Description | Notes
 **date_uploaded** | **DateTime** |  | [optional] 
 **date_image_captured** | **DateTime** |  | [optional] 
 **storage_allocation_bytes** | **Integer** |  | [optional] 
+**audio_duration_seconds** | **Integer** |  | [optional] 
 
 

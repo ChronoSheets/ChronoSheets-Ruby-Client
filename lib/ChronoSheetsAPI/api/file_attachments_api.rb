@@ -20,6 +20,67 @@ module ChronoSheetsAPI
       @api_client = api_client
     end
 
+    # Delete a particular timesheet file attachment
+    # 
+    # @param file_attachment_id The Id of the file attachment to delete
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [CSApiResponseBoolean]
+    def file_attachments_delete_timesheet_file_attachment(file_attachment_id, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = file_attachments_delete_timesheet_file_attachment_with_http_info(file_attachment_id, x_chronosheets_auth, opts)
+      return data
+    end
+
+    # Delete a particular timesheet file attachment
+    # 
+    # @param file_attachment_id The Id of the file attachment to delete
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers
+    def file_attachments_delete_timesheet_file_attachment_with_http_info(file_attachment_id, x_chronosheets_auth, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: FileAttachmentsApi.file_attachments_delete_timesheet_file_attachment ..."
+      end
+      # verify the required parameter 'file_attachment_id' is set
+      if @api_client.config.client_side_validation && file_attachment_id.nil?
+        fail ArgumentError, "Missing the required parameter 'file_attachment_id' when calling FileAttachmentsApi.file_attachments_delete_timesheet_file_attachment"
+      end
+      # verify the required parameter 'x_chronosheets_auth' is set
+      if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
+        fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling FileAttachmentsApi.file_attachments_delete_timesheet_file_attachment"
+      end
+      # resource path
+      local_var_path = "/api/FileAttachments/DeleteTimesheetFileAttachment"
+
+      # query parameters
+      query_params = {}
+      query_params[:'FileAttachmentId'] = file_attachment_id
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json', 'text/json', 'application/xml', 'text/xml', 'multipart/form-data'])
+      header_params[:'x-chronosheets-auth'] = x_chronosheets_auth
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CSApiResponseBoolean')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: FileAttachmentsApi#file_attachments_delete_timesheet_file_attachment\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get my file attachments.  Get files you've attached to timesheets.
     # 
     # @param start_date The Start date of the date range.  File attachments after this date will be obtained.

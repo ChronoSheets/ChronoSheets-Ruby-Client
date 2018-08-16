@@ -15,8 +15,9 @@ Name | Type | Description | Notes
 **email_address** | **String** |  | [optional] 
 **timezone** | **String** |  | [optional] 
 **subscription_customer_id** | **String** |  | [optional] 
-**subscription_plan_id** | **String** |  | [optional] 
 **signup_token** | **String** |  | [optional] 
-**number_seats_available** | **Integer** |  | [optional] 
+**subscription_cycle_start** | **DateTime** |  | [optional] 
+**subscription_cycle_end** | **DateTime** |  | [optional] 
+**pricing_plans** | [**Array&lt;CSOrganisationPricingPlan&gt;**](CSOrganisationPricingPlan.md) |  | [optional] 
 
 
