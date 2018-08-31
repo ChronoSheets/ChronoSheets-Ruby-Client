@@ -145,28 +145,24 @@ module ChronoSheetsAPI
 
     # Get a collection of vehicles that are under your organisation.    Does not require any special permission.
     # 
-    # @param include_deleted Whether or not to include deleted vehicles
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :include_deleted Whether or not to include deleted vehicles
     # @return [CSApiResponseListFleetVehicle]
-    def fleet_get_vehicles(include_deleted, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = fleet_get_vehicles_with_http_info(include_deleted, x_chronosheets_auth, opts)
+    def fleet_get_vehicles(x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = fleet_get_vehicles_with_http_info(x_chronosheets_auth, opts)
       return data
     end
 
     # Get a collection of vehicles that are under your organisation.    Does not require any special permission.
     # 
-    # @param include_deleted Whether or not to include deleted vehicles
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :include_deleted Whether or not to include deleted vehicles
     # @return [Array<(CSApiResponseListFleetVehicle, Fixnum, Hash)>] CSApiResponseListFleetVehicle data, response status code and response headers
-    def fleet_get_vehicles_with_http_info(include_deleted, x_chronosheets_auth, opts = {})
+    def fleet_get_vehicles_with_http_info(x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FleetApi.fleet_get_vehicles ..."
-      end
-      # verify the required parameter 'include_deleted' is set
-      if @api_client.config.client_side_validation && include_deleted.nil?
-        fail ArgumentError, "Missing the required parameter 'include_deleted' when calling FleetApi.fleet_get_vehicles"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -177,7 +173,7 @@ module ChronoSheetsAPI
 
       # query parameters
       query_params = {}
-      query_params[:'IncludeDeleted'] = include_deleted
+      query_params[:'IncludeDeleted'] = opts[:'include_deleted'] if !opts[:'include_deleted'].nil?
 
       # header parameters
       header_params = {}

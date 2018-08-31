@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **reports_get_all_charts_data_admin**
-> CSApiResponseCombinedReportsData reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+> CSApiResponseCombinedReportsData reports_get_all_charts_data_admin(start_date, end_date, x_chronosheets_auth, opts)
 
 Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
 
@@ -32,14 +32,15 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+}
 
 begin
   #Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
-  result = api_instance.reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+  result = api_instance.reports_get_all_charts_data_admin(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_all_charts_data_admin: #{e}"
@@ -52,8 +53,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
 
 ### Return type
 
@@ -122,7 +123,7 @@ No authorization required
 
 
 # **reports_get_fleet_summary_admin**
-> CSApiResponseListFleetSummaryReportItem reports_get_fleet_summary_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+> CSApiResponseListFleetSummaryReportItem reports_get_fleet_summary_admin(start_date, end_date, x_chronosheets_auth, opts)
 
 Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the 'ReportAdmin' permission.
 
@@ -137,14 +138,15 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+}
 
 begin
   #Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the 'ReportAdmin' permission.
-  result = api_instance.reports_get_fleet_summary_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+  result = api_instance.reports_get_fleet_summary_admin(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_fleet_summary_admin: #{e}"
@@ -157,8 +159,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
 
 ### Return type
 
@@ -224,7 +226,7 @@ No authorization required
 
 
 # **reports_get_organisation_timesheet_file_attachments**
-> CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
+> CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reports_get_organisation_timesheet_file_attachments(start_date, end_date, x_chronosheets_auth, opts)
 
 Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the 'ReportAdmin' permission.
 
@@ -239,18 +241,17 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-skip = 56 # Integer | Skip this many items
-
-take = 56 # Integer | Take this many items
-
-user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  skip: 56, # Integer | Skip this many items
+  take: 56, # Integer | Take this many items
+  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+}
 
 begin
   #Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the 'ReportAdmin' permission.
-  result = api_instance.reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
+  result = api_instance.reports_get_organisation_timesheet_file_attachments(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_organisation_timesheet_file_attachments: #{e}"
@@ -263,10 +264,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **skip** | **Integer**| Skip this many items | 
- **take** | **Integer**| Take this many items | 
- **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **skip** | **Integer**| Skip this many items | [optional] 
+ **take** | **Integer**| Take this many items | [optional] 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
 
 ### Return type
 
@@ -284,7 +285,7 @@ No authorization required
 
 
 # **reports_get_organisation_transcripts**
-> CSApiResponseForPaginatedListOrgReportTranscript reports_get_organisation_transcripts(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth)
+> CSApiResponseForPaginatedListOrgReportTranscript reports_get_organisation_transcripts(start_date, end_date, x_chronosheets_auth, opts)
 
 Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the 'ReportAdmin' permission.
 
@@ -299,20 +300,18 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-skip = 56 # Integer | Skip this many items
-
-take = 56 # Integer | Take this many items
-
-user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-
-keywords = "keywords_example" # String | Search the transcripts by keyword(s)
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  skip: 56, # Integer | Skip this many items
+  take: 56, # Integer | Take this many items
+  user_ids: "user_ids_example", # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  keywords: "keywords_example" # String | Search the transcripts by keyword(s)
+}
 
 begin
   #Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the 'ReportAdmin' permission.
-  result = api_instance.reports_get_organisation_transcripts(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth)
+  result = api_instance.reports_get_organisation_transcripts(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_organisation_transcripts: #{e}"
@@ -325,11 +324,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **skip** | **Integer**| Skip this many items | 
- **take** | **Integer**| Take this many items | 
- **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
- **keywords** | **String**| Search the transcripts by keyword(s) | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **skip** | **Integer**| Skip this many items | [optional] 
+ **take** | **Integer**| Take this many items | [optional] 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
+ **keywords** | **String**| Search the transcripts by keyword(s) | [optional] 
 
 ### Return type
 
@@ -347,7 +346,7 @@ No authorization required
 
 
 # **reports_get_organisation_trips**
-> CSApiResponseForPaginatedListOrgReportTrip reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
+> CSApiResponseForPaginatedListOrgReportTrip reports_get_organisation_trips(start_date, end_date, x_chronosheets_auth, opts)
 
 Reports on Organisation trips (GPS tracking from whole organisation).    Requires the 'ReportAdmin' permission.
 
@@ -362,18 +361,17 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-skip = 56 # Integer | Skip this many items
-
-take = 56 # Integer | Take this many items
-
-user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  skip: 56, # Integer | Skip this many items
+  take: 56, # Integer | Take this many items
+  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+}
 
 begin
   #Reports on Organisation trips (GPS tracking from whole organisation).    Requires the 'ReportAdmin' permission.
-  result = api_instance.reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth)
+  result = api_instance.reports_get_organisation_trips(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_organisation_trips: #{e}"
@@ -386,10 +384,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **skip** | **Integer**| Skip this many items | 
- **take** | **Integer**| Take this many items | 
- **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **skip** | **Integer**| Skip this many items | [optional] 
+ **take** | **Integer**| Take this many items | [optional] 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
 
 ### Return type
 
@@ -407,7 +405,7 @@ No authorization required
 
 
 # **reports_get_raw_data_admin**
-> CSApiResponseForPaginatedListRawReportItem reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth)
+> CSApiResponseForPaginatedListRawReportItem reports_get_raw_data_admin(start_date, end_date, x_chronosheets_auth, opts)
 
 Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
 
@@ -422,22 +420,19 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-
-sort = "sort_example" # String | Decide which column to sort on
-
-order = "order_example" # String | Decide which direction to sort the column
-
-skip = 56 # Integer | Skip this many rows
-
-take = 56 # Integer | Take this many rows
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  user_ids: "user_ids_example", # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  sort: "sort_example", # String | Decide which column to sort on
+  order: "order_example", # String | Decide which direction to sort the column
+  skip: 56, # Integer | Skip this many rows
+  take: 56 # Integer | Take this many rows
+}
 
 begin
   #Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
-  result = api_instance.reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth)
+  result = api_instance.reports_get_raw_data_admin(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_get_raw_data_admin: #{e}"
@@ -450,12 +445,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
- **sort** | **String**| Decide which column to sort on | 
- **order** | **String**| Decide which direction to sort the column | 
- **skip** | **Integer**| Skip this many rows | 
- **take** | **Integer**| Take this many rows | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
+ **sort** | **String**| Decide which column to sort on | [optional] 
+ **order** | **String**| Decide which direction to sort the column | [optional] 
+ **skip** | **Integer**| Skip this many rows | [optional] 
+ **take** | **Integer**| Take this many rows | [optional] 
 
 ### Return type
 
@@ -473,7 +468,7 @@ No authorization required
 
 
 # **reports_project_costings_admin**
-> CSApiResponseListProjectCostingReportItem reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+> CSApiResponseListProjectCostingReportItem reports_project_costings_admin(start_date, end_date, x_chronosheets_auth, opts)
 
 Gets project cost estimations VS actual cost for date range and users.    Requires the 'ReportAdmin' permission.
 
@@ -488,14 +483,15 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
 
-user_ids = "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+}
 
 begin
   #Gets project cost estimations VS actual cost for date range and users.    Requires the 'ReportAdmin' permission.
-  result = api_instance.reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth)
+  result = api_instance.reports_project_costings_admin(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ReportsApi->reports_project_costings_admin: #{e}"
@@ -508,8 +504,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The start date for the date range.  Report data in the response is after this date | 
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
- **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
 
 ### Return type
 

@@ -57,7 +57,7 @@ No authorization required
 
 
 # **file_attachments_get_my_file_attachments**
-> CSApiResponseForPaginatedListTimesheetFileAttachment file_attachments_get_my_file_attachments(start_date, end_date, skip, take, x_chronosheets_auth)
+> CSApiResponseForPaginatedListTimesheetFileAttachment file_attachments_get_my_file_attachments(start_date, end_date, x_chronosheets_auth, opts)
 
 Get my file attachments.  Get files you've attached to timesheets.
 
@@ -72,16 +72,16 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The Start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The End date of the date range.  File attachments before this date will be obtained.
 
-skip = 56 # Integer | Skip this many File attachments
-
-take = 56 # Integer | Take this many File attachments
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  skip: 56, # Integer | Skip this many File attachments
+  take: 56 # Integer | Take this many File attachments
+}
 
 begin
   #Get my file attachments.  Get files you've attached to timesheets.
-  result = api_instance.file_attachments_get_my_file_attachments(start_date, end_date, skip, take, x_chronosheets_auth)
+  result = api_instance.file_attachments_get_my_file_attachments(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling FileAttachmentsApi->file_attachments_get_my_file_attachments: #{e}"
@@ -94,9 +94,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The Start date of the date range.  File attachments after this date will be obtained. | 
  **end_date** | **DateTime**| The End date of the date range.  File attachments before this date will be obtained. | 
- **skip** | **Integer**| Skip this many File attachments | 
- **take** | **Integer**| Take this many File attachments | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **skip** | **Integer**| Skip this many File attachments | [optional] 
+ **take** | **Integer**| Take this many File attachments | [optional] 
 
 ### Return type
 

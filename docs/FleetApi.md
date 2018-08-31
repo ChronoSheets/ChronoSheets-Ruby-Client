@@ -107,7 +107,7 @@ No authorization required
 
 
 # **fleet_get_vehicles**
-> CSApiResponseListFleetVehicle fleet_get_vehicles(include_deleted, x_chronosheets_auth)
+> CSApiResponseListFleetVehicle fleet_get_vehicles(x_chronosheets_auth, opts)
 
 Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
@@ -118,14 +118,15 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::FleetApi.new
 
-include_deleted = true # BOOLEAN | Whether or not to include deleted vehicles
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  include_deleted: true # BOOLEAN | Whether or not to include deleted vehicles
+}
 
 begin
   #Get a collection of vehicles that are under your organisation.    Does not require any special permission.
-  result = api_instance.fleet_get_vehicles(include_deleted, x_chronosheets_auth)
+  result = api_instance.fleet_get_vehicles(x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling FleetApi->fleet_get_vehicles: #{e}"
@@ -136,8 +137,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_deleted** | **BOOLEAN**| Whether or not to include deleted vehicles | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **include_deleted** | **BOOLEAN**| Whether or not to include deleted vehicles | [optional] 
 
 ### Return type
 

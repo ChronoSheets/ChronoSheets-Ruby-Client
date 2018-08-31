@@ -147,14 +147,14 @@ module ChronoSheetsAPI
     # 
     # @param start_date The Start date of the date range.  Trips after this date will be obtained.
     # @param end_date The End date of the date range.  Trips before this date will be obtained.
-    # @param skip Skip this many Trips
-    # @param take Take this many Trips
-    # @param vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many Trips
+    # @option opts [Integer] :take Take this many Trips
+    # @option opts [Integer] :vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
     # @return [CSApiResponseForPaginatedListTrip]
-    def trips_get_my_trips(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = trips_get_my_trips_with_http_info(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth, opts)
+    def trips_get_my_trips(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = trips_get_my_trips_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -162,13 +162,13 @@ module ChronoSheetsAPI
     # 
     # @param start_date The Start date of the date range.  Trips after this date will be obtained.
     # @param end_date The End date of the date range.  Trips before this date will be obtained.
-    # @param skip Skip this many Trips
-    # @param take Take this many Trips
-    # @param vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many Trips
+    # @option opts [Integer] :take Take this many Trips
+    # @option opts [Integer] :vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
     # @return [Array<(CSApiResponseForPaginatedListTrip, Fixnum, Hash)>] CSApiResponseForPaginatedListTrip data, response status code and response headers
-    def trips_get_my_trips_with_http_info(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth, opts = {})
+    def trips_get_my_trips_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TripsApi.trips_get_my_trips ..."
       end
@@ -179,18 +179,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling TripsApi.trips_get_my_trips"
-      end
-      # verify the required parameter 'skip' is set
-      if @api_client.config.client_side_validation && skip.nil?
-        fail ArgumentError, "Missing the required parameter 'skip' when calling TripsApi.trips_get_my_trips"
-      end
-      # verify the required parameter 'take' is set
-      if @api_client.config.client_side_validation && take.nil?
-        fail ArgumentError, "Missing the required parameter 'take' when calling TripsApi.trips_get_my_trips"
-      end
-      # verify the required parameter 'vehicle_id' is set
-      if @api_client.config.client_side_validation && vehicle_id.nil?
-        fail ArgumentError, "Missing the required parameter 'vehicle_id' when calling TripsApi.trips_get_my_trips"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -203,9 +191,9 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'Skip'] = skip
-      query_params[:'Take'] = take
-      query_params[:'VehicleId'] = vehicle_id
+      query_params[:'Skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'Take'] = opts[:'take'] if !opts[:'take'].nil?
+      query_params[:'VehicleId'] = opts[:'vehicle_id'] if !opts[:'vehicle_id'].nil?
 
       # header parameters
       header_params = {}

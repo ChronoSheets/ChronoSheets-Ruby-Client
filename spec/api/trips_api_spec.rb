@@ -63,11 +63,11 @@ describe 'TripsApi' do
   # 
   # @param start_date The Start date of the date range.  Trips after this date will be obtained.
   # @param end_date The End date of the date range.  Trips before this date will be obtained.
-  # @param skip Skip this many Trips
-  # @param take Take this many Trips
-  # @param vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :skip Skip this many Trips
+  # @option opts [Integer] :take Take this many Trips
+  # @option opts [Integer] :vehicle_id Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
   # @return [CSApiResponseForPaginatedListTrip]
   describe 'trips_get_my_trips test' do
     it "should work" do

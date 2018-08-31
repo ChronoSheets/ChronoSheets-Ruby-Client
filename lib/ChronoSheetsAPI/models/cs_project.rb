@@ -25,6 +25,8 @@ module ChronoSheetsAPI
 
     attr_accessor :cost_estimation
 
+    attr_accessor :cost_actual
+
     attr_accessor :start_date
 
     attr_accessor :end_date
@@ -38,6 +40,7 @@ module ChronoSheetsAPI
         :'organisation_id' => :'OrganisationId',
         :'project_name' => :'ProjectName',
         :'cost_estimation' => :'CostEstimation',
+        :'cost_actual' => :'CostActual',
         :'start_date' => :'StartDate',
         :'end_date' => :'EndDate'
       }
@@ -51,6 +54,7 @@ module ChronoSheetsAPI
         :'organisation_id' => :'Integer',
         :'project_name' => :'String',
         :'cost_estimation' => :'Float',
+        :'cost_actual' => :'Float',
         :'start_date' => :'DateTime',
         :'end_date' => :'DateTime'
       }
@@ -82,6 +86,10 @@ module ChronoSheetsAPI
 
       if attributes.has_key?(:'CostEstimation')
         self.cost_estimation = attributes[:'CostEstimation']
+      end
+
+      if attributes.has_key?(:'CostActual')
+        self.cost_actual = attributes[:'CostActual']
       end
 
       if attributes.has_key?(:'StartDate')
@@ -117,6 +125,7 @@ module ChronoSheetsAPI
           organisation_id == o.organisation_id &&
           project_name == o.project_name &&
           cost_estimation == o.cost_estimation &&
+          cost_actual == o.cost_actual &&
           start_date == o.start_date &&
           end_date == o.end_date
     end
@@ -130,7 +139,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, client_id, organisation_id, project_name, cost_estimation, start_date, end_date].hash
+      [id, client_id, organisation_id, project_name, cost_estimation, cost_actual, start_date, end_date].hash
     end
 
     # Builds the object from hash

@@ -37,9 +37,9 @@ describe 'ReportsApi' do
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
-  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @return [CSApiResponseCombinedReportsData]
   describe 'reports_get_all_charts_data_admin test' do
     it "should work" do
@@ -66,9 +66,9 @@ describe 'ReportsApi' do
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
-  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @return [CSApiResponseListFleetSummaryReportItem]
   describe 'reports_get_fleet_summary_admin test' do
     it "should work" do
@@ -94,11 +94,11 @@ describe 'ReportsApi' do
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
-  # @param skip Skip this many items
-  # @param take Take this many items
-  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :skip Skip this many items
+  # @option opts [Integer] :take Take this many items
+  # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @return [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
   describe 'reports_get_organisation_timesheet_file_attachments test' do
     it "should work" do
@@ -111,12 +111,12 @@ describe 'ReportsApi' do
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
-  # @param skip Skip this many items
-  # @param take Take this many items
-  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-  # @param keywords Search the transcripts by keyword(s)
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :skip Skip this many items
+  # @option opts [Integer] :take Take this many items
+  # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  # @option opts [String] :keywords Search the transcripts by keyword(s)
   # @return [CSApiResponseForPaginatedListOrgReportTranscript]
   describe 'reports_get_organisation_transcripts test' do
     it "should work" do
@@ -129,11 +129,11 @@ describe 'ReportsApi' do
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
-  # @param skip Skip this many items
-  # @param take Take this many items
-  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :skip Skip this many items
+  # @option opts [Integer] :take Take this many items
+  # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @return [CSApiResponseForPaginatedListOrgReportTrip]
   describe 'reports_get_organisation_trips test' do
     it "should work" do
@@ -146,13 +146,13 @@ describe 'ReportsApi' do
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
-  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-  # @param sort Decide which column to sort on
-  # @param order Decide which direction to sort the column
-  # @param skip Skip this many rows
-  # @param take Take this many rows
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  # @option opts [String] :sort Decide which column to sort on
+  # @option opts [String] :order Decide which direction to sort the column
+  # @option opts [Integer] :skip Skip this many rows
+  # @option opts [Integer] :take Take this many rows
   # @return [CSApiResponseForPaginatedListRawReportItem]
   describe 'reports_get_raw_data_admin test' do
     it "should work" do
@@ -165,9 +165,9 @@ describe 'ReportsApi' do
   # 
   # @param start_date The start date for the date range.  Report data in the response is after this date
   # @param end_date The end date for the date range.  Report data in the response is before this date
-  # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   # @return [CSApiResponseListProjectCostingReportItem]
   describe 'reports_project_costings_admin test' do
     it "should work" do

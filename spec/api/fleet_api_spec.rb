@@ -61,9 +61,9 @@ describe 'FleetApi' do
   # unit tests for fleet_get_vehicles
   # Get a collection of vehicles that are under your organisation.    Does not require any special permission.
   # 
-  # @param include_deleted Whether or not to include deleted vehicles
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [BOOLEAN] :include_deleted Whether or not to include deleted vehicles
   # @return [CSApiResponseListFleetVehicle]
   describe 'fleet_get_vehicles test' do
     it "should work" do

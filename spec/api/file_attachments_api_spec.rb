@@ -50,10 +50,10 @@ describe 'FileAttachmentsApi' do
   # 
   # @param start_date The Start date of the date range.  File attachments after this date will be obtained.
   # @param end_date The End date of the date range.  File attachments before this date will be obtained.
-  # @param skip Skip this many File attachments
-  # @param take Take this many File attachments
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :skip Skip this many File attachments
+  # @option opts [Integer] :take Take this many File attachments
   # @return [CSApiResponseForPaginatedListTimesheetFileAttachment]
   describe 'file_attachments_get_my_file_attachments test' do
     it "should work" do

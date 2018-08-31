@@ -106,7 +106,7 @@ No authorization required
 
 
 # **trips_get_my_trips**
-> CSApiResponseForPaginatedListTrip trips_get_my_trips(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth)
+> CSApiResponseForPaginatedListTrip trips_get_my_trips(start_date, end_date, x_chronosheets_auth, opts)
 
 Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
 
@@ -121,18 +121,17 @@ start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The Start 
 
 end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The End date of the date range.  Trips before this date will be obtained.
 
-skip = 56 # Integer | Skip this many Trips
-
-take = 56 # Integer | Take this many Trips
-
-vehicle_id = 56 # Integer | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
-
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
+opts = { 
+  skip: 56, # Integer | Skip this many Trips
+  take: 56, # Integer | Take this many Trips
+  vehicle_id: 56 # Integer | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
+}
 
 begin
   #Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
-  result = api_instance.trips_get_my_trips(start_date, end_date, skip, take, vehicle_id, x_chronosheets_auth)
+  result = api_instance.trips_get_my_trips(start_date, end_date, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TripsApi->trips_get_my_trips: #{e}"
@@ -145,10 +144,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The Start date of the date range.  Trips after this date will be obtained. | 
  **end_date** | **DateTime**| The End date of the date range.  Trips before this date will be obtained. | 
- **skip** | **Integer**| Skip this many Trips | 
- **take** | **Integer**| Take this many Trips | 
- **vehicle_id** | **Integer**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **skip** | **Integer**| Skip this many Trips | [optional] 
+ **take** | **Integer**| Take this many Trips | [optional] 
+ **vehicle_id** | **Integer**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | [optional] 
 
 ### Return type
 

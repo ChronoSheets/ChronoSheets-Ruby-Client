@@ -24,14 +24,14 @@ module ChronoSheetsAPI
     # 
     # @param start_date The Start date of the date range.  Transcripts after this date will be obtained.
     # @param end_date The End date of the date range.  Transcripts before this date will be obtained.
-    # @param skip Skip this many transcripts
-    # @param take Take this many transcripts
-    # @param keyword Search the text content of the transcript keywords
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many transcripts
+    # @option opts [Integer] :take Take this many transcripts
+    # @option opts [String] :keyword Search the text content of the transcript keywords
     # @return [CSApiResponseForPaginatedListOrgReportTranscript]
-    def transcripts_get_my_transcripts(start_date, end_date, skip, take, keyword, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = transcripts_get_my_transcripts_with_http_info(start_date, end_date, skip, take, keyword, x_chronosheets_auth, opts)
+    def transcripts_get_my_transcripts(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = transcripts_get_my_transcripts_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -39,13 +39,13 @@ module ChronoSheetsAPI
     # 
     # @param start_date The Start date of the date range.  Transcripts after this date will be obtained.
     # @param end_date The End date of the date range.  Transcripts before this date will be obtained.
-    # @param skip Skip this many transcripts
-    # @param take Take this many transcripts
-    # @param keyword Search the text content of the transcript keywords
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many transcripts
+    # @option opts [Integer] :take Take this many transcripts
+    # @option opts [String] :keyword Search the text content of the transcript keywords
     # @return [Array<(CSApiResponseForPaginatedListOrgReportTranscript, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTranscript data, response status code and response headers
-    def transcripts_get_my_transcripts_with_http_info(start_date, end_date, skip, take, keyword, x_chronosheets_auth, opts = {})
+    def transcripts_get_my_transcripts_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TranscriptsApi.transcripts_get_my_transcripts ..."
       end
@@ -56,18 +56,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling TranscriptsApi.transcripts_get_my_transcripts"
-      end
-      # verify the required parameter 'skip' is set
-      if @api_client.config.client_side_validation && skip.nil?
-        fail ArgumentError, "Missing the required parameter 'skip' when calling TranscriptsApi.transcripts_get_my_transcripts"
-      end
-      # verify the required parameter 'take' is set
-      if @api_client.config.client_side_validation && take.nil?
-        fail ArgumentError, "Missing the required parameter 'take' when calling TranscriptsApi.transcripts_get_my_transcripts"
-      end
-      # verify the required parameter 'keyword' is set
-      if @api_client.config.client_side_validation && keyword.nil?
-        fail ArgumentError, "Missing the required parameter 'keyword' when calling TranscriptsApi.transcripts_get_my_transcripts"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -80,9 +68,9 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'Skip'] = skip
-      query_params[:'Take'] = take
-      query_params[:'Keyword'] = keyword
+      query_params[:'Skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'Take'] = opts[:'take'] if !opts[:'take'].nil?
+      query_params[:'Keyword'] = opts[:'keyword'] if !opts[:'keyword'].nil?
 
       # header parameters
       header_params = {}

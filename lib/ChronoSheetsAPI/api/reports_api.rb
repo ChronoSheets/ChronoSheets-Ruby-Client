@@ -24,12 +24,12 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [CSApiResponseCombinedReportsData]
-    def reports_get_all_charts_data_admin(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = reports_get_all_charts_data_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts)
+    def reports_get_all_charts_data_admin(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_all_charts_data_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -37,11 +37,11 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [Array<(CSApiResponseCombinedReportsData, Fixnum, Hash)>] CSApiResponseCombinedReportsData data, response status code and response headers
-    def reports_get_all_charts_data_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
+    def reports_get_all_charts_data_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_all_charts_data_admin ..."
       end
@@ -52,10 +52,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_all_charts_data_admin"
-      end
-      # verify the required parameter 'user_ids' is set
-      if @api_client.config.client_side_validation && user_ids.nil?
-        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_all_charts_data_admin"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -68,7 +64,7 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'UserIds'] = user_ids
+      query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
 
       # header parameters
       header_params = {}
@@ -167,12 +163,12 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [CSApiResponseListFleetSummaryReportItem]
-    def reports_get_fleet_summary_admin(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = reports_get_fleet_summary_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts)
+    def reports_get_fleet_summary_admin(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_fleet_summary_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -180,11 +176,11 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [Array<(CSApiResponseListFleetSummaryReportItem, Fixnum, Hash)>] CSApiResponseListFleetSummaryReportItem data, response status code and response headers
-    def reports_get_fleet_summary_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
+    def reports_get_fleet_summary_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_fleet_summary_admin ..."
       end
@@ -195,10 +191,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_fleet_summary_admin"
-      end
-      # verify the required parameter 'user_ids' is set
-      if @api_client.config.client_side_validation && user_ids.nil?
-        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_fleet_summary_admin"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -211,7 +203,7 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'UserIds'] = user_ids
+      query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
 
       # header parameters
       header_params = {}
@@ -303,14 +295,14 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param skip Skip this many items
-    # @param take Take this many items
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many items
+    # @option opts [Integer] :take Take this many items
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment]
-    def reports_get_organisation_timesheet_file_attachments(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = reports_get_organisation_timesheet_file_attachments_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts)
+    def reports_get_organisation_timesheet_file_attachments(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_organisation_timesheet_file_attachments_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -318,13 +310,13 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param skip Skip this many items
-    # @param take Take this many items
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many items
+    # @option opts [Integer] :take Take this many items
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [Array<(CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment data, response status code and response headers
-    def reports_get_organisation_timesheet_file_attachments_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
+    def reports_get_organisation_timesheet_file_attachments_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_organisation_timesheet_file_attachments ..."
       end
@@ -335,18 +327,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_organisation_timesheet_file_attachments"
-      end
-      # verify the required parameter 'skip' is set
-      if @api_client.config.client_side_validation && skip.nil?
-        fail ArgumentError, "Missing the required parameter 'skip' when calling ReportsApi.reports_get_organisation_timesheet_file_attachments"
-      end
-      # verify the required parameter 'take' is set
-      if @api_client.config.client_side_validation && take.nil?
-        fail ArgumentError, "Missing the required parameter 'take' when calling ReportsApi.reports_get_organisation_timesheet_file_attachments"
-      end
-      # verify the required parameter 'user_ids' is set
-      if @api_client.config.client_side_validation && user_ids.nil?
-        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_organisation_timesheet_file_attachments"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -359,9 +339,9 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'Skip'] = skip
-      query_params[:'Take'] = take
-      query_params[:'UserIds'] = user_ids
+      query_params[:'Skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'Take'] = opts[:'take'] if !opts[:'take'].nil?
+      query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
 
       # header parameters
       header_params = {}
@@ -392,15 +372,15 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param skip Skip this many items
-    # @param take Take this many items
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-    # @param keywords Search the transcripts by keyword(s)
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many items
+    # @option opts [Integer] :take Take this many items
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @option opts [String] :keywords Search the transcripts by keyword(s)
     # @return [CSApiResponseForPaginatedListOrgReportTranscript]
-    def reports_get_organisation_transcripts(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = reports_get_organisation_transcripts_with_http_info(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth, opts)
+    def reports_get_organisation_transcripts(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_organisation_transcripts_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -408,14 +388,14 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param skip Skip this many items
-    # @param take Take this many items
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-    # @param keywords Search the transcripts by keyword(s)
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many items
+    # @option opts [Integer] :take Take this many items
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @option opts [String] :keywords Search the transcripts by keyword(s)
     # @return [Array<(CSApiResponseForPaginatedListOrgReportTranscript, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTranscript data, response status code and response headers
-    def reports_get_organisation_transcripts_with_http_info(start_date, end_date, skip, take, user_ids, keywords, x_chronosheets_auth, opts = {})
+    def reports_get_organisation_transcripts_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_organisation_transcripts ..."
       end
@@ -426,22 +406,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_organisation_transcripts"
-      end
-      # verify the required parameter 'skip' is set
-      if @api_client.config.client_side_validation && skip.nil?
-        fail ArgumentError, "Missing the required parameter 'skip' when calling ReportsApi.reports_get_organisation_transcripts"
-      end
-      # verify the required parameter 'take' is set
-      if @api_client.config.client_side_validation && take.nil?
-        fail ArgumentError, "Missing the required parameter 'take' when calling ReportsApi.reports_get_organisation_transcripts"
-      end
-      # verify the required parameter 'user_ids' is set
-      if @api_client.config.client_side_validation && user_ids.nil?
-        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_organisation_transcripts"
-      end
-      # verify the required parameter 'keywords' is set
-      if @api_client.config.client_side_validation && keywords.nil?
-        fail ArgumentError, "Missing the required parameter 'keywords' when calling ReportsApi.reports_get_organisation_transcripts"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -454,10 +418,10 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'Skip'] = skip
-      query_params[:'Take'] = take
-      query_params[:'UserIds'] = user_ids
-      query_params[:'Keywords'] = keywords
+      query_params[:'Skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'Take'] = opts[:'take'] if !opts[:'take'].nil?
+      query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
+      query_params[:'Keywords'] = opts[:'keywords'] if !opts[:'keywords'].nil?
 
       # header parameters
       header_params = {}
@@ -488,14 +452,14 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param skip Skip this many items
-    # @param take Take this many items
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many items
+    # @option opts [Integer] :take Take this many items
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [CSApiResponseForPaginatedListOrgReportTrip]
-    def reports_get_organisation_trips(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = reports_get_organisation_trips_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts)
+    def reports_get_organisation_trips(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_organisation_trips_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -503,13 +467,13 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param skip Skip this many items
-    # @param take Take this many items
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :skip Skip this many items
+    # @option opts [Integer] :take Take this many items
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [Array<(CSApiResponseForPaginatedListOrgReportTrip, Fixnum, Hash)>] CSApiResponseForPaginatedListOrgReportTrip data, response status code and response headers
-    def reports_get_organisation_trips_with_http_info(start_date, end_date, skip, take, user_ids, x_chronosheets_auth, opts = {})
+    def reports_get_organisation_trips_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_organisation_trips ..."
       end
@@ -520,18 +484,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_organisation_trips"
-      end
-      # verify the required parameter 'skip' is set
-      if @api_client.config.client_side_validation && skip.nil?
-        fail ArgumentError, "Missing the required parameter 'skip' when calling ReportsApi.reports_get_organisation_trips"
-      end
-      # verify the required parameter 'take' is set
-      if @api_client.config.client_side_validation && take.nil?
-        fail ArgumentError, "Missing the required parameter 'take' when calling ReportsApi.reports_get_organisation_trips"
-      end
-      # verify the required parameter 'user_ids' is set
-      if @api_client.config.client_side_validation && user_ids.nil?
-        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_organisation_trips"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -544,9 +496,9 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'Skip'] = skip
-      query_params[:'Take'] = take
-      query_params[:'UserIds'] = user_ids
+      query_params[:'Skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'Take'] = opts[:'take'] if !opts[:'take'].nil?
+      query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
 
       # header parameters
       header_params = {}
@@ -577,16 +529,16 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-    # @param sort Decide which column to sort on
-    # @param order Decide which direction to sort the column
-    # @param skip Skip this many rows
-    # @param take Take this many rows
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @option opts [String] :sort Decide which column to sort on
+    # @option opts [String] :order Decide which direction to sort the column
+    # @option opts [Integer] :skip Skip this many rows
+    # @option opts [Integer] :take Take this many rows
     # @return [CSApiResponseForPaginatedListRawReportItem]
-    def reports_get_raw_data_admin(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = reports_get_raw_data_admin_with_http_info(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth, opts)
+    def reports_get_raw_data_admin(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_get_raw_data_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -594,15 +546,15 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-    # @param sort Decide which column to sort on
-    # @param order Decide which direction to sort the column
-    # @param skip Skip this many rows
-    # @param take Take this many rows
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @option opts [String] :sort Decide which column to sort on
+    # @option opts [String] :order Decide which direction to sort the column
+    # @option opts [Integer] :skip Skip this many rows
+    # @option opts [Integer] :take Take this many rows
     # @return [Array<(CSApiResponseForPaginatedListRawReportItem, Fixnum, Hash)>] CSApiResponseForPaginatedListRawReportItem data, response status code and response headers
-    def reports_get_raw_data_admin_with_http_info(start_date, end_date, user_ids, sort, order, skip, take, x_chronosheets_auth, opts = {})
+    def reports_get_raw_data_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_get_raw_data_admin ..."
       end
@@ -614,37 +566,15 @@ module ChronoSheetsAPI
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_get_raw_data_admin"
       end
-      # verify the required parameter 'user_ids' is set
-      if @api_client.config.client_side_validation && user_ids.nil?
-        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_get_raw_data_admin"
-      end
-      # verify the required parameter 'sort' is set
-      if @api_client.config.client_side_validation && sort.nil?
-        fail ArgumentError, "Missing the required parameter 'sort' when calling ReportsApi.reports_get_raw_data_admin"
-      end
-      # verify enum value
-      if @api_client.config.client_side_validation && !['EmailAddress', 'JobCode', 'TaskName', 'ClientName', 'ProjectName', 'StartDate', 'EndDate', 'SpanSeconds', 'Description', 'PayAmount', 'PayOvertimeAmount', 'TripCost', 'TripDistanceMeters', 'Username'].include?(sort)
-        fail ArgumentError, "invalid value for 'sort', must be one of EmailAddress, JobCode, TaskName, ClientName, ProjectName, StartDate, EndDate, SpanSeconds, Description, PayAmount, PayOvertimeAmount, TripCost, TripDistanceMeters, Username"
-      end
-      # verify the required parameter 'order' is set
-      if @api_client.config.client_side_validation && order.nil?
-        fail ArgumentError, "Missing the required parameter 'order' when calling ReportsApi.reports_get_raw_data_admin"
-      end
-      # verify enum value
-      if @api_client.config.client_side_validation && !['Ascending', 'Descending'].include?(order)
-        fail ArgumentError, "invalid value for 'order', must be one of Ascending, Descending"
-      end
-      # verify the required parameter 'skip' is set
-      if @api_client.config.client_side_validation && skip.nil?
-        fail ArgumentError, "Missing the required parameter 'skip' when calling ReportsApi.reports_get_raw_data_admin"
-      end
-      # verify the required parameter 'take' is set
-      if @api_client.config.client_side_validation && take.nil?
-        fail ArgumentError, "Missing the required parameter 'take' when calling ReportsApi.reports_get_raw_data_admin"
-      end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
         fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling ReportsApi.reports_get_raw_data_admin"
+      end
+      if @api_client.config.client_side_validation && opts[:'sort'] && !['EmailAddress', 'JobCode', 'TaskName', 'ClientName', 'ProjectName', 'StartDate', 'EndDate', 'SpanSeconds', 'Description', 'PayAmount', 'PayOvertimeAmount', 'TripCost', 'TripDistanceMeters', 'Username'].include?(opts[:'sort'])
+        fail ArgumentError, 'invalid value for "sort", must be one of EmailAddress, JobCode, TaskName, ClientName, ProjectName, StartDate, EndDate, SpanSeconds, Description, PayAmount, PayOvertimeAmount, TripCost, TripDistanceMeters, Username'
+      end
+      if @api_client.config.client_side_validation && opts[:'order'] && !['Ascending', 'Descending'].include?(opts[:'order'])
+        fail ArgumentError, 'invalid value for "order", must be one of Ascending, Descending'
       end
       # resource path
       local_var_path = "/api/Reports/GetRawDataAdmin"
@@ -653,11 +583,11 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'UserIds'] = user_ids
-      query_params[:'Sort'] = sort
-      query_params[:'Order'] = order
-      query_params[:'Skip'] = skip
-      query_params[:'Take'] = take
+      query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
+      query_params[:'Sort'] = opts[:'sort'] if !opts[:'sort'].nil?
+      query_params[:'Order'] = opts[:'order'] if !opts[:'order'].nil?
+      query_params[:'Skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'Take'] = opts[:'take'] if !opts[:'take'].nil?
 
       # header parameters
       header_params = {}
@@ -688,12 +618,12 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [CSApiResponseListProjectCostingReportItem]
-    def reports_project_costings_admin(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = reports_project_costings_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts)
+    def reports_project_costings_admin(start_date, end_date, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = reports_project_costings_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
       return data
     end
 
@@ -701,11 +631,11 @@ module ChronoSheetsAPI
     # 
     # @param start_date The start date for the date range.  Report data in the response is after this date
     # @param end_date The end date for the date range.  Report data in the response is before this date
-    # @param user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     # @return [Array<(CSApiResponseListProjectCostingReportItem, Fixnum, Hash)>] CSApiResponseListProjectCostingReportItem data, response status code and response headers
-    def reports_project_costings_admin_with_http_info(start_date, end_date, user_ids, x_chronosheets_auth, opts = {})
+    def reports_project_costings_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ReportsApi.reports_project_costings_admin ..."
       end
@@ -716,10 +646,6 @@ module ChronoSheetsAPI
       # verify the required parameter 'end_date' is set
       if @api_client.config.client_side_validation && end_date.nil?
         fail ArgumentError, "Missing the required parameter 'end_date' when calling ReportsApi.reports_project_costings_admin"
-      end
-      # verify the required parameter 'user_ids' is set
-      if @api_client.config.client_side_validation && user_ids.nil?
-        fail ArgumentError, "Missing the required parameter 'user_ids' when calling ReportsApi.reports_project_costings_admin"
       end
       # verify the required parameter 'x_chronosheets_auth' is set
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
@@ -732,7 +658,7 @@ module ChronoSheetsAPI
       query_params = {}
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
-      query_params[:'UserIds'] = user_ids
+      query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
 
       # header parameters
       header_params = {}

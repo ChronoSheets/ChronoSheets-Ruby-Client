@@ -37,11 +37,11 @@ describe 'TranscriptsApi' do
   # 
   # @param start_date The Start date of the date range.  Transcripts after this date will be obtained.
   # @param end_date The End date of the date range.  Transcripts before this date will be obtained.
-  # @param skip Skip this many transcripts
-  # @param take Take this many transcripts
-  # @param keyword Search the text content of the transcript keywords
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :skip Skip this many transcripts
+  # @option opts [Integer] :take Take this many transcripts
+  # @option opts [String] :keyword Search the text content of the transcript keywords
   # @return [CSApiResponseForPaginatedListOrgReportTranscript]
   describe 'transcripts_get_my_transcripts test' do
     it "should work" do
