@@ -35,7 +35,7 @@ describe 'ProjectsApi' do
   # unit tests for projects_create_project
   # Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
   # 
-  # @param request An Insert Project Request object containing values for the new Project to create
+  # @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @return [CSApiResponseInt32]

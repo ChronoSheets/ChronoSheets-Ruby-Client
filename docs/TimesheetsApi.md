@@ -169,7 +169,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
-request = ChronoSheetsAPI::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
+request = ChronoSheetsAPI::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -187,7 +187,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| A BatchUpdateTimesheet Request object containing values for the new Timesheets to create | 
+ **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

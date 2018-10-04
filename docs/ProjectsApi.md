@@ -22,7 +22,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ProjectsApi.new
 
-request = ChronoSheetsAPI::CSInsertProjectRequest.new # CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create
+request = ChronoSheetsAPI::CSInsertProjectRequest.new # CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
 
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
@@ -40,7 +40,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create | 
+ **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type

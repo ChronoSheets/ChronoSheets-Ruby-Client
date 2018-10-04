@@ -41,6 +41,8 @@ module ChronoSheetsAPI
 
     attr_accessor :signup_token
 
+    attr_accessor :is_active
+
     attr_accessor :subscription_cycle_start
 
     attr_accessor :subscription_cycle_end
@@ -64,6 +66,7 @@ module ChronoSheetsAPI
         :'timezone' => :'Timezone',
         :'subscription_customer_id' => :'SubscriptionCustomerId',
         :'signup_token' => :'SignupToken',
+        :'is_active' => :'IsActive',
         :'subscription_cycle_start' => :'SubscriptionCycleStart',
         :'subscription_cycle_end' => :'SubscriptionCycleEnd',
         :'pricing_plans' => :'PricingPlans'
@@ -86,6 +89,7 @@ module ChronoSheetsAPI
         :'timezone' => :'String',
         :'subscription_customer_id' => :'String',
         :'signup_token' => :'String',
+        :'is_active' => :'BOOLEAN',
         :'subscription_cycle_start' => :'DateTime',
         :'subscription_cycle_end' => :'DateTime',
         :'pricing_plans' => :'Array<CSOrganisationPricingPlan>'
@@ -152,6 +156,10 @@ module ChronoSheetsAPI
         self.signup_token = attributes[:'SignupToken']
       end
 
+      if attributes.has_key?(:'IsActive')
+        self.is_active = attributes[:'IsActive']
+      end
+
       if attributes.has_key?(:'SubscriptionCycleStart')
         self.subscription_cycle_start = attributes[:'SubscriptionCycleStart']
       end
@@ -199,6 +207,7 @@ module ChronoSheetsAPI
           timezone == o.timezone &&
           subscription_customer_id == o.subscription_customer_id &&
           signup_token == o.signup_token &&
+          is_active == o.is_active &&
           subscription_cycle_start == o.subscription_cycle_start &&
           subscription_cycle_end == o.subscription_cycle_end &&
           pricing_plans == o.pricing_plans
@@ -213,7 +222,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address_line01, address_line02, suburb, state, postcode, country, phone, email_address, timezone, subscription_customer_id, signup_token, subscription_cycle_start, subscription_cycle_end, pricing_plans].hash
+      [id, name, address_line01, address_line02, suburb, state, postcode, country, phone, email_address, timezone, subscription_customer_id, signup_token, is_active, subscription_cycle_start, subscription_cycle_end, pricing_plans].hash
     end
 
     # Builds the object from hash

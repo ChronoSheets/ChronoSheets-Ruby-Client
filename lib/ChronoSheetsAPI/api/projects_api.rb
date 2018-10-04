@@ -22,7 +22,7 @@ module ChronoSheetsAPI
 
     # Create a project.    Requires the 'ManageClientsAndProjects' permission.
     # 
-    # @param request An Insert Project Request object containing values for the new Project to create
+    # @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseInt32]
@@ -33,7 +33,7 @@ module ChronoSheetsAPI
 
     # Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
     # 
-    # @param request An Insert Project Request object containing values for the new Project to create
+    # @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseInt32, Fixnum, Hash)>] CSApiResponseInt32 data, response status code and response headers

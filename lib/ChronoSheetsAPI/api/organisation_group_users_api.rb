@@ -22,7 +22,7 @@ module ChronoSheetsAPI
 
     # Get a collection of organisation group users that belong to an organisation group.    Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
     # 
-    # @param org_group_id An OrganisatioGroup Id
+    # @param org_group_id An OrganisationGroup Id
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseListUserForManagement]
@@ -33,7 +33,7 @@ module ChronoSheetsAPI
 
     # Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
     # 
-    # @param org_group_id An OrganisatioGroup Id
+    # @param org_group_id An OrganisationGroup Id
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseListUserForManagement, Fixnum, Hash)>] CSApiResponseListUserForManagement data, response status code and response headers
@@ -83,7 +83,7 @@ module ChronoSheetsAPI
 
     # Set the users who belong to an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
     # 
-    # @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
+    # @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseBoolean]
@@ -94,7 +94,7 @@ module ChronoSheetsAPI
 
     # Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
     # 
-    # @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update
+    # @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseBoolean, Fixnum, Hash)>] CSApiResponseBoolean data, response status code and response headers

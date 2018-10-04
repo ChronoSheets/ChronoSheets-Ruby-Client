@@ -213,7 +213,7 @@ module ChronoSheetsAPI
 
     # Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
     # 
-    # @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
+    # @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [CSApiResponseListInt32]
@@ -224,7 +224,7 @@ module ChronoSheetsAPI
 
     # Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
     # 
-    # @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
+    # @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @return [Array<(CSApiResponseListInt32, Fixnum, Hash)>] CSApiResponseListInt32 data, response status code and response headers
