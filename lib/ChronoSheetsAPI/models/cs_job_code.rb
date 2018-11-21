@@ -15,20 +15,28 @@ require 'date'
 module ChronoSheetsAPI
 
   class CSJobCode
+    # The ID of the job code (not the code itself)
     attr_accessor :id
 
+    # The job code itself
     attr_accessor :code
 
+    # The name of the client
     attr_accessor :client
 
+    # The ID of the client
     attr_accessor :client_id
 
+    # The name of the project
     attr_accessor :project
 
+    # The ID of the project
     attr_accessor :project_id
 
+    # Your organisation ID
     attr_accessor :organisation_id
 
+    # A flag indicating whether or not the job code has been marked as deleted
     attr_accessor :is_deleted
 
 

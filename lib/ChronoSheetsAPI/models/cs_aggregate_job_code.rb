@@ -15,24 +15,34 @@ require 'date'
 module ChronoSheetsAPI
 
   class CSAggregateJobCode
+    # The list of available tasks under this job code
     attr_accessor :available_tasks
 
+    # The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone)
     attr_accessor :permitted_employees
 
+    # The ID of the job code (not the code itself)
     attr_accessor :id
 
+    # The job code itself
     attr_accessor :code
 
+    # The name of the client
     attr_accessor :client
 
+    # The ID of the client
     attr_accessor :client_id
 
+    # The name of the project
     attr_accessor :project
 
+    # The ID of the project
     attr_accessor :project_id
 
+    # Your organisation ID
     attr_accessor :organisation_id
 
+    # A flag indicating whether or not the job code has been marked as deleted
     attr_accessor :is_deleted
 
 

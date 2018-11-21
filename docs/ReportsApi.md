@@ -35,7 +35,8 @@ end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date
 x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
 
 opts = { 
-  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  user_ids: "user_ids_example", # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  force_only_this_chart: "force_only_this_chart_example" # String | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option.
 }
 
 begin
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
  **end_date** | **DateTime**| The end date for the date range.  Report data in the response is before this date | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
  **user_ids** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
+ **force_only_this_chart** | **String**| A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. | [optional] 
 
 ### Return type
 

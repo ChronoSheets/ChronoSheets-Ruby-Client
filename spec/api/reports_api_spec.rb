@@ -40,6 +40,7 @@ describe 'ReportsApi' do
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
   # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  # @option opts [String] :force_only_this_chart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option.
   # @return [CSApiResponseCombinedReportsData]
   describe 'reports_get_all_charts_data_admin test' do
     it "should work" do

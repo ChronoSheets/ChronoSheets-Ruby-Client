@@ -27,6 +27,7 @@ module ChronoSheetsAPI
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @option opts [String] :force_only_this_chart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option.
     # @return [CSApiResponseCombinedReportsData]
     def reports_get_all_charts_data_admin(start_date, end_date, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = reports_get_all_charts_data_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts)
@@ -40,6 +41,7 @@ module ChronoSheetsAPI
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
     # @option opts [String] :user_ids A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+    # @option opts [String] :force_only_this_chart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option.
     # @return [Array<(CSApiResponseCombinedReportsData, Fixnum, Hash)>] CSApiResponseCombinedReportsData data, response status code and response headers
     def reports_get_all_charts_data_admin_with_http_info(start_date, end_date, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
@@ -57,6 +59,9 @@ module ChronoSheetsAPI
       if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
         fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling ReportsApi.reports_get_all_charts_data_admin"
       end
+      if @api_client.config.client_side_validation && opts[:'force_only_this_chart'] && !['NotForced', 'SeriesJobCodes', 'SeriesClients', 'SeriesProjects', 'SeriesTasks', 'TotalsClients', 'TotalsJobCodes', 'TotalsProjects', 'TotalsTasks'].include?(opts[:'force_only_this_chart'])
+        fail ArgumentError, 'invalid value for "force_only_this_chart", must be one of NotForced, SeriesJobCodes, SeriesClients, SeriesProjects, SeriesTasks, TotalsClients, TotalsJobCodes, TotalsProjects, TotalsTasks'
+      end
       # resource path
       local_var_path = "/api/Reports/GetAllChartsDataAdmin"
 
@@ -65,6 +70,7 @@ module ChronoSheetsAPI
       query_params[:'StartDate'] = start_date
       query_params[:'EndDate'] = end_date
       query_params[:'UserIds'] = opts[:'user_ids'] if !opts[:'user_ids'].nil?
+      query_params[:'ForceOnlyThisChart'] = opts[:'force_only_this_chart'] if !opts[:'force_only_this_chart'].nil?
 
       # header parameters
       header_params = {}

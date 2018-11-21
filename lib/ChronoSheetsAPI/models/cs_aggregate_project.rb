@@ -15,18 +15,25 @@ require 'date'
 module ChronoSheetsAPI
 
   class CSAggregateProject
+    # The ID of the project
     attr_accessor :id
 
+    # The ID of the client that this project is assigned to
     attr_accessor :client_id
 
+    # The ID of your organisation
     attr_accessor :organisation_id
 
+    # The name of the project (can be viewed in PROJECT TIMELINES)
     attr_accessor :project_name
 
+    # The estimated cost of the project (can be viewed in PROJECT TIMELINES)
     attr_accessor :cost_estimation
 
+    # The start date of the project (can be viewed in PROJECT TIMELINES)
     attr_accessor :start_date
 
+    # The end date of the project (can be viewed in PROJECT TIMELINES)
     attr_accessor :end_date
 
 

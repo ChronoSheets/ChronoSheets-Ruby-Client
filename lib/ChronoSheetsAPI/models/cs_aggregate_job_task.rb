@@ -15,10 +15,13 @@ require 'date'
 module ChronoSheetsAPI
 
   class CSAggregateJobTask
+    # The Id of the task
     attr_accessor :id
 
+    # The label of the task
     attr_accessor :label
 
+    # A flag indicating that this task has been marked as deleted
     attr_accessor :is_deleted
 
 

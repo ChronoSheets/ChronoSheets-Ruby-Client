@@ -15,32 +15,46 @@ require 'date'
 module ChronoSheetsAPI
 
   class CSClient
+    # The ID of the client
     attr_accessor :id
 
+    # The ID of your organisation
     attr_accessor :organisation_id
 
+    # The name of the client
     attr_accessor :client_name
 
+    # The address line 1 of the client
     attr_accessor :client_address_line1
 
+    # The address line 2 of the client
     attr_accessor :client_address_line2
 
+    # The address suburb of the client
     attr_accessor :client_suburb
 
+    # The address state of the client
     attr_accessor :client_state
 
+    # The postcode of the client
     attr_accessor :client_post_code
 
+    # The contact person working under the client
     attr_accessor :person_of_contact
 
+    # The phone number of the client
     attr_accessor :client_phone_number
 
+    # The mobile phone number of the client
     attr_accessor :client_mobile_number
 
+    # The email address of the client
     attr_accessor :client_email_address
 
+    # The website URL of the client
     attr_accessor :client_web_url
 
+    # The number of projects under the client
     attr_accessor :project_count
 
 
