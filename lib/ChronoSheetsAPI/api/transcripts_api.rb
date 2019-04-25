@@ -20,6 +20,67 @@ module ChronoSheetsAPI
       @api_client = api_client
     end
 
+    # Get an audio to text transcript for a particular audio file attachment
+    # 
+    # @param file_attachment_id The ID of the file attachment that has a transcript.  It should be an audio file attachment.
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [CSApiResponseForPaginatedTranscription]
+    def transcripts_get_my_transcript(file_attachment_id, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = transcripts_get_my_transcript_with_http_info(file_attachment_id, x_chronosheets_auth, opts)
+      return data
+    end
+
+    # Get an audio to text transcript for a particular audio file attachment
+    # 
+    # @param file_attachment_id The ID of the file attachment that has a transcript.  It should be an audio file attachment.
+    # @param x_chronosheets_auth The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CSApiResponseForPaginatedTranscription, Fixnum, Hash)>] CSApiResponseForPaginatedTranscription data, response status code and response headers
+    def transcripts_get_my_transcript_with_http_info(file_attachment_id, x_chronosheets_auth, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TranscriptsApi.transcripts_get_my_transcript ..."
+      end
+      # verify the required parameter 'file_attachment_id' is set
+      if @api_client.config.client_side_validation && file_attachment_id.nil?
+        fail ArgumentError, "Missing the required parameter 'file_attachment_id' when calling TranscriptsApi.transcripts_get_my_transcript"
+      end
+      # verify the required parameter 'x_chronosheets_auth' is set
+      if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
+        fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling TranscriptsApi.transcripts_get_my_transcript"
+      end
+      # resource path
+      local_var_path = "/api/Transcripts/GetMyTranscript"
+
+      # query parameters
+      query_params = {}
+      query_params[:'FileAttachmentId'] = file_attachment_id
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json', 'text/json', 'application/xml', 'text/xml', 'multipart/form-data'])
+      header_params[:'x-chronosheets-auth'] = x_chronosheets_auth
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CSApiResponseForPaginatedTranscription')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TranscriptsApi#transcripts_get_my_transcript\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get my file transcripts.  Get audio to text transcripts that you've created.
     # 
     # @param start_date The Start date of the date range.  Transcripts after this date will be obtained.

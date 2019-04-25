@@ -37,6 +37,8 @@ module ChronoSheetsAPI
 
     attr_accessor :organisation
 
+    attr_accessor :is_primary_account
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -51,7 +53,8 @@ module ChronoSheetsAPI
         :'alert_settings' => :'AlertSettings',
         :'setup_wizard_required' => :'SetupWizardRequired',
         :'is_subscribed_to_newsletter' => :'IsSubscribedToNewsletter',
-        :'organisation' => :'Organisation'
+        :'organisation' => :'Organisation',
+        :'is_primary_account' => :'IsPrimaryAccount'
       }
     end
 
@@ -68,7 +71,8 @@ module ChronoSheetsAPI
         :'alert_settings' => :'Integer',
         :'setup_wizard_required' => :'BOOLEAN',
         :'is_subscribed_to_newsletter' => :'BOOLEAN',
-        :'organisation' => :'CSOrganisation'
+        :'organisation' => :'CSOrganisation',
+        :'is_primary_account' => :'BOOLEAN'
       }
     end
 
@@ -124,6 +128,10 @@ module ChronoSheetsAPI
         self.organisation = attributes[:'Organisation']
       end
 
+      if attributes.has_key?(:'IsPrimaryAccount')
+        self.is_primary_account = attributes[:'IsPrimaryAccount']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -154,7 +162,8 @@ module ChronoSheetsAPI
           alert_settings == o.alert_settings &&
           setup_wizard_required == o.setup_wizard_required &&
           is_subscribed_to_newsletter == o.is_subscribed_to_newsletter &&
-          organisation == o.organisation
+          organisation == o.organisation &&
+          is_primary_account == o.is_primary_account
     end
 
     # @see the `==` method
@@ -166,7 +175,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, organisation_id, user_name, first_name, last_name, email_address, roles, alert_settings, setup_wizard_required, is_subscribed_to_newsletter, organisation].hash
+      [id, organisation_id, user_name, first_name, last_name, email_address, roles, alert_settings, setup_wizard_required, is_subscribed_to_newsletter, organisation, is_primary_account].hash
     end
 
     # Builds the object from hash

@@ -43,12 +43,41 @@ module ChronoSheetsAPI
 
     attr_accessor :is_active
 
+    attr_accessor :stripe_coupon_code
+
+    attr_accessor :subscription_source
+
+    attr_accessor :sign_up_source
+
+    attr_accessor :mobile_sign_up_code
+
     attr_accessor :subscription_cycle_start
 
     attr_accessor :subscription_cycle_end
 
     attr_accessor :pricing_plans
 
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -67,6 +96,10 @@ module ChronoSheetsAPI
         :'subscription_customer_id' => :'SubscriptionCustomerId',
         :'signup_token' => :'SignupToken',
         :'is_active' => :'IsActive',
+        :'stripe_coupon_code' => :'StripeCouponCode',
+        :'subscription_source' => :'SubscriptionSource',
+        :'sign_up_source' => :'SignUpSource',
+        :'mobile_sign_up_code' => :'MobileSignUpCode',
         :'subscription_cycle_start' => :'SubscriptionCycleStart',
         :'subscription_cycle_end' => :'SubscriptionCycleEnd',
         :'pricing_plans' => :'PricingPlans'
@@ -90,6 +123,10 @@ module ChronoSheetsAPI
         :'subscription_customer_id' => :'String',
         :'signup_token' => :'String',
         :'is_active' => :'BOOLEAN',
+        :'stripe_coupon_code' => :'String',
+        :'subscription_source' => :'String',
+        :'sign_up_source' => :'String',
+        :'mobile_sign_up_code' => :'String',
         :'subscription_cycle_start' => :'DateTime',
         :'subscription_cycle_end' => :'DateTime',
         :'pricing_plans' => :'Array<CSOrganisationPricingPlan>'
@@ -160,6 +197,22 @@ module ChronoSheetsAPI
         self.is_active = attributes[:'IsActive']
       end
 
+      if attributes.has_key?(:'StripeCouponCode')
+        self.stripe_coupon_code = attributes[:'StripeCouponCode']
+      end
+
+      if attributes.has_key?(:'SubscriptionSource')
+        self.subscription_source = attributes[:'SubscriptionSource']
+      end
+
+      if attributes.has_key?(:'SignUpSource')
+        self.sign_up_source = attributes[:'SignUpSource']
+      end
+
+      if attributes.has_key?(:'MobileSignUpCode')
+        self.mobile_sign_up_code = attributes[:'MobileSignUpCode']
+      end
+
       if attributes.has_key?(:'SubscriptionCycleStart')
         self.subscription_cycle_start = attributes[:'SubscriptionCycleStart']
       end
@@ -186,7 +239,31 @@ module ChronoSheetsAPI
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      subscription_source_validator = EnumAttributeValidator.new('String', ["None", "Stripe", "AppleInApp", "GoogleInApp"])
+      return false unless subscription_source_validator.valid?(@subscription_source)
+      sign_up_source_validator = EnumAttributeValidator.new('String', ["Desktop", "MobileiOS", "MobileAndroid"])
+      return false unless sign_up_source_validator.valid?(@sign_up_source)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] subscription_source Object to be assigned
+    def subscription_source=(subscription_source)
+      validator = EnumAttributeValidator.new('String', ["None", "Stripe", "AppleInApp", "GoogleInApp"])
+      unless validator.valid?(subscription_source)
+        fail ArgumentError, "invalid value for 'subscription_source', must be one of #{validator.allowable_values}."
+      end
+      @subscription_source = subscription_source
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] sign_up_source Object to be assigned
+    def sign_up_source=(sign_up_source)
+      validator = EnumAttributeValidator.new('String', ["Desktop", "MobileiOS", "MobileAndroid"])
+      unless validator.valid?(sign_up_source)
+        fail ArgumentError, "invalid value for 'sign_up_source', must be one of #{validator.allowable_values}."
+      end
+      @sign_up_source = sign_up_source
     end
 
     # Checks equality by comparing each attribute.
@@ -208,6 +285,10 @@ module ChronoSheetsAPI
           subscription_customer_id == o.subscription_customer_id &&
           signup_token == o.signup_token &&
           is_active == o.is_active &&
+          stripe_coupon_code == o.stripe_coupon_code &&
+          subscription_source == o.subscription_source &&
+          sign_up_source == o.sign_up_source &&
+          mobile_sign_up_code == o.mobile_sign_up_code &&
           subscription_cycle_start == o.subscription_cycle_start &&
           subscription_cycle_end == o.subscription_cycle_end &&
           pricing_plans == o.pricing_plans
@@ -222,7 +303,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address_line01, address_line02, suburb, state, postcode, country, phone, email_address, timezone, subscription_customer_id, signup_token, is_active, subscription_cycle_start, subscription_cycle_end, pricing_plans].hash
+      [id, name, address_line01, address_line02, suburb, state, postcode, country, phone, email_address, timezone, subscription_customer_id, signup_token, is_active, stripe_coupon_code, subscription_source, sign_up_source, mobile_sign_up_code, subscription_cycle_start, subscription_cycle_end, pricing_plans].hash
     end
 
     # Builds the object from hash

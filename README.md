@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 *ChronoSheetsAPI::TimesheetsApi* | [**timesheets_delete_timesheet**](docs/TimesheetsApi.md#timesheets_delete_timesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
 *ChronoSheetsAPI::TimesheetsApi* | [**timesheets_get_timesheets**](docs/TimesheetsApi.md#timesheets_get_timesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the 'SubmitTimesheets' permission.
 *ChronoSheetsAPI::TimesheetsApi* | [**timesheets_update_timesheets**](docs/TimesheetsApi.md#timesheets_update_timesheets) | **PUT** /api/Timesheets/UpdateTimesheets | Batch update timesheets.    Requires the 'SubmitTimesheets' permission.
+*ChronoSheetsAPI::TranscriptsApi* | [**transcripts_get_my_transcript**](docs/TranscriptsApi.md#transcripts_get_my_transcript) | **GET** /api/Transcripts/GetMyTranscript | Get an audio to text transcript for a particular audio file attachment
 *ChronoSheetsAPI::TranscriptsApi* | [**transcripts_get_my_transcripts**](docs/TranscriptsApi.md#transcripts_get_my_transcripts) | **GET** /api/Transcripts/GetMyTranscripts | Get my file transcripts.  Get audio to text transcripts that you've created.
 *ChronoSheetsAPI::TripsApi* | [**trips_create_trip**](docs/TripsApi.md#trips_create_trip) | **POST** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
 *ChronoSheetsAPI::TripsApi* | [**trips_get_my_trip_by_id**](docs/TripsApi.md#trips_get_my_trip_by_id) | **GET** /api/Trips/GetMyTripById | Get trip by Id.    Requires the 'ViewMyTrips' permission.
@@ -165,6 +166,7 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListRawReportItem](docs/CSApiResponseForPaginatedListRawReportItem.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListTimesheetFileAttachment](docs/CSApiResponseForPaginatedListTimesheetFileAttachment.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListTrip](docs/CSApiResponseForPaginatedListTrip.md)
+ - [ChronoSheetsAPI::CSApiResponseForPaginatedTranscription](docs/CSApiResponseForPaginatedTranscription.md)
  - [ChronoSheetsAPI::CSApiResponseInsertUserResponse](docs/CSApiResponseInsertUserResponse.md)
  - [ChronoSheetsAPI::CSApiResponseInt32](docs/CSApiResponseInt32.md)
  - [ChronoSheetsAPI::CSApiResponseJobCode](docs/CSApiResponseJobCode.md)
@@ -241,6 +243,7 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsAPI::CSTimesheet](docs/CSTimesheet.md)
  - [ChronoSheetsAPI::CSTimesheetFileAttachment](docs/CSTimesheetFileAttachment.md)
  - [ChronoSheetsAPI::CSTimesheetTask](docs/CSTimesheetTask.md)
+ - [ChronoSheetsAPI::CSTranscription](docs/CSTranscription.md)
  - [ChronoSheetsAPI::CSTrip](docs/CSTrip.md)
  - [ChronoSheetsAPI::CSTripCoordinate](docs/CSTripCoordinate.md)
  - [ChronoSheetsAPI::CSUpdateJobCodeRequest](docs/CSUpdateJobCodeRequest.md)

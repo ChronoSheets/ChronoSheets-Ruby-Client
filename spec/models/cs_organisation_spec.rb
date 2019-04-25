@@ -116,6 +116,38 @@ describe 'CSOrganisation' do
     end
   end
 
+  describe 'test attribute "stripe_coupon_code"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "subscription_source"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["None", "Stripe", "AppleInApp", "GoogleInApp"])
+       #validator.allowable_values.each do |value|
+       #  expect { @instance.subscription_source = value }.not_to raise_error
+       #end
+    end
+  end
+
+  describe 'test attribute "sign_up_source"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Desktop", "MobileiOS", "MobileAndroid"])
+       #validator.allowable_values.each do |value|
+       #  expect { @instance.sign_up_source = value }.not_to raise_error
+       #end
+    end
+  end
+
+  describe 'test attribute "mobile_sign_up_code"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "subscription_cycle_start"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

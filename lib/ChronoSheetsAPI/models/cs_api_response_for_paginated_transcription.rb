@@ -14,69 +14,54 @@ require 'date'
 
 module ChronoSheetsAPI
 
-  class CSUserForManagement
-    attr_accessor :is_account_active
+  class CSApiResponseForPaginatedTranscription
+    attr_accessor :total_set_count
 
-    attr_accessor :id
+    attr_accessor :data
 
-    attr_accessor :organisation_id
+    attr_accessor :status
 
-    attr_accessor :user_name
+    attr_accessor :message
 
-    attr_accessor :first_name
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
 
-    attr_accessor :last_name
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
 
-    attr_accessor :email_address
-
-    attr_accessor :roles
-
-    attr_accessor :alert_settings
-
-    attr_accessor :setup_wizard_required
-
-    attr_accessor :is_subscribed_to_newsletter
-
-    attr_accessor :organisation
-
-    attr_accessor :is_primary_account
-
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'is_account_active' => :'IsAccountActive',
-        :'id' => :'Id',
-        :'organisation_id' => :'OrganisationId',
-        :'user_name' => :'UserName',
-        :'first_name' => :'FirstName',
-        :'last_name' => :'LastName',
-        :'email_address' => :'EmailAddress',
-        :'roles' => :'Roles',
-        :'alert_settings' => :'AlertSettings',
-        :'setup_wizard_required' => :'SetupWizardRequired',
-        :'is_subscribed_to_newsletter' => :'IsSubscribedToNewsletter',
-        :'organisation' => :'Organisation',
-        :'is_primary_account' => :'IsPrimaryAccount'
+        :'total_set_count' => :'TotalSetCount',
+        :'data' => :'Data',
+        :'status' => :'Status',
+        :'message' => :'Message'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'is_account_active' => :'BOOLEAN',
-        :'id' => :'Integer',
-        :'organisation_id' => :'Integer',
-        :'user_name' => :'String',
-        :'first_name' => :'String',
-        :'last_name' => :'String',
-        :'email_address' => :'String',
-        :'roles' => :'Integer',
-        :'alert_settings' => :'Integer',
-        :'setup_wizard_required' => :'BOOLEAN',
-        :'is_subscribed_to_newsletter' => :'BOOLEAN',
-        :'organisation' => :'CSOrganisation',
-        :'is_primary_account' => :'BOOLEAN'
+        :'total_set_count' => :'Integer',
+        :'data' => :'CSTranscription',
+        :'status' => :'String',
+        :'message' => :'String'
       }
     end
 
@@ -88,56 +73,20 @@ module ChronoSheetsAPI
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'IsAccountActive')
-        self.is_account_active = attributes[:'IsAccountActive']
+      if attributes.has_key?(:'TotalSetCount')
+        self.total_set_count = attributes[:'TotalSetCount']
       end
 
-      if attributes.has_key?(:'Id')
-        self.id = attributes[:'Id']
+      if attributes.has_key?(:'Data')
+        self.data = attributes[:'Data']
       end
 
-      if attributes.has_key?(:'OrganisationId')
-        self.organisation_id = attributes[:'OrganisationId']
+      if attributes.has_key?(:'Status')
+        self.status = attributes[:'Status']
       end
 
-      if attributes.has_key?(:'UserName')
-        self.user_name = attributes[:'UserName']
-      end
-
-      if attributes.has_key?(:'FirstName')
-        self.first_name = attributes[:'FirstName']
-      end
-
-      if attributes.has_key?(:'LastName')
-        self.last_name = attributes[:'LastName']
-      end
-
-      if attributes.has_key?(:'EmailAddress')
-        self.email_address = attributes[:'EmailAddress']
-      end
-
-      if attributes.has_key?(:'Roles')
-        self.roles = attributes[:'Roles']
-      end
-
-      if attributes.has_key?(:'AlertSettings')
-        self.alert_settings = attributes[:'AlertSettings']
-      end
-
-      if attributes.has_key?(:'SetupWizardRequired')
-        self.setup_wizard_required = attributes[:'SetupWizardRequired']
-      end
-
-      if attributes.has_key?(:'IsSubscribedToNewsletter')
-        self.is_subscribed_to_newsletter = attributes[:'IsSubscribedToNewsletter']
-      end
-
-      if attributes.has_key?(:'Organisation')
-        self.organisation = attributes[:'Organisation']
-      end
-
-      if attributes.has_key?(:'IsPrimaryAccount')
-        self.is_primary_account = attributes[:'IsPrimaryAccount']
+      if attributes.has_key?(:'Message')
+        self.message = attributes[:'Message']
       end
 
     end
@@ -152,7 +101,19 @@ module ChronoSheetsAPI
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      status_validator = EnumAttributeValidator.new('String', ["Succeeded", "FatalException", "GeneralError", "ValidationError", "UnAuthorized", "SessionExpired"])
+      return false unless status_validator.valid?(@status)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      validator = EnumAttributeValidator.new('String', ["Succeeded", "FatalException", "GeneralError", "ValidationError", "UnAuthorized", "SessionExpired"])
+      unless validator.valid?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{validator.allowable_values}."
+      end
+      @status = status
     end
 
     # Checks equality by comparing each attribute.
@@ -160,19 +121,10 @@ module ChronoSheetsAPI
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          is_account_active == o.is_account_active &&
-          id == o.id &&
-          organisation_id == o.organisation_id &&
-          user_name == o.user_name &&
-          first_name == o.first_name &&
-          last_name == o.last_name &&
-          email_address == o.email_address &&
-          roles == o.roles &&
-          alert_settings == o.alert_settings &&
-          setup_wizard_required == o.setup_wizard_required &&
-          is_subscribed_to_newsletter == o.is_subscribed_to_newsletter &&
-          organisation == o.organisation &&
-          is_primary_account == o.is_primary_account
+          total_set_count == o.total_set_count &&
+          data == o.data &&
+          status == o.status &&
+          message == o.message
     end
 
     # @see the `==` method
@@ -184,7 +136,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_account_active, id, organisation_id, user_name, first_name, last_name, email_address, roles, alert_settings, setup_wizard_required, is_subscribed_to_newsletter, organisation, is_primary_account].hash
+      [total_set_count, data, status, message].hash
     end
 
     # Builds the object from hash

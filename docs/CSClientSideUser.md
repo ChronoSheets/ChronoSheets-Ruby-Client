@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **setup_wizard_required** | **BOOLEAN** |  | [optional] 
 **is_subscribed_to_newsletter** | **BOOLEAN** |  | [optional] 
 **organisation** | [**CSOrganisation**](CSOrganisation.md) |  | [optional] 
+**is_primary_account** | **BOOLEAN** |  | [optional] 
 
 

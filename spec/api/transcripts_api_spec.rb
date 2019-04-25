@@ -32,6 +32,19 @@ describe 'TranscriptsApi' do
     end
   end
 
+  # unit tests for transcripts_get_my_transcript
+  # Get an audio to text transcript for a particular audio file attachment
+  # 
+  # @param file_attachment_id The ID of the file attachment that has a transcript.  It should be an audio file attachment.
+  # @param x_chronosheets_auth The ChronoSheets Auth Token
+  # @param [Hash] opts the optional parameters
+  # @return [CSApiResponseForPaginatedTranscription]
+  describe 'transcripts_get_my_transcript test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for transcripts_get_my_transcripts
   # Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
   # 
