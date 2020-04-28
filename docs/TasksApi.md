@@ -26,7 +26,7 @@ api_instance = ChronoSheetsAPI::TasksApi.new
 
 request = ChronoSheetsAPI::CSInsertTaskRequest.new # CSInsertTaskRequest | An Insert Task Request object containing values for the new Task to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -74,7 +74,7 @@ api_instance = ChronoSheetsAPI::TasksApi.new
 
 task_id = 56 # Integer | The ID of the Task you want to delete
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -122,7 +122,7 @@ api_instance = ChronoSheetsAPI::TasksApi.new
 
 task_id = 56 # Integer | The ID of the TimesheetTask you want to get
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -168,7 +168,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TasksApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -215,7 +215,7 @@ api_instance = ChronoSheetsAPI::TasksApi.new
 
 job_id = 56 # Integer | The ID of the job
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -263,7 +263,7 @@ api_instance = ChronoSheetsAPI::TasksApi.new
 
 request = ChronoSheetsAPI::CSUpdateTaskRequest.new # CSUpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

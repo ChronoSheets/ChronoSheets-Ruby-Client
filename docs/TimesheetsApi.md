@@ -24,7 +24,7 @@ api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
 request = ChronoSheetsAPI::CSTimesheet.new # CSTimesheet | A Timesheet Request object containing values for the new Timesheet to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -72,7 +72,7 @@ api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
 timesheet_id = 56 # Integer | The ID of the Timesheet you want to delete
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -118,11 +118,11 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date of the date range
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date of the date range
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date of the date range
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date of the date range
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -171,7 +171,7 @@ api_instance = ChronoSheetsAPI::TimesheetsApi.new
 
 request = ChronoSheetsAPI::CSBatchUpdateTimesheetRequest.new # CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

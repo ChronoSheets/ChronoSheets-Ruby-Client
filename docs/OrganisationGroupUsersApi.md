@@ -22,7 +22,7 @@ api_instance = ChronoSheetsAPI::OrganisationGroupUsersApi.new
 
 org_group_id = 56 # Integer | An OrganisationGroup Id
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -70,7 +70,7 @@ api_instance = ChronoSheetsAPI::OrganisationGroupUsersApi.new
 
 request = ChronoSheetsAPI::CSSetOrganisationGroupUsersRequest.new # CSSetOrganisationGroupUsersRequest | A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

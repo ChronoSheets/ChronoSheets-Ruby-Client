@@ -24,7 +24,7 @@ api_instance = ChronoSheetsAPI::ClientsApi.new
 
 request = ChronoSheetsAPI::CSInsertClientRequest.new # CSInsertClientRequest | An Insert Client Request object containing values for the new Client to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -72,7 +72,7 @@ api_instance = ChronoSheetsAPI::ClientsApi.new
 
 client_id = 56 # Integer | The ID of the Client you want to get
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -118,7 +118,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ClientsApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -165,7 +165,7 @@ api_instance = ChronoSheetsAPI::ClientsApi.new
 
 request = ChronoSheetsAPI::CSSaveClientRequest.new # CSSaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

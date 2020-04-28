@@ -23,7 +23,7 @@ api_instance = ChronoSheetsAPI::TripsApi.new
 
 request = ChronoSheetsAPI::CSCreateTripRequest.new # CSCreateTripRequest | A Create Trip Request object containing values for the new Trip to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -71,7 +71,7 @@ api_instance = ChronoSheetsAPI::TripsApi.new
 
 trip_id = 56 # Integer | The ID of the Trip you want to get
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -117,11 +117,11 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TripsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The Start date of the date range.  Trips after this date will be obtained.
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The Start date of the date range.  Trips after this date will be obtained.
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The End date of the date range.  Trips before this date will be obtained.
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The End date of the date range.  Trips before this date will be obtained.
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
   skip: 56, # Integer | Skip this many Trips

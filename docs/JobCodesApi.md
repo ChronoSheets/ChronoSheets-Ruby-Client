@@ -25,7 +25,7 @@ api_instance = ChronoSheetsAPI::JobCodesApi.new
 
 request = ChronoSheetsAPI::CSInsertJobCodeRequest.new # CSInsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -73,7 +73,7 @@ api_instance = ChronoSheetsAPI::JobCodesApi.new
 
 job_code_id = 56 # Integer | The ID of the job code you want to delete
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -121,7 +121,7 @@ api_instance = ChronoSheetsAPI::JobCodesApi.new
 
 job_code_id = 56 # Integer | The ID of the JobCode you want to get
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -167,7 +167,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::JobCodesApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -214,7 +214,7 @@ api_instance = ChronoSheetsAPI::JobCodesApi.new
 
 request = ChronoSheetsAPI::CSUpdateJobCodeRequest.new # CSUpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

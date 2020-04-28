@@ -24,7 +24,7 @@ api_instance = ChronoSheetsAPI::ProjectsApi.new
 
 request = ChronoSheetsAPI::CSInsertProjectRequest.new # CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -72,7 +72,7 @@ api_instance = ChronoSheetsAPI::ProjectsApi.new
 
 project_id = 56 # Integer | The ID of the Project you want to get
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -120,7 +120,7 @@ api_instance = ChronoSheetsAPI::ProjectsApi.new
 
 client_id = 56 # Integer | The ID of the client
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -168,7 +168,7 @@ api_instance = ChronoSheetsAPI::ProjectsApi.new
 
 request = ChronoSheetsAPI::CSUpdateProjectRequest.new # CSUpdateProjectRequest | An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

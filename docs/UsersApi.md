@@ -24,7 +24,7 @@ api_instance = ChronoSheetsAPI::UsersApi.new
 
 request = ChronoSheetsAPI::CSInsertUserRequest.new # CSInsertUserRequest | An Insert User Request object containing values for the new User to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -72,7 +72,7 @@ api_instance = ChronoSheetsAPI::UsersApi.new
 
 user_id = 56 # Integer | The User ID of the UserForManagement you want to get
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -118,7 +118,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UsersApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -165,7 +165,7 @@ api_instance = ChronoSheetsAPI::UsersApi.new
 
 request = ChronoSheetsAPI::CSUpdateUserRequest.new # CSUpdateUserRequest | A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

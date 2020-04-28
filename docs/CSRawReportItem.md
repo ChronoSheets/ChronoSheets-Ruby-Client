@@ -19,5 +19,7 @@ Name | Type | Description | Notes
 **pay_overtime_amount** | **Float** |  | [optional] 
 **trip_cost** | **Float** |  | [optional] 
 **trip_distance_meters** | **Float** |  | [optional] 
+**span_seconds_normal_time** | **Integer** |  | [optional] 
+**span_seconds_overtime** | **Integer** |  | [optional] 
 
 

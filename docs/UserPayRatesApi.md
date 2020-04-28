@@ -22,7 +22,7 @@ api_instance = ChronoSheetsAPI::UserPayRatesApi.new
 
 request = ChronoSheetsAPI::CSInsertUserHourlyRateRequest.new # CSInsertUserHourlyRateRequest | An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -70,7 +70,7 @@ api_instance = ChronoSheetsAPI::UserPayRatesApi.new
 
 user_id = 56 # Integer | The ID of the User for which you want to get UserHourlyRate objects
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

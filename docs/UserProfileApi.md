@@ -68,7 +68,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UserProfileApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -113,7 +113,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UserProfileApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -158,7 +158,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UserProfileApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -205,7 +205,7 @@ api_instance = ChronoSheetsAPI::UserProfileApi.new
 
 request = ChronoSheetsAPI::CSUpdateMyProfileRequest.new # CSUpdateMyProfileRequest | An Update MyProfile Request object containing updated fields.
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

@@ -20,7 +20,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::OrganisationApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -67,7 +67,7 @@ api_instance = ChronoSheetsAPI::OrganisationApi.new
 
 request = ChronoSheetsAPI::CSUpdateOrganisationRequest.new # CSUpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

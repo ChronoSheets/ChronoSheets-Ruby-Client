@@ -22,7 +22,7 @@ api_instance = ChronoSheetsAPI::TranscriptsApi.new
 
 file_attachment_id = 56 # Integer | The ID of the file attachment that has a transcript.  It should be an audio file attachment.
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -68,16 +68,16 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TranscriptsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The Start date of the date range.  Transcripts after this date will be obtained.
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The Start date of the date range.  Transcripts after this date will be obtained.
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The End date of the date range.  Transcripts before this date will be obtained.
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The End date of the date range.  Transcripts before this date will be obtained.
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
   skip: 56, # Integer | Skip this many transcripts
   take: 56, # Integer | Take this many transcripts
-  keyword: "keyword_example" # String | Search the text content of the transcript keywords
+  keyword: 'keyword_example' # String | Search the text content of the transcript keywords
 }
 
 begin

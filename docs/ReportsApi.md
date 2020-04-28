@@ -28,15 +28,15 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
-  user_ids: "user_ids_example", # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-  force_only_this_chart: "force_only_this_chart_example" # String | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option.
+  user_ids: 'user_ids_example', # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  force_only_this_chart: 'force_only_this_chart_example' # String | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option.
 }
 
 begin
@@ -85,11 +85,11 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -136,14 +136,14 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
-  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  user_ids: 'user_ids_example' # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 }
 
 begin
@@ -193,7 +193,7 @@ api_instance = ChronoSheetsAPI::ReportsApi.new
 
 trip_id = 56 # Integer | The ID of the Trip you want to get
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -239,16 +239,16 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
   skip: 56, # Integer | Skip this many items
   take: 56, # Integer | Take this many items
-  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  user_ids: 'user_ids_example' # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 }
 
 begin
@@ -298,17 +298,17 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
   skip: 56, # Integer | Skip this many items
   take: 56, # Integer | Take this many items
-  user_ids: "user_ids_example", # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-  keywords: "keywords_example" # String | Search the transcripts by keyword(s)
+  user_ids: 'user_ids_example', # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  keywords: 'keywords_example' # String | Search the transcripts by keyword(s)
 }
 
 begin
@@ -359,16 +359,16 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
   skip: 56, # Integer | Skip this many items
   take: 56, # Integer | Take this many items
-  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  user_ids: 'user_ids_example' # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 }
 
 begin
@@ -418,16 +418,16 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
-  user_ids: "user_ids_example", # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-  sort: "sort_example", # String | Decide which column to sort on
-  order: "order_example", # String | Decide which direction to sort the column
+  user_ids: 'user_ids_example', # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  sort: 'sort_example', # String | Decide which column to sort on
+  order: 'order_example', # String | Decide which direction to sort the column
   skip: 56, # Integer | Skip this many rows
   take: 56 # Integer | Take this many rows
 }
@@ -481,14 +481,14 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 opts = { 
-  user_ids: "user_ids_example" # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+  user_ids: 'user_ids_example' # String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 }
 
 begin
@@ -536,11 +536,11 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ReportsApi.new
 
-start_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The start date for the date range.  Report data in the response is after this date
+start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The start date for the date range.  Report data in the response is after this date
 
-end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The end date for the date range.  Report data in the response is before this date
+end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The end date for the date range.  Report data in the response is before this date
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

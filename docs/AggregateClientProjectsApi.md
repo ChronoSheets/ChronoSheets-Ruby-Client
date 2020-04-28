@@ -19,7 +19,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::AggregateClientProjectsApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin

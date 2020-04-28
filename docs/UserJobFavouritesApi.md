@@ -23,7 +23,7 @@ api_instance = ChronoSheetsAPI::UserJobFavouritesApi.new
 
 request = ChronoSheetsAPI::CSInsertUserJobFavouriteRequest.new # CSInsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -71,7 +71,7 @@ api_instance = ChronoSheetsAPI::UserJobFavouritesApi.new
 
 job_id = 56 # Integer | The ID of the Job for the Job Favourite you want to delete.
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
@@ -117,7 +117,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UserJobFavouritesApi.new
 
-x_chronosheets_auth = "x_chronosheets_auth_example" # String | The ChronoSheets Auth Token
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 
 begin
