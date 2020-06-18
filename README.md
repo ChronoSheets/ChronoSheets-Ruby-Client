@@ -35,9 +35,9 @@ Finally add this to the Gemfile:
 
 ### Install from Git
 
-If the Ruby gem is hosted at a git repository: https://github.com/ChronoSheets/ChronoSheets-Ruby-Client, then add the following in the Gemfile:
+If the Ruby gem is hosted at a git repository: https://github.com/lachlanwp/ChronoSheets-Ruby-Client, then add the following in the Gemfile:
 
-    gem 'ChronoSheetsAPI', :git => 'https://github.com/ChronoSheets/ChronoSheets-Ruby-Client.git'
+    gem 'ChronoSheetsAPI', :git => 'https://github.com/lachlanwp/ChronoSheets-Ruby-Client.git'
 
 ### Include the Ruby code directly
 
@@ -89,6 +89,11 @@ Class | Method | HTTP request | Description
 *ChronoSheetsAPI::FleetApi* | [**fleet_get_vehicle_by_id**](docs/FleetApi.md#fleet_get_vehicle_by_id) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
 *ChronoSheetsAPI::FleetApi* | [**fleet_get_vehicles**](docs/FleetApi.md#fleet_get_vehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 *ChronoSheetsAPI::FleetApi* | [**fleet_update_vehicle**](docs/FleetApi.md#fleet_update_vehicle) | **PUT** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the 'ManageFleet' permission.
+*ChronoSheetsAPI::GeoFencingApi* | [**geo_fencing_create_geofence**](docs/GeoFencingApi.md#geo_fencing_create_geofence) | **POST** /api/GeoFencing/CreateGeofence | Create a geofencing with rules to be used for clock on/off automation.  Requires the 'ManageGeofencing' permission.
+*ChronoSheetsAPI::GeoFencingApi* | [**geo_fencing_delete_geofence**](docs/GeoFencingApi.md#geo_fencing_delete_geofence) | **DELETE** /api/GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the 'ManageGeofencing' permission.
+*ChronoSheetsAPI::GeoFencingApi* | [**geo_fencing_get_geofence_by_id**](docs/GeoFencingApi.md#geo_fencing_get_geofence_by_id) | **GET** /api/GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the 'SubmitTimesheets' permission.
+*ChronoSheetsAPI::GeoFencingApi* | [**geo_fencing_get_geofences**](docs/GeoFencingApi.md#geo_fencing_get_geofences) | **GET** /api/GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the 'SubmitTimesheets' permission.
+*ChronoSheetsAPI::GeoFencingApi* | [**geo_fencing_update_geofence**](docs/GeoFencingApi.md#geo_fencing_update_geofence) | **PUT** /api/GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the 'ManageGeofencing' permission.
 *ChronoSheetsAPI::JobCodesApi* | [**job_codes_create_job_code**](docs/JobCodesApi.md#job_codes_create_job_code) | **POST** /api/JobCodes/CreateJobCode | Create a job code.    Requires the 'ManageJobsAndTask' permission.
 *ChronoSheetsAPI::JobCodesApi* | [**job_codes_delete_job_code**](docs/JobCodesApi.md#job_codes_delete_job_code) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.    Requires the 'ManageJobsAndTask' permission.
 *ChronoSheetsAPI::JobCodesApi* | [**job_codes_get_job_code_by_id**](docs/JobCodesApi.md#job_codes_get_job_code_by_id) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
@@ -125,6 +130,7 @@ Class | Method | HTTP request | Description
 *ChronoSheetsAPI::TasksApi* | [**tasks_get_tasks**](docs/TasksApi.md#tasks_get_tasks) | **GET** /api/Tasks/GetTasks | Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 *ChronoSheetsAPI::TasksApi* | [**tasks_get_tasks_for_job**](docs/TasksApi.md#tasks_get_tasks_for_job) | **GET** /api/Tasks/GetTasksForJob | Get a collection of tasks for a particular Job, specified by JobId.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 *ChronoSheetsAPI::TasksApi* | [**tasks_update_task**](docs/TasksApi.md#tasks_update_task) | **PUT** /api/Tasks/UpdateTask | Update a task.    Requires the 'ManageJobsAndTask' permission.
+*ChronoSheetsAPI::TimesheetAutomationApi* | [**timesheet_automation_create_automation_step**](docs/TimesheetAutomationApi.md#timesheet_automation_create_automation_step) | **POST** /api/TimesheetAutomation/CreateAutomationStep | Creates an automation step.  Timesheet automation is determined by looking at steps taken by the user.  Create a step to log some automation action, such as entering a geofence or tapping on an NFC badge.  Requires the 'SubmitTimesheets' permission.
 *ChronoSheetsAPI::TimesheetsApi* | [**timesheets_create_single_timesheet**](docs/TimesheetsApi.md#timesheets_create_single_timesheet) | **POST** /api/Timesheets/CreateSingleTimesheet | Inserts a single timesheet record.    Requires the 'SubmitTimesheets' permission.
 *ChronoSheetsAPI::TimesheetsApi* | [**timesheets_delete_timesheet**](docs/TimesheetsApi.md#timesheets_delete_timesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet.    Requires the 'SubmitTimesheets' permission.
 *ChronoSheetsAPI::TimesheetsApi* | [**timesheets_get_timesheets**](docs/TimesheetsApi.md#timesheets_get_timesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the 'SubmitTimesheets' permission.
@@ -163,13 +169,14 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsAPI::CSApiResponseCombinedReportsData](docs/CSApiResponseCombinedReportsData.md)
  - [ChronoSheetsAPI::CSApiResponseDoLoginResponse](docs/CSApiResponseDoLoginResponse.md)
  - [ChronoSheetsAPI::CSApiResponseFleetVehicle](docs/CSApiResponseFleetVehicle.md)
+ - [ChronoSheetsAPI::CSApiResponseForPaginatedListExtendedGeofence](docs/CSApiResponseForPaginatedListExtendedGeofence.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment](docs/CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListOrgReportTranscript](docs/CSApiResponseForPaginatedListOrgReportTranscript.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListOrgReportTrip](docs/CSApiResponseForPaginatedListOrgReportTrip.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListRawReportItem](docs/CSApiResponseForPaginatedListRawReportItem.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListTimesheetFileAttachment](docs/CSApiResponseForPaginatedListTimesheetFileAttachment.md)
  - [ChronoSheetsAPI::CSApiResponseForPaginatedListTrip](docs/CSApiResponseForPaginatedListTrip.md)
- - [ChronoSheetsAPI::CSApiResponseForPaginatedTranscription](docs/CSApiResponseForPaginatedTranscription.md)
+ - [ChronoSheetsAPI::CSApiResponseGeofence](docs/CSApiResponseGeofence.md)
  - [ChronoSheetsAPI::CSApiResponseInsertUserResponse](docs/CSApiResponseInsertUserResponse.md)
  - [ChronoSheetsAPI::CSApiResponseInt32](docs/CSApiResponseInt32.md)
  - [ChronoSheetsAPI::CSApiResponseJobCode](docs/CSApiResponseJobCode.md)
@@ -195,23 +202,29 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsAPI::CSApiResponseProject](docs/CSApiResponseProject.md)
  - [ChronoSheetsAPI::CSApiResponseTimesheetFileAttachment](docs/CSApiResponseTimesheetFileAttachment.md)
  - [ChronoSheetsAPI::CSApiResponseTimesheetTask](docs/CSApiResponseTimesheetTask.md)
+ - [ChronoSheetsAPI::CSApiResponseTranscription](docs/CSApiResponseTranscription.md)
  - [ChronoSheetsAPI::CSApiResponseTrip](docs/CSApiResponseTrip.md)
  - [ChronoSheetsAPI::CSApiResponseUpdateOrganisationResponse](docs/CSApiResponseUpdateOrganisationResponse.md)
  - [ChronoSheetsAPI::CSApiResponseUpdateProfileResponse](docs/CSApiResponseUpdateProfileResponse.md)
  - [ChronoSheetsAPI::CSApiResponseUpdateUserResponse](docs/CSApiResponseUpdateUserResponse.md)
  - [ChronoSheetsAPI::CSApiResponseUserForManagement](docs/CSApiResponseUserForManagement.md)
  - [ChronoSheetsAPI::CSApiResponseUserProfile](docs/CSApiResponseUserProfile.md)
+ - [ChronoSheetsAPI::CSBasicCoordinate](docs/CSBasicCoordinate.md)
  - [ChronoSheetsAPI::CSBatchUpdateTimesheetRequest](docs/CSBatchUpdateTimesheetRequest.md)
  - [ChronoSheetsAPI::CSClient](docs/CSClient.md)
  - [ChronoSheetsAPI::CSClientSeriesReportItem](docs/CSClientSeriesReportItem.md)
  - [ChronoSheetsAPI::CSClientSideUser](docs/CSClientSideUser.md)
  - [ChronoSheetsAPI::CSClientTotalsReportItem](docs/CSClientTotalsReportItem.md)
  - [ChronoSheetsAPI::CSCombinedReportsData](docs/CSCombinedReportsData.md)
+ - [ChronoSheetsAPI::CSCreateAutomationStepRequest](docs/CSCreateAutomationStepRequest.md)
+ - [ChronoSheetsAPI::CSCreateGeoFenceRequest](docs/CSCreateGeoFenceRequest.md)
  - [ChronoSheetsAPI::CSCreateTripRequest](docs/CSCreateTripRequest.md)
  - [ChronoSheetsAPI::CSDoLoginRequest](docs/CSDoLoginRequest.md)
  - [ChronoSheetsAPI::CSDoLoginResponse](docs/CSDoLoginResponse.md)
+ - [ChronoSheetsAPI::CSExtendedGeofence](docs/CSExtendedGeofence.md)
  - [ChronoSheetsAPI::CSFleetSummaryReportItem](docs/CSFleetSummaryReportItem.md)
  - [ChronoSheetsAPI::CSFleetVehicle](docs/CSFleetVehicle.md)
+ - [ChronoSheetsAPI::CSGeofence](docs/CSGeofence.md)
  - [ChronoSheetsAPI::CSInsertClientRequest](docs/CSInsertClientRequest.md)
  - [ChronoSheetsAPI::CSInsertJobCodeRequest](docs/CSInsertJobCodeRequest.md)
  - [ChronoSheetsAPI::CSInsertOrganisationGroupRequest](docs/CSInsertOrganisationGroupRequest.md)
@@ -250,6 +263,7 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsAPI::CSTranscription](docs/CSTranscription.md)
  - [ChronoSheetsAPI::CSTrip](docs/CSTrip.md)
  - [ChronoSheetsAPI::CSTripCoordinate](docs/CSTripCoordinate.md)
+ - [ChronoSheetsAPI::CSUpdateGeoFenceRequest](docs/CSUpdateGeoFenceRequest.md)
  - [ChronoSheetsAPI::CSUpdateJobCodeRequest](docs/CSUpdateJobCodeRequest.md)
  - [ChronoSheetsAPI::CSUpdateMyProfileRequest](docs/CSUpdateMyProfileRequest.md)
  - [ChronoSheetsAPI::CSUpdateOrganisationRequest](docs/CSUpdateOrganisationRequest.md)

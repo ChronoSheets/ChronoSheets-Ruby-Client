@@ -23,7 +23,7 @@ module ChronoSheetsAPI
     # @param file_attachment_id The ID of the file attachment that has a transcript.  It should be an audio file attachment.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [CSApiResponseForPaginatedTranscription]
+    # @return [CSApiResponseTranscription]
     def transcripts_get_my_transcript(file_attachment_id, x_chronosheets_auth, opts = {})
       data, _status_code, _headers = transcripts_get_my_transcript_with_http_info(file_attachment_id, x_chronosheets_auth, opts)
       data
@@ -33,7 +33,7 @@ module ChronoSheetsAPI
     # @param file_attachment_id The ID of the file attachment that has a transcript.  It should be an audio file attachment.
     # @param x_chronosheets_auth The ChronoSheets Auth Token
     # @param [Hash] opts the optional parameters
-    # @return [Array<(CSApiResponseForPaginatedTranscription, Fixnum, Hash)>] CSApiResponseForPaginatedTranscription data, response status code and response headers
+    # @return [Array<(CSApiResponseTranscription, Fixnum, Hash)>] CSApiResponseTranscription data, response status code and response headers
     def transcripts_get_my_transcript_with_http_info(file_attachment_id, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TranscriptsApi.transcripts_get_my_transcript ...'
@@ -71,7 +71,7 @@ module ChronoSheetsAPI
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CSApiResponseForPaginatedTranscription')
+        :return_type => 'CSApiResponseTranscription')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TranscriptsApi#transcripts_get_my_transcript\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

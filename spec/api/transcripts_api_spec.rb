@@ -37,7 +37,7 @@ describe 'TranscriptsApi' do
   # @param file_attachment_id The ID of the file attachment that has a transcript.  It should be an audio file attachment.
   # @param x_chronosheets_auth The ChronoSheets Auth Token
   # @param [Hash] opts the optional parameters
-  # @return [CSApiResponseForPaginatedTranscription]
+  # @return [CSApiResponseTranscription]
   describe 'transcripts_get_my_transcript test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

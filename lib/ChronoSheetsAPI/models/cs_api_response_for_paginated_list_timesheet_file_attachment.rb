@@ -13,13 +13,18 @@ Swagger Codegen version: 2.4.12
 require 'date'
 
 module ChronoSheetsAPI
+  # A paginated API repsonse
   class CSApiResponseForPaginatedListTimesheetFileAttachment
+    # The count of total records that are being paginated
     attr_accessor :total_set_count
 
+    # The main Data of the response
     attr_accessor :data
 
+    # The API response status. Indicates if the request was successful, failed or was unauthorised.
     attr_accessor :status
 
+    # A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
     attr_accessor :message
 
     class EnumAttributeValidator
