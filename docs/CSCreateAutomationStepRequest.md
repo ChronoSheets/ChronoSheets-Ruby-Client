@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **automation_action_type** | **String** |  | [optional] 
 **latitude** | **Float** |  | [optional] 
 **longitude** | **Float** |  | [optional] 
+**client_time** | **DateTime** |  | [optional] 
 
 
