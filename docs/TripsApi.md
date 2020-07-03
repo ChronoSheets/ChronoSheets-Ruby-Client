@@ -9,26 +9,26 @@ Method | HTTP request | Description
 [**trips_get_my_trips**](TripsApi.md#trips_get_my_trips) | **GET** /Trips/GetMyTrips | Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
 
 
-# **trips_create_trip**
-> CSApiResponseInt32 trips_create_trip(request, x_chronosheets_auth)
+
+## trips_create_trip
+
+> ApiResponseInt32 trips_create_trip(x_chronosheets_auth, request)
 
 Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TripsApi.new
-
-request = ChronoSheetsAPI::CSCreateTripRequest.new # CSCreateTripRequest | A Create Trip Request object containing values for the new Trip to create
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
+request = ChronoSheetsAPI::CreateTripRequest.new # CreateTripRequest | A Create Trip Request object containing values for the new Trip to create
 
 begin
   #Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
-  result = api_instance.trips_create_trip(request, x_chronosheets_auth)
+  result = api_instance.trips_create_trip(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TripsApi->trips_create_trip: #{e}"
@@ -37,14 +37,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSCreateTripRequest**](CSCreateTripRequest.md)| A Create Trip Request object containing values for the new Trip to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **request** | [**CreateTripRequest**](CreateTripRequest.md)| A Create Trip Request object containing values for the new Trip to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -52,27 +53,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## trips_get_my_trip_by_id
 
-# **trips_get_my_trip_by_id**
-> CSApiResponseTrip trips_get_my_trip_by_id(trip_id, x_chronosheets_auth)
+> ApiResponseTrip trips_get_my_trip_by_id(trip_id, x_chronosheets_auth)
 
 Get trip by Id.    Requires the 'ViewMyTrips' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TripsApi.new
-
 trip_id = 56 # Integer | The ID of the Trip you want to get
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get trip by Id.    Requires the 'ViewMyTrips' permission.
@@ -85,6 +84,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trip_id** | **Integer**| The ID of the Trip you want to get | 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseTrip**](CSApiResponseTrip.md)
+[**ApiResponseTrip**](ApiResponseTrip.md)
 
 ### Authorization
 
@@ -100,30 +100,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## trips_get_my_trips
 
-# **trips_get_my_trips**
-> CSApiResponseForPaginatedListTrip trips_get_my_trips(start_date, end_date, x_chronosheets_auth, opts)
+> ApiResponseForPaginatedListTrip trips_get_my_trips(start_date, end_date, x_chronosheets_auth, opts)
 
 Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TripsApi.new
-
 start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The Start date of the date range.  Trips after this date will be obtained.
-
 end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The End date of the date range.  Trips before this date will be obtained.
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
-opts = { 
+opts = {
   skip: 56, # Integer | Skip this many Trips
   take: 56, # Integer | Take this many Trips
   vehicle_id: 56 # Integer | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
@@ -140,6 +137,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The Start date of the date range.  Trips after this date will be obtained. | 
@@ -151,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseForPaginatedListTrip**](CSApiResponseForPaginatedListTrip.md)
+[**ApiResponseForPaginatedListTrip**](ApiResponseForPaginatedListTrip.md)
 
 ### Authorization
 
@@ -159,8 +157,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

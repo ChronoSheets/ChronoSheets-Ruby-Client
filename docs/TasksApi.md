@@ -12,26 +12,26 @@ Method | HTTP request | Description
 [**tasks_update_task**](TasksApi.md#tasks_update_task) | **PUT** /Tasks/UpdateTask | Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
-# **tasks_create_task**
-> CSApiResponseInt32 tasks_create_task(request, x_chronosheets_auth)
+
+## tasks_create_task
+
+> ApiResponseInt32 tasks_create_task(x_chronosheets_auth, request)
 
 Create a task.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TasksApi.new
-
-request = ChronoSheetsAPI::CSInsertTaskRequest.new # CSInsertTaskRequest | An Insert Task Request object containing values for the new Task to create
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
+request = ChronoSheetsAPI::InsertTaskRequest.new # InsertTaskRequest | An Insert Task Request object containing values for the new Task to create
 
 begin
   #Create a task.    Requires the 'ManageJobsAndTask' permission.
-  result = api_instance.tasks_create_task(request, x_chronosheets_auth)
+  result = api_instance.tasks_create_task(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_create_task: #{e}"
@@ -40,14 +40,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertTaskRequest**](CSInsertTaskRequest.md)| An Insert Task Request object containing values for the new Task to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **request** | [**InsertTaskRequest**](InsertTaskRequest.md)| An Insert Task Request object containing values for the new Task to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -55,27 +56,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## tasks_delete_task
 
-# **tasks_delete_task**
-> CSApiResponseBoolean tasks_delete_task(task_id, x_chronosheets_auth)
+> ApiResponseBoolean tasks_delete_task(task_id, x_chronosheets_auth)
 
 Delete a task.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TasksApi.new
-
 task_id = 56 # Integer | The ID of the Task you want to delete
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Delete a task.    Requires the 'ManageJobsAndTask' permission.
@@ -88,6 +87,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **Integer**| The ID of the Task you want to delete | 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -103,27 +103,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## tasks_get_task_by_id
 
-# **tasks_get_task_by_id**
-> CSApiResponseTimesheetTask tasks_get_task_by_id(task_id, x_chronosheets_auth)
+> ApiResponseTimesheetTask tasks_get_task_by_id(task_id, x_chronosheets_auth)
 
 Get a particular task by Id.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TasksApi.new
-
 task_id = 56 # Integer | The ID of the TimesheetTask you want to get
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get a particular task by Id.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
@@ -136,6 +134,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **Integer**| The ID of the TimesheetTask you want to get | 
@@ -143,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseTimesheetTask**](CSApiResponseTimesheetTask.md)
+[**ApiResponseTimesheetTask**](ApiResponseTimesheetTask.md)
 
 ### Authorization
 
@@ -151,25 +150,24 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## tasks_get_tasks
 
-# **tasks_get_tasks**
-> CSApiResponseListTimesheetTask tasks_get_tasks(x_chronosheets_auth)
+> ApiResponseListTimesheetTask tasks_get_tasks(x_chronosheets_auth)
 
 Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TasksApi.new
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
@@ -182,13 +180,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
+[**ApiResponseListTimesheetTask**](ApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -196,27 +195,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## tasks_get_tasks_for_job
 
-# **tasks_get_tasks_for_job**
-> CSApiResponseListTimesheetTask tasks_get_tasks_for_job(job_id, x_chronosheets_auth)
+> ApiResponseListTimesheetTask tasks_get_tasks_for_job(job_id, x_chronosheets_auth)
 
 Get a collection of tasks for a particular Job, specified by JobId.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TasksApi.new
-
 job_id = 56 # Integer | The ID of the job
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get a collection of tasks for a particular Job, specified by JobId.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
@@ -229,6 +226,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **job_id** | **Integer**| The ID of the job | 
@@ -236,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
+[**ApiResponseListTimesheetTask**](ApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -244,31 +242,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## tasks_update_task
 
-# **tasks_update_task**
-> CSApiResponseBoolean tasks_update_task(request, x_chronosheets_auth)
+> ApiResponseBoolean tasks_update_task(x_chronosheets_auth, request)
 
 Update a task.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TasksApi.new
-
-request = ChronoSheetsAPI::CSUpdateTaskRequest.new # CSUpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
+request = ChronoSheetsAPI::UpdateTaskRequest.new # UpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
 
 begin
   #Update a task.    Requires the 'ManageJobsAndTask' permission.
-  result = api_instance.tasks_update_task(request, x_chronosheets_auth)
+  result = api_instance.tasks_update_task(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TasksApi->tasks_update_task: #{e}"
@@ -277,14 +273,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateTaskRequest**](CSUpdateTaskRequest.md)| An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **request** | [**UpdateTaskRequest**](UpdateTaskRequest.md)| An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -292,8 +289,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
-
-
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

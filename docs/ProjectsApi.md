@@ -10,26 +10,26 @@ Method | HTTP request | Description
 [**projects_update_project**](ProjectsApi.md#projects_update_project) | **PUT** /Projects/UpdateProject | Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
-# **projects_create_project**
-> CSApiResponseInt32 projects_create_project(request, x_chronosheets_auth)
+
+## projects_create_project
+
+> ApiResponseInt32 projects_create_project(x_chronosheets_auth, request)
 
 Create a project.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ProjectsApi.new
-
-request = ChronoSheetsAPI::CSInsertProjectRequest.new # CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
+request = ChronoSheetsAPI::InsertProjectRequest.new # InsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
 
 begin
   #Create a project.    Requires the 'ManageClientsAndProjects' permission.
-  result = api_instance.projects_create_project(request, x_chronosheets_auth)
+  result = api_instance.projects_create_project(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ProjectsApi->projects_create_project: #{e}"
@@ -38,14 +38,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **request** | [**InsertProjectRequest**](InsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -53,27 +54,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## projects_get_project_by_id
 
-# **projects_get_project_by_id**
-> CSApiResponseProject projects_get_project_by_id(project_id, x_chronosheets_auth)
+> ApiResponseProject projects_get_project_by_id(project_id, x_chronosheets_auth)
 
 Get a project by its Id.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ProjectsApi.new
-
 project_id = 56 # Integer | The ID of the Project you want to get
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get a project by its Id.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
@@ -86,6 +85,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **Integer**| The ID of the Project you want to get | 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseProject**](CSApiResponseProject.md)
+[**ApiResponseProject**](ApiResponseProject.md)
 
 ### Authorization
 
@@ -101,27 +101,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## projects_get_projects_for_client
 
-# **projects_get_projects_for_client**
-> CSApiResponseListProject projects_get_projects_for_client(client_id, x_chronosheets_auth)
+> ApiResponseListProject projects_get_projects_for_client(client_id, x_chronosheets_auth)
 
 Get projects for a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ProjectsApi.new
-
 client_id = 56 # Integer | The ID of the client
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get projects for a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
@@ -134,6 +132,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **Integer**| The ID of the client | 
@@ -141,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseListProject**](CSApiResponseListProject.md)
+[**ApiResponseListProject**](ApiResponseListProject.md)
 
 ### Authorization
 
@@ -149,31 +148,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## projects_update_project
 
-# **projects_update_project**
-> CSApiResponseBoolean projects_update_project(request, x_chronosheets_auth)
+> ApiResponseBoolean projects_update_project(x_chronosheets_auth, request)
 
 Update a project.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ProjectsApi.new
-
-request = ChronoSheetsAPI::CSUpdateProjectRequest.new # CSUpdateProjectRequest | An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
+request = ChronoSheetsAPI::UpdateProjectRequest.new # UpdateProjectRequest | An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
 
 begin
   #Update a project.    Requires the 'ManageClientsAndProjects' permission.
-  result = api_instance.projects_update_project(request, x_chronosheets_auth)
+  result = api_instance.projects_update_project(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ProjectsApi->projects_update_project: #{e}"
@@ -182,14 +179,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateProjectRequest**](CSUpdateProjectRequest.md)| An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **request** | [**UpdateProjectRequest**](UpdateProjectRequest.md)| An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -197,8 +195,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
-
-
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

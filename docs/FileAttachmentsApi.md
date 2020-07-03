@@ -9,22 +9,22 @@ Method | HTTP request | Description
 [**file_attachments_get_my_file_attachments**](FileAttachmentsApi.md#file_attachments_get_my_file_attachments) | **GET** /FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 
-# **file_attachments_delete_timesheet_file_attachment**
-> CSApiResponseBoolean file_attachments_delete_timesheet_file_attachment(file_attachment_id, x_chronosheets_auth)
+
+## file_attachments_delete_timesheet_file_attachment
+
+> ApiResponseBoolean file_attachments_delete_timesheet_file_attachment(file_attachment_id, x_chronosheets_auth)
 
 Delete a particular timesheet file attachment  Requires the 'SubmitTimesheets' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::FileAttachmentsApi.new
-
 file_attachment_id = 56 # Integer | The Id of the file attachment to delete
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Delete a particular timesheet file attachment  Requires the 'SubmitTimesheets' permission.
@@ -37,6 +37,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_attachment_id** | **Integer**| The Id of the file attachment to delete | 
@@ -44,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -52,27 +53,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## file_attachments_get_file_attachment_by_id
 
-# **file_attachments_get_file_attachment_by_id**
-> CSApiResponseTimesheetFileAttachment file_attachments_get_file_attachment_by_id(file_attachment_id, x_chronosheets_auth)
+> ApiResponseTimesheetFileAttachment file_attachments_get_file_attachment_by_id(file_attachment_id, x_chronosheets_auth)
 
 Get a particular file attachment by ID.  User must own the file attachment for access.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::FileAttachmentsApi.new
-
 file_attachment_id = 56 # Integer | The ID of the file attachment
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get a particular file attachment by ID.  User must own the file attachment for access.
@@ -85,6 +84,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_attachment_id** | **Integer**| The ID of the file attachment | 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseTimesheetFileAttachment**](CSApiResponseTimesheetFileAttachment.md)
+[**ApiResponseTimesheetFileAttachment**](ApiResponseTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -100,30 +100,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## file_attachments_get_my_file_attachments
 
-# **file_attachments_get_my_file_attachments**
-> CSApiResponseForPaginatedListTimesheetFileAttachment file_attachments_get_my_file_attachments(start_date, end_date, x_chronosheets_auth, opts)
+> ApiResponseForPaginatedListTimesheetFileAttachment file_attachments_get_my_file_attachments(start_date, end_date, x_chronosheets_auth, opts)
 
 Get my file attachments.  Get files you've attached to timesheets.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::FileAttachmentsApi.new
-
 start_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The Start date of the date range.  File attachments after this date will be obtained.
-
 end_date = DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | The End date of the date range.  File attachments before this date will be obtained.
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
-opts = { 
+opts = {
   skip: 56, # Integer | Skip this many File attachments
   take: 56 # Integer | Take this many File attachments
 }
@@ -139,6 +136,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_date** | **DateTime**| The Start date of the date range.  File attachments after this date will be obtained. | 
@@ -149,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseForPaginatedListTimesheetFileAttachment**](CSApiResponseForPaginatedListTimesheetFileAttachment.md)
+[**ApiResponseForPaginatedListTimesheetFileAttachment**](ApiResponseForPaginatedListTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -157,8 +155,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

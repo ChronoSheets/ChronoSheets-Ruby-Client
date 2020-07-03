@@ -10,26 +10,26 @@ Method | HTTP request | Description
 [**clients_update_client**](ClientsApi.md#clients_update_client) | **PUT** /Clients/UpdateClient | Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
-# **clients_create_client**
-> CSApiResponseInt32 clients_create_client(request, x_chronosheets_auth)
+
+## clients_create_client
+
+> ApiResponseInt32 clients_create_client(x_chronosheets_auth, request)
 
 Create a client.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ClientsApi.new
-
-request = ChronoSheetsAPI::CSInsertClientRequest.new # CSInsertClientRequest | An Insert Client Request object containing values for the new Client to create
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
+request = ChronoSheetsAPI::InsertClientRequest.new # InsertClientRequest | An Insert Client Request object containing values for the new Client to create
 
 begin
   #Create a client.    Requires the 'ManageClientsAndProjects' permission.
-  result = api_instance.clients_create_client(request, x_chronosheets_auth)
+  result = api_instance.clients_create_client(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ClientsApi->clients_create_client: #{e}"
@@ -38,14 +38,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)| An Insert Client Request object containing values for the new Client to create | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **request** | [**InsertClientRequest**](InsertClientRequest.md)| An Insert Client Request object containing values for the new Client to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -53,27 +54,25 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## clients_get_client
 
-# **clients_get_client**
-> CSApiResponseClient clients_get_client(client_id, x_chronosheets_auth)
+> ApiResponseClient clients_get_client(client_id, x_chronosheets_auth)
 
 Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ClientsApi.new
-
 client_id = 56 # Integer | The ID of the Client you want to get
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
@@ -86,6 +85,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **Integer**| The ID of the Client you want to get | 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseClient**](CSApiResponseClient.md)
+[**ApiResponseClient**](ApiResponseClient.md)
 
 ### Authorization
 
@@ -101,25 +101,24 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## clients_get_clients
 
-# **clients_get_clients**
-> CSApiResponseListClient clients_get_clients(x_chronosheets_auth)
+> ApiResponseListClient clients_get_clients(x_chronosheets_auth)
 
 Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ClientsApi.new
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
 
 begin
   #Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
@@ -132,13 +131,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListClient**](CSApiResponseListClient.md)
+[**ApiResponseListClient**](ApiResponseListClient.md)
 
 ### Authorization
 
@@ -146,31 +146,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 
+## clients_update_client
 
-# **clients_update_client**
-> CSApiResponseBoolean clients_update_client(request, x_chronosheets_auth)
+> ApiResponseBoolean clients_update_client(x_chronosheets_auth, request)
 
 Update a client.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::ClientsApi.new
-
-request = ChronoSheetsAPI::CSSaveClientRequest.new # CSSaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
-
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
-
+request = ChronoSheetsAPI::SaveClientRequest.new # SaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
 
 begin
   #Update a client.    Requires the 'ManageClientsAndProjects' permission.
-  result = api_instance.clients_update_client(request, x_chronosheets_auth)
+  result = api_instance.clients_update_client(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling ClientsApi->clients_update_client: #{e}"
@@ -179,14 +177,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)| A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update | 
  **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+ **request** | [**SaveClientRequest**](SaveClientRequest.md)| A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -194,8 +193,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
-
-
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
