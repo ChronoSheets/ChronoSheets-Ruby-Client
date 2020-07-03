@@ -58,7 +58,7 @@ No authorization required
 
 ## timesheet_automation_get_timesheet_automation_audit_trail
 
-> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheet_automation_get_timesheet_automation_audit_trail(geofence_id, user_id, sort, order, x_chronosheets_auth, opts)
+> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheet_automation_get_timesheet_automation_audit_trail(geofence_id, nfc_id, user_id, sort, order, x_chronosheets_auth, opts)
 
 Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the 'ManageGeofencing' permission.
 
@@ -70,6 +70,7 @@ require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::TimesheetAutomationApi.new
 geofence_id = 56 # Integer | The ID of the Geofence
+nfc_id = 56 # Integer | 
 user_id = 56 # Integer | 
 sort = 'sort_example' # String | 
 order = 'order_example' # String | 
@@ -81,7 +82,7 @@ opts = {
 
 begin
   #Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the 'ManageGeofencing' permission.
-  result = api_instance.timesheet_automation_get_timesheet_automation_audit_trail(geofence_id, user_id, sort, order, x_chronosheets_auth, opts)
+  result = api_instance.timesheet_automation_get_timesheet_automation_audit_trail(geofence_id, nfc_id, user_id, sort, order, x_chronosheets_auth, opts)
   p result
 rescue ChronoSheetsAPI::ApiError => e
   puts "Exception when calling TimesheetAutomationApi->timesheet_automation_get_timesheet_automation_audit_trail: #{e}"
@@ -94,6 +95,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geofence_id** | **Integer**| The ID of the Geofence | 
+ **nfc_id** | **Integer**|  | 
  **user_id** | **Integer**|  | 
  **sort** | **String**|  | 
  **order** | **String**|  | 

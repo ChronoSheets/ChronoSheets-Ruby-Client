@@ -90,6 +90,7 @@ module ChronoSheetsAPI
 
     # Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the 'ManageGeofencing' permission.
     # @param geofence_id [Integer] The ID of the Geofence
+    # @param nfc_id [Integer] 
     # @param user_id [Integer] 
     # @param sort [String] 
     # @param order [String] 
@@ -98,13 +99,14 @@ module ChronoSheetsAPI
     # @option opts [Integer] :skip Skip this many records
     # @option opts [Integer] :take Take this many records
     # @return [ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence]
-    def timesheet_automation_get_timesheet_automation_audit_trail(geofence_id, user_id, sort, order, x_chronosheets_auth, opts = {})
-      data, _status_code, _headers = timesheet_automation_get_timesheet_automation_audit_trail_with_http_info(geofence_id, user_id, sort, order, x_chronosheets_auth, opts)
+    def timesheet_automation_get_timesheet_automation_audit_trail(geofence_id, nfc_id, user_id, sort, order, x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = timesheet_automation_get_timesheet_automation_audit_trail_with_http_info(geofence_id, nfc_id, user_id, sort, order, x_chronosheets_auth, opts)
       data
     end
 
     # Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
     # @param geofence_id [Integer] The ID of the Geofence
+    # @param nfc_id [Integer] 
     # @param user_id [Integer] 
     # @param sort [String] 
     # @param order [String] 
@@ -113,13 +115,17 @@ module ChronoSheetsAPI
     # @option opts [Integer] :skip Skip this many records
     # @option opts [Integer] :take Take this many records
     # @return [Array<(ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence, Integer, Hash)>] ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence data, response status code and response headers
-    def timesheet_automation_get_timesheet_automation_audit_trail_with_http_info(geofence_id, user_id, sort, order, x_chronosheets_auth, opts = {})
+    def timesheet_automation_get_timesheet_automation_audit_trail_with_http_info(geofence_id, nfc_id, user_id, sort, order, x_chronosheets_auth, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TimesheetAutomationApi.timesheet_automation_get_timesheet_automation_audit_trail ...'
       end
       # verify the required parameter 'geofence_id' is set
       if @api_client.config.client_side_validation && geofence_id.nil?
         fail ArgumentError, "Missing the required parameter 'geofence_id' when calling TimesheetAutomationApi.timesheet_automation_get_timesheet_automation_audit_trail"
+      end
+      # verify the required parameter 'nfc_id' is set
+      if @api_client.config.client_side_validation && nfc_id.nil?
+        fail ArgumentError, "Missing the required parameter 'nfc_id' when calling TimesheetAutomationApi.timesheet_automation_get_timesheet_automation_audit_trail"
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
@@ -153,6 +159,7 @@ module ChronoSheetsAPI
       # query parameters
       query_params = opts[:query_params] || {}
       query_params[:'GeofenceId'] = geofence_id
+      query_params[:'NfcId'] = nfc_id
       query_params[:'UserId'] = user_id
       query_params[:'Sort'] = sort
       query_params[:'Order'] = order
