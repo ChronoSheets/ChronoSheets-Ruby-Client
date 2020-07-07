@@ -21,11 +21,15 @@ module ChronoSheetsAPI
     # Your ChronoSheets password
     attr_accessor :password
 
+    # Increase session expiry beyond default of 1 hour
+    attr_accessor :remember_me
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'username_or_email' => :'UsernameOrEmail',
-        :'password' => :'Password'
+        :'password' => :'Password',
+        :'remember_me' => :'RememberMe'
       }
     end
 
@@ -33,7 +37,8 @@ module ChronoSheetsAPI
     def self.openapi_types
       {
         :'username_or_email' => :'String',
-        :'password' => :'String'
+        :'password' => :'String',
+        :'remember_me' => :'Boolean'
       }
     end
 
@@ -65,6 +70,10 @@ module ChronoSheetsAPI
       if attributes.key?(:'password')
         self.password = attributes[:'password']
       end
+
+      if attributes.key?(:'remember_me')
+        self.remember_me = attributes[:'remember_me']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -86,7 +95,8 @@ module ChronoSheetsAPI
       return true if self.equal?(o)
       self.class == o.class &&
           username_or_email == o.username_or_email &&
-          password == o.password
+          password == o.password &&
+          remember_me == o.remember_me
     end
 
     # @see the `==` method
@@ -98,7 +108,7 @@ module ChronoSheetsAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [username_or_email, password].hash
+      [username_or_email, password, remember_me].hash
     end
 
     # Builds the object from hash
