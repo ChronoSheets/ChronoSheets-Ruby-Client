@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**geo_fencing_delete_geofence**](GeoFencingApi.md#geo_fencing_delete_geofence) | **DELETE** /GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
 [**geo_fencing_get_geofence_by_id**](GeoFencingApi.md#geo_fencing_get_geofence_by_id) | **GET** /GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
 [**geo_fencing_get_geofences**](GeoFencingApi.md#geo_fencing_get_geofences) | **GET** /GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
+[**geo_fencing_get_geofences_basic_info**](GeoFencingApi.md#geo_fencing_get_geofences_basic_info) | **GET** /GeoFencing/GetGeofencesBasicInfo | Gets a list of all geofences in your organisation, including just the name and ID.
 [**geo_fencing_update_geofence**](GeoFencingApi.md#geo_fencing_update_geofence) | **PUT** /GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 
 
@@ -193,6 +194,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseForPaginatedListExtendedGeofence**](ApiResponseForPaginatedListExtendedGeofence.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+
+## geo_fencing_get_geofences_basic_info
+
+> ApiResponseForPaginatedListBasicGeofence geo_fencing_get_geofences_basic_info(x_chronosheets_auth)
+
+Gets a list of all geofences in your organisation, including just the name and ID.
+
+### Example
+
+```ruby
+# load the gem
+require 'ChronoSheetsAPI'
+
+api_instance = ChronoSheetsAPI::GeoFencingApi.new
+x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
+
+begin
+  #Gets a list of all geofences in your organisation, including just the name and ID.
+  result = api_instance.geo_fencing_get_geofences_basic_info(x_chronosheets_auth)
+  p result
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Exception when calling GeoFencingApi->geo_fencing_get_geofences_basic_info: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**ApiResponseForPaginatedListBasicGeofence**](ApiResponseForPaginatedListBasicGeofence.md)
 
 ### Authorization
 

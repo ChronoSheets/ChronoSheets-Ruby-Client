@@ -291,6 +291,67 @@ module ChronoSheetsAPI
       return data, status_code, headers
     end
 
+    # Gets a list of all geofences in your organisation, including just the name and ID.
+    # @param x_chronosheets_auth [String] The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [ApiResponseForPaginatedListBasicGeofence]
+    def geo_fencing_get_geofences_basic_info(x_chronosheets_auth, opts = {})
+      data, _status_code, _headers = geo_fencing_get_geofences_basic_info_with_http_info(x_chronosheets_auth, opts)
+      data
+    end
+
+    # Gets a list of all geofences in your organisation, including just the name and ID.
+    # @param x_chronosheets_auth [String] The ChronoSheets Auth Token
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ApiResponseForPaginatedListBasicGeofence, Integer, Hash)>] ApiResponseForPaginatedListBasicGeofence data, response status code and response headers
+    def geo_fencing_get_geofences_basic_info_with_http_info(x_chronosheets_auth, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: GeoFencingApi.geo_fencing_get_geofences_basic_info ...'
+      end
+      # verify the required parameter 'x_chronosheets_auth' is set
+      if @api_client.config.client_side_validation && x_chronosheets_auth.nil?
+        fail ArgumentError, "Missing the required parameter 'x_chronosheets_auth' when calling GeoFencingApi.geo_fencing_get_geofences_basic_info"
+      end
+      # resource path
+      local_var_path = '/GeoFencing/GetGeofencesBasicInfo'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json', 'text/json', 'application/xml', 'text/xml', 'multipart/form-data'])
+      header_params[:'x-chronosheets-auth'] = x_chronosheets_auth
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] 
+
+      # return_type
+      return_type = opts[:return_type] || 'ApiResponseForPaginatedListBasicGeofence' 
+
+      # auth_names
+      auth_names = opts[:auth_names] || []
+
+      new_options = opts.merge(
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GeoFencingApi#geo_fencing_get_geofences_basic_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Updates a geofencing with rules to be used for clock on/off automation.  Requires the 'ManageGeofencing' permission.
     # @param x_chronosheets_auth [String] The ChronoSheets Auth Token
     # @param request [UpdateGeoFenceRequest] 
