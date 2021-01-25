@@ -2,26 +2,25 @@
 
 All URIs are relative to *https://api.chronosheets.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**job_codes_create_job_code**](JobCodesApi.md#job_codes_create_job_code) | **POST** /JobCodes/CreateJobCode | Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
-[**job_codes_delete_job_code**](JobCodesApi.md#job_codes_delete_job_code) | **DELETE** /JobCodes/DeleteJobCode | Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
-[**job_codes_get_job_code_by_id**](JobCodesApi.md#job_codes_get_job_code_by_id) | **GET** /JobCodes/GetJobCodeById | Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
-[**job_codes_get_job_codes**](JobCodesApi.md#job_codes_get_job_codes) | **GET** /JobCodes/GetJobCodes | Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
-[**job_codes_update_job_code**](JobCodesApi.md#job_codes_update_job_code) | **PUT** /JobCodes/UpdateJobCode | Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
-
+| Method | HTTP request | Description |
+| ------ | ------------ | ----------- |
+| [**job_codes_create_job_code**](JobCodesApi.md#job_codes_create_job_code) | **POST** /JobCodes/CreateJobCode | Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission. |
+| [**job_codes_delete_job_code**](JobCodesApi.md#job_codes_delete_job_code) | **DELETE** /JobCodes/DeleteJobCode | Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission. |
+| [**job_codes_get_job_code_by_id**](JobCodesApi.md#job_codes_get_job_code_by_id) | **GET** /JobCodes/GetJobCodeById | Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. |
+| [**job_codes_get_job_codes**](JobCodesApi.md#job_codes_get_job_codes) | **GET** /JobCodes/GetJobCodes | Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. |
+| [**job_codes_update_job_code**](JobCodesApi.md#job_codes_update_job_code) | **PUT** /JobCodes/UpdateJobCode | Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission. |
 
 
 ## job_codes_create_job_code
 
-> ApiResponseInt32 job_codes_create_job_code(x_chronosheets_auth, request)
+> <ApiResponseInt32> job_codes_create_job_code(x_chronosheets_auth, request)
 
 Create a job code.    Requires the 'ManageJobsAndTask' permission.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::JobCodesApi.new
@@ -29,21 +28,38 @@ x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets 
 request = ChronoSheetsAPI::InsertJobCodeRequest.new # InsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
 
 begin
-  #Create a job code.    Requires the 'ManageJobsAndTask' permission.
+  # Create a job code.    Requires the 'ManageJobsAndTask' permission.
   result = api_instance.job_codes_create_job_code(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling JobCodesApi->job_codes_create_job_code: #{e}"
+  puts "Error when calling JobCodesApi->job_codes_create_job_code: #{e}"
+end
+```
+
+#### Using the job_codes_create_job_code_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseInt32>, Integer, Hash)> job_codes_create_job_code_with_http_info(x_chronosheets_auth, request)
+
+```ruby
+begin
+  # Create a job code.    Requires the 'ManageJobsAndTask' permission.
+  data, status_code, headers = api_instance.job_codes_create_job_code_with_http_info(x_chronosheets_auth, request)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseInt32>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling JobCodesApi->job_codes_create_job_code_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
- **request** | [**InsertJobCodeRequest**](InsertJobCodeRequest.md)| An Insert JobCode Request object containing values for the new JobCode to create | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
+| **request** | [**InsertJobCodeRequest**](InsertJobCodeRequest.md) | An Insert JobCode Request object containing values for the new JobCode to create |  |
 
 ### Return type
 
@@ -61,14 +77,14 @@ No authorization required
 
 ## job_codes_delete_job_code
 
-> ApiResponseBoolean job_codes_delete_job_code(job_code_id, x_chronosheets_auth)
+> <ApiResponseBoolean> job_codes_delete_job_code(job_code_id, x_chronosheets_auth)
 
 Delete a job code.    Requires the 'ManageJobsAndTask' permission.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::JobCodesApi.new
@@ -76,21 +92,38 @@ job_code_id = 56 # Integer | The ID of the job code you want to delete
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 begin
-  #Delete a job code.    Requires the 'ManageJobsAndTask' permission.
+  # Delete a job code.    Requires the 'ManageJobsAndTask' permission.
   result = api_instance.job_codes_delete_job_code(job_code_id, x_chronosheets_auth)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling JobCodesApi->job_codes_delete_job_code: #{e}"
+  puts "Error when calling JobCodesApi->job_codes_delete_job_code: #{e}"
+end
+```
+
+#### Using the job_codes_delete_job_code_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseBoolean>, Integer, Hash)> job_codes_delete_job_code_with_http_info(job_code_id, x_chronosheets_auth)
+
+```ruby
+begin
+  # Delete a job code.    Requires the 'ManageJobsAndTask' permission.
+  data, status_code, headers = api_instance.job_codes_delete_job_code_with_http_info(job_code_id, x_chronosheets_auth)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseBoolean>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling JobCodesApi->job_codes_delete_job_code_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_code_id** | **Integer**| The ID of the job code you want to delete | 
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **job_code_id** | **Integer** | The ID of the job code you want to delete |  |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
 
 ### Return type
 
@@ -108,14 +141,14 @@ No authorization required
 
 ## job_codes_get_job_code_by_id
 
-> ApiResponseJobCode job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth)
+> <ApiResponseJobCode> job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth)
 
 Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::JobCodesApi.new
@@ -123,21 +156,38 @@ job_code_id = 56 # Integer | The ID of the JobCode you want to get
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 begin
-  #Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+  # Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
   result = api_instance.job_codes_get_job_code_by_id(job_code_id, x_chronosheets_auth)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling JobCodesApi->job_codes_get_job_code_by_id: #{e}"
+  puts "Error when calling JobCodesApi->job_codes_get_job_code_by_id: #{e}"
+end
+```
+
+#### Using the job_codes_get_job_code_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseJobCode>, Integer, Hash)> job_codes_get_job_code_by_id_with_http_info(job_code_id, x_chronosheets_auth)
+
+```ruby
+begin
+  # Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+  data, status_code, headers = api_instance.job_codes_get_job_code_by_id_with_http_info(job_code_id, x_chronosheets_auth)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseJobCode>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling JobCodesApi->job_codes_get_job_code_by_id_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_code_id** | **Integer**| The ID of the JobCode you want to get | 
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **job_code_id** | **Integer** | The ID of the JobCode you want to get |  |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
 
 ### Return type
 
@@ -155,34 +205,51 @@ No authorization required
 
 ## job_codes_get_job_codes
 
-> ApiResponseListJobCode job_codes_get_job_codes(x_chronosheets_auth)
+> <ApiResponseListJobCode> job_codes_get_job_codes(x_chronosheets_auth)
 
 Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::JobCodesApi.new
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 begin
-  #Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+  # Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
   result = api_instance.job_codes_get_job_codes(x_chronosheets_auth)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling JobCodesApi->job_codes_get_job_codes: #{e}"
+  puts "Error when calling JobCodesApi->job_codes_get_job_codes: #{e}"
+end
+```
+
+#### Using the job_codes_get_job_codes_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseListJobCode>, Integer, Hash)> job_codes_get_job_codes_with_http_info(x_chronosheets_auth)
+
+```ruby
+begin
+  # Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+  data, status_code, headers = api_instance.job_codes_get_job_codes_with_http_info(x_chronosheets_auth)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseListJobCode>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling JobCodesApi->job_codes_get_job_codes_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
 
 ### Return type
 
@@ -200,14 +267,14 @@ No authorization required
 
 ## job_codes_update_job_code
 
-> ApiResponseBoolean job_codes_update_job_code(x_chronosheets_auth, request)
+> <ApiResponseBoolean> job_codes_update_job_code(x_chronosheets_auth, request)
 
 Update a job code.    Requires the 'ManageJobsAndTask' permission.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::JobCodesApi.new
@@ -215,21 +282,38 @@ x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets 
 request = ChronoSheetsAPI::UpdateJobCodeRequest.new # UpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
 
 begin
-  #Update a job code.    Requires the 'ManageJobsAndTask' permission.
+  # Update a job code.    Requires the 'ManageJobsAndTask' permission.
   result = api_instance.job_codes_update_job_code(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling JobCodesApi->job_codes_update_job_code: #{e}"
+  puts "Error when calling JobCodesApi->job_codes_update_job_code: #{e}"
+end
+```
+
+#### Using the job_codes_update_job_code_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseBoolean>, Integer, Hash)> job_codes_update_job_code_with_http_info(x_chronosheets_auth, request)
+
+```ruby
+begin
+  # Update a job code.    Requires the 'ManageJobsAndTask' permission.
+  data, status_code, headers = api_instance.job_codes_update_job_code_with_http_info(x_chronosheets_auth, request)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseBoolean>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling JobCodesApi->job_codes_update_job_code_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
- **request** | [**UpdateJobCodeRequest**](UpdateJobCodeRequest.md)| A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
+| **request** | [**UpdateJobCodeRequest**](UpdateJobCodeRequest.md) | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update |  |
 
 ### Return type
 

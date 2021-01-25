@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**latitude** | **Float** |  | [optional] 
-**longitude** | **Float** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **latitude** | **Float** |  | [optional] |
+| **longitude** | **Float** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
 require 'ChronoSheetsAPI'
 
-instance = ChronoSheetsAPI::TripCoordinate.new(latitude: null,
-                                 longitude: null)
+instance = ChronoSheetsAPI::TripCoordinate.new(
+  latitude: null,
+  longitude: null
+)
 ```
-
 

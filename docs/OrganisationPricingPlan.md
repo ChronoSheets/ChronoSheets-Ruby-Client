@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**plan_id** | **String** |  | [optional] 
-**quantity** | **Integer** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **plan_id** | **String** |  | [optional] |
+| **quantity** | **Integer** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
 require 'ChronoSheetsAPI'
 
-instance = ChronoSheetsAPI::OrganisationPricingPlan.new(plan_id: null,
-                                 quantity: null)
+instance = ChronoSheetsAPI::OrganisationPricingPlan.new(
+  plan_id: null,
+  quantity: null
+)
 ```
-
 

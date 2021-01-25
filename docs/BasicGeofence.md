@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**geo_fencing_id** | **Integer** |  | [optional] 
-**name** | **String** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **geo_fencing_id** | **Integer** | The ID of the geofence | [optional] |
+| **name** | **String** | The descriptive name of the geofence | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
 require 'ChronoSheetsAPI'
 
-instance = ChronoSheetsAPI::BasicGeofence.new(geo_fencing_id: null,
-                                 name: null)
+instance = ChronoSheetsAPI::BasicGeofence.new(
+  geo_fencing_id: null,
+  name: null
+)
 ```
-
 

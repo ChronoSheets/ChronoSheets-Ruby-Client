@@ -2,24 +2,23 @@
 
 All URIs are relative to *https://api.chronosheets.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**user_job_favourites_create_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_create_job_favourite) | **POST** /UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
-[**user_job_favourites_delete_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_delete_job_favourite) | **DELETE** /UserJobFavourites/DeleteJobFavourite | Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
-[**user_job_favourites_get_job_favourites**](UserJobFavouritesApi.md#user_job_favourites_get_job_favourites) | **GET** /UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
-
+| Method | HTTP request | Description |
+| ------ | ------------ | ----------- |
+| [**user_job_favourites_create_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_create_job_favourite) | **POST** /UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. |
+| [**user_job_favourites_delete_job_favourite**](UserJobFavouritesApi.md#user_job_favourites_delete_job_favourite) | **DELETE** /UserJobFavourites/DeleteJobFavourite | Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. |
+| [**user_job_favourites_get_job_favourites**](UserJobFavouritesApi.md#user_job_favourites_get_job_favourites) | **GET** /UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission. |
 
 
 ## user_job_favourites_create_job_favourite
 
-> ApiResponseInt32 user_job_favourites_create_job_favourite(x_chronosheets_auth, request)
+> <ApiResponseInt32> user_job_favourites_create_job_favourite(x_chronosheets_auth, request)
 
 Create a job favourite.    Requires the 'SubmitTimesheets' permission.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UserJobFavouritesApi.new
@@ -27,21 +26,38 @@ x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets 
 request = ChronoSheetsAPI::InsertUserJobFavouriteRequest.new # InsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
 
 begin
-  #Create a job favourite.    Requires the 'SubmitTimesheets' permission.
+  # Create a job favourite.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.user_job_favourites_create_job_favourite(x_chronosheets_auth, request)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling UserJobFavouritesApi->user_job_favourites_create_job_favourite: #{e}"
+  puts "Error when calling UserJobFavouritesApi->user_job_favourites_create_job_favourite: #{e}"
+end
+```
+
+#### Using the user_job_favourites_create_job_favourite_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseInt32>, Integer, Hash)> user_job_favourites_create_job_favourite_with_http_info(x_chronosheets_auth, request)
+
+```ruby
+begin
+  # Create a job favourite.    Requires the 'SubmitTimesheets' permission.
+  data, status_code, headers = api_instance.user_job_favourites_create_job_favourite_with_http_info(x_chronosheets_auth, request)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseInt32>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling UserJobFavouritesApi->user_job_favourites_create_job_favourite_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
- **request** | [**InsertUserJobFavouriteRequest**](InsertUserJobFavouriteRequest.md)| An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
+| **request** | [**InsertUserJobFavouriteRequest**](InsertUserJobFavouriteRequest.md) | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create |  |
 
 ### Return type
 
@@ -59,14 +75,14 @@ No authorization required
 
 ## user_job_favourites_delete_job_favourite
 
-> ApiResponseBoolean user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth)
+> <ApiResponseBoolean> user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth)
 
 Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UserJobFavouritesApi.new
@@ -74,21 +90,38 @@ job_id = 56 # Integer | The ID of the Job for the Job Favourite you want to dele
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 begin
-  #Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
+  # Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.user_job_favourites_delete_job_favourite(job_id, x_chronosheets_auth)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling UserJobFavouritesApi->user_job_favourites_delete_job_favourite: #{e}"
+  puts "Error when calling UserJobFavouritesApi->user_job_favourites_delete_job_favourite: #{e}"
+end
+```
+
+#### Using the user_job_favourites_delete_job_favourite_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseBoolean>, Integer, Hash)> user_job_favourites_delete_job_favourite_with_http_info(job_id, x_chronosheets_auth)
+
+```ruby
+begin
+  # Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
+  data, status_code, headers = api_instance.user_job_favourites_delete_job_favourite_with_http_info(job_id, x_chronosheets_auth)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseBoolean>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling UserJobFavouritesApi->user_job_favourites_delete_job_favourite_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| The ID of the Job for the Job Favourite you want to delete. | 
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **job_id** | **Integer** | The ID of the Job for the Job Favourite you want to delete. |  |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
 
 ### Return type
 
@@ -106,34 +139,51 @@ No authorization required
 
 ## user_job_favourites_get_job_favourites
 
-> ApiResponseListUserJobFavourite user_job_favourites_get_job_favourites(x_chronosheets_auth)
+> <ApiResponseListUserJobFavourite> user_job_favourites_get_job_favourites(x_chronosheets_auth)
 
 Get your job favourites.    Requires the 'SubmitTimesheets' permission.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'ChronoSheetsAPI'
 
 api_instance = ChronoSheetsAPI::UserJobFavouritesApi.new
 x_chronosheets_auth = 'x_chronosheets_auth_example' # String | The ChronoSheets Auth Token
 
 begin
-  #Get your job favourites.    Requires the 'SubmitTimesheets' permission.
+  # Get your job favourites.    Requires the 'SubmitTimesheets' permission.
   result = api_instance.user_job_favourites_get_job_favourites(x_chronosheets_auth)
   p result
 rescue ChronoSheetsAPI::ApiError => e
-  puts "Exception when calling UserJobFavouritesApi->user_job_favourites_get_job_favourites: #{e}"
+  puts "Error when calling UserJobFavouritesApi->user_job_favourites_get_job_favourites: #{e}"
+end
+```
+
+#### Using the user_job_favourites_get_job_favourites_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ApiResponseListUserJobFavourite>, Integer, Hash)> user_job_favourites_get_job_favourites_with_http_info(x_chronosheets_auth)
+
+```ruby
+begin
+  # Get your job favourites.    Requires the 'SubmitTimesheets' permission.
+  data, status_code, headers = api_instance.user_job_favourites_get_job_favourites_with_http_info(x_chronosheets_auth)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ApiResponseListUserJobFavourite>
+rescue ChronoSheetsAPI::ApiError => e
+  puts "Error when calling UserJobFavouritesApi->user_job_favourites_get_job_favourites_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_chronosheets_auth** | **String**| The ChronoSheets Auth Token | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **x_chronosheets_auth** | **String** | The ChronoSheets Auth Token |  |
 
 ### Return type
 

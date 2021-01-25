@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **Integer** |  | [optional] 
-**job_id** | **Integer** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** |  | [optional] |
+| **job_id** | **Integer** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
 require 'ChronoSheetsAPI'
 
-instance = ChronoSheetsAPI::UserJobFavourite.new(id: null,
-                                 job_id: null)
+instance = ChronoSheetsAPI::UserJobFavourite.new(
+  id: null,
+  job_id: null
+)
 ```
-
 
